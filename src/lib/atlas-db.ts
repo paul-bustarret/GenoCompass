@@ -2,6 +2,7 @@
 // `atlas.ts`, so the screens render either source without changes (see AGENTS.md).
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
+import { localTables, useLocalApi } from "@/lib/atlas-api";
 
 type GraphDatabase = {
   public: {
@@ -30,7 +31,8 @@ type GraphDatabase = {
           confidence: number | null;
           evidence: string | null;
           polarity: string | null;
-          effect: number | null;
+          /** Text in the backend data ("LoF", "GoF", ...); the migration declares real. */
+          effect: number | string | null;
           quote: string | null;
           frequency: string | null;
         };
@@ -82,8 +84,10 @@ type GraphDatabase = {
 };
 
 // Same client instance (and session); the generated Database type just doesn't
-// describe the knowledge-graph tables.
-const db = supabase as unknown as SupabaseClient<GraphDatabase>;
+// describe the knowledge-graph tables. With VITE_ATLAS_API_URL set, the same queries are
+// served by the local backend's `GET /tables/{name}` (identical row shapes), so no Supabase
+// project is needed.
+const db = (useLocalApi ? localTables : supabase) as unknown as SupabaseClient<GraphDatabase>;
 
 export type AtlasDisease = {
   id: string;
@@ -365,6 +369,9 @@ async function fetchAtlasGraph(): Promise<AtlasGraph> {
   for (const e of activityRes.data ?? []) activity.set(e.dst, (activity.get(e.dst) ?? 0) + 1);
   const peak = Math.max(1, ...activity.values());
 
+  const groupOf = new Map(
+    (nodesRes.data ?? []).map((n) => [n.id, String((n.attrs ?? {})["group"] ?? "")]),
+  );
   const diseases: AtlasDisease[] = (nodesRes.data ?? []).map((n) => {
     const attrs = (n.attrs ?? {}) as Record<string, string | undefined>;
     const synonyms = splitList(n.synonyms, "|");
@@ -439,13 +446,26 @@ async function fetchAtlasGraph(): Promise<AtlasGraph> {
     const members = diseases.filter((d) => d.cluster === id);
     // No cluster names in the database: name each one after the gene family or the
     // condition that anchors it, rather than inventing a mechanism label.
+    // A display group shared by every member (nodes.attrs.group) is a curated name; use it.
+    // Majority curated group (ignoring bridge/control labels) names a mixed cluster, e.g. 4 of 6
+    // sphingolipidoses + a bridge -> "Sphingolipidoses" rather than "<top disease> group".
+    const counts = new Map<string, number>();
+    for (const d of members) {
+      const g = groupOf.get(d.id) ?? "";
+      if (g && g !== "Bridge" && g !== "Lookalike control") counts.set(g, (counts.get(g) ?? 0) + 1);
+    }
+    const [top, n] = [...counts.entries()].sort((a, b) => b[1] - a[1])[0] ?? ["", 0];
+    const allSame = new Set(members.map((d) => groupOf.get(d.id) ?? "")).size === 1;
+    const shared = allSame ? (groupOf.get(members[0]?.id ?? "") ?? "") : n * 2 > members.length ? top : "";
     const anchor = members.slice().sort((a, b) => b.research_activity - a.research_activity)[0];
     const name =
       id === "unmapped"
         ? "Not yet grouped"
-        : anchor
-          ? `${anchor.plain_label} group`
-          : `Group ${id}`;
+        : shared
+          ? shared
+          : anchor
+            ? `${anchor.plain_label} group`
+            : `Group ${id}`;
     return { id, label: name, plain_label: name };
   });
 

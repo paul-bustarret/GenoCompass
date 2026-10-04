@@ -1,0 +1,16 @@
+{
+ "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+ "disease_id": "MONDO:0009260",
+ "to": "info@ntsad.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Introduction and potential collaboration from a GM1 (infantile) patient group",
+ "body": "Dear NTSAD Team,\n\nMy name is Maria, and I lead a patient group supporting families affected by GM1 gangliosidosis, type I (infantile). I'm reaching out to introduce our community and explore whether there might be room to collaborate.\n\nI understand that your organization leads the worldwide fight to treat and cure Tay-Sachs, Canavan, GM1, and Sandhoff diseases by driving research, forging collaboration, and fostering community [E3f52bb3]. I also understand that NTSAD runs the UPenn Natural History Study of Infantile and Juvenile GM1 Gangliosidosis Patients, sponsored by Passage Bio [Edc4757e].\n\nGiven that your work already includes GM1 specifically, I think there could be real value in our two groups connecting - whether to share experiences supporting affected families, exchange information on resources, or simply learn more about each other's efforts.\n\nWould you be open to a short introductory call in the coming weeks? I'd love to hear more about your work and see where our communities might be able to support one another.\n\nThank you for all that NTSAD does for families like ours. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[E3f52bb3] https://ntsad.org/about-ntsad/\n[Edc4757e] https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/",
+ "citations": [
+  "E3f52bb3",
+  "Edc4757e"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

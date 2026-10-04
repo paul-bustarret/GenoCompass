@@ -1,0 +1,521 @@
+{
+ "name": "Lysosomal storage diseases (20) + controls (5)",
+ "generated_at": "2026-10-04T01:24:48+00:00",
+ "counts": {
+  "nodes": 1734,
+  "edges": {
+   "total": 3492,
+   "extracted": 1159,
+   "inferred": 20,
+   "observed": 2313
+  },
+  "papers": 361,
+  "organizations": 226,
+  "countries": 56,
+  "trials": 88,
+  "diseases": 25
+ },
+ "sources": [
+  {
+   "name": "hpo",
+   "records_available": 852,
+   "records_kept": 852
+  },
+  {
+   "name": "mondo",
+   "records_available": 25,
+   "records_kept": 25
+  },
+  {
+   "name": "reactome",
+   "records_available": 74,
+   "records_kept": 74
+  },
+  {
+   "name": "clinvar",
+   "records_available": 10404,
+   "records_kept": 72
+  },
+  {
+   "name": "ctgov",
+   "records_available": 2302,
+   "records_kept": 121
+  },
+  {
+   "name": "reporter",
+   "records_available": 1010,
+   "records_kept": 104
+  },
+  {
+   "name": "pubmed",
+   "records_available": 46115,
+   "records_kept": 125
+  },
+  {
+   "name": "patient_groups",
+   "records_available": 187,
+   "records_kept": 261
+  },
+  {
+   "name": "pubmed_llm",
+   "records_available": 39957,
+   "records_kept": 668
+  }
+ ],
+ "diseases": [
+  {
+   "id": "MONDO:0009655",
+   "name": "Mucopolysaccharidosis type IIIA",
+   "short": "MPS IIIA",
+   "group": "Mucopolysaccharidoses",
+   "role": "hero",
+   "cluster_id": 0,
+   "files": {
+    "journey": "journey/MONDO_0009655.json",
+    "subgraph": "subgraph/MONDO_0009655.json",
+    "email": "email/MONDO_0009655.json"
+   }
+  },
+  {
+   "id": "MONDO:0009656",
+   "name": "Mucopolysaccharidosis type IIIB",
+   "short": "MPS IIIB",
+   "group": "Mucopolysaccharidoses",
+   "role": "hero",
+   "cluster_id": 0,
+   "files": {
+    "journey": "journey/MONDO_0009656.json",
+    "subgraph": "subgraph/MONDO_0009656.json",
+    "email": "email/MONDO_0009656.json"
+   }
+  },
+  {
+   "id": "MONDO:0009657",
+   "name": "Mucopolysaccharidosis type IIIC",
+   "short": "MPS IIIC",
+   "group": "Mucopolysaccharidoses",
+   "role": "hero",
+   "cluster_id": 0,
+   "files": {
+    "journey": "journey/MONDO_0009657.json",
+    "subgraph": "subgraph/MONDO_0009657.json",
+    "email": "email/MONDO_0009657.json"
+   }
+  },
+  {
+   "id": "MONDO:0009658",
+   "name": "Mucopolysaccharidosis, type IIID",
+   "short": "MPS IIID",
+   "group": "Mucopolysaccharidoses",
+   "role": "hero",
+   "cluster_id": 0,
+   "files": {
+    "journey": "journey/MONDO_0009658.json",
+    "subgraph": "subgraph/MONDO_0009658.json",
+    "email": "email/MONDO_0009658.json"
+   }
+  },
+  {
+   "id": "MONDO:0011758",
+   "name": "Hurler syndrome",
+   "short": "MPS I (Hurler)",
+   "group": "Mucopolysaccharidoses",
+   "role": "lysosomal",
+   "cluster_id": 0,
+   "files": {
+    "journey": "journey/MONDO_0011758.json",
+    "subgraph": "subgraph/MONDO_0011758.json",
+    "email": "email/MONDO_0011758.json"
+   }
+  },
+  {
+   "id": "MONDO:0010674",
+   "name": "Mucopolysaccharidosis, type II",
+   "short": "MPS II (Hunter)",
+   "group": "Mucopolysaccharidoses",
+   "role": "lysosomal",
+   "cluster_id": 0,
+   "files": {
+    "journey": "journey/MONDO_0010674.json",
+    "subgraph": "subgraph/MONDO_0010674.json",
+    "email": "email/MONDO_0010674.json"
+   }
+  },
+  {
+   "id": "MONDO:0017694",
+   "name": "Glycogen storage disease II",
+   "short": "Pompe",
+   "group": "Glycogen & autophagy (Pompe, Danon)",
+   "role": "lysosomal",
+   "cluster_id": 4,
+   "files": {
+    "journey": "journey/MONDO_0017694.json",
+    "subgraph": "subgraph/MONDO_0017694.json",
+    "email": "email/MONDO_0017694.json"
+   }
+  },
+  {
+   "id": "MONDO:0009265",
+   "name": "Gaucher disease, type I",
+   "short": "Gaucher",
+   "group": "Sphingolipidoses",
+   "role": "lysosomal",
+   "cluster_id": 1,
+   "files": {
+    "journey": "journey/MONDO_0009265.json",
+    "subgraph": "subgraph/MONDO_0009265.json",
+    "email": "email/MONDO_0009265.json"
+   }
+  },
+  {
+   "id": "MONDO:0010526",
+   "name": "Fabry disease",
+   "short": "Fabry",
+   "group": "Sphingolipidoses",
+   "role": "lysosomal",
+   "cluster_id": 1,
+   "files": {
+    "journey": "journey/MONDO_0010526.json",
+    "subgraph": "subgraph/MONDO_0010526.json",
+    "email": "email/MONDO_0010526.json"
+   }
+  },
+  {
+   "id": "MONDO:0009499",
+   "name": "Krabbe disease",
+   "short": "Krabbe",
+   "group": "Sphingolipidoses",
+   "role": "lysosomal",
+   "cluster_id": 1,
+   "files": {
+    "journey": "journey/MONDO_0009499.json",
+    "subgraph": "subgraph/MONDO_0009499.json",
+    "email": "email/MONDO_0009499.json"
+   }
+  },
+  {
+   "id": "MONDO:0009591",
+   "name": "Metachromatic leukodystrophy",
+   "short": "MLD",
+   "group": "Sphingolipidoses",
+   "role": "lysosomal",
+   "cluster_id": 1,
+   "files": {
+    "journey": "journey/MONDO_0009591.json",
+    "subgraph": "subgraph/MONDO_0009591.json",
+    "email": "email/MONDO_0009591.json"
+   }
+  },
+  {
+   "id": "MONDO:0010100",
+   "name": "Tay-Sachs disease",
+   "short": "Tay-Sachs",
+   "group": "GM2 & GM1 gangliosidoses",
+   "role": "lysosomal",
+   "cluster_id": 2,
+   "files": {
+    "journey": "journey/MONDO_0010100.json",
+    "subgraph": "subgraph/MONDO_0010100.json",
+    "email": "email/MONDO_0010100.json"
+   }
+  },
+  {
+   "id": "MONDO:0010006",
+   "name": "Sandhoff disease",
+   "short": "Sandhoff",
+   "group": "GM2 & GM1 gangliosidoses",
+   "role": "lysosomal",
+   "cluster_id": 2,
+   "files": {
+    "journey": "journey/MONDO_0010006.json",
+    "subgraph": "subgraph/MONDO_0010006.json",
+    "email": "email/MONDO_0010006.json"
+   }
+  },
+  {
+   "id": "MONDO:0009757",
+   "name": "Niemann-pick disease, type C1",
+   "short": "Niemann-Pick C",
+   "group": "Niemann-Pick",
+   "role": "lysosomal",
+   "cluster_id": 5,
+   "files": {
+    "journey": "journey/MONDO_0009757.json",
+    "subgraph": "subgraph/MONDO_0009757.json",
+    "email": "email/MONDO_0009757.json"
+   }
+  },
+  {
+   "id": "MONDO:0008769",
+   "name": "Ceroid lipofuscinosis, neuronal, 2",
+   "short": "CLN2",
+   "group": "Neuronal ceroid lipofuscinoses",
+   "role": "lysosomal",
+   "cluster_id": 3,
+   "files": {
+    "journey": "journey/MONDO_0008769.json",
+    "subgraph": "subgraph/MONDO_0008769.json",
+    "email": "email/MONDO_0008769.json"
+   }
+  },
+  {
+   "id": "MONDO:0008767",
+   "name": "Ceroid lipofuscinosis, neuronal, 3",
+   "short": "CLN3",
+   "group": "Neuronal ceroid lipofuscinoses",
+   "role": "lysosomal",
+   "cluster_id": 3,
+   "files": {
+    "journey": "journey/MONDO_0008767.json",
+    "subgraph": "subgraph/MONDO_0008767.json",
+    "email": "email/MONDO_0008767.json"
+   }
+  },
+  {
+   "id": "MONDO:0009260",
+   "name": "GM1-gangliosidosis, type I",
+   "short": "GM1 (infantile)",
+   "group": "GM2 & GM1 gangliosidoses",
+   "role": "lysosomal",
+   "cluster_id": 2,
+   "files": {
+    "journey": "journey/MONDO_0009260.json",
+    "subgraph": "subgraph/MONDO_0009260.json",
+    "email": "email/MONDO_0009260.json"
+   }
+  },
+  {
+   "id": "MONDO:0010099",
+   "name": "GM2-gangliosidosis, AB variant",
+   "short": "GM2 AB variant",
+   "group": "GM2 & GM1 gangliosidoses",
+   "role": "lysosomal",
+   "cluster_id": 1,
+   "files": {
+    "journey": "journey/MONDO_0010099.json",
+    "subgraph": "subgraph/MONDO_0010099.json",
+    "email": "email/MONDO_0010099.json"
+   }
+  },
+  {
+   "id": "MONDO:0009756",
+   "name": "Niemann-Pick disease, type A",
+   "short": "Niemann-Pick A",
+   "group": "Niemann-Pick",
+   "role": "lysosomal",
+   "cluster_id": 2,
+   "files": {
+    "journey": "journey/MONDO_0009756.json",
+    "subgraph": "subgraph/MONDO_0009756.json",
+    "email": "email/MONDO_0009756.json"
+   }
+  },
+  {
+   "id": "MONDO:0010281",
+   "name": "Danon disease",
+   "short": "Danon",
+   "group": "Glycogen & autophagy (Pompe, Danon)",
+   "role": "bridge",
+   "cluster_id": 6,
+   "files": {
+    "journey": "journey/MONDO_0010281.json",
+    "subgraph": "subgraph/MONDO_0010281.json",
+    "email": "email/MONDO_0010281.json"
+   }
+  },
+  {
+   "id": "MONDO:0008199",
+   "name": "Parkinson disease, late-onset",
+   "short": "Parkinson (late-onset)",
+   "group": "Bridge",
+   "role": "bridge",
+   "cluster_id": 1,
+   "files": {
+    "journey": "journey/MONDO_0008199.json",
+    "subgraph": "subgraph/MONDO_0008199.json",
+    "email": "email/MONDO_0008199.json"
+   }
+  },
+  {
+   "id": "MONDO:0010726",
+   "name": "Rett syndrome",
+   "short": "Rett",
+   "group": "Lookalike control",
+   "role": "lookalike",
+   "cluster_id": 7,
+   "files": {
+    "journey": "journey/MONDO_0010726.json",
+    "subgraph": "subgraph/MONDO_0010726.json",
+    "email": "email/MONDO_0010726.json"
+   }
+  },
+  {
+   "id": "MONDO:0010679",
+   "name": "Duchenne muscular dystrophy",
+   "short": "Duchenne",
+   "group": "Lookalike control",
+   "role": "lookalike",
+   "cluster_id": 8,
+   "files": {
+    "journey": "journey/MONDO_0010679.json",
+    "subgraph": "subgraph/MONDO_0010679.json",
+    "email": "email/MONDO_0010679.json"
+   }
+  },
+  {
+   "id": "MONDO:0008647",
+   "name": "Cardiomyopathy, familial hypertrophic 1",
+   "short": "HCM (MYH7)",
+   "group": "Lookalike control",
+   "role": "lookalike",
+   "cluster_id": 9,
+   "files": {
+    "journey": "journey/MONDO_0008647.json",
+    "subgraph": "subgraph/MONDO_0008647.json",
+    "email": "email/MONDO_0008647.json"
+   }
+  },
+  {
+   "id": "MONDO:0010079",
+   "name": "Canavan disease",
+   "short": "Canavan",
+   "group": "Lookalike control",
+   "role": "lookalike",
+   "cluster_id": 10,
+   "files": {
+    "journey": "journey/MONDO_0010079.json",
+    "subgraph": "subgraph/MONDO_0010079.json",
+    "email": "email/MONDO_0010079.json"
+   }
+  }
+ ],
+ "clusters": [
+  {
+   "cluster": 0,
+   "diseases": [
+    "MONDO:0009655",
+    "MONDO:0009656",
+    "MONDO:0009657",
+    "MONDO:0009658",
+    "MONDO:0010674",
+    "MONDO:0011758"
+   ],
+   "names": [
+    "MPS I (Hurler)",
+    "MPS II (Hunter)",
+    "MPS IIIA",
+    "MPS IIIB",
+    "MPS IIIC",
+    "MPS IIID"
+   ]
+  },
+  {
+   "cluster": 1,
+   "diseases": [
+    "MONDO:0008199",
+    "MONDO:0009265",
+    "MONDO:0009499",
+    "MONDO:0009591",
+    "MONDO:0010099",
+    "MONDO:0010526"
+   ],
+   "names": [
+    "Fabry",
+    "GM2 AB variant",
+    "Gaucher",
+    "Krabbe",
+    "MLD",
+    "Parkinson (late-onset)"
+   ]
+  },
+  {
+   "cluster": 2,
+   "diseases": [
+    "MONDO:0009260",
+    "MONDO:0009756",
+    "MONDO:0010006",
+    "MONDO:0010100"
+   ],
+   "names": [
+    "GM1 (infantile)",
+    "Niemann-Pick A",
+    "Sandhoff",
+    "Tay-Sachs"
+   ]
+  },
+  {
+   "cluster": 3,
+   "diseases": [
+    "MONDO:0008767",
+    "MONDO:0008769"
+   ],
+   "names": [
+    "CLN2",
+    "CLN3"
+   ]
+  },
+  {
+   "cluster": 4,
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "names": [
+    "Pompe"
+   ]
+  },
+  {
+   "cluster": 5,
+   "diseases": [
+    "MONDO:0009757"
+   ],
+   "names": [
+    "Niemann-Pick C"
+   ]
+  },
+  {
+   "cluster": 6,
+   "diseases": [
+    "MONDO:0010281"
+   ],
+   "names": [
+    "Danon"
+   ]
+  },
+  {
+   "cluster": 7,
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "names": [
+    "Rett"
+   ]
+  },
+  {
+   "cluster": 8,
+   "diseases": [
+    "MONDO:0010679"
+   ],
+   "names": [
+    "Duchenne"
+   ]
+  },
+  {
+   "cluster": 9,
+   "diseases": [
+    "MONDO:0008647"
+   ],
+   "names": [
+    "HCM (MYH7)"
+   ]
+  },
+  {
+   "cluster": 10,
+   "diseases": [
+    "MONDO:0010079"
+   ],
+   "names": [
+    "Canavan"
+   ]
+  }
+ ]
+}

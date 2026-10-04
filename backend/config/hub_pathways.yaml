@@ -1,0 +1,12 @@
+# Reactome pathways that are generic cell-biology hubs: many unrelated lysosomal/secreted proteins are
+# annotated to them, so a shared hub says nothing about shared disease biology. similarity.features()
+# ignores them; the in_pathway / part_of edges stay in the graph as evidence.
+hub_pathways:
+  - {id: R-HSA-6798695, name: "Neutrophil degranulation", reason: "lists hundreds of granule/lysosomal proteins (GLA, GM2A, HEXB...); links unrelated enzymes"}
+  - {id: R-HSA-114608, name: "Platelet degranulation", reason: "generic secretory-granule cargo list, not a disease mechanism"}
+  - {id: R-HSA-76005, name: "Response to elevated platelet cytosolic Ca2+", reason: "parent of Platelet degranulation; same generic cargo list"}
+  - {id: R-HSA-168249, name: "Innate Immune System", reason: "top-level hub containing degranulation pathways"}
+  - {id: R-HSA-432720, name: "Lysosome Vesicle Biogenesis", reason: "generic trafficking of any lysosomal protein"}
+  - {id: R-HSA-199992, name: "trans-Golgi Network Vesicle Budding", reason: "generic trafficking of any lysosomal protein"}
+  - {id: R-HSA-390471, name: "Association of TriC/CCT with target proteins during biosynthesis", reason: "generic chaperonin client list"}
+  - {id: R-HSA-390466, name: "Chaperonin-mediated protein folding", reason: "generic protein-folding hub (parent of TriC/CCT)"}

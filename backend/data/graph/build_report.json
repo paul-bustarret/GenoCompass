@@ -1,0 +1,47 @@
+{
+  "diseases": 25,
+  "nodes": 1182,
+  "edges": 2087,
+  "nodes_by_type": {
+    "gene": 24,
+    "disease": 25,
+    "phenotype": 449,
+    "pathway": 66,
+    "variant": 69,
+    "trial": 88,
+    "organization": 77,
+    "country": 37,
+    "intervention": 70,
+    "grant": 75,
+    "person": 87,
+    "paper": 115
+  },
+  "edges_by_relation": {
+    "caused_by": 25,
+    "has_phenotype": 848,
+    "in_pathway": 74,
+    "part_of": 38,
+    "has_variant": 72,
+    "pathogenic_for": 23,
+    "studies": 225,
+    "runs": 88,
+    "has_site_in": 251,
+    "tests": 89,
+    "pi_of": 117,
+    "funds": 92,
+    "mentions": 125,
+    "authored": 20
+  },
+  "edges_by_source": {
+    "hpo": 873,
+    "reactome": 112,
+    "clinvar": 95,
+    "ctgov": 549,
+    "reporter": 313,
+    "pubmed": 145
+  },
+  "not_yet_covered": [
+    "patient groups / registries (web + LLM)",
+    "mechanism + LoF/GoF (PubMed + LLM)"
+  ]
+}

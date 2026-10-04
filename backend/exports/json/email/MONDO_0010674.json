@@ -1,0 +1,26 @@
+{
+ "org_id": "ORG:AIMPS_ETS",
+ "disease_id": "MONDO:0010674",
+ "to": "info@aimps.it",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Introduction and possible collaboration between our MPS patient groups",
+ "body": "Dear AIMPS ETS team,\n\nMy name is Maria, and I lead a patient group for MPS II (Hunter syndrome). I am reaching out to introduce our group and explore a possible collaboration.\n\nA paper reports that AIMPS ETS was founded in 1991 to support children and adult patients affected by rare genetic metabolic diseases that often cause serious disability, and lists MPS II among the conditions it serves [Ebb059e1]. The same source also lists MPS I (Hurler) [E68fcb3d] and the MPS III subtypes IIIA, IIIB, IIIC and IIID [E080e178][E994105e][E30302cc][Ea6b3adc] among the diseases AIMPS ETS supports. Papers report that MPS II and MPS I share overlapping biology, including storage of dermatan sulfate [E385b672][Ef4f70c3] and heparan sulfate [E1f3fa46][Ea90608d], arising from lysosomal enzyme deficiency [Ef5d5a50][E834d07e]. Given this shared underlying biology across the MPS family, I think our two groups could usefully exchange experience.\n\nWould you be open to a brief introductory call in the coming weeks to discuss how our communities support families and where we might collaborate?\n\nThank you for your time, and I look forward to your reply.\n\nWarm regards,\nMaria\nPatient group leader, MPS II (Hunter) patient group\n\nSources:\n[Ebb059e1] https://www.aimps.it/chi-siamo/\n[E68fcb3d] https://www.aimps.it/chi-siamo/\n[E080e178] https://www.aimps.it/chi-siamo/\n[E994105e] https://www.aimps.it/chi-siamo/\n[E30302cc] https://www.aimps.it/chi-siamo/\n[Ea6b3adc] https://www.aimps.it/chi-siamo/\n[E385b672] https://pubmed.ncbi.nlm.nih.gov/25345092/\n[Ef4f70c3] https://pubmed.ncbi.nlm.nih.gov/32188113/\n[E1f3fa46] https://pubmed.ncbi.nlm.nih.gov/25345092/\n[Ea90608d] https://pubmed.ncbi.nlm.nih.gov/32188113/\n[Ef5d5a50] https://pubmed.ncbi.nlm.nih.gov/39617925/\n[E834d07e] https://pubmed.ncbi.nlm.nih.gov/32188113/",
+ "citations": [
+  "Ebb059e1",
+  "E68fcb3d",
+  "E080e178",
+  "E994105e",
+  "E30302cc",
+  "Ea6b3adc",
+  "E385b672",
+  "Ef4f70c3",
+  "E1f3fa46",
+  "Ea90608d",
+  "Ef5d5a50",
+  "E834d07e"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

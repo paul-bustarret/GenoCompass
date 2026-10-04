@@ -1,0 +1,18 @@
+{
+ "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+ "disease_id": "MONDO:0010099",
+ "to": "info@ntsad.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Collaboration inquiry from a GM2 AB variant patient group",
+ "body": "Dear NTSAD team,\n\nMy name is Maria, and I lead a patient group for GM2-gangliosidosis, AB variant. I'm reaching out to introduce our community and explore whether there might be room to connect.\n\nA paper reports that NTSAD \"leads the worldwide fight to treat and cure Tay-Sachs, Canavan, GM1, and Sandhoff diseases by driving research, forging collaboration, and fostering community\" [Ed912a71]. A paper also reports that NTSAD runs PRONTO – Azafaros, described as \"a natural history study of GM1 and GM2 (Sandhoff and Tay-Sachs)\" [E48e5738].\n\nGM2 AB variant and Tay-Sachs share a common mechanism: a paper reports that GM2 AB variant is marked by \"excessive neuronal accumulation of GM2 and related glycolipids\" [E7d4ef12], and a paper reports that Tay-Sachs involves \"GM2 ganglioside accumulation predominantly in lysosomes of nerve cells\" [Ee7edb35]. Given this overlap, I believe our communities may have shared interests in research and natural history efforts.\n\nWould you be open to a short introductory call to see if there's potential for collaboration or information-sharing between our groups?\n\nThank you for your time and for the work you do.\n\nWarm regards,\nMaria\nPatient Group Leader, GM2 AB Variant Community\n\nSources:\n[Ed912a71] https://ntsad.org/diseases/sandhoff-disease/\n[E48e5738] https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/\n[E7d4ef12] https://pubmed.ncbi.nlm.nih.gov/8900233/\n[Ee7edb35] https://pubmed.ncbi.nlm.nih.gov/30524313/",
+ "citations": [
+  "Ed912a71",
+  "E48e5738",
+  "E7d4ef12",
+  "Ee7edb35"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

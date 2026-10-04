@@ -1,0 +1,13 @@
+{
+ "org_id": "ORG:Krabbe_UK",
+ "disease_id": "MONDO:0009499",
+ "to": "contactus@krabbeuk.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting two Krabbe-focused patient communities",
+ "body": "Dear Krabbe UK team,\n\nMy name is Maria, and I lead a patient group supporting families affected by Krabbe disease. I'm reaching out because I believe our communities share a common focus.\n\nGiven that our organisations both work closely with families navigating this same rare condition, I thought it could be valuable for us to connect and learn more about each other's work.\n\nWould you be open to a brief introductory call in the coming weeks? Nothing formal at this stage—just an opportunity to share experiences and explore whether there might be useful ways to support one another going forward.\n\nThank you for the work you do for families affected by Krabbe. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader",
+ "citations": [],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

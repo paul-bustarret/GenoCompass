@@ -1,0 +1,18 @@
+{
+ "org_id": "ORG:Asociación_MPS_LISOSOMALES_España",
+ "disease_id": "MONDO:0009265",
+ "to": "info@mpslisosomales.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Proposing a connection between our lysosomal disease patient communities",
+ "body": "Dear colleagues at Asociación MPS-LISOSOMALES España,\n\nMy name is Maria, and I lead a patient group supporting families affected by Gaucher disease.\n\nI understand that your association works to raise awareness of lysosomal diseases such as Mucopolysaccharidosis, Fabry disease and Gaucher disease [Ed1d0a38][Ef06dde0].\n\nA paper reports that Gaucher disease is caused by deficiency of the enzyme glucocerebrosidase, required for the degradation of glycosphingolipids [Ec8d1187]. A paper reports that Fabry disease results from deficient activity of the enzyme alpha-galactosidase A and progressive lysosomal deposition of globotriaosylceramide in cells throughout the body [E871c351]. Because both diseases share this pattern of lysosomal enzyme deficiency and glycosphingolipid storage, I believe there may be useful common ground between our communities, both on the Gaucher side you already support and on the broader lysosomal disease experience your association covers.\n\nWould you be open to a short introductory call in the coming weeks to explore whether there are ways our groups could learn from and support one another?\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient group leader (Gaucher)\n\nSources:\n[Ed1d0a38] https://mpslisosomales.org/\n[Ef06dde0] https://mpslisosomales.org/\n[Ec8d1187] https://pubmed.ncbi.nlm.nih.gov/24588457/\n[E871c351] https://pubmed.ncbi.nlm.nih.gov/23931807/",
+ "citations": [
+  "Ed1d0a38",
+  "Ef06dde0",
+  "Ec8d1187",
+  "E871c351"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

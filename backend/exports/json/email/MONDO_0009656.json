@@ -1,0 +1,17 @@
+{
+ "org_id": "ORG:AIMPS_ETS",
+ "disease_id": "MONDO:0009656",
+ "to": "info@aimps.it",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Introduction and Possible Collaboration Between Our Patient Groups",
+ "body": "Dear AIMPS ETS team,\n\nMy name is Maria, and I lead a patient group supporting families affected by MPS IIIB (Sanfilippo syndrome type B). I am writing to introduce myself and explore a possible connection with your organisation.\n\nI understand that AIMPS ETS was founded in 1991 to support children and adult patients affected by these rare genetic metabolic diseases, which often lead to severe disability [E994105e]. MPS IIIB is caused by deficiency of the lysosomal enzyme alpha-N-acetylglucosaminidase (NAGLU), leading to accumulation of heparan sulfate within lysosomes [Eac469c9][E4da5d49]. Given that your organisation's work spans this same disease area, I believe there may be valuable common ground between our communities, particularly around shared experiences of caring for families with these conditions.\n\nI would be glad to arrange a short call, at your convenience, simply to learn more about your work and see whether there might be opportunities for our groups to share information or support one another going forward.\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader (MPS IIIB)\n\nSources:\n[E994105e] https://www.aimps.it/chi-siamo/\n[Eac469c9] https://pubmed.ncbi.nlm.nih.gov/16151907/\n[E4da5d49] https://pubmed.ncbi.nlm.nih.gov/21408219/",
+ "citations": [
+  "E994105e",
+  "Eac469c9",
+  "E4da5d49"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

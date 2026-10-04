@@ -1,0 +1,786 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0010079",
+  "name": "Canavan disease",
+  "short": "Canavan"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:443",
+    "name": "ASPA",
+    "edges": [
+     "E96abfe0",
+     "Eab43fa4",
+     "Ec81ffbe",
+     "E4881c9c",
+     "E66c3a16",
+     "E2d48154",
+     "E1c95f65",
+     "Ead5ba8f"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:demyelination",
+    "name": "Demyelination",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E6ac495a",
+     "Ed98f8fc",
+     "E7cd3f82"
+    ]
+   },
+   {
+    "id": "MECH:aspartoacylase_deficiency_naa_accumulation",
+    "name": "Aspartoacylase deficiency / NAA accumulation",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E92b34b8",
+     "E4fe19a2",
+     "E0a47ece",
+     "Efc1f912",
+     "Ee1b6226",
+     "E8db298c"
+    ]
+   },
+   {
+    "id": "MECH:er_stress_misfolding",
+    "name": "Protein misfolding / ER stress",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E1fc7967"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-8963693",
+    "name": "Aspartate and asparagine metabolism",
+    "edges": [
+     "E96abfe0",
+     "E493ee1f",
+     "Eab43fa4",
+     "Ec81ffbe",
+     "E4881c9c",
+     "E66c3a16",
+     "E2d48154",
+     "E1c95f65",
+     "Ead5ba8f"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0000252",
+    "name": "Microcephaly",
+    "weight": 3.219,
+    "frequency": "2/12",
+    "edges": [
+     "Ec7a89da"
+    ]
+   },
+   {
+    "id": "HP:0001476",
+    "name": "Delayed closure of the anterior fontanelle",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E8f86733"
+    ]
+   },
+   {
+    "id": "HP:0002179",
+    "name": "Opisthotonus",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E74535f2"
+    ]
+   },
+   {
+    "id": "HP:0002521",
+    "name": "Hypsarrhythmia",
+    "weight": 3.219,
+    "frequency": "1/5",
+    "edges": [
+     "E86abb3d"
+    ]
+   },
+   {
+    "id": "HP:0010841",
+    "name": "Multifocal epileptiform discharges",
+    "weight": 3.219,
+    "frequency": "2/5",
+    "edges": [
+     "Ec865933"
+    ]
+   },
+   {
+    "id": "HP:0011097",
+    "name": "Epileptic spasm",
+    "weight": 3.219,
+    "frequency": "1/12",
+    "edges": [
+     "Ea63f81b"
+    ]
+   },
+   {
+    "id": "HP:0012444",
+    "name": "Brain atrophy",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Eddac0a7"
+    ]
+   },
+   {
+    "id": "HP:0025053",
+    "name": "Elevated brain N-acetyl aspartate level by MRS",
+    "weight": 3.219,
+    "frequency": "10/10",
+    "edges": [
+     "E2ccd385"
+    ]
+   },
+   {
+    "id": "HP:0032273",
+    "name": "Increased circulating N-acetylaspartic acid concentration",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E6f7a14d"
+    ]
+   },
+   {
+    "id": "HP:0032274",
+    "name": "Increased CSF N-acetylaspartic acid concentration",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E5334f7a"
+    ]
+   }
+  ],
+  "variants": []
+ },
+ "similar": [],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "name": "National Tay-Sachs & Allied Diseases Association",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@ntsad.org",
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E960696e",
+    "Ef52c6e0",
+    "E08ebf6f",
+    "Efd1c057",
+    "E4b9f5af",
+    "Ebba29d7"
+   ]
+  },
+  {
+   "id": "ORG:Canavan_Disease_Research",
+   "name": "Canavan Disease Research",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "Info@canavanresearch.org",
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E6a703de",
+    "E2cfdd5c",
+    "E51da5ed"
+   ]
+  },
+  {
+   "id": "ORG:Canavan_Foundation",
+   "name": "Canavan Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E7f03be6",
+    "Ea9d0f3b",
+    "E700fa03"
+   ]
+  },
+  {
+   "id": "ORG:National_Tay_Sachs_and_Allied_Diseases_A",
+   "name": "National Tay-Sachs and Allied Diseases Association – Brighton, MA",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E48a9f4d",
+    "E41fb999"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_Society_for_Mucopolysaccharide",
+   "name": "Canadian Society for Mucopolysaccharide & Related Diseases Inc.",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E1c0e15b"
+   ]
+  },
+  {
+   "id": "ORG:The_Canavan_Research_Foundation",
+   "name": "The Canavan Research Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E5d9f328"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NINDS",
+   "name": "NIH NINDS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E8fe4b6c",
+    "E7370725",
+    "E39a15d1",
+    "E1ce0a8c",
+    "E5b19b6e",
+    "E0036970"
+   ]
+  },
+  {
+   "id": "ORG:Aspa_Therapeutics",
+   "name": "Aspa Therapeutics",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "Ecbfa1a8",
+    "E2631a0a",
+    "Ee004059",
+    "E67c6e7d"
+   ]
+  },
+  {
+   "id": "ORG:Myrtelle_Inc",
+   "name": "Myrtelle Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "Eae7d4f0",
+    "Ea59ea0a"
+   ]
+  },
+  {
+   "id": "ORG:Children_s_Hospital_of_Philadelphia",
+   "name": "Children's Hospital of Philadelphia",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E47cea90",
+    "Edbb22e2"
+   ]
+  },
+  {
+   "id": "ORG:RTI_International",
+   "name": "RTI International",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E4997bb8",
+    "Eccbdf7c"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT04998396",
+   "title": "A Study of AAV9 Gene Therapy in Participants With Canavan Disease (CANaspire Clinical Trial)",
+   "status": "RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0010079",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "AAV9 BBP-812"
+   ],
+   "edges": [
+    "E67c6e7d",
+    "E9d749ee",
+    "Eeb80c0a"
+   ]
+  },
+  {
+   "id": "NCT04833907",
+   "title": "rAAV-Olig001-ASPA Gene Therapy for Treatment of Children With Typical Canavan Disease",
+   "status": "ENROLLING_BY_INVITATION",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0010079",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "rAAV-Olig001-ASPA",
+    "Levetiracetam",
+    "Prednisone"
+   ],
+   "edges": [
+    "Ea59ea0a",
+    "Eaee5b3a",
+    "E17dc012",
+    "Ebbfe1ee",
+    "Ee7ea317"
+   ]
+  },
+  {
+   "id": "NCT03655223",
+   "title": "Early Check: Expanded Screening in Newborns",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0010079",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Eccbdf7c",
+    "E98a978e"
+   ]
+  },
+  {
+   "id": "NCT02699190",
+   "title": "LeukoSEQ: Whole Genome Sequencing as a First-Line Diagnostic Tool for Leukodystrophies",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0010079",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Edbb22e2",
+    "E2d4281c"
+   ]
+  },
+  {
+   "id": "NCT04126005",
+   "title": "Natural History Study of Patients With Canavan Disease (CANinform Study)",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0010079",
+   "countries": [
+    "DE",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E2631a0a",
+    "E0bdbf8c",
+    "E9f1f719"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "id": "ASSET:CanInform",
+   "name": "CanInform",
+   "kind": "natural_history_study",
+   "website": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "Ef4a1117",
+    "Ebba29d7"
+   ]
+  },
+  {
+   "id": "ASSET:Variant_Mutation_Database",
+   "name": "Variant (Mutation) Database",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E29c82f7",
+    "E5debefc",
+    "E6aa78fe"
+   ]
+  },
+  {
+   "id": "ASSET:CAN_Inform",
+   "name": "CAN-Inform",
+   "kind": "natural_history_study",
+   "website": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E700fa03",
+    "Ea9d0f3b"
+   ]
+  },
+  {
+   "id": "ASSET:Canavan_Patient_Insight_Network",
+   "name": "Canavan Patient Insight Network",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010079",
+   "edges": [
+    "E51da5ed",
+    "E2cfdd5c"
+   ]
+  }
+ ],
+ "researchers": [
+  {
+   "id": "PERSON:10442611",
+   "name": "Barbara Stauch Slusher",
+   "grants": [
+    "RePORTER:R61NS136652"
+   ],
+   "diseases": [
+    "MONDO:0010079"
+   ],
+   "edges": [
+    "E82dbb21",
+    "E09c722f"
+   ]
+  },
+  {
+   "id": "PERSON:2106055",
+   "name": "Daneng Wang",
+   "grants": [
+    "RePORTER:R01NS108151"
+   ],
+   "diseases": [
+    "MONDO:0010079"
+   ],
+   "edges": [
+    "E25b25b8",
+    "E1ce0a8c"
+   ]
+  },
+  {
+   "id": "PERSON:6579783",
+   "name": "Florian S Eichler",
+   "grants": [
+    "RePORTER:U54NS115052"
+   ],
+   "diseases": [
+    "MONDO:0010079"
+   ],
+   "edges": [
+    "E90bada5",
+    "E0036970",
+    "E6e8e5a8",
+    "E6d6545b",
+    "Eded2688",
+    "E8c6cad9"
+   ]
+  },
+  {
+   "id": "PERSON:7179141",
+   "name": "Guangping Gao",
+   "grants": [
+    "RePORTER:R01NS076991"
+   ],
+   "diseases": [
+    "MONDO:0010079"
+   ],
+   "edges": [
+    "Edad7c03",
+    "E7370725"
+   ]
+  },
+  {
+   "id": "PERSON:9888956",
+   "name": "Takashi Tsukamoto",
+   "grants": [
+    "RePORTER:R61NS136652"
+   ],
+   "diseases": [
+    "MONDO:0010079"
+   ],
+   "edges": [
+    "E6f21f7a",
+    "E09c722f"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact National Tay-Sachs & Allied Diseases Association (patient group, based in US), which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "edges": [
+    "E960696e",
+    "Ef52c6e0",
+    "E08ebf6f",
+    "Efd1c057",
+    "E4b9f5af",
+    "Ebba29d7"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Canavan Disease Research (patient group, based in US), which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ORG:Canavan_Disease_Research",
+   "edges": [
+    "E6a703de",
+    "E2cfdd5c",
+    "E51da5ed"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "natural_history_study",
+   "text": "Ask about joining the natural history study CanInform, which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ASSET:CanInform",
+   "edges": [
+    "Ef4a1117",
+    "Ebba29d7"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Variant (Mutation) Database, which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ASSET:Variant_Mutation_Database",
+   "edges": [
+    "E29c82f7",
+    "E5debefc",
+    "E6aa78fe"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "natural_history_study",
+   "text": "Ask about joining the natural history study CAN-Inform, which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ASSET:CAN_Inform",
+   "edges": [
+    "E700fa03",
+    "Ea9d0f3b"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Canavan Foundation (patient group, based in US), which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ORG:Canavan_Foundation",
+   "edges": [
+    "E7f03be6",
+    "Ea9d0f3b",
+    "E700fa03"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact National Tay-Sachs and Allied Diseases Association – Brighton, MA (patient group, based in US), which the atlas links to Canavan.",
+   "from_disease": "MONDO:0010079",
+   "target_id": "ORG:National_Tay_Sachs_and_Allied_Diseases_A",
+   "edges": [
+    "E48a9f4d",
+    "E41fb999"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on in the body",
+   "text": "According to HPO, Canavan disease is caused by changes in a gene called ASPA [E96abfe0]. A paper reports that this gene normally makes an enzyme called aspartoacylase, which breaks down a brain substance called NAA (N-acetylaspartate) into smaller pieces [E66c3a16]. A paper reports that when this enzyme is missing or does not work, NAA builds up in the brain, and this is tied to a serious brain condition called leukodystrophy along with spongy changes in brain tissue [E4881c9c]. A paper reports that this is also linked to loss of the brain's white matter (the coating around nerves), called demyelination, which can affect how nerve signals travel [E6ac495a]. A paper reports that many of the gene changes that cause Canavan disease make the ASPA protein fold incorrectly, so it gets broken down inside cells, a process called ER stress [E1fc7967]. A paper reports that Canavan disease follows an autosomal-recessive pattern, meaning it is caused by the aspartoacylase enzyme being switched off due to gene mutations [Ead5ba8f].",
+   "citations": [
+    "E96abfe0",
+    "E66c3a16",
+    "E4881c9c",
+    "E6ac495a",
+    "E1fc7967",
+    "Ead5ba8f"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Similar diseases",
+   "text": "According to Reactome, the ASPA gene that is involved in Canavan disease is part of a pathway called 'aspartate and asparagine metabolism,' which helps process certain building blocks in the body [E493ee1f].",
+   "citations": [
+    "E493ee1f"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "What research and support already exists",
+   "text": "According to ClinicalTrials.gov, a trial called CANaspire is testing a gene therapy called AAV9 BBP-812 for Canavan disease and is currently recruiting at a site in the United States [E67c6e7d, E9d749ee, Eeb80c0a]. According to ClinicalTrials.gov, another trial is testing a gene therapy called rAAV-Olig001-ASPA, along with the medicines Levetiracetam and Prednisone, and is enrolling children with Canavan disease by invitation at a site in the United States [Ea59ea0a, Eaee5b3a, E17dc012, Ebbfe1ee, Ee7ea317]. According to ClinicalTrials.gov, a completed study called CANinform gathered natural history information about Canavan disease at sites in the United States and Germany [E2631a0a, E0bdbf8c, E9f1f719]. According to ClinicalTrials.gov, Aspa Therapeutics runs both the CANaspire trial and the completed CANinform study [Ecbfa1a8, Ee004059], and Myrtelle Inc. runs the rAAV-Olig001-ASPA trial [Eae7d4f0]. A paper reports that the National Tay-Sachs & Allied Diseases Association leads worldwide efforts around Tay-Sachs, Canavan, GM1, and Sandhoff diseases [E960696e], and that Canavan Disease Research directs funding toward developing therapies for Canavan disease [E6a703de]. A paper reports that the Canavan Foundation works to educate at-risk populations about Canavan disease [E7f03be6]. According to NIH RePORTER, the NIH NINDS funds a grant on oligodendrocyte-focused gene therapy strategies for Canavan disease and other leukodystrophies, led by researcher Guangping Gao [E8fe4b6c, E7370725, Edad7c03]. According to NIH RePORTER, the NIH NINDS also funds an observational study grant run alongside a gene therapy trial in Canavan disease, led by researcher Florian S Eichler [E5b19b6e, E0036970, E90bada5], and a grant developing NAT8L inhibitors for Canavan disease, led by researchers Barbara Stauch Slusher and Takashi Tsukamoto [E82dbb21, E6f21f7a, E09c722f].",
+   "citations": [
+    "E67c6e7d",
+    "E9d749ee",
+    "Eeb80c0a",
+    "Ea59ea0a",
+    "Eaee5b3a",
+    "E17dc012",
+    "Ebbfe1ee",
+    "Ee7ea317",
+    "E2631a0a",
+    "E0bdbf8c",
+    "E9f1f719",
+    "Ecbfa1a8",
+    "Ee004059",
+    "Eae7d4f0",
+    "E960696e",
+    "E6a703de",
+    "E7f03be6",
+    "E8fe4b6c",
+    "E7370725",
+    "Edad7c03",
+    "E5b19b6e",
+    "E0036970",
+    "E90bada5",
+    "E82dbb21",
+    "E6f21f7a",
+    "E09c722f"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "You could reach out to the National Tay-Sachs & Allied Diseases Association, a patient group linked to Canavan disease [E960696e, Ef52c6e0, E08ebf6f, Efd1c057, E4b9f5af, Ebba29d7]. You could also reach out to Canavan Disease Research, another patient group linked to Canavan disease [E6a703de, E2cfdd5c, E51da5ed]. It may be worth asking your child's care team about joining the CanInform natural history study, which is linked to Canavan disease [Ef4a1117, Ebba29d7].",
+   "citations": [
+    "E960696e",
+    "Ef52c6e0",
+    "E08ebf6f",
+    "Efd1c057",
+    "E4b9f5af",
+    "Ebba29d7",
+    "E6a703de",
+    "E2cfdd5c",
+    "E51da5ed",
+    "Ef4a1117"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:271900",
+   "n_results": 26,
+   "n_kept": 26
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0010079",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Canavan disease",
+   "n_results": 13,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "Canavan",
+   "n_results": 9,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Canavan disease\"[tiab]",
+   "n_results": 462,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Canavan disease\"[tiab]) AND hasabstract",
+   "n_results": 398,
+   "n_kept": 20
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.canavanfoundation.org/about",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.canavan.org/what-we-do",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://canavandisease.org/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://ntsad.org/diseases/canavan-disease/",
+   "n_results": 1,
+   "n_kept": 0
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

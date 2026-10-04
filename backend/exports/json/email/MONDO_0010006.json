@@ -1,0 +1,18 @@
+{
+ "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+ "disease_id": "MONDO:0010006",
+ "to": "info@ntsad.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Proposing a connection between our Sandhoff patient group and NTSAD",
+ "body": "Dear NTSAD team,\n\nMy name is Maria, and I lead a patient group supporting families affected by Sandhoff disease. I'm reaching out because your organisation's mission aligns closely with ours.\n\nAccording to a webpage, NTSAD leads the worldwide fight to treat and cure Tay-Sachs, Canavan, GM1, and Sandhoff diseases by driving research, forging collaboration, and fostering community [E01216c0]. A paper reports that NTSAD runs PRONTO – Azafaros, a natural history study of GM1 and GM2 conditions including Sandhoff and Tay-Sachs [E48e5738].\n\nA paper reports that Sandhoff disease involves accumulation of GM2 ganglioside in lysosomes, particularly in neuronal cells [E1db4d37], and a paper reports that it results from a genetic mutation in HEXB and associated deficiency in β-hexosaminidase activity [E82f44df]. Given this shared biology with Tay-Sachs and your established research infrastructure, I believe our communities could benefit from a closer connection.\n\nWould you be open to a brief call in the coming weeks to explore how our groups might support each other, for example around the natural history study or shared family resources?\n\nThank you for your time and for all the work NTSAD does for our community.\n\nWarm regards,\nMaria\nPatient Group Leader (Sandhoff)\n\nSources:\n[E01216c0] https://ntsad.org/about-ntsad/\n[E48e5738] https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/\n[E1db4d37] https://pubmed.ncbi.nlm.nih.gov/33407268/\n[E82f44df] https://pubmed.ncbi.nlm.nih.gov/36596541/",
+ "citations": [
+  "E01216c0",
+  "E48e5738",
+  "E1db4d37",
+  "E82f44df"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

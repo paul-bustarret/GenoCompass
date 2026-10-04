@@ -1,0 +1,17 @@
+{
+ "org_id": "ORG:Ontario_Rett_Syndrome_Association_of_Can",
+ "disease_id": "MONDO:0010726",
+ "to": "info@rett.ca",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting our Rett syndrome communities",
+ "body": "Dear Ontario Rett Syndrome Association of Canada team,\n\nMy name is Maria, and I lead a patient group for families affected by Rett syndrome. I'm reaching out because I was glad to learn more about your work.\n\nA paper reports that ORSA Canada provides essential resources and advocacy for individuals with Rett syndrome and their families across Canada [E4616ce3]. A paper also reports that ORSA Canada runs a Bio-Bank Repository [E16f9f2f], and that this repository is focused on Rett syndrome [Ea4743f8]. Given that both our organizations are dedicated to supporting the Rett community, I believe there could be valuable opportunities for us to learn from one another and potentially support shared goals for families living with this condition.\n\nI would welcome the chance to introduce our group and hear more about your initiatives, including the biobank repository. Would you be open to a brief 20-30 minute call in the coming weeks to explore whether there are ways we might collaborate or support each other's efforts?\n\nThank you for the important work you do for the Rett community. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[E4616ce3] https://rett.ca/\n[E16f9f2f] https://rett.ca/\n[Ea4743f8] https://rett.ca/",
+ "citations": [
+  "E4616ce3",
+  "E16f9f2f",
+  "Ea4743f8"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

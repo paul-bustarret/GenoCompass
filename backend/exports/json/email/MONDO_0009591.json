@@ -1,0 +1,18 @@
+{
+ "org_id": "ORG:Krabbe_UK",
+ "disease_id": "MONDO:0009591",
+ "to": "contactus@krabbeuk.org",
+ "recipient_reason": "patient group of the most similar disease with a contact email (a related community)",
+ "subject": "Proposing a connection between MLD and Krabbe patient communities",
+ "body": "Dear Krabbe UK team,\n\nMy name is Maria, and I lead a patient group supporting families affected by Metachromatic leukodystrophy (MLD). I'm reaching out because Krabbe UK is a charity registered in the UK supporting families affected by Krabbe Leukodystrophy [Ed349bff].\n\nA paper reports that MLD is a lysosomal storage disorder in which deficient arylsulfatase A activity leads to sulfatide accumulation and demyelination [Ef63ba6a]. A paper reports that Krabbe disease similarly results from a deficiency in the lysosomal enzyme galactocerebrosidase [E050a41e]. A paper also reports that Krabbe disease is characterized by loss and disorganization of myelin [E8b1c4df]. Given these shared features between our two conditions, we believe there may be value for our patient communities in learning from one another, even though Krabbe UK's focus is Krabbe rather than MLD.\n\nWould Krabbe UK be open to a short introductory call to explore whether there are useful ways our two groups could connect or share experiences?\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient group leader, MLD patient group\n\nSources:\n[Ed349bff] https://www.krabbeuk.org/\n[Ef63ba6a] https://pubmed.ncbi.nlm.nih.gov/31684987/\n[E050a41e] https://pubmed.ncbi.nlm.nih.gov/27491217/\n[E8b1c4df] https://pubmed.ncbi.nlm.nih.gov/27491217/",
+ "citations": [
+  "Ed349bff",
+  "Ef63ba6a",
+  "E050a41e",
+  "E8b1c4df"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

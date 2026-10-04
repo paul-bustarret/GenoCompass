@@ -1,0 +1,10 @@
+disease,source,query,n_results,retrieved_at
+Pompe,mondo,Pompe disease,1,2026-10-03
+Pompe,hpo,OMIM:232300,3,2026-10-03
+Pompe,orphadata,ORPHA:365,1,2026-10-03
+Pompe,clinvar,GAA[gene] AND clinsig_pathogenic[prop],541,2026-10-03
+Pompe,reactome,UniProt:P10253,1,2026-10-03
+Pompe,ctgov,cond=Pompe disease,1,2026-10-03
+Pompe,reporter,Pompe,403,2026-10-03
+Pompe,pubmed,Pompe disease[MeSH] AND acid alpha-glucosidase AND hasabstract,1198,2026-10-03
+Pompe,nord,https://rarediseases.org/rare-diseases/pompe-disease/,1,2026-10-03

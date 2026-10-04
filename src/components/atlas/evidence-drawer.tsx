@@ -1,7 +1,76 @@
+import { useEffect, useState } from "react";
 import { ExternalLink, CircleAlert } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle, SheetDescription } from "@/components/ui/sheet";
 import { allEdges } from "@/lib/atlas";
 import type { AtlasEdge } from "@/lib/atlas-db";
+import { getLinkEvidence, useLocalApi, type LinkEvidence } from "@/lib/atlas-api";
+
+const sourceLabel: Record<string, string> = {
+  hpo: "HPO",
+  reactome: "Reactome",
+  pubmed: "PubMed",
+  ctgov: "ClinicalTrials.gov",
+  clinvar: "ClinVar",
+  reporter: "NIH RePORTER",
+  mondo: "MONDO",
+};
+
+/** Sourced records behind a computed similarity line (local backend only). */
+function SupportingRecords({ edge }: { edge: AtlasEdge }) {
+  const [items, setItems] = useState<LinkEvidence[] | null>(null);
+  const [failed, setFailed] = useState(false);
+  useEffect(() => {
+    let active = true;
+    setItems(null);
+    setFailed(false);
+    getLinkEvidence(edge.source, edge.target)
+      .then((found) => {
+        if (active) setItems(found);
+      })
+      .catch(() => {
+        if (active) setFailed(true);
+      });
+    return () => {
+      active = false;
+    };
+  }, [edge.source, edge.target]);
+  if (failed) return <p className="drawer-note">Could not load the supporting records.</p>;
+  if (!items) return <p className="drawer-note">Loading supporting records…</p>;
+  if (items.length === 0)
+    return (
+      <p className="drawer-note">
+        This line is a weak overall similarity score. The atlas has no supported shared gene,
+        pathway or mechanism behind it, so treat it as a gap, not evidence.
+      </p>
+    );
+  return (
+    <section className="supporting-records">
+      <span className="eyebrow">SUPPORTING RECORDS</span>
+      {items.map((item) => (
+        <div key={item.witness} className="supporting-record">
+          <strong>
+            {item.witness} <small>· shared {item.kind}</small>
+          </strong>
+          {item.edges.map((e) => (
+            <div key={e.id} className="supporting-edge">
+              {e.quote && !/^PMID:\d+$/.test(e.quote) && <blockquote>“{e.quote}”</blockquote>}
+              <small>
+                {sourceLabel[e.source_name ?? ""] ?? e.source_name ?? "Source"} ·{" "}
+                {e.relation.replace(/_/g, " ")}
+                {e.retrieved_at ? ` · retrieved ${e.retrieved_at}` : ""} · {e.id}
+              </small>
+              {e.source_url && (
+                <a href={e.source_url} target="_blank" rel="noopener noreferrer">
+                  Open source <ExternalLink size={12} />
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      ))}
+    </section>
+  );
+}
 
 export function EvidenceDrawer({ edge, onClose }: { edge: AtlasEdge | null; onClose: () => void }) {
   const fromDb = edge?.provenance === "database";
@@ -80,6 +149,7 @@ export function EvidenceDrawer({ edge, onClose }: { edge: AtlasEdge | null; onCl
                 </dd>
               </div>
             </dl>
+            {fromDb && useLocalApi && <SupportingRecords edge={edge} />}
             {edge.contradicted_by.length > 0 && (
               <section className="contradiction">
                 <CircleAlert size={18} />

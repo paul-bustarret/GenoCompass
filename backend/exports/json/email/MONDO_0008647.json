@@ -1,0 +1,15 @@
+{
+ "org_id": "ORG:Cardiomyopathy_Patient_Council",
+ "disease_id": "MONDO:0008647",
+ "to": "info@globalhearthub.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting HCM patient communities",
+ "body": "Dear Cardiomyopathy Patient Council,\n\nMy name is Maria, and I lead a patient group for HCM (MYH7). I am reaching out because our communities share a focus on the same condition.\n\nA paper reports that the Cardiomyopathy Patient Council \"was formed in November 2021 and brings together patient organisations across the world to increase awareness and understanding of cardiomyopathy\" [E5a3bbe2]. Given this shared focus on cardiomyopathy, I believe there may be valuable opportunities for our groups to learn from one another and support our respective communities.\n\nWould you be open to a short introductory call in the coming weeks to explore whether there are natural areas of collaboration, such as sharing awareness resources or coordinating on patient education efforts? I would be glad to work around your schedule.\n\nThank you for the important work your council does, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader, HCM (MYH7) Patient Group\n\nSources:\n[E5a3bbe2] https://globalhearthub.org/patient-councils/cardiomyopathy-patient-council/",
+ "citations": [
+  "E5a3bbe2"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

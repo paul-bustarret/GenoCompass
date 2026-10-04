@@ -1,0 +1,17 @@
+{
+ "request": {
+  "disease_id": "MONDO:0010100",
+  "messages": [
+   {
+    "role": "user",
+    "content": "Is there a trial my child could join outside the US?"
+   }
+  ]
+ },
+ "response": {
+  "answer": "The atlas doesn't have information about specific clinical trial locations or enrollment (like trials outside the US) yet. For details on actual trials your child could join, including where they are located, it's best to ask your child's care team or check a clinical trial registry together.",
+  "citations": [],
+  "grounded": false,
+  "out_of_scope": true
+ }
+}

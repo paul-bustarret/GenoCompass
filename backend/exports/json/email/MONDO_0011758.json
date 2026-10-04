@@ -1,0 +1,22 @@
+{
+ "org_id": "ORG:AIMPS_ETS",
+ "disease_id": "MONDO:0011758",
+ "to": "info@aimps.it",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Introduction and possible collaboration between our MPS patient groups",
+ "body": "Dear AIMPS ETS,\n\nI am Maria, a parent leading a patient group supporting families affected by MPS I (Hurler). I am writing to introduce our group and to explore whether a collaboration might be possible.\n\nA paper reports that AIMPS ETS was founded in 1991 to support children and adult patients affected by these rare genetic metabolic diseases, which often lead to severe disability [E68fcb3d]. Your organisation's work spans MPS I (Hurler) as well as related conditions, including MPS II (Hunter), MPS IIIA, MPS IIIB, MPS IIIC and MPS IIID [E68fcb3d][Ebb059e1][E080e178][E994105e][E30302cc][Ea6b3adc].\n\nA paper reports that MPS I (Hurler) is caused by deficiency of the enzyme alpha-L-iduronidase, leading to storage of dermatan and heparan sulfate [Ef4f70c3]. A paper reports that MPS II (Hunter), one of the conditions your organisation also supports, likewise involves accumulation of dermatan and heparan sulfate due to a different enzyme deficiency [E385b672]. Given these shared storage mechanisms across the MPS family, I believe our communities face many overlapping challenges and could learn from one another.\n\nWould you be open to a short introductory call, perhaps 20-30 minutes, to share experiences and discuss how our groups might support each other going forward?\n\nThank you for your time, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient group leader\n\nSources:\n[E68fcb3d] https://www.aimps.it/chi-siamo/\n[Ebb059e1] https://www.aimps.it/chi-siamo/\n[E080e178] https://www.aimps.it/chi-siamo/\n[E994105e] https://www.aimps.it/chi-siamo/\n[E30302cc] https://www.aimps.it/chi-siamo/\n[Ea6b3adc] https://www.aimps.it/chi-siamo/\n[Ef4f70c3] https://pubmed.ncbi.nlm.nih.gov/32188113/\n[E385b672] https://pubmed.ncbi.nlm.nih.gov/25345092/",
+ "citations": [
+  "E68fcb3d",
+  "Ebb059e1",
+  "E080e178",
+  "E994105e",
+  "E30302cc",
+  "Ea6b3adc",
+  "Ef4f70c3",
+  "E385b672"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

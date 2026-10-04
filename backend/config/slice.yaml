@@ -1,0 +1,40 @@
+# Disease slice: lysosomal cluster + bridges + lookalikes (spec §3).
+# Each entry was verified against HPO (gene -> disease annotation) on 2026-10-03.
+# `query` is used for ClinicalTrials.gov and PubMed; `reporter` for NIH RePORTER text search
+# (RePORTER ORs bare words, so multi-word terms use AND or a quoted phrase);
+# optional `pubmed` overrides the PubMed query with a raw E-utilities term.
+name: "Lysosomal storage diseases (20) + controls (5)"
+# `group` is a display grouping only (not used in similarity).
+diseases:
+  - {omim: "OMIM:252900", gene: SGSH,   short: "MPS IIIA",  role: hero,      query: "Sanfilippo syndrome type A OR mucopolysaccharidosis IIIA", reporter: "Sanfilippo", group: "Mucopolysaccharidoses"}
+  - {omim: "OMIM:252920", gene: NAGLU,  short: "MPS IIIB",  role: hero,      query: "Sanfilippo syndrome type B OR mucopolysaccharidosis IIIB", reporter: "Sanfilippo", group: "Mucopolysaccharidoses"}
+  - {omim: "OMIM:252930", gene: HGSNAT, short: "MPS IIIC",  role: hero,      query: "Sanfilippo syndrome type C OR mucopolysaccharidosis IIIC", reporter: "Sanfilippo", group: "Mucopolysaccharidoses"}
+  - {omim: "OMIM:252940", gene: GNS,    short: "MPS IIID",  role: hero,      query: "Sanfilippo syndrome type D OR mucopolysaccharidosis IIID", reporter: "Sanfilippo", group: "Mucopolysaccharidoses"}
+  - {omim: "OMIM:607014", gene: IDUA,   short: "MPS I (Hurler)", role: lysosomal, query: "Hurler syndrome OR mucopolysaccharidosis type I", reporter: "Hurler", group: "Mucopolysaccharidoses"}
+  - {omim: "OMIM:309900", gene: IDS,    short: "MPS II (Hunter)", role: lysosomal, query: "Hunter syndrome OR mucopolysaccharidosis type II", reporter: '"Hunter syndrome"', group: "Mucopolysaccharidoses"}
+  - {omim: "OMIM:232300", gene: GAA,    short: "Pompe",     role: lysosomal, query: "Pompe disease", reporter: "Pompe", group: "Glycogen & autophagy (Pompe, Danon)"}
+  - {omim: "OMIM:230800", gene: GBA1,   short: "Gaucher",   role: lysosomal, query: "Gaucher disease", reporter: "Gaucher", group: "Sphingolipidoses"}
+  - {omim: "OMIM:301500", gene: GLA,    short: "Fabry",     role: lysosomal, query: "Fabry disease", reporter: "Fabry", group: "Sphingolipidoses"}
+  - {omim: "OMIM:245200", gene: GALC,   short: "Krabbe",    role: lysosomal, query: "Krabbe disease", reporter: "Krabbe", group: "Sphingolipidoses"}
+  - {omim: "OMIM:250100", gene: ARSA,   short: "MLD",       role: lysosomal, query: "metachromatic leukodystrophy", reporter: "metachromatic leukodystrophy", group: "Sphingolipidoses"}
+  - {omim: "OMIM:272800", gene: HEXA,   short: "Tay-Sachs", role: lysosomal, query: "Tay-Sachs disease", reporter: "Tay-Sachs", group: "GM2 & GM1 gangliosidoses"}
+  - {omim: "OMIM:268800", gene: HEXB,   short: "Sandhoff",  role: lysosomal, query: "Sandhoff disease", reporter: "Sandhoff", group: "GM2 & GM1 gangliosidoses"}
+  - {omim: "OMIM:257220", gene: NPC1,   short: "Niemann-Pick C", role: lysosomal, query: "Niemann-Pick disease type C", reporter: "Niemann-Pick", group: "Niemann-Pick"}
+  - {omim: "OMIM:204500", gene: TPP1,   short: "CLN2",      role: lysosomal, query: "CLN2 disease OR neuronal ceroid lipofuscinosis type 2", reporter: "CLN2", group: "Neuronal ceroid lipofuscinoses"}
+  - {omim: "OMIM:204200", gene: CLN3,   short: "CLN3",      role: lysosomal, query: "CLN3 disease OR juvenile neuronal ceroid lipofuscinosis", reporter: "CLN3", group: "Neuronal ceroid lipofuscinoses"}
+  - {omim: "OMIM:230500", gene: GLB1,   short: "GM1 (infantile)", role: lysosomal, query: "GM1 gangliosidosis", reporter: "GM1 AND gangliosidosis", group: "GM2 & GM1 gangliosidoses"}
+  - {omim: "OMIM:272750", gene: GM2A,   short: "GM2 AB variant", role: lysosomal, query: "GM2 gangliosidosis AB variant OR GM2 activator deficiency", reporter: "GM2 AND gangliosidosis", group: "GM2 & GM1 gangliosidoses"}
+  - {omim: "OMIM:257200", gene: SMPD1,  short: "Niemann-Pick A", role: lysosomal, query: "Niemann-Pick disease type A OR acid sphingomyelinase deficiency", reporter: "sphingomyelinase AND Niemann-Pick", group: "Niemann-Pick"}
+  - {omim: "OMIM:300257", gene: LAMP2,  short: "Danon",     role: bridge,    query: "Danon disease", reporter: '"Danon disease"', group: "Glycogen & autophagy (Pompe, Danon)"}
+  - {omim: "OMIM:168600", gene: GBA1,   short: "Parkinson (late-onset)", role: bridge, query: "GBA Parkinson disease", reporter: "GBA AND Parkinson", pubmed: "(GBA1[tiab] OR GBA[tiab]) AND Parkinson*[tiab]", group: "Bridge"}
+  - {omim: "OMIM:312750", gene: MECP2,  short: "Rett",      role: lookalike, query: "Rett syndrome", reporter: '"Rett syndrome"', group: "Lookalike control"}
+  - {omim: "OMIM:310200", gene: DMD,    short: "Duchenne",  role: lookalike, query: "Duchenne muscular dystrophy", reporter: "Duchenne", group: "Lookalike control"}
+  - {omim: "OMIM:192600", gene: MYH7,   short: "HCM (MYH7)", role: lookalike, query: "hypertrophic cardiomyopathy", reporter: "MYH7 AND hypertrophic cardiomyopathy", pubmed: "MYH7[tiab] AND hypertrophic cardiomyopathy[tiab]", group: "Lookalike control"}
+  - {omim: "OMIM:271900", gene: ASPA,   short: "Canavan",   role: lookalike, query: "Canavan disease", reporter: "Canavan", group: "Lookalike control"}
+
+limits:
+  variants_per_gene: 3
+  trials_per_disease: 5
+  grants_per_disease: 5
+  papers_per_disease: 5
+  grant_fiscal_years: [2024, 2025, 2026]

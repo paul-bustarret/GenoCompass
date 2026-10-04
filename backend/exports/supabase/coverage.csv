@@ -1,0 +1,314 @@
+disease_id,source,query,n_results,n_kept,retrieved_at
+MONDO:0009655,hpo,OMIM:252900,28,28,2026-10-03
+MONDO:0009655,mondo,MONDO:0009655,1,1,2026-10-03
+MONDO:0009656,hpo,OMIM:252920,27,27,2026-10-03
+MONDO:0009656,mondo,MONDO:0009656,1,1,2026-10-03
+MONDO:0009657,hpo,OMIM:252930,37,37,2026-10-03
+MONDO:0009657,mondo,MONDO:0009657,1,1,2026-10-03
+MONDO:0009658,hpo,OMIM:252940,73,73,2026-10-03
+MONDO:0009658,mondo,MONDO:0009658,1,1,2026-10-03
+MONDO:0011758,hpo,OMIM:607014,64,64,2026-10-03
+MONDO:0011758,mondo,MONDO:0011758,1,1,2026-10-03
+MONDO:0010674,hpo,OMIM:309900,53,53,2026-10-03
+MONDO:0010674,mondo,MONDO:0010674,1,1,2026-10-03
+MONDO:0017694,hpo,OMIM:232300,41,41,2026-10-03
+MONDO:0017694,mondo,MONDO:0017694,1,1,2026-10-03
+MONDO:0009265,hpo,OMIM:230800,25,25,2026-10-03
+MONDO:0009265,mondo,MONDO:0009265,1,1,2026-10-03
+MONDO:0010526,hpo,OMIM:301500,39,39,2026-10-03
+MONDO:0010526,mondo,MONDO:0010526,1,1,2026-10-03
+MONDO:0009499,hpo,OMIM:245200,32,32,2026-10-03
+MONDO:0009499,mondo,MONDO:0009499,1,1,2026-10-03
+MONDO:0009591,hpo,OMIM:250100,33,33,2026-10-03
+MONDO:0009591,mondo,MONDO:0009591,1,1,2026-10-03
+MONDO:0010100,hpo,OMIM:272800,16,16,2026-10-03
+MONDO:0010100,mondo,MONDO:0010100,1,1,2026-10-03
+MONDO:0010006,hpo,OMIM:268800,37,37,2026-10-03
+MONDO:0010006,mondo,MONDO:0010006,1,1,2026-10-03
+MONDO:0009757,hpo,OMIM:257220,33,33,2026-10-03
+MONDO:0009757,mondo,MONDO:0009757,1,1,2026-10-03
+MONDO:0008769,hpo,OMIM:204500,15,15,2026-10-03
+MONDO:0008769,mondo,MONDO:0008769,1,1,2026-10-03
+MONDO:0008767,hpo,OMIM:204200,32,32,2026-10-03
+MONDO:0008767,mondo,MONDO:0008767,1,1,2026-10-03
+MONDO:0009260,hpo,OMIM:230500,38,38,2026-10-03
+MONDO:0009260,mondo,MONDO:0009260,1,1,2026-10-03
+MONDO:0010099,hpo,OMIM:272750,27,27,2026-10-03
+MONDO:0010099,mondo,MONDO:0010099,1,1,2026-10-03
+MONDO:0009756,hpo,OMIM:257200,39,39,2026-10-03
+MONDO:0009756,mondo,MONDO:0009756,1,1,2026-10-03
+MONDO:0010281,hpo,OMIM:300257,34,34,2026-10-03
+MONDO:0010281,mondo,MONDO:0010281,1,1,2026-10-03
+MONDO:0008199,hpo,OMIM:168600,30,30,2026-10-03
+MONDO:0008199,mondo,MONDO:0008199,1,1,2026-10-03
+MONDO:0010726,hpo,OMIM:312750,35,35,2026-10-03
+MONDO:0010726,mondo,MONDO:0010726,1,1,2026-10-03
+MONDO:0010679,hpo,OMIM:310200,32,32,2026-10-03
+MONDO:0010679,mondo,MONDO:0010679,1,1,2026-10-03
+MONDO:0008647,hpo,OMIM:192600,6,6,2026-10-03
+MONDO:0008647,mondo,MONDO:0008647,1,1,2026-10-03
+MONDO:0010079,hpo,OMIM:271900,26,26,2026-10-03
+MONDO:0010079,mondo,MONDO:0010079,1,1,2026-10-03
+NCBIGene:6448,reactome,P51688,2,2,2026-10-03
+NCBIGene:6448,clinvar,SGSH[gene] AND clinsig_pathogenic[prop],149,3,2026-10-03
+NCBIGene:4669,reactome,P54802,2,2,2026-10-03
+NCBIGene:4669,clinvar,NAGLU[gene] AND clinsig_pathogenic[prop],203,3,2026-10-03
+NCBIGene:138050,reactome,Q68CP4,3,3,2026-10-03
+NCBIGene:138050,clinvar,HGSNAT[gene] AND clinsig_pathogenic[prop],168,3,2026-10-03
+NCBIGene:2799,reactome,P15586,4,4,2026-10-03
+NCBIGene:2799,clinvar,GNS[gene] AND clinsig_pathogenic[prop],72,3,2026-10-03
+NCBIGene:3425,reactome,P35475,4,4,2026-10-03
+NCBIGene:3425,clinvar,IDUA[gene] AND clinsig_pathogenic[prop],393,3,2026-10-03
+NCBIGene:3423,reactome,P22304,4,4,2026-10-03
+NCBIGene:3423,clinvar,IDS[gene] AND clinsig_pathogenic[prop],768,3,2026-10-03
+NCBIGene:2548,reactome,P10253,3,3,2026-10-03
+NCBIGene:2548,clinvar,GAA[gene] AND clinsig_pathogenic[prop],541,3,2026-10-03
+NCBIGene:2629,reactome,P04062,2,2,2026-10-03
+NCBIGene:2629,clinvar,GBA1[gene] AND clinsig_pathogenic[prop],151,3,2026-10-03
+NCBIGene:2717,reactome,P06280,2,2,2026-10-03
+NCBIGene:2717,clinvar,GLA[gene] AND clinsig_pathogenic[prop],997,3,2026-10-03
+NCBIGene:2581,reactome,P54803,1,1,2026-10-03
+NCBIGene:2581,clinvar,GALC[gene] AND clinsig_pathogenic[prop],287,3,2026-10-03
+NCBIGene:410,reactome,P15289,3,3,2026-10-03
+NCBIGene:410,clinvar,ARSA[gene] AND clinsig_pathogenic[prop],383,3,2026-10-03
+NCBIGene:3073,reactome,P06865,5,5,2026-10-03
+NCBIGene:3073,clinvar,HEXA[gene] AND clinsig_pathogenic[prop],232,3,2026-10-03
+NCBIGene:3074,reactome,P07686,6,6,2026-10-03
+NCBIGene:3074,clinvar,HEXB[gene] AND clinsig_pathogenic[prop],158,3,2026-10-03
+NCBIGene:4864,reactome,O15118,1,1,2026-10-03
+NCBIGene:4864,clinvar,NPC1[gene] AND clinsig_pathogenic[prop],411,3,2026-10-03
+NCBIGene:1200,reactome,O14773,1,1,2026-10-03
+NCBIGene:1200,clinvar,TPP1[gene] AND clinsig_pathogenic[prop],158,3,2026-10-03
+NCBIGene:1201,reactome,Q13286,1,1,2026-10-03
+NCBIGene:1201,clinvar,CLN3[gene] AND clinsig_pathogenic[prop],214,3,2026-10-03
+NCBIGene:2720,reactome,P16278,8,8,2026-10-03
+NCBIGene:2720,clinvar,GLB1[gene] AND clinsig_pathogenic[prop],231,3,2026-10-03
+NCBIGene:2760,reactome,P17900,2,2,2026-10-03
+NCBIGene:2760,clinvar,GM2A[gene] AND clinsig_pathogenic[prop],19,3,2026-10-03
+NCBIGene:6609,reactome,P17405,2,2,2026-10-03
+NCBIGene:6609,clinvar,SMPD1[gene] AND clinsig_pathogenic[prop],231,3,2026-10-03
+NCBIGene:3920,reactome,P13473,3,3,2026-10-03
+NCBIGene:3920,clinvar,LAMP2[gene] AND clinsig_pathogenic[prop],291,3,2026-10-03
+NCBIGene:4204,reactome,P51608,11,11,2026-10-03
+NCBIGene:4204,clinvar,MECP2[gene] AND clinsig_pathogenic[prop],948,3,2026-10-03
+NCBIGene:1756,reactome,P11532,3,3,2026-10-03
+NCBIGene:1756,clinvar,DMD[gene] AND clinsig_pathogenic[prop],3045,3,2026-10-03
+NCBIGene:4625,reactome,P12883,0,0,2026-10-03
+NCBIGene:4625,clinvar,MYH7[gene] AND clinsig_pathogenic[prop],205,3,2026-10-03
+NCBIGene:443,reactome,P45381,1,1,2026-10-03
+NCBIGene:443,clinvar,ASPA[gene] AND clinsig_pathogenic[prop],149,3,2026-10-03
+MONDO:0009655,ctgov,Sanfilippo syndrome type A OR mucopolysaccharidosis IIIA,50,5,2026-10-03
+MONDO:0009655,reporter,Sanfilippo,16,5,2026-10-03
+MONDO:0009655,pubmed,"""Sanfilippo syndrome type A""[tiab] OR ""mucopolysaccharidosis IIIA""[tiab]",104,5,2026-10-03
+MONDO:0009655,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009656,ctgov,Sanfilippo syndrome type B OR mucopolysaccharidosis IIIB,24,5,2026-10-03
+MONDO:0009656,reporter,Sanfilippo,16,5,2026-10-03
+MONDO:0009656,pubmed,"""Sanfilippo syndrome type B""[tiab] OR ""mucopolysaccharidosis IIIB""[tiab]",147,5,2026-10-03
+MONDO:0009656,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009657,ctgov,Sanfilippo syndrome type C OR mucopolysaccharidosis IIIC,5,5,2026-10-03
+MONDO:0009657,reporter,Sanfilippo,16,5,2026-10-03
+MONDO:0009657,pubmed,"""Sanfilippo syndrome type C""[tiab] OR ""mucopolysaccharidosis IIIC""[tiab]",39,5,2026-10-03
+MONDO:0009657,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009658,ctgov,Sanfilippo syndrome type D OR mucopolysaccharidosis IIID,3,3,2026-10-03
+MONDO:0009658,reporter,Sanfilippo,16,5,2026-10-03
+MONDO:0009658,pubmed,"""Sanfilippo syndrome type D""[tiab] OR ""mucopolysaccharidosis IIID""[tiab]",26,5,2026-10-03
+MONDO:0009658,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0011758,ctgov,Hurler syndrome OR mucopolysaccharidosis type I,97,5,2026-10-03
+MONDO:0011758,reporter,Hurler,23,5,2026-10-03
+MONDO:0011758,pubmed,"""Hurler syndrome""[tiab] OR ""mucopolysaccharidosis type I""[tiab]",1331,5,2026-10-03
+MONDO:0011758,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010674,ctgov,Hunter syndrome OR mucopolysaccharidosis type II,102,5,2026-10-03
+MONDO:0010674,reporter,"""Hunter syndrome""",3,3,2026-10-03
+MONDO:0010674,pubmed,"""Hunter syndrome""[tiab] OR ""mucopolysaccharidosis type II""[tiab]",1312,5,2026-10-03
+MONDO:0010674,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0017694,ctgov,Pompe disease,179,5,2026-10-03
+MONDO:0017694,reporter,Pompe,34,5,2026-10-03
+MONDO:0017694,pubmed,"""Pompe disease""[tiab]",2520,5,2026-10-03
+MONDO:0017694,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009265,ctgov,Gaucher disease,181,5,2026-10-03
+MONDO:0009265,reporter,Gaucher,48,5,2026-10-03
+MONDO:0009265,pubmed,"""Gaucher disease""[tiab]",6008,5,2026-10-03
+MONDO:0009265,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010526,ctgov,Fabry disease,256,5,2026-10-03
+MONDO:0010526,reporter,Fabry,19,5,2026-10-03
+MONDO:0010526,pubmed,"""Fabry disease""[tiab]",5834,5,2026-10-03
+MONDO:0010526,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009499,ctgov,Krabbe disease,36,5,2026-10-03
+MONDO:0009499,reporter,Krabbe,19,5,2026-10-03
+MONDO:0009499,pubmed,"""Krabbe disease""[tiab]",1109,5,2026-10-03
+MONDO:0009499,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009591,ctgov,metachromatic leukodystrophy,51,5,2026-10-03
+MONDO:0009591,reporter,metachromatic leukodystrophy,83,2,2026-10-03
+MONDO:0009591,pubmed,"""metachromatic leukodystrophy""[tiab]",1421,5,2026-10-03
+MONDO:0009591,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010100,ctgov,Tay-Sachs disease,38,5,2026-10-03
+MONDO:0010100,reporter,Tay-Sachs,18,5,2026-10-03
+MONDO:0010100,pubmed,"""Tay-Sachs disease""[tiab]",1275,5,2026-10-03
+MONDO:0010100,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010006,ctgov,Sandhoff disease,27,5,2026-10-03
+MONDO:0010006,reporter,Sandhoff,4,4,2026-10-03
+MONDO:0010006,pubmed,"""Sandhoff disease""[tiab]",606,5,2026-10-03
+MONDO:0010006,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009757,ctgov,Niemann-Pick disease type C,43,5,2026-10-03
+MONDO:0009757,reporter,Niemann-Pick,162,5,2026-10-03
+MONDO:0009757,pubmed,"""Niemann-Pick disease type C""[tiab]",909,5,2026-10-03
+MONDO:0009757,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0008769,ctgov,CLN2 disease OR neuronal ceroid lipofuscinosis type 2,28,5,2026-10-03
+MONDO:0008769,reporter,CLN2,11,5,2026-10-03
+MONDO:0008769,pubmed,"""CLN2 disease""[tiab] OR ""neuronal ceroid lipofuscinosis type 2""[tiab]",165,5,2026-10-03
+MONDO:0008769,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0008767,ctgov,CLN3 disease OR juvenile neuronal ceroid lipofuscinosis,45,5,2026-10-03
+MONDO:0008767,reporter,CLN3,39,5,2026-10-03
+MONDO:0008767,pubmed,"""CLN3 disease""[tiab] OR ""juvenile neuronal ceroid lipofuscinosis""[tiab]",428,5,2026-10-03
+MONDO:0008767,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009260,ctgov,GM1 gangliosidosis,30,5,2026-10-03
+MONDO:0009260,reporter,GM1 AND gangliosidosis,10,4,2026-10-03
+MONDO:0009260,pubmed,"""GM1 gangliosidosis""[tiab]",797,5,2026-10-03
+MONDO:0009260,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010099,ctgov,GM2 gangliosidosis AB variant OR GM2 activator deficiency,3,3,2026-10-03
+MONDO:0010099,reporter,GM2 AND gangliosidosis,2,0,2026-10-03
+MONDO:0010099,pubmed,"""GM2 gangliosidosis AB variant""[tiab] OR ""GM2 activator deficiency""[tiab]",28,5,2026-10-03
+MONDO:0010099,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009756,ctgov,Niemann-Pick disease type A OR acid sphingomyelinase deficiency,48,5,2026-10-03
+MONDO:0009756,reporter,sphingomyelinase AND Niemann-Pick,3,0,2026-10-03
+MONDO:0009756,pubmed,"""Niemann-Pick disease type A""[tiab] OR ""acid sphingomyelinase deficiency""[tiab]",341,5,2026-10-03
+MONDO:0009756,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010281,ctgov,Danon disease,7,5,2026-10-03
+MONDO:0010281,reporter,"""Danon disease""",4,4,2026-10-03
+MONDO:0010281,pubmed,"""Danon disease""[tiab]",371,5,2026-10-03
+MONDO:0010281,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0008199,ctgov,GBA Parkinson disease,31,5,2026-10-03
+MONDO:0008199,reporter,GBA AND Parkinson,5,2,2026-10-03
+MONDO:0008199,pubmed,(GBA1[tiab] OR GBA[tiab]) AND Parkinson*[tiab],1721,5,2026-10-03
+MONDO:0008199,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010726,ctgov,Rett syndrome,101,5,2026-10-03
+MONDO:0010726,reporter,"""Rett syndrome""",148,5,2026-10-03
+MONDO:0010726,pubmed,"""Rett syndrome""[tiab]",4652,5,2026-10-03
+MONDO:0010726,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010679,ctgov,Duchenne muscular dystrophy,499,5,2026-10-03
+MONDO:0010679,reporter,Duchenne,284,5,2026-10-03
+MONDO:0010679,pubmed,"""Duchenne muscular dystrophy""[tiab]",13914,5,2026-10-03
+MONDO:0010679,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0008647,ctgov,hypertrophic cardiomyopathy,405,5,2026-10-03
+MONDO:0008647,reporter,MYH7 AND hypertrophic cardiomyopathy,18,5,2026-10-03
+MONDO:0008647,pubmed,MYH7[tiab] AND hypertrophic cardiomyopathy[tiab],595,5,2026-10-03
+MONDO:0008647,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0010079,ctgov,Canavan disease,13,5,2026-10-03
+MONDO:0010079,reporter,Canavan,9,5,2026-10-03
+MONDO:0010079,pubmed,"""Canavan disease""[tiab]",462,5,2026-10-03
+MONDO:0010079,patient_groups,web + LLM,-1,0,2026-10-03
+MONDO:0009655,pubmed_llm,"(""Sanfilippo syndrome type A""[tiab] OR ""mucopolysaccharidosis IIIA""[tiab]) AND hasabstract",96,24,2026-10-03
+MONDO:0009656,pubmed_llm,"(""Sanfilippo syndrome type B""[tiab] OR ""mucopolysaccharidosis IIIB""[tiab]) AND hasabstract",143,26,2026-10-03
+MONDO:0009657,pubmed_llm,"(""Sanfilippo syndrome type C""[tiab] OR ""mucopolysaccharidosis IIIC""[tiab]) AND hasabstract",36,26,2026-10-03
+MONDO:0009658,pubmed_llm,"(""Sanfilippo syndrome type D""[tiab] OR ""mucopolysaccharidosis IIID""[tiab]) AND hasabstract",24,28,2026-10-03
+MONDO:0011758,pubmed_llm,"(""Hurler syndrome""[tiab] OR ""mucopolysaccharidosis type I""[tiab]) AND hasabstract",1119,36,2026-10-03
+MONDO:0010674,pubmed_llm,"(""Hunter syndrome""[tiab] OR ""mucopolysaccharidosis type II""[tiab]) AND hasabstract",1109,30,2026-10-03
+MONDO:0017694,pubmed_llm,"(""Pompe disease""[tiab]) AND hasabstract",2175,34,2026-10-03
+MONDO:0009265,pubmed_llm,"(""Gaucher disease""[tiab]) AND hasabstract",4725,18,2026-10-03
+MONDO:0010526,pubmed_llm,"(""Fabry disease""[tiab]) AND hasabstract",4796,44,2026-10-03
+MONDO:0009499,pubmed_llm,"(""Krabbe disease""[tiab]) AND hasabstract",951,32,2026-10-03
+MONDO:0009591,pubmed_llm,"(""metachromatic leukodystrophy""[tiab]) AND hasabstract",1127,41,2026-10-03
+MONDO:0010100,pubmed_llm,"(""Tay-Sachs disease""[tiab]) AND hasabstract",872,37,2026-10-03
+MONDO:0010006,pubmed_llm,"(""Sandhoff disease""[tiab]) AND hasabstract",534,35,2026-10-03
+MONDO:0009757,pubmed_llm,"(""Niemann-Pick disease type C""[tiab]) AND hasabstract",851,29,2026-10-03
+MONDO:0008769,pubmed_llm,"(""CLN2 disease""[tiab] OR ""neuronal ceroid lipofuscinosis type 2""[tiab]) AND hasabstract",156,30,2026-10-03
+MONDO:0008767,pubmed_llm,"(""CLN3 disease""[tiab] OR ""juvenile neuronal ceroid lipofuscinosis""[tiab]) AND hasabstract",405,16,2026-10-03
+MONDO:0009260,pubmed_llm,"(""GM1 gangliosidosis""[tiab]) AND hasabstract",682,28,2026-10-03
+MONDO:0010099,pubmed_llm,"(""GM2 gangliosidosis AB variant""[tiab] OR ""GM2 activator deficiency""[tiab]) AND hasabstract",28,16,2026-10-03
+MONDO:0009756,pubmed_llm,"(""Niemann-Pick disease type A""[tiab] OR ""acid sphingomyelinase deficiency""[tiab]) AND hasabstract",310,18,2026-10-03
+MONDO:0010281,pubmed_llm,"(""Danon disease""[tiab]) AND hasabstract",302,34,2026-10-03
+MONDO:0008199,pubmed_llm,((GBA1[tiab] OR GBA[tiab]) AND Parkinson*[tiab]) AND hasabstract,1656,29,2026-10-03
+MONDO:0010726,pubmed_llm,"(""Rett syndrome""[tiab]) AND hasabstract",4276,14,2026-10-03
+MONDO:0010679,pubmed_llm,"(""Duchenne muscular dystrophy""[tiab]) AND hasabstract",12604,12,2026-10-03
+MONDO:0008647,pubmed_llm,(MYH7[tiab] AND hypertrophic cardiomyopathy[tiab]) AND hasabstract,582,11,2026-10-03
+MONDO:0010079,pubmed_llm,"(""Canavan disease""[tiab]) AND hasabstract",398,20,2026-10-03
+MONDO:0009655,patient_groups,https://rarediseases.org/organizations/cure-sanfilippo-foundation/,1,4,2026-10-03
+MONDO:0009655,patient_groups,https://www.sanfilippo.org.au/about-us/our-purpose,1,4,2026-10-03
+MONDO:0009655,patient_groups,https://mpssociety.org.uk/conditions/mps-conditions/mps-iii-sanfilippo,1,10,2026-10-03
+MONDO:0009656,patient_groups,https://teamsanfilippo.org/,1,4,2026-10-03
+MONDO:0009656,patient_groups,https://www.stopsanfilippo.org/,1,4,2026-10-03
+MONDO:0009657,patient_groups,https://sanfilippofonds.nl/,1,4,2026-10-03
+MONDO:0009657,patient_groups,https://www.vml-asso.org/,1,0,2026-10-03
+MONDO:0009658,patient_groups,https://mps-ev.de/,1,3,2026-10-03
+MONDO:0009658,patient_groups,https://mpslisosomales.org/,1,4,2026-10-03
+MONDO:0009658,patient_groups,https://www.aimps.it/chi-siamo/,1,7,2026-10-03
+MONDO:0011758,patient_groups,https://mpssociety.org/en/about-mps-society/,1,6,2026-10-03
+MONDO:0011758,patient_groups,https://mpssociety.org.uk/conditions/mps-conditions/mps-i-hurler,1,6,2026-10-03
+MONDO:0011758,patient_groups,https://www.mpssociety.ca/about-us/,1,2,2026-10-03
+MONDO:0011758,patient_groups,https://www.mpsargertina.org/,1,0,2026-10-03
+MONDO:0011758,patient_groups,https://www.mps-austria.at/,1,2,2026-10-03
+MONDO:0010674,patient_groups,https://projectalive.org/about,1,1,2026-10-03
+MONDO:0010674,patient_groups,https://mpssociety.org.uk/conditions/mps-conditions/mps-ii-hunter,1,7,2026-10-03
+MONDO:0010674,patient_groups,https://mpsii.theisaacfoundation.com/,1,1,2026-10-03
+MONDO:0017694,patient_groups,https://worldpompe.org/about-us/ipa-members-a-contacts/,51,51,2026-10-03
+MONDO:0017694,patient_groups,https://amda-pompe.org/about-us/,1,1,2026-10-03
+MONDO:0017694,patient_groups,https://amda-pompe.org/pompe-registry-a-decade-of-making-a-difference/,1,1,2026-10-03
+MONDO:0017694,patient_groups,https://www.mpompe.de/,1,1,2026-10-03
+MONDO:0017694,patient_groups,https://agsd.org.uk/about-us/,1,0,2026-10-03
+MONDO:0009265,patient_groups,https://www.gaucherdisease.org/,1,1,2026-10-03
+MONDO:0009265,patient_groups,https://www.gaucher.org.uk/associations_around_the_world,20,17,2026-10-03
+MONDO:0009265,patient_groups,https://www.ggd-ev.de/,1,1,2026-10-03
+MONDO:0009265,patient_groups,https://aeefegaucher.es/,1,1,2026-10-03
+MONDO:0010526,patient_groups,https://fabryintnetwork.com/members,23,23,2026-10-03
+MONDO:0010526,patient_groups,https://www.fabrynetwork.org/about-us/,1,1,2026-10-03
+MONDO:0010526,patient_groups,https://www.fabry.org/,1,1,2026-10-03
+MONDO:0010526,patient_groups,https://www.fabrycanada.com/,1,1,2026-10-03
+MONDO:0009499,patient_groups,https://www.huntershope.org/about-us/,1,0,2026-10-03
+MONDO:0009499,patient_groups,https://krabbeconnect.org/about-krabbeconnect/,1,1,2026-10-03
+MONDO:0009499,patient_groups,https://www.krabbeuk.org/,1,1,2026-10-03
+MONDO:0009499,patient_groups,https://www.ninds.nih.gov/health-information/clinical-trials/krabbe-disease-global-patient-registry,1,1,2026-10-03
+MONDO:0009591,patient_groups,https://mld.foundation/about-us/,1,1,2026-10-03
+MONDO:0009591,patient_groups,https://mld.foundation/registry/,1,1,2026-10-03
+MONDO:0009591,patient_groups,https://www.mldinitiative.com/home/about-us/,1,1,2026-10-03
+MONDO:0009591,patient_groups,https://alextlc.org/,1,0,2026-10-03
+MONDO:0010100,patient_groups,https://ntsad.org/about-ntsad/,1,4,2026-10-03
+MONDO:0010100,patient_groups,https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/,1,4,2026-10-03
+MONDO:0010100,patient_groups,https://cats-foundation.org/the-cats-foundation/,1,2,2026-10-03
+MONDO:0010100,patient_groups,https://www.curetay-sachs.org/,1,1,2026-10-03
+MONDO:0010006,patient_groups,https://ntsad.org/diseases/sandhoff-disease/,1,5,2026-10-03
+MONDO:0010006,patient_groups,https://www.rarefindfoundation.org/,1,2,2026-10-03
+MONDO:0010006,patient_groups,https://globalgenes.org/disorder/sandhoff-disease/,4,16,2026-10-03
+MONDO:0009757,patient_groups,https://nnpdf.org/about-us/,1,2,2026-10-03
+MONDO:0009757,patient_groups,https://www.npuk.org/,1,2,2026-10-03
+MONDO:0009757,patient_groups,https://www.npcd.org.au/,1,1,2026-10-03
+MONDO:0009757,patient_groups,https://www.inpda.org/useful-link/,1,0,2026-10-03
+MONDO:0008769,patient_groups,https://bdsraaustralia.org/about/,1,0,2026-10-03
+MONDO:0008769,patient_groups,https://www.a-ncl.it/,1,0,2026-10-03
+MONDO:0008769,patient_groups,https://www.taylorstale.org/rare-disease/about-batten-disease/,2,3,2026-10-03
+MONDO:0008767,patient_groups,https://beyondbatten.org/about/,1,1,2026-10-03
+MONDO:0008767,patient_groups,https://beyondbatten.org/research/state-of-science/,1,0,2026-10-03
+MONDO:0008767,patient_groups,https://www.ncl-stiftung.de/,1,0,2026-10-03
+MONDO:0010281,patient_groups,https://www.danonfoundation.org/about-us/,1,1,2026-10-03
+MONDO:0010281,patient_groups,https://www.danonfoundation.org/about-us/partners/,1,1,2026-10-03
+MONDO:0010281,patient_groups,https://rarediseases.org/organizations/danondisease-org/,1,1,2026-10-03
+MONDO:0008199,patient_groups,https://www.michaeljfox.org/publication/michael-j-fox-foundation-and-silverstein-foundation-parkinsons-gba-grant-nearly-3,2,0,2026-10-03
+MONDO:0008199,patient_groups,https://silversteinfoundation.org/,1,1,2026-10-03
+MONDO:0008199,patient_groups,https://www.ppmi-info.org/about-ppmi,1,0,2026-10-03
+MONDO:0008199,patient_groups,https://cureparkinsons.org.uk/about-us/,1,0,2026-10-03
+MONDO:0010726,patient_groups,https://reverserett.org/about-rsrt/,1,1,2026-10-03
+MONDO:0010726,patient_groups,https://www.rettsyndrome.org/researchers/rett-syndrome-natural-history-study/,1,1,2026-10-03
+MONDO:0010726,patient_groups,https://www.rettuk.org/about-us/,1,1,2026-10-03
+MONDO:0010726,patient_groups,https://abrete.org.br/,1,1,2026-10-03
+MONDO:0010726,patient_groups,https://www.rett.org.il/,1,0,2026-10-03
+MONDO:0010726,patient_groups,https://rett.ca/,1,1,2026-10-03
+MONDO:0010679,patient_groups,https://www.parentprojectmd.org/about-ppmd/,1,1,2026-10-03
+MONDO:0010679,patient_groups,https://www.parentprojectmd.org/clinical-trial/the-duchenne-registry/,1,1,2026-10-03
+MONDO:0010679,patient_groups,https://www.duchenneuk.org/about,1,1,2026-10-03
+MONDO:0010679,patient_groups,https://ppmdindia.org/,1,0,2026-10-03
+MONDO:0010679,patient_groups,https://www.duchenne-spain.org/,1,1,2026-10-03
+MONDO:0010679,patient_groups,https://www.parentproject.it/chi-siamo/,1,1,2026-10-03
+MONDO:0008647,patient_groups,https://www.4hcm.org/,1,0,2026-10-03
+MONDO:0008647,patient_groups,https://www.cardiomyopathy.org/about-us,1,1,2026-10-03
+MONDO:0008647,patient_groups,https://globalhearthub.org/patient-councils/cardiomyopathy-patient-council/,1,1,2026-10-03
+MONDO:0009260,patient_groups,https://www.curegm1.org/the-foundation-and-its-members/,1,1,2026-10-03
+MONDO:0009260,patient_groups,https://ntsad.org/diseases/gm1-gangliosidosis-disease/,1,4,2026-10-03
+MONDO:0009260,patient_groups,https://www.mps-japan.org/,1,0,2026-10-03
+MONDO:0010099,patient_groups,https://globalgenes.org/disorder/gm2-gangliosidosis-ab-variant/,2,10,2026-10-03
+MONDO:0010099,patient_groups,https://ntsad.org/diseases/,1,4,2026-10-03
+MONDO:0009756,patient_groups,https://rarediseases.org/rare-diseases/acid-sphingomyelinase-deficiency/,1,1,2026-10-03
+MONDO:0009756,patient_groups,https://nnpdf.org/,1,2,2026-10-03
+MONDO:0009756,patient_groups,https://www.inpda.org/about-us/,1,2,2026-10-03
+MONDO:0010079,patient_groups,https://www.canavanfoundation.org/about,1,1,2026-10-03
+MONDO:0010079,patient_groups,https://www.canavan.org/what-we-do,1,1,2026-10-03
+MONDO:0010079,patient_groups,https://canavandisease.org/,1,1,2026-10-03
+MONDO:0010079,patient_groups,https://ntsad.org/diseases/canavan-disease/,1,0,2026-10-03

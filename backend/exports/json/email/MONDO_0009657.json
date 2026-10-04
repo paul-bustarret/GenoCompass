@@ -1,0 +1,17 @@
+{
+ "org_id": "ORG:AIMPS_ETS",
+ "disease_id": "MONDO:0009657",
+ "to": "info@aimps.it",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting on MPS IIIC – potential collaboration",
+ "body": "Dear AIMPS ETS Team,\n\nMy name is Maria, and I lead a patient group for families affected by Mucopolysaccharidosis type IIIC (MPS IIIC).\n\nA paper reports that AIMPS ETS was founded in 1991 to support children and adult patients affected by rare genetic metabolic diseases, including MPS IIIC, which often lead to severe disability [E30302cc]. A paper reports that MPS IIIC is caused by a deficiency of the lysosomal enzyme HGSNAT, resulting in storage of heparan sulfate in cells [E108a4c3][E7373ae4]. Since your organisation's founding mission already encompasses support for families living with MPS IIIC, I believe our groups may have complementary experience and contacts that could be valuable to share.\n\nI would be glad to introduce our group more fully and hear about your current activities related to MPS IIIC. Would you be open to a short introductory call in the coming weeks to explore whether there are simple ways we could support one another?\n\nThank you for considering this, and for the work your organisation does for affected families.\n\nWarm regards,\nMaria\nPatient Group Leader (MPS IIIC)\n\nSources:\n[E30302cc] https://www.aimps.it/chi-siamo/\n[E108a4c3] https://pubmed.ncbi.nlm.nih.gov/19479962/\n[E7373ae4] https://pubmed.ncbi.nlm.nih.gov/19479962/",
+ "citations": [
+  "E30302cc",
+  "E108a4c3",
+  "E7373ae4"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

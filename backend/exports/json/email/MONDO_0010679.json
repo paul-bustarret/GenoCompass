@@ -1,0 +1,17 @@
+{
+ "org_id": "ORG:Duchenne_UK",
+ "disease_id": "MONDO:0010679",
+ "to": "info@duchenneuk.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Proposing a connection between our Duchenne patient groups",
+ "body": "Dear Duchenne UK team,\n\nMy name is Maria, and I lead a patient group for Duchenne muscular dystrophy. I'm reaching out because our communities share the same focus.\n\nDuchenne UK works to create a future without Duchenne, while supporting those affected today [E3cfa85b]. I understand you also run the Duchenne Hub UK, a clinical research network of 11 hospital sites that, since launching in 2016, has helped bring more clinical trials of Duchenne treatments to the UK [E978dac6], and that this Hub specifically studies Duchenne [E09a3600].\n\nGiven this shared focus on Duchenne, I believe there could be real value in our two groups exchanging perspectives, particularly around how families and patients experience engagement with clinical research efforts like the Hub.\n\nWould you be open to a brief 20-30 minute call in the coming weeks to introduce our respective work and explore whether closer collaboration makes sense? I'd be glad to work around your availability.\n\nThank you for considering this, and for the work your organisation does for the Duchenne community.\n\nWarm regards,\nMaria\nPatient Group Leader (Duchenne)\n\nSources:\n[E3cfa85b] https://www.duchenneuk.org/about\n[E978dac6] https://www.duchenneuk.org/about\n[E09a3600] https://www.duchenneuk.org/about",
+ "citations": [
+  "E3cfa85b",
+  "E978dac6",
+  "E09a3600"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

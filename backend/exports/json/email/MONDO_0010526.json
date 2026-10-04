@@ -1,0 +1,16 @@
+{
+ "org_id": "ORG:Fabry_Support_Information_Group",
+ "disease_id": "MONDO:0010526",
+ "to": "info@fabry.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting our Fabry patient communities",
+ "body": "Dear colleagues at Fabry Support & Information Group,\n\nMy name is Maria, and I lead a patient group supporting families affected by Fabry disease. I'm reaching out because your organization is dedicated to providing resources and community for individuals affected by Fabry disease [E245eca1], and you work alongside other groups as part of the Fabry International Network [Edcdc139].\n\nGiven that our groups share a focus on Fabry disease, I believe there could be real value in comparing notes on how we each support our communities and identifying areas where we might collaborate or share resources.\n\nWould you be open to a brief call in the coming weeks to introduce our organizations and explore whether there are natural ways to work together? I'd be happy to work around your schedule.\n\nThank you for considering this, and for the work you do for the Fabry community.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[E245eca1] https://www.fabry.org/\n[Edcdc139] https://fabryintnetwork.com/members",
+ "citations": [
+  "E245eca1",
+  "Edcdc139"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

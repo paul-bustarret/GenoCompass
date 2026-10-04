@@ -1,0 +1,17 @@
+{
+ "org_id": "ORG:Acid_Maltase_Deficiency_Association",
+ "disease_id": "MONDO:0017694",
+ "to": "info@amda-pompe.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting two Pompe disease patient communities",
+ "body": "Dear colleagues at the Acid Maltase Deficiency Association,\n\nMy name is Maria, and I lead a patient group for Pompe disease (glycogen storage disease II). I'm reaching out because our communities share the same focus.\n\nA paper reports that the Acid Maltase Deficiency Association was established in 1995 as a 501(c)(3) nonprofit to help fund research and promote public awareness of Pompe disease [E516c908]. A paper also reports that your organization runs a Patient Registry [E3fa57b9], and that this registry studies Pompe disease [Ec799c2f]. Given our shared focus on this condition and the overlap in the people we support, I believe there could be valuable ways for our groups to learn from one another, whether around patient engagement, registry experience, or awareness efforts.\n\nWould you be open to a brief introductory call, perhaps 20-30 minutes, to share what each of our organizations is working on and explore whether there are natural areas for collaboration? I'd be glad to work around your schedule.\n\nThank you for considering this, and for the work your organization has done on behalf of the Pompe community.\n\nWarm regards,\nMaria\nPatient Group Leader (Pompe)\n\nSources:\n[E516c908] https://amda-pompe.org/about-us/\n[E3fa57b9] https://amda-pompe.org/about-us/\n[Ec799c2f] https://amda-pompe.org/about-us/",
+ "citations": [
+  "E516c908",
+  "E3fa57b9",
+  "Ec799c2f"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

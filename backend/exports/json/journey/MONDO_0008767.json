@@ -1,0 +1,735 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0008767",
+  "name": "Ceroid lipofuscinosis, neuronal, 3",
+  "short": "CLN3"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:1201",
+    "name": "CLN3",
+    "edges": [
+     "E2eacf58",
+     "E30dc69f",
+     "E74117b2",
+     "Edae28cb",
+     "Eaaac865",
+     "E2f98f6c",
+     "Ebd3f430"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:lysosomal_membrane_protein_defect",
+    "name": "Lysosomal membrane protein defect",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E85a0572",
+     "E2a6fd95"
+    ]
+   },
+   {
+    "id": "MECH:ceroid_lipofuscin_storage",
+    "name": "Ceroid lipofuscin storage",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "Eb0132b8",
+     "E670c401",
+     "E7e266f9",
+     "E633c826"
+    ]
+   },
+   {
+    "id": "MECH:neuronal_loss",
+    "name": "Neuronal loss / neurodegeneration",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E148344e",
+     "Ed7956f4",
+     "E4a5b1d9"
+    ]
+   },
+   {
+    "id": "MECH:cardiomyopathy_storage",
+    "name": "Cardiac involvement / cardiomyopathy",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E1f2dcff"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-9845576",
+    "name": "Glycosphingolipid transport",
+    "edges": [
+     "E2eacf58",
+     "Eb44bcf7",
+     "E30dc69f",
+     "E74117b2",
+     "Edae28cb",
+     "Eaaac865",
+     "E2f98f6c",
+     "Ebd3f430"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0000518",
+    "name": "Cataract",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E1915f0a"
+    ]
+   },
+   {
+    "id": "HP:0000608",
+    "name": "Macular degeneration",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E1981ec2"
+    ]
+   },
+   {
+    "id": "HP:0000739",
+    "name": "Anxiety",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Efbae2b7"
+    ]
+   },
+   {
+    "id": "HP:0001317",
+    "name": "Abnormal cerebellum morphology",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E52b1d34"
+    ]
+   },
+   {
+    "id": "HP:0002071",
+    "name": "Abnormality of extrapyramidal motor function",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E131de53"
+    ]
+   },
+   {
+    "id": "HP:0003208",
+    "name": "Fingerprint intracellular accumulation of autofluorescent lipopigment storage material",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "Ecf6b15e"
+    ]
+   },
+   {
+    "id": "HP:0005157",
+    "name": "Concentric hypertrophic cardiomyopathy",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Eefc23f1"
+    ]
+   },
+   {
+    "id": "HP:0007663",
+    "name": "Reduced visual acuity",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "E25298ff"
+    ]
+   },
+   {
+    "id": "HP:0000501",
+    "name": "Glaucoma",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E4100b72"
+    ]
+   },
+   {
+    "id": "HP:0000510",
+    "name": "Rod-cone dystrophy",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E7cce9f2"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": "ClinVar:4771297",
+    "name": "NM_001042432.2(CLN3):c.824G>A (p.Trp275Ter)",
+    "significance": "Pathogenic",
+    "consequence": "nonsense",
+    "edges": [
+     "E7413b5d"
+    ]
+   },
+   {
+    "id": "ClinVar:4738196",
+    "name": "NM_001042432.2(CLN3):c.83del (p.Leu28fs)",
+    "significance": "Pathogenic",
+    "consequence": "frameshift variant, intron variant",
+    "edges": [
+     "E8daea89"
+    ]
+   }
+  ]
+ },
+ "similar": [],
+ "lookalikes": [
+  {
+   "id": "MONDO:0008769",
+   "name": "CLN2",
+   "score": 0.187,
+   "lookalike": true,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.0,
+    "phenotype": 0.234,
+    "mechanism": 0.623
+   },
+   "witnesses": [
+    {
+     "id": "MECH:ceroid_lipofuscin_storage",
+     "name": "Ceroid lipofuscin storage",
+     "kind": "mechanism",
+     "edges": [
+      "Eb0132b8",
+      "E670c401",
+      "E7e266f9",
+      "E633c826",
+      "E4b46978",
+      "E7cdeea3",
+      "Ee036853",
+      "E6a3d168",
+      "E1770cfa",
+      "E04adc14",
+      "E0d63214"
+     ]
+    },
+    {
+     "id": "MECH:neuronal_loss",
+     "name": "Neuronal loss / neurodegeneration",
+     "kind": "mechanism",
+     "edges": [
+      "E148344e",
+      "Ed7956f4",
+      "E4a5b1d9",
+      "E71ce38d",
+      "E7af4453",
+      "E8ddd2a4",
+      "E094516c",
+      "E4eb4631"
+     ]
+    },
+    {
+     "id": "HP:0001336",
+     "name": "Myoclonus",
+     "kind": "phenotype",
+     "edges": [
+      "E0282bf7",
+      "E7982300"
+     ]
+    },
+    {
+     "id": "HP:0000529",
+     "name": "Progressive visual loss",
+     "kind": "phenotype",
+     "edges": [
+      "Ece5a0d1",
+      "E24d0838"
+     ]
+    },
+    {
+     "id": "HP:0000550",
+     "name": "Undetectable electroretinogram",
+     "kind": "phenotype",
+     "edges": [
+      "E505ff82",
+      "E692fe55"
+     ]
+    }
+   ]
+  }
+ ],
+ "organizations": [
+  {
+   "id": "ORG:Beyond_Batten_Disease_Foundation",
+   "name": "Beyond Batten Disease Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@beyondbatten.org",
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "Eda2ebc2"
+   ]
+  },
+  {
+   "id": "ORG:The_Batten_Disease_Support_Research_Asso",
+   "name": "The Batten Disease Support & Research Association",
+   "kind": "registry_host",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "E0294533"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NINDS",
+   "name": "NIH NINDS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "Ed725662",
+    "E0685c9c",
+    "E979376d",
+    "E246b584",
+    "E0e47c64",
+    "Ea22db1a"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NICHD",
+   "name": "NIH NICHD",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "Eba9be50",
+    "E2a71a2d",
+    "Ee961191",
+    "E011ef2f",
+    "Ee2e1cfd"
+   ]
+  },
+  {
+   "id": "ORG:Polaryx_Therapeutics_Inc",
+   "name": "Polaryx Therapeutics, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "Ec50667b",
+    "E489962f"
+   ]
+  },
+  {
+   "id": "ORG:Eunice_Kennedy_Shriver_National_Institut",
+   "name": "Eunice Kennedy Shriver National Institute of Child Health and Human Development (NICHD)",
+   "kind": "nih",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "Efe77716",
+    "E19ee7ea",
+    "E0f510fa",
+    "Ec2c2679"
+   ]
+  },
+  {
+   "id": "ORG:Joanne_Kurtzberg_MD",
+   "name": "Joanne Kurtzberg, MD",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "E478a4f9",
+    "Eb47ea6a"
+   ]
+  },
+  {
+   "id": "ORG:National_Human_Genome_Research_Institute",
+   "name": "National Human Genome Research Institute (NHGRI)",
+   "kind": "nih",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008767",
+   "edges": [
+    "E6d2d77e",
+    "E83e587a"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT02254863",
+   "title": "UCB Transplant of Inherited Metabolic Diseases With Administration of Intrathecal UCB Derived Oligodendrocyte-Like Cells",
+   "status": "RECRUITING",
+   "phase": "PHASE1",
+   "for_disease": "MONDO:0008767",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "DUOC-01"
+   ],
+   "edges": [
+    "Eb47ea6a",
+    "E55ebc77",
+    "Ec109198"
+   ]
+  },
+  {
+   "id": "NCT03307304",
+   "title": "Investigations of Juvenile Neuronal Ceroid Lipofuscinosis",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0008767",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E19ee7ea",
+    "Ef32c051"
+   ]
+  },
+  {
+   "id": "NCT05007990",
+   "title": "Caregiving Networks Across Disease Context and the Life Course",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0008767",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E83e587a",
+    "E35ecde9"
+   ]
+  },
+  {
+   "id": "NCT04637282",
+   "title": "Safety, Tolerability, and Efficacy of PLX-200 in Patients With CLN3",
+   "status": "WITHDRAWN",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0008767",
+   "countries": [],
+   "near_user": false,
+   "interventions": [
+    "PLX-200",
+    "Placebo"
+   ],
+   "edges": [
+    "E489962f",
+    "Ef038fca",
+    "Ea339530"
+   ]
+  },
+  {
+   "id": "NCT05642221",
+   "title": "Functional Near-Infrared Spectroscopy (fNIRS) Combined With Diffuse Correlation Spectroscopy (DCS) in Neurocognitive Disease as Compared to Healthy Neurotypical Controls",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0008767",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Ec2c2679",
+    "Ebfb87ac"
+   ]
+  }
+ ],
+ "assets": [],
+ "researchers": [
+  {
+   "id": "PERSON:9568426",
+   "name": "Erika Augustine",
+   "grants": [
+    "RePORTER:U54HD122210"
+   ],
+   "diseases": [
+    "MONDO:0008767"
+   ],
+   "edges": [
+    "Ec74b030",
+    "E2a71a2d",
+    "E9434757",
+    "Ee2e1cfd"
+   ]
+  },
+  {
+   "id": "PERSON:7864776",
+   "name": "Jill M Weimer",
+   "grants": [
+    "RePORTER:U54HD122210"
+   ],
+   "diseases": [
+    "MONDO:0008767"
+   ],
+   "edges": [
+    "E6d64cb3",
+    "E2a71a2d",
+    "Ee2e1cfd"
+   ]
+  },
+  {
+   "id": "PERSON:2427635",
+   "name": "Jonathan D Cooper",
+   "grants": [
+    "RePORTER:R01NS140682"
+   ],
+   "diseases": [
+    "MONDO:0008767"
+   ],
+   "edges": [
+    "Ed3a744a",
+    "E246b584",
+    "E772b52b"
+   ]
+  },
+  {
+   "id": "PERSON:9608833",
+   "name": "Michelle L Hastings",
+   "grants": [
+    "RePORTER:U01NS148918"
+   ],
+   "diseases": [
+    "MONDO:0008767"
+   ],
+   "edges": [
+    "Eb70d387",
+    "E0685c9c"
+   ]
+  },
+  {
+   "id": "PERSON:8310828",
+   "name": "Susan Lynn Cotman",
+   "grants": [
+    "RePORTER:R03NS146860"
+   ],
+   "diseases": [
+    "MONDO:0008767"
+   ],
+   "edges": [
+    "Eb38c2d1",
+    "Edd559f3"
+   ]
+  },
+  {
+   "id": "PERSON:1920549",
+   "name": "Edward H. Schuchman",
+   "grants": [],
+   "diseases": [
+    "MONDO:0008767"
+   ],
+   "edges": [
+    "E0378964",
+    "Eedd836d"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Beyond Batten Disease Foundation (patient group, based in US), which the atlas links to CLN3.",
+   "from_disease": "MONDO:0008767",
+   "target_id": "ORG:Beyond_Batten_Disease_Foundation",
+   "edges": [
+    "Eda2ebc2"
+   ]
+  },
+  {
+   "kind": "build",
+   "step": "registry",
+   "text": "No disease similar to CLN3 in the atlas has a patient registry yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  },
+  {
+   "kind": "build",
+   "step": "natural_history_study",
+   "text": "No disease similar to CLN3 in the atlas has a natural history study yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on in the body",
+   "text": "CLN3 disease happens because of changes in a gene (a set of instructions in our cells) called CLN3 [E2eacf58, E30dc69f]. This gene normally makes a protein that sits in the outer wall of tiny cell parts called lysosomes, which act like the cell's cleanup crew [Eaaac865]. When the CLN3 protein is missing or not working, a fatty, waxy material called ceroid lipofuscin builds up inside cells [Eb0132b8, E633c826]. This build-up is linked to a slow loss of nerve cells, especially in the brain [Ed7956f4, E4a5b1d9]. The condition can also affect the heart, with changes in heart rhythm and the heart muscle starting around the mid-teen years [E1f2dcff]. Specific harmful changes in the CLN3 gene, including ones named p.Trp275Ter and p.Leu28fs, have been identified as causing this disease [E7413b5d, E8daea89].",
+   "citations": [
+    "E2eacf58",
+    "E30dc69f",
+    "Eaaac865",
+    "Eb0132b8",
+    "E633c826",
+    "Ed7956f4",
+    "E4a5b1d9",
+    "E1f2dcff",
+    "E7413b5d",
+    "E8daea89"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "How it compares to other conditions",
+   "text": "A condition called CLN2 disease is listed as a lookalike for CLN3, meaning it can look similar but comes from a different cause [E4b46978]. CLN2 is caused by a problem with a different protein, an enzyme called TPP1, rather than the CLN3 gene [E4b46978]. Even so, children with CLN2 can have sudden muscle jerks called myoclonus, the same as children with CLN3 [E0282bf7, E7982300]. Both conditions can involve a gradual loss of vision over time [Ece5a0d1, E24d0838]. Both can also show no detectable signal on an eye test called an electroretinogram [E505ff82, E692fe55].",
+   "citations": [
+    "E4b46978",
+    "E0282bf7",
+    "E7982300",
+    "Ece5a0d1",
+    "E24d0838",
+    "E505ff82",
+    "E692fe55"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "What support and research already exists",
+   "text": "There is a patient group focused on CLN3 called Beyond Batten Disease Foundation, based in the US, which works to raise awareness and funds for research [Eda2ebc2]. Another group, The Batten Disease Support & Research Association, keeps up-to-date information on every known form of Batten disease [E0294533]. The NIH's NINDS funds research grants about CLN3, including one on a possible antisense oligonucleotide therapy and one looking at a gene called TTYH3 [Ed725662, E0685c9c, Ea22db1a]. The NIH's NICHD also funds a research project studying CLN3 [Eba9be50, E2a71a2d]. Several studies are recruiting in the United States, including one looking at an infused cell treatment given through the spine [Eb47ea6a, E55ebc77, Ec109198], one called Investigations of Juvenile Neuronal Ceroid Lipofuscinosis [E19ee7ea, Ef32c051], and one studying family caregiving [E83e587a, E35ecde9]. A trial of a medicine called PLX-200 for CLN3 was later withdrawn [Ec50667b, E489962f, Ef038fca]. Researchers including Erika Augustine, Jill M Weimer, and Susan Lynn Cotman are listed as working on grants that study CLN3 [Ec74b030, E2a71a2d, E6d64cb3, Eb38c2d1, Edd559f3].",
+   "citations": [
+    "Eda2ebc2",
+    "E0294533",
+    "Ed725662",
+    "E0685c9c",
+    "Ea22db1a",
+    "Eba9be50",
+    "E2a71a2d",
+    "Eb47ea6a",
+    "E55ebc77",
+    "Ec109198",
+    "E19ee7ea",
+    "Ef32c051",
+    "E83e587a",
+    "E35ecde9",
+    "Ec50667b",
+    "E489962f",
+    "Ef038fca",
+    "Ec74b030",
+    "E6d64cb3",
+    "Eb38c2d1",
+    "Edd559f3"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "A first step could be reaching out to the Beyond Batten Disease Foundation, a patient group in the US that the atlas links directly to CLN3 [Eda2ebc2].",
+   "citations": [
+    "Eda2ebc2"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:204200",
+   "n_results": 32,
+   "n_kept": 32
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0008767",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "CLN3 disease OR juvenile neuronal ceroid lipofuscinosis",
+   "n_results": 45,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "CLN3",
+   "n_results": 39,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"CLN3 disease\"[tiab] OR \"juvenile neuronal ceroid lipofuscinosis\"[tiab]",
+   "n_results": 428,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"CLN3 disease\"[tiab] OR \"juvenile neuronal ceroid lipofuscinosis\"[tiab]) AND hasabstract",
+   "n_results": 405,
+   "n_kept": 16
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://beyondbatten.org/about/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://beyondbatten.org/research/state-of-science/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.ncl-stiftung.de/",
+   "n_results": 1,
+   "n_kept": 0
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

@@ -1,0 +1,658 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0010281",
+  "name": "Danon disease",
+  "short": "Danon"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:3920",
+    "name": "LAMP2",
+    "edges": [
+     "Eb39aff7",
+     "E91e8398",
+     "Ec691cdb",
+     "E2638519",
+     "E6b94b2b",
+     "Ec6112f2",
+     "Ec08d455",
+     "E766f0d8"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:autophagy_defect",
+    "name": "Autophagy / lysosomal clearance defect",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E14acadc",
+     "E26d5d47",
+     "Ed8d56f4",
+     "E1018ef1",
+     "Ee19d05d",
+     "E3dcae5a"
+    ]
+   },
+   {
+    "id": "MECH:lysosomal_membrane_protein_defect",
+    "name": "Lysosomal membrane protein defect",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E64c2de7",
+     "E7bbb1b5",
+     "E6303c40",
+     "E4fab73f",
+     "E4767213",
+     "Ee942232"
+    ]
+   },
+   {
+    "id": "MECH:cardiomyopathy_storage",
+    "name": "Cardiac involvement / cardiomyopathy",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E13cc433",
+     "E13e8768",
+     "E1bdb179",
+     "Ef11c52b"
+    ]
+   },
+   {
+    "id": "MECH:mitochondrial_dysfunction",
+    "name": "Mitochondrial dysfunction",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E86ac16a",
+     "E4f646ca"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-9613829",
+    "name": "Chaperone Mediated Autophagy",
+    "edges": [
+     "Eb39aff7",
+     "Ea98b068",
+     "E91e8398",
+     "Ec691cdb",
+     "E2638519",
+     "E6b94b2b",
+     "Ec6112f2",
+     "Ec08d455",
+     "E766f0d8"
+    ]
+   },
+   {
+    "id": "R-HSA-114608",
+    "name": "Platelet degranulation ",
+    "edges": [
+     "Eb39aff7",
+     "Eb2a9815",
+     "E91e8398",
+     "Ec691cdb",
+     "E2638519",
+     "E6b94b2b",
+     "Ec6112f2",
+     "Ec08d455",
+     "E766f0d8"
+    ]
+   },
+   {
+    "id": "R-HSA-76005",
+    "name": "Response to elevated platelet cytosolic Ca2+",
+    "edges": [
+     "Eb39aff7",
+     "Eb2a9815",
+     "E69ca5cc",
+     "E91e8398",
+     "Ec691cdb",
+     "E2638519",
+     "E6b94b2b",
+     "Ec6112f2",
+     "Ec08d455",
+     "E766f0d8"
+    ]
+   },
+   {
+    "id": "R-HSA-6798695",
+    "name": "Neutrophil degranulation",
+    "edges": [
+     "Eb39aff7",
+     "E2c5d117",
+     "E91e8398",
+     "Ec691cdb",
+     "E2638519",
+     "E6b94b2b",
+     "Ec6112f2",
+     "Ec08d455",
+     "E766f0d8"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0001279",
+    "name": "Syncope",
+    "weight": 3.219,
+    "frequency": "1/2",
+    "edges": [
+     "E30349c7"
+    ]
+   },
+   {
+    "id": "HP:0001678",
+    "name": "Atrioventricular block",
+    "weight": 3.219,
+    "frequency": "1/2",
+    "edges": [
+     "E523e58d"
+    ]
+   },
+   {
+    "id": "HP:0001685",
+    "name": "Myocardial fibrosis",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ea8af907"
+    ]
+   },
+   {
+    "id": "HP:0001692",
+    "name": "Atrial arrhythmia",
+    "weight": 3.219,
+    "frequency": "1/2",
+    "edges": [
+     "Ef7d4dc5"
+    ]
+   },
+   {
+    "id": "HP:0001700",
+    "name": "Myocardial necrosis",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E91be898"
+    ]
+   },
+   {
+    "id": "HP:0002375",
+    "name": "Hypokinesia",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E1da2f18"
+    ]
+   },
+   {
+    "id": "HP:0002460",
+    "name": "Distal muscle weakness",
+    "weight": 3.219,
+    "frequency": "1/2",
+    "edges": [
+     "E3a982fb"
+    ]
+   },
+   {
+    "id": "HP:0003458",
+    "name": "EMG: myopathic abnormalities",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E3930453"
+    ]
+   },
+   {
+    "id": "HP:0003700",
+    "name": "Generalized amyotrophy",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ecdccb94"
+    ]
+   },
+   {
+    "id": "HP:0003710",
+    "name": "Exercise-induced muscle cramps",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ea7d0ff2"
+    ]
+   }
+  ],
+  "variants": []
+ },
+ "similar": [],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:Danon_Foundation",
+   "name": "Danon Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "contact@danonfoundation.org",
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "Ebb89110",
+    "E5453000"
+   ]
+  },
+  {
+   "id": "ORG:DanonDisease_org",
+   "name": "DanonDisease.org",
+   "kind": "academic",
+   "country": "US",
+   "website": "https://www.danondisease.org",
+   "contact_email": "matthew.taylor@ucdenver.edu",
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "E5eaeabc",
+    "Ea66a030",
+    "E0d1acb7"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NIGMS",
+   "name": "NIH NIGMS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "Eefb11fc",
+    "E042e259",
+    "Ea8a707c",
+    "Ec3867e1",
+    "E2be90ee",
+    "E34446f3"
+   ]
+  },
+  {
+   "id": "ORG:Rocket_Pharmaceuticals_Inc",
+   "name": "Rocket Pharmaceuticals Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "E822f114",
+    "Ea370024",
+    "Ee764f20",
+    "Ec165b8d",
+    "E518cc81",
+    "E517d94f"
+   ]
+  },
+  {
+   "id": "ORG:Chinese_Academy_of_Medical_Sciences_Fuwa",
+   "name": "Chinese Academy of Medical Sciences, Fuwai Hospital",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "E948e7e8",
+    "E6c048cc"
+   ]
+  },
+  {
+   "id": "ORG:Duke_University",
+   "name": "Duke University",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "E4e42edb",
+    "E485f287"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT06092034",
+   "title": "A Gene Therapy Study of RP-A501 in Male Patients With Danon Disease",
+   "status": "RECRUITING",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0010281",
+   "countries": [
+    "DE",
+    "GB",
+    "IT",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "RP-A501"
+   ],
+   "edges": [
+    "Ec165b8d",
+    "Ef3ad63e",
+    "E77e875f",
+    "E5e48ead",
+    "E1668b79",
+    "E4192620"
+   ]
+  },
+  {
+   "id": "NCT06214507",
+   "title": "Danon Disease Natural History Study",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0010281",
+   "countries": [
+    "DE",
+    "ES",
+    "GB",
+    "IL",
+    "IT",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Ea370024",
+    "E9cadb6d",
+    "Efeffc76",
+    "E82505d2",
+    "Eadecf2e",
+    "Edfa898e"
+   ]
+  },
+  {
+   "id": "NCT06795152",
+   "title": "Rare Glycogen Storage Diseases Natural History Study",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0010281",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E485f287",
+    "E37cc651"
+   ]
+  },
+  {
+   "id": "NCT07336394",
+   "title": "Precision Diagnosis and Risk Stratification of Rare Cardiomyopathies Based on Novel Cardiac Magnetic Resonance Techniques",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0010281",
+   "countries": [
+    "CN"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E6c048cc",
+    "E14467f7"
+   ]
+  },
+  {
+   "id": "NCT05548855",
+   "title": "Natural History of Danon Disease",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0010281",
+   "countries": [
+    "CZ",
+    "ES",
+    "FR",
+    "IE",
+    "IT"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E517d94f",
+    "E8c9ce4b",
+    "Ef9f78bd",
+    "E87eb350",
+    "Eae5d3a2",
+    "Ec22f80f"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "id": "ASSET:Registry",
+   "name": "Registry",
+   "kind": "registry",
+   "website": "https://www.danondisease.org",
+   "for_disease": "MONDO:0010281",
+   "edges": [
+    "E0d1acb7",
+    "Ea66a030"
+   ]
+  }
+ ],
+ "researchers": [
+  {
+   "id": "PERSON:11942734",
+   "name": "Timothy D. Heden",
+   "grants": [
+    "RePORTER:R35GM154665"
+   ],
+   "diseases": [
+    "MONDO:0010281"
+   ],
+   "edges": [
+    "E2e5d60a",
+    "E042e259",
+    "E504037b",
+    "E2735903",
+    "E991682c",
+    "E34446f3",
+    "E46a52c0",
+    "E5506cee"
+   ]
+  },
+  {
+   "id": "PERSON:11084045",
+   "name": "Ying Sun",
+   "grants": [],
+   "diseases": [
+    "MONDO:0010281"
+   ],
+   "edges": [
+    "E6a41567",
+    "E0ebc691"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Danon Foundation (patient group, based in US), which the atlas links to Danon.",
+   "from_disease": "MONDO:0010281",
+   "target_id": "ORG:Danon_Foundation",
+   "edges": [
+    "Ebb89110",
+    "E5453000"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Registry, which the atlas links to Danon.",
+   "from_disease": "MONDO:0010281",
+   "target_id": "ASSET:Registry",
+   "edges": [
+    "E0d1acb7",
+    "Ea66a030"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on with Danon disease",
+   "text": "Danon disease is caused by changes, called mutations, in a gene named LAMP2 [Eb39aff7, E91e8398]. In most people with Danon disease, these changes mean the body makes very little or none of the LAMP2 protein [E2638519]. The LAMP2 protein normally sits on lysosomes, which are tiny parts inside cells that act like clean-up and recycling stations [E6303c40]. Without enough LAMP2, cells struggle to clear away old or damaged parts, a clean-up process called autophagy [Ed8d56f4, E1018ef1]. This means leftover material builds up inside cells and gets in the way of how the cells normally work [E3dcae5a]. This buildup mostly affects the heart and muscles, and can lead to serious heart problems [E13cc433, Ef11c52b]. Some research also points to trouble in mitochondria, the tiny parts of cells that help make energy [E86ac16a].",
+   "citations": [
+    "Eb39aff7",
+    "E91e8398",
+    "E2638519",
+    "E6303c40",
+    "Ed8d56f4",
+    "E1018ef1",
+    "E3dcae5a",
+    "E13cc433",
+    "Ef11c52b",
+    "E86ac16a"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Similar diseases and lookalikes",
+   "text": "The atlas has no cited evidence for this yet.",
+   "citations": [],
+   "status": "no_supported_evidence"
+  },
+  {
+   "key": "what_exists",
+   "title": "Groups, studies and people working in this space",
+   "text": "The Danon Foundation is a patient group based in the United States that describes itself as a community of people living with or affected by Danon disease [Ebb89110, E5453000]. A group called DanonDisease.org, based in the United States, provides information for patients and families and runs a registry that patients can join to learn more about the condition [E5eaeabc, Ea66a030, E0d1acb7]. According to ClinicalTrials.gov, Rocket Pharmaceuticals Inc. runs a recruiting Phase 2 gene therapy study of RP-A501 for male patients with Danon disease, with sites in the United States, Germany, Italy, and the United Kingdom [Ee764f20, Ec165b8d, E77e875f, E5e48ead, E1668b79, E4192620]. According to ClinicalTrials.gov, Rocket Pharmaceuticals Inc. also runs a recruiting Danon Disease Natural History Study with sites in the United States, Germany, Israel, Italy, and Spain [E822f114, Ea370024, E9cadb6d, Efeffc76, E82505d2, Eadecf2e, Edfa898e], and ran a now-completed natural history study with sites in Czechia, France, Ireland, Italy, and Spain [E518cc81, E517d94f, E8c9ce4b, Ef9f78bd, E87eb350, Eae5d3a2, Ec22f80f]. According to ClinicalTrials.gov, Duke University runs a recruiting natural history study of rare glycogen storage diseases that includes Danon disease, with a site in the United States [E4e42edb, E485f287, E37cc651]. According to ClinicalTrials.gov, the Chinese Academy of Medical Sciences, Fuwai Hospital runs a recruiting study on precision diagnosis of rare cardiomyopathies, including Danon disease, with a site in China [E948e7e8, E6c048cc, E14467f7]. Heden listed as the lead researcher [Eefb11fc, E042e259, E2e5d60a]. We matched by name a researcher, Ying Sun, to a paper that mentions Danon disease [E6a41567, E0ebc691].",
+   "citations": [
+    "Ebb89110",
+    "E5453000",
+    "E5eaeabc",
+    "Ea66a030",
+    "E0d1acb7",
+    "Ee764f20",
+    "Ec165b8d",
+    "E77e875f",
+    "E5e48ead",
+    "E1668b79",
+    "E4192620",
+    "E822f114",
+    "Ea370024",
+    "E9cadb6d",
+    "Efeffc76",
+    "E82505d2",
+    "Eadecf2e",
+    "Edfa898e",
+    "E518cc81",
+    "E517d94f",
+    "E8c9ce4b",
+    "Ef9f78bd",
+    "E87eb350",
+    "Eae5d3a2",
+    "Ec22f80f",
+    "E4e42edb",
+    "E485f287",
+    "E37cc651",
+    "E948e7e8",
+    "E6c048cc",
+    "E14467f7",
+    "Eefb11fc",
+    "E042e259",
+    "E2e5d60a",
+    "E6a41567",
+    "E0ebc691"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "A first step could be to contact the Danon Foundation, a patient group based in the United States that is linked to Danon disease, to learn more and connect with others [Ebb89110, E5453000]. Another step could be to ask about joining the Registry run for Danon disease, which patients can join to learn more about the condition [E0d1acb7, Ea66a030].",
+   "citations": [
+    "Ebb89110",
+    "E5453000",
+    "E0d1acb7",
+    "Ea66a030"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:300257",
+   "n_results": 34,
+   "n_kept": 34
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0010281",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Danon disease",
+   "n_results": 7,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "\"Danon disease\"",
+   "n_results": 4,
+   "n_kept": 4
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Danon disease\"[tiab]",
+   "n_results": 371,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Danon disease\"[tiab]) AND hasabstract",
+   "n_results": 302,
+   "n_kept": 34
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.danonfoundation.org/about-us/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.danonfoundation.org/about-us/partners/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://rarediseases.org/organizations/danondisease-org/",
+   "n_results": 1,
+   "n_kept": 1
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

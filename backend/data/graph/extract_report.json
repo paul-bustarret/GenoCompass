@@ -1,0 +1,801 @@
+{
+  "pubmed_llm": {
+    "papers_read": 250,
+    "claims_proposed": 768,
+    "already_present": 21,
+    "contradictions_downgraded": 9,
+    "kept": 668,
+    "edges_added_total": 914,
+    "dropped": {
+      "quote_check": 7,
+      "relevance": 72,
+      "unresolved_entity": 4,
+      "invalid_type": 0
+    },
+    "new_nodes": 354,
+    "contradictions": 1,
+    "kept_examples": [
+      {
+        "id": "E7b907fc",
+        "src": "MONDO:0009655",
+        "relation": "caused_by",
+        "dst": "NCBIGene:6448",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis IIIA (MPS-IIIA) is an autosomal recessive lysosomal storage disorder caused by the deficiency of sulfamidase (NS; EC 3.10.1.1)"
+      },
+      {
+        "id": "E8282821",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis IIIA (MPS-IIIA) is an autosomal recessive lysosomal storage disorder caused by the deficiency of sulfamidase (NS; EC 3.10.1.1)"
+      },
+      {
+        "id": "Ec586fdd",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "resulting in defective degradation and storage of heparan sulfate."
+      },
+      {
+        "id": "E6c3b383",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "Sanfilippo syndrome type A (mucopolysaccharidosis type IIIA; MPS IIIA) is caused by a deficiency of the lysosomal enzyme haparan N-sulphatase (NS)."
+      },
+      {
+        "id": "E9276c06",
+        "src": "MONDO:0009655",
+        "relation": "caused_by",
+        "dst": "NCBIGene:6448",
+        "polarity": "supports",
+        "quote": "Sanfilippo syndrome type A (mucopolysaccharidosis type IIIA; MPS IIIA) is caused by a deficiency of the lysosomal enzyme haparan N-sulphatase (NS)."
+      },
+      {
+        "id": "E2e92e5f",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "The diagnosis of MPS IIIA was confirmed by decreased activity of heparan N-sulfatase in leucocytes."
+      },
+      {
+        "id": "E98013d4",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis type III (MPS III; Sanfilippo syndrome) is a metabolic disorder characterized by the deficiency of a lysosomal enzyme catalyzing the catab"
+      },
+      {
+        "id": "E6ff8e71",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "Biochemically there was a deficiency of heparan sulphamidase."
+      },
+      {
+        "id": "E87be76b",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "All the heparan sulphate chains had non-reducing-end glucosamine-N-sulphate residues."
+      },
+      {
+        "id": "E4c6d421",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "On ultrastructure examination, these cytosomes contained either moderately dense granular material, tentatively interpreted as precipitated glycosaminoglycan; a"
+      },
+      {
+        "id": "E6e128f9",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_glycogen",
+        "polarity": "supports",
+        "quote": "In the liver, storage vesicles also contained excess glycogen as a secondary storage product."
+      },
+      {
+        "id": "E0d3b201",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "MPS IIIA is inherited in an autosomal recessive manner and is caused by a deficiency in the lysosomal enzyme sulfamidase, which is required for the degradation "
+      },
+      {
+        "id": "E6f133a2",
+        "src": "MONDO:0009655",
+        "relation": "caused_by",
+        "dst": "NCBIGene:6448",
+        "polarity": "supports",
+        "quote": "In MPS IIIA patients, the excess of lysosomal storage of heparan sulfate often leads to mental retardation, hyperactive behavior, and connective tissue impairme"
+      },
+      {
+        "id": "Edc95f21",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "In MPS IIIA patients, the excess of lysosomal storage of heparan sulfate often leads to mental retardation, hyperactive behavior, and connective tissue impairme"
+      },
+      {
+        "id": "E81e28a7",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis type IIIA (Sanfilippo A syndrome), a fatal childhood-onset neurodegenerative disease with mild facial, visceral and skeletal abnormalities"
+      },
+      {
+        "id": "E76a2693",
+        "src": "MONDO:0009655",
+        "relation": "caused_by",
+        "dst": "NCBIGene:6448",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis type IIIA (Sanfilippo A syndrome), a fatal childhood-onset neurodegenerative disease with mild facial, visceral and skeletal abnormalities"
+      },
+      {
+        "id": "E5637629",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "Following vector administration, enzymatic activity increased throughout the brain and in serum, leading to whole body correction of GAG accumulation and lysoso"
+      },
+      {
+        "id": "E0e49aee",
+        "src": "MONDO:0009655",
+        "relation": "studied_with",
+        "dst": "INTERVENTION:intra_CSF_AAV9_gene_therapy",
+        "polarity": "supports",
+        "quote": "intracerebrospinal fluid (intra-CSF) administration of serotype 9 adenoassociated viral vectors (AAV9s) encoding sulfamidase corrects both CNS and somatic patho"
+      },
+      {
+        "id": "Ed62fa17",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:substrate_storage_heparan_sulfate",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis IIIA is a neuronopathic lysosomal storage disease, characterised by heparan sulphate and other substrates accumulating in the brain."
+      },
+      {
+        "id": "E4af2811",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:neuroinflammation",
+        "polarity": "supports",
+        "quote": "Patients develop behavioural disturbances and cognitive decline, a possible consequence of neuroinflammation and abnormal substrate accumulation."
+      },
+      {
+        "id": "E13c6e2f",
+        "src": "MONDO:0009655",
+        "relation": "studied_with",
+        "dst": "INTERVENTION:haematopoietic_stem_cell_gene_therapy_wi",
+        "polarity": "supports",
+        "quote": "IL-1 blockade in mucopolysaccharidosis IIIA mice using IL-1 receptor type 1 knockout or haematopoietic stem cell gene therapy over-expressing IL-1Ra reduced gli"
+      },
+      {
+        "id": "Eb4daecf",
+        "src": "MONDO:0009655",
+        "relation": "studied_with",
+        "dst": "INTERVENTION:IL_1_receptor_type_1_knockout",
+        "polarity": "supports",
+        "quote": "IL-1 blockade in mucopolysaccharidosis IIIA mice using IL-1 receptor type 1 knockout or haematopoietic stem cell gene therapy over-expressing IL-1Ra reduced gli"
+      },
+      {
+        "id": "Eee0e5f8",
+        "src": "MONDO:0009655",
+        "relation": "has_mechanism",
+        "dst": "MECH:lysosomal_enzyme_deficiency",
+        "polarity": "supports",
+        "quote": "Mucopolysaccharidosis type IIIA (MPS-IIIA) is a lysosomal storage disorder (LSD) caused by inherited defect of sulfamidase, a lysosomal sulfatase."
+      },
+      {
+        "id": "E63d5bb6",
+        "src": "MONDO:0009655",
+        "relation": "studied_with",
+        "dst": "INTERVENTION:AAV9_mediated_sulfamidase_gene_therapy",
+        "polarity": "supports",
+        "quote": "Translating such gene delivery strategy to a mouse model of MPS-IIIA results in a rescue of brain pathology, including memory deficit, as well as improvement in"
+      },
+      {
+        "id": "Ec820ac0",
+        "src": "MONDO:0009656",
+        "relation": "has_mechanism",
+        "dst": "MECH:synaptic_dysfunction",
+        "polarity": "supports",
+        "quote": "Multiple bioinformatic analyses allowed to identify three major clusters of the differentially abundant proteins: proteins involved in cytoskeletal regulation, "
+      }
+    ],
+    "drop_examples": [
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIA",
+        "relation": "caused_by",
+        "object": "SGSH",
+        "quote": "Transfection of COS-7 cells with cDNA mutagenized to the corresponding mutations did not yield active enzyme, demonstrating the deleterious nature of the mutati",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/12000360/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIA",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_glycosphingolipid",
+        "quote": "By histology, there were variably stained storage cytosomes within neurons, including many that stained for gangliosides.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/17846229/"
+      },
+      {
+        "reason": "quote_check",
+        "disease": "MPS IIIA",
+        "relation": "has_mechanism",
+        "object": "lysosomal_enzyme_deficiency",
+        "quote": "Mucopolysaccharidosis type IIIA (MPS IIIA) is an automic recessive LSD caused by a deficiency in sulfamidase, a sulfatase involved in the stepwise degradation o",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/23863627/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIA",
+        "relation": "studied_with",
+        "object": "intracerebroventricular AAV9 gene therapy",
+        "quote": "Administration of sulfamidase-encoding AAV9 resulted in transgenic expression throughout the CNS and liver and increased sulfamidase activity in CSF.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/23863627/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIA",
+        "relation": "has_mechanism",
+        "object": "neuroinflammation",
+        "quote": "We identified pathogenic mechanisms of inflammasome activation, including that disease-specific 2-O-sulphated heparan sulphate was essential for priming an IL-1",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32057196/"
+      },
+      {
+        "reason": "quote_check",
+        "disease": "MPS IIIB",
+        "relation": "has_mechanism",
+        "object": "lysosomal_enzyme_deficiency",
+        "quote": "MPS IIIB is an inherited metabolic disease due to deficiency of α-N-Acetylglucosaminidase (NAGLU) enzyme with subsequent storage of undegraded heparan sulfate (",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32111039/"
+      },
+      {
+        "reason": "quote_check",
+        "disease": "MPS IIIB",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_heparan_sulfate",
+        "quote": "MPS IIIB is an inherited metabolic disease due to deficiency of α-N-Acetylglucosaminidase (NAGLU) enzyme with subsequent storage of undegraded heparan sulfate (",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32111039/"
+      },
+      {
+        "reason": "quote_check",
+        "disease": "MPS IIIB",
+        "relation": "caused_by",
+        "object": "NAGLU",
+        "quote": "MPS IIIB is an inherited metabolic disease due to deficiency of α-N-Acetylglucosaminidase (NAGLU) enzyme with subsequent storage of undegraded heparan sulfate (",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/32111039/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "caused_by",
+        "object": "NAGLU",
+        "quote": "it is caused by deficiency of α-N-acetylglucosaminidase and resulting lysosomal storage of heparan sulfate.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/22096577/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "has_mechanism",
+        "object": "lysosomal_enzyme_deficiency",
+        "quote": "hepatic and serum α-N-acetylglucosaminidase activity was very low (<8% of control), while other enzyme activities were normal to increased in the 2 affected emu",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/24723233/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_glycosphingolipid",
+        "quote": "GM3 ganglioside accumulation in endothelium of the brain microvasculature",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/21408219/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_heparan_sulfate",
+        "quote": "Biochemical studies revealed an accumulation of glycosaminoglycans in the CNS and abnormalities in the lipid metabolism in the brain and visceral organs.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/3938624/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "has_mechanism",
+        "object": "neuroinflammation",
+        "quote": "A protein assay of the cerebrum showed increased glial fibrillary acidic protein and low levels of myelin basic protein in the white matter.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/3938624/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "studied_with",
+        "object": "intracranial AAV2/5-NAGLU",
+        "quote": "Adeno-associated viral (AAV) treatment resulted in improvements in lifespan, motor function, hearing, time to activity onset, and daytime activity level, but no",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/20179679/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "studied_with",
+        "object": "bone marrow transplant",
+        "quote": "BMT resulted in improved hearing by 9 months, and improved circadian measures, but had no effect on lifespan, motor function, or central nervous system (CNS) ly",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/20179679/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIIB",
+        "relation": "studied_with",
+        "object": "intracranial AAV2/5-NAGLU combined with bone marrow transplant",
+        "quote": "AAV/BMT treatment resulted in improvements in hearing, time to activity onset, motor function, and reduced CNS lysosomal storage, but had no effect on lifespan.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/20179679/"
+      },
+      {
+        "reason": "quote_check",
+        "disease": "MPS IIIC",
+        "relation": "has_mechanism",
+        "object": "lysosomal_enzyme_deficiency",
+        "quote": "Mucopolysaccharidosis IIIC (MPS IIIC, or Sanfilippo C syndrome) is a lysosomal storage disorder caused by the inherited deficiency of the lysosomal membrane enz",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/17033958/"
+      },
+      {
+        "reason": "quote_check",
+        "disease": "MPS IIIC",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_heparan_sulfate",
+        "quote": "Mucopolysaccharidosis IIIC (MPS IIIC, or Sanfilippo C syndrome) is a lysosomal storage disorder caused by the inherited deficiency of the lysosomal membrane enz",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/17033958/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIID",
+        "relation": "caused_by",
+        "object": "GNS",
+        "quote": "It is caused by deficient activity of lysosomal N-acetylglucosamine-6-sulfatase (G6S).",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/9039471/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIID",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_heparan_sulfate",
+        "quote": "The majority of the cells in various tissues showed morphological changes expected with lysosomal storage of HS.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/9329460/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIID",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_glycosphingolipid",
+        "quote": "The central nervous system (CNS) was most severely affected because of the secondary storage of GM2 and GM3 gangliosides in addition to the primary accumulation",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/9329460/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIID",
+        "relation": "caused_by",
+        "object": "GNS",
+        "quote": "Novel homozygous mutations were identified in the affected patients from each family: a large intragenic deletion of 8723 bp encompassing exons 2 and 3 in famil",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/16990043/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS IIID",
+        "relation": "caused_by",
+        "object": "GNS",
+        "quote": "In family 2, the proband carried a heterozygous mutation occurring in a splice recognition site in the intron 7 boundary (c.876-2A>G).",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/17998446/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS I (Hurler)",
+        "relation": "caused_by",
+        "object": "IDUA",
+        "quote": "It is an inherited lysosomal disorder caused by the absence of the alpha-L-iduronidase enzyme, which is responsible for the degradation of glycosaminoglycans (G",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/30335294/"
+      },
+      {
+        "reason": "relevance",
+        "disease": "MPS I (Hurler)",
+        "relation": "has_mechanism",
+        "object": "substrate_storage_heparan_sulfate",
+        "quote": "This leads to a buildup of dermatan sulfate and heparin sulfate in multiple tissues, resulting in progressive deterioration and, eventually, death.",
+        "source_url": "https://pubmed.ncbi.nlm.nih.gov/30335294/"
+      }
+    ],
+    "run_date": "2026-10-03"
+  },
+  "patient_groups": {
+    "pages_read": 90,
+    "orgs_proposed": 187,
+    "orgs_kept": 166,
+    "assets_proposed": 41,
+    "emails_nulled": 7,
+    "already_present": 3,
+    "kept": 491,
+    "edges_added_total": 491,
+    "dropped": {
+      "quote_check": 5,
+      "relevance": 22,
+      "unresolved_entity": 0,
+      "invalid_type": 0
+    },
+    "new_nodes": 198,
+    "contradictions": 0,
+    "kept_examples": [
+      {
+        "id": "E80ea2ad",
+        "src": "ORG:Cure_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009655",
+        "polarity": null,
+        "quote": "The mission of the Cure Sanfilippo Foundation is to advocate for and fund research directed toward a cure or treatment options for children with Sanfilippo Synd"
+      },
+      {
+        "id": "Ea7a71e3",
+        "src": "ORG:Cure_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009656",
+        "polarity": null,
+        "quote": "The mission of the Cure Sanfilippo Foundation is to advocate for and fund research directed toward a cure or treatment options for children with Sanfilippo Synd"
+      },
+      {
+        "id": "E8303439",
+        "src": "ORG:Cure_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009657",
+        "polarity": null,
+        "quote": "The mission of the Cure Sanfilippo Foundation is to advocate for and fund research directed toward a cure or treatment options for children with Sanfilippo Synd"
+      },
+      {
+        "id": "E6c5b837",
+        "src": "ORG:Cure_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009658",
+        "polarity": null,
+        "quote": "The mission of the Cure Sanfilippo Foundation is to advocate for and fund research directed toward a cure or treatment options for children with Sanfilippo Synd"
+      },
+      {
+        "id": "E12be793",
+        "src": "ORG:Cure_Sanfilippo_Foundation",
+        "relation": "based_in",
+        "dst": "COUNTRY:US",
+        "polarity": null,
+        "quote": "The mission of the Cure Sanfilippo Foundation is to advocate for and fund research directed toward a cure or treatment options for children with Sanfilippo Synd"
+      },
+      {
+        "id": "Eb6b5ea1",
+        "src": "ORG:Sanfilippo_Children_s_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009655",
+        "polarity": null,
+        "quote": "The purpose of the Sanfilippo Children's Foundation is to drive research for a world without Sanfilippo syndrome."
+      },
+      {
+        "id": "Ed536e8b",
+        "src": "ORG:Sanfilippo_Children_s_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009656",
+        "polarity": null,
+        "quote": "The purpose of the Sanfilippo Children's Foundation is to drive research for a world without Sanfilippo syndrome."
+      },
+      {
+        "id": "E1058e71",
+        "src": "ORG:Sanfilippo_Children_s_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009657",
+        "polarity": null,
+        "quote": "The purpose of the Sanfilippo Children's Foundation is to drive research for a world without Sanfilippo syndrome."
+      },
+      {
+        "id": "Ea9e9baf",
+        "src": "ORG:Sanfilippo_Children_s_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009658",
+        "polarity": null,
+        "quote": "The purpose of the Sanfilippo Children's Foundation is to drive research for a world without Sanfilippo syndrome."
+      },
+      {
+        "id": "Ea781b26",
+        "src": "ORG:Sanfilippo_Children_s_Foundation",
+        "relation": "based_in",
+        "dst": "COUNTRY:AU",
+        "polarity": null,
+        "quote": "The purpose of the Sanfilippo Children's Foundation is to drive research for a world without Sanfilippo syndrome."
+      },
+      {
+        "id": "E74da709",
+        "src": "ORG:Sanfilippo_Children_s_Foundation",
+        "relation": "runs",
+        "dst": "ASSET:Patient_Registry",
+        "polarity": null,
+        "quote": "Patient Registry"
+      },
+      {
+        "id": "E10d7132",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009655",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "Ea8aa518",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009656",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "Ed9f5fc4",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009657",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "Ea02bec7",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009658",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "E7291dc8",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0011758",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "E1f5a006",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0010674",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "E040d968",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009265",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "Ea5b7539",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0010526",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "E1dfdb85",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009591",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "Ea783cbc",
+        "src": "ORG:MPS_Society",
+        "relation": "studies",
+        "dst": "MONDO:0009260",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "Ef1a1063",
+        "src": "ORG:MPS_Society",
+        "relation": "based_in",
+        "dst": "COUNTRY:GB",
+        "polarity": null,
+        "quote": "UK MPS Society welcomes FDA approval of UX111 for MPS IIIA"
+      },
+      {
+        "id": "E2fbfe1f",
+        "src": "ORG:Team_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009655",
+        "polarity": null,
+        "quote": "Team Sanfilippo is a nonprofit foundation dedicated to funding research and supporting families affected by Sanfilippo Syndrome."
+      },
+      {
+        "id": "E0ca79ae",
+        "src": "ORG:Team_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009656",
+        "polarity": null,
+        "quote": "Team Sanfilippo is a nonprofit foundation dedicated to funding research and supporting families affected by Sanfilippo Syndrome."
+      },
+      {
+        "id": "Ed18299e",
+        "src": "ORG:Team_Sanfilippo_Foundation",
+        "relation": "studies",
+        "dst": "MONDO:0009657",
+        "polarity": null,
+        "quote": "Team Sanfilippo is a nonprofit foundation dedicated to funding research and supporting families affected by Sanfilippo Syndrome."
+      }
+    ],
+    "drop_examples": [
+      {
+        "reason": "relevance",
+        "org": "Vaincre les Maladies Lysosomales",
+        "quote": "Une association de parents et patients adultes unis par une même conviction, la science peut guérir les maladies lysosomales.",
+        "source_url": "https://www.vml-asso.org/"
+      },
+      {
+        "reason": "relevance",
+        "org": "AMA",
+        "quote": "El ámbito de aplicación es en todo el territorio argentino, beneficiando a sus miembros a lo largo y ancho del país, abarcando la totalidad de los tipos y subti",
+        "source_url": "https://www.mpsargertina.org/"
+      },
+      {
+        "reason": "quote_check",
+        "org": "Genzyme",
+        "asset": "Pompe Registry",
+        "quote": "the Pompe Registry was established as a global, voluntary, observational database to collect and report on the natural history and outcomes of patients with Pom",
+        "source_url": "https://amda-pompe.org/pompe-registry-a-decade-of-making-a-difference/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Pompe Deutschland e.V.",
+        "asset": "Pompe-Register",
+        "quote": "Im Zeitraum 22. September bis 1. Oktober 2026 haben wir unsere Mitglieder in einer Online-Umfrage zu ausgefallenen Infusionen während des Lieferengpasses von My",
+        "source_url": "https://www.mpompe.de/"
+      },
+      {
+        "reason": "relevance",
+        "org": "AGSD-UK",
+        "quote": "We help individuals and families affected by Glycogen Storage Disease (GSD) by putting people in contact, providing information and support, publishing a magazi",
+        "source_url": "https://agsd.org.uk/about-us/"
+      },
+      {
+        "reason": "quote_check",
+        "org": "Hunter's Hope",
+        "quote": "Hunter's Hope was established in 1997 by Pro Football Hall of Fame Member and former Buffalo Bills Quarterback, Jim Kelly and his wife Jill, after their infant ",
+        "source_url": "https://www.huntershope.org/about-us/"
+      },
+      {
+        "reason": "relevance",
+        "org": "KrabbeConnect",
+        "asset": "KrabbeCURES",
+        "quote": "Your experience is more than your story—it can become part of the research.",
+        "source_url": "https://krabbeconnect.org/about-krabbeconnect/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Alex, The Leukodystrophy Charity",
+        "quote": "Established in 2004, Alex TLC provides invaluable support and information to people affected by leukodystrophy.",
+        "source_url": "https://alextlc.org/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Lysosomal Storage Disorders Society – Pakistan",
+        "quote": "LSD Society Pakistan is a registered Non-Profit organization set up by a group of parents dedicated and committed to improve the lives of Lysosomal Storage Dise",
+        "source_url": "https://globalgenes.org/disorder/sandhoff-disease/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Lysosomal Storage Disorders Support Society",
+        "quote": "LSDSS endeavors to transform the life of children affected by rare Lysosomal Storage Disorders.",
+        "source_url": "https://globalgenes.org/disorder/sandhoff-disease/"
+      },
+      {
+        "reason": "relevance",
+        "org": "International Niemann-Pick Disease Alliance",
+        "quote": "We've created a global registry of all NPD patients - if you're not enrolled yet, join us now...",
+        "source_url": "https://www.inpda.org/useful-link/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Batten Disease Support & Research Association Australia",
+        "quote": "BDSRA Australia is dedicated to improving the well-being of patients and families affected by Batten disease in Australia.",
+        "source_url": "https://bdsraaustralia.org/about/"
+      },
+      {
+        "reason": "relevance",
+        "org": "A-NCL",
+        "quote": "Questo sito è il braccio dell'Associazione Nazionale contro le Ceroidolipofuscinosi Neuronali, nata con lo scopo di combattere questa terribile malattia.",
+        "source_url": "https://www.a-ncl.it/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Beyond Batten Disease Foundation",
+        "quote": "BBDF is proud to have co-authored three recent publications.",
+        "source_url": "https://beyondbatten.org/research/state-of-science/"
+      },
+      {
+        "reason": "relevance",
+        "org": "NCL-Stiftung",
+        "quote": "Wir als NCL-Stiftung setzen uns für die nationale und internationale Forschungsförderung ein, um den von NCL betroffenen Kindern eine Aussicht auf bisher fehlen",
+        "source_url": "https://www.ncl-stiftung.de/"
+      },
+      {
+        "reason": "relevance",
+        "org": "The Michael J. Fox Foundation for Parkinson's Research",
+        "quote": "As the world's largest nonprofit funder of Parkinson's research, The Michael J. Fox Foundation is dedicated to accelerating a cure for Parkinson's disease and i",
+        "source_url": "https://www.michaeljfox.org/publication/michael-j-fox-foundation-and-silverstein-foundation-parkinsons-gba-grant-nearly-3"
+      },
+      {
+        "reason": "relevance",
+        "org": "The Silverstein Foundation for Parkinson's with GBA",
+        "quote": "The Silverstein Foundation is a 501(c)(3) non-profit organization focused on investing in cutting-edge therapeutic approaches for the treatment and prevention o",
+        "source_url": "https://www.michaeljfox.org/publication/michael-j-fox-foundation-and-silverstein-foundation-parkinsons-gba-grant-nearly-3"
+      },
+      {
+        "reason": "relevance",
+        "org": "Parkinson's Precision Medicine Initiative",
+        "quote": "PPMI is a landmark study collaborating with partners around the world to create a robust open-access data set and biosample library to speed scientific breakthr",
+        "source_url": "https://www.ppmi-info.org/about-ppmi"
+      },
+      {
+        "reason": "relevance",
+        "org": "Cure Parkinson's",
+        "quote": "Cure Parkinson's is the only organisation in the UK solely dedicated to finding a cure for Parkinson's, one of the fastest growing neurological conditions in th",
+        "source_url": "https://cureparkinsons.org.uk/about-us/"
+      },
+      {
+        "reason": "quote_check",
+        "org": "Israel Rett Syndrome Association",
+        "quote": "××ª×¡××× ×ª ×¨× ×× × ×××ª ××× ×ª××¨×©×ª××ª",
+        "source_url": "https://www.rett.org.il/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Parent Project Muscular Dystrophy - India",
+        "quote": "we at Parent Project Muscular Dystrophy (PPMD) a non-profit organisation registered in Mumbai - India need YOUR SUPPORT!",
+        "source_url": "https://ppmdindia.org/"
+      },
+      {
+        "reason": "relevance",
+        "org": "Hypertrophic Cardiomyopathy Association",
+        "quote": "The HCMA: A home for the Bighearted",
+        "source_url": "https://www.4hcm.org/"
+      },
+      {
+        "reason": "quote_check",
+        "org": "Cure GM1 Foundation",
+        "asset": "GM1 Biobank",
+        "quote": "GM1 Biobank",
+        "source_url": "https://www.curegm1.org/the-foundation-and-its-members/"
+      },
+      {
+        "reason": "relevance",
+        "org": "LysoBridge JAPAN：日本ムコ多糖症患者家族の会",
+        "quote": "｢日本ムコ多糖患者家族の会｣では、交流会などを通じての家族の交流・医師研究者を含めた情報交換のほか、内外の関係団体との交流、関係各省庁・研究機関に対する研究促進のはたらきかけを行っています。",
+        "source_url": "https://www.mps-japan.org/"
+      },
+      {
+        "reason": "relevance",
+        "org": "National Organization for Rare Disorders",
+        "asset": "NORD's Rare Disease Database",
+        "quote": "Search for detailed information on rare diseases, including NORD's authoritative Rare Disease Reports and data from other reliable sources.",
+        "source_url": "https://rarediseases.org/rare-diseases/acid-sphingomyelinase-deficiency/"
+      }
+    ],
+    "run_date": "2026-10-03"
+  }
+}

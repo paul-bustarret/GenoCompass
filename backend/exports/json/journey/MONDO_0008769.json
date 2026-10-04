@@ -1,0 +1,742 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0008769",
+  "name": "Ceroid lipofuscinosis, neuronal, 2",
+  "short": "CLN2"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:1200",
+    "name": "TPP1",
+    "edges": [
+     "Eee49fa2",
+     "E4eae0df",
+     "Ed248e83",
+     "E7dc6ee2",
+     "E3c230b3",
+     "Ec8b6491",
+     "E0e7a9a0",
+     "E03170a6"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:lysosomal_enzyme_deficiency",
+    "name": "Lysosomal enzyme deficiency",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E70b6fe8",
+     "E58296be",
+     "Ed77a436",
+     "Eec06751",
+     "Eafee7b3",
+     "E2045017"
+    ]
+   },
+   {
+    "id": "MECH:ceroid_lipofuscin_storage",
+    "name": "Ceroid lipofuscin storage",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E4b46978",
+     "E7cdeea3",
+     "Ee036853",
+     "E6a3d168",
+     "E1770cfa",
+     "E04adc14",
+     "E0d63214"
+    ]
+   },
+   {
+    "id": "MECH:neuronal_loss",
+    "name": "Neuronal loss / neurodegeneration",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E71ce38d",
+     "E7af4453",
+     "E8ddd2a4",
+     "E094516c",
+     "E4eb4631"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-381038",
+    "name": "XBP1(S) activates chaperone genes",
+    "edges": [
+     "Eee49fa2",
+     "Ea05b317",
+     "E4eae0df",
+     "Ed248e83",
+     "E7dc6ee2",
+     "E3c230b3",
+     "Ec8b6491",
+     "E0e7a9a0",
+     "E03170a6"
+    ]
+   },
+   {
+    "id": "R-HSA-381070",
+    "name": "IRE1alpha activates chaperones",
+    "edges": [
+     "Eee49fa2",
+     "Ea05b317",
+     "E624d5c0",
+     "E4eae0df",
+     "Ed248e83",
+     "E7dc6ee2",
+     "E3c230b3",
+     "Ec8b6491",
+     "E0e7a9a0",
+     "E03170a6"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0001311",
+    "name": "Abnormal nervous system electrophysiology",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E81461ce"
+    ]
+   },
+   {
+    "id": "HP:6000571",
+    "name": "Reduced tissue tripeptidyl peptidase 1 activity",
+    "weight": 3.219,
+    "frequency": "2/2",
+    "edges": [
+     "Ed623780"
+    ]
+   },
+   {
+    "id": "HP:0000529",
+    "name": "Progressive visual loss",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E24d0838"
+    ]
+   },
+   {
+    "id": "HP:0000550",
+    "name": "Undetectable electroretinogram",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E692fe55"
+    ]
+   },
+   {
+    "id": "HP:0000750",
+    "name": "Delayed speech and language development",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "Eda9eb74"
+    ]
+   },
+   {
+    "id": "HP:0001336",
+    "name": "Myoclonus",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E7982300"
+    ]
+   },
+   {
+    "id": "HP:0002074",
+    "name": "Increased neuronal autofluorescent lipopigment",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E38e90c9"
+    ]
+   },
+   {
+    "id": "HP:0003205",
+    "name": "Curvilinear intracellular accumulation of autofluorescent lipopigment storage material",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E2fb98e1"
+    ]
+   },
+   {
+    "id": "HP:0003463",
+    "name": "Increased extraneuronal autofluorescent lipopigment",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E81e0f41"
+    ]
+   },
+   {
+    "id": "HP:0000546",
+    "name": "Retinal degeneration",
+    "weight": 2.12,
+    "frequency": null,
+    "edges": [
+     "E399ebc8"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": "ClinVar:4818300",
+    "name": "NM_000391.4(TPP1):c.509-2A>T",
+    "significance": "Pathogenic",
+    "consequence": "splice acceptor variant",
+    "edges": [
+     "E4ddeac4"
+    ]
+   }
+  ]
+ },
+ "similar": [],
+ "lookalikes": [
+  {
+   "id": "MONDO:0008767",
+   "name": "CLN3",
+   "score": 0.187,
+   "lookalike": true,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.0,
+    "phenotype": 0.234,
+    "mechanism": 0.623
+   },
+   "witnesses": [
+    {
+     "id": "MECH:ceroid_lipofuscin_storage",
+     "name": "Ceroid lipofuscin storage",
+     "kind": "mechanism",
+     "edges": [
+      "E4b46978",
+      "E7cdeea3",
+      "Ee036853",
+      "E6a3d168",
+      "E1770cfa",
+      "E04adc14",
+      "E0d63214",
+      "Eb0132b8",
+      "E670c401",
+      "E7e266f9",
+      "E633c826"
+     ]
+    },
+    {
+     "id": "MECH:neuronal_loss",
+     "name": "Neuronal loss / neurodegeneration",
+     "kind": "mechanism",
+     "edges": [
+      "E71ce38d",
+      "E7af4453",
+      "E8ddd2a4",
+      "E094516c",
+      "E4eb4631",
+      "E148344e",
+      "Ed7956f4",
+      "E4a5b1d9"
+     ]
+    },
+    {
+     "id": "HP:0001336",
+     "name": "Myoclonus",
+     "kind": "phenotype",
+     "edges": [
+      "E7982300",
+      "E0282bf7"
+     ]
+    },
+    {
+     "id": "HP:0000529",
+     "name": "Progressive visual loss",
+     "kind": "phenotype",
+     "edges": [
+      "E24d0838",
+      "Ece5a0d1"
+     ]
+    },
+    {
+     "id": "HP:0000550",
+     "name": "Undetectable electroretinogram",
+     "kind": "phenotype",
+     "edges": [
+      "E692fe55",
+      "E505ff82"
+     ]
+    }
+   ]
+  }
+ ],
+ "organizations": [
+  {
+   "id": "ORG:Taylor_s_Tale",
+   "name": "Taylor's Tale",
+   "kind": "patient_group",
+   "country": "US",
+   "website": "www.taylorstale.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E8e670ee"
+   ]
+  },
+  {
+   "id": "ORG:The_Batten_Disease_Support_Research_Asso",
+   "name": "The Batten Disease Support & Research Association",
+   "kind": "registry_host",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E613fcb3"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NICHD",
+   "name": "NIH NICHD",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "Eba9be50",
+    "Eccc3ac9",
+    "Ee961191",
+    "E011ef2f",
+    "Ebbef661",
+    "E055be57"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NINDS",
+   "name": "NIH NINDS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E979376d",
+    "E215c22c",
+    "E0e47c64",
+    "Ecbd2222"
+   ]
+  },
+  {
+   "id": "ORG:BioMarin_Pharmaceutical",
+   "name": "BioMarin Pharmaceutical",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E6239b0d",
+    "E88ec7f7"
+   ]
+  },
+  {
+   "id": "ORG:Polaryx_Therapeutics_Inc",
+   "name": "Polaryx Therapeutics, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E2aaf128",
+    "E12fae6f"
+   ]
+  },
+  {
+   "id": "ORG:Albert_Einstein_College_of_Medicine",
+   "name": "Albert Einstein College of Medicine",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E2523361",
+    "E17af82a"
+   ]
+  },
+  {
+   "id": "ORG:David_L_Rogers_MD",
+   "name": "David L Rogers, MD",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E63570b1",
+    "E01eb273"
+   ]
+  },
+  {
+   "id": "ORG:The_Charlotte_and_Gwenyth_Gray_Foundatio",
+   "name": "The Charlotte and Gwenyth Gray Foundation",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008769",
+   "edges": [
+    "E5406472",
+    "E54b7767"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT07582484",
+   "title": "Gene Therapy Trial for CLN6 Batten Disease",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0008769",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "scAAV9.CB.CLN6 (dose: 1.5E14 vector genomes)"
+   ],
+   "edges": [
+    "E54b7767",
+    "E94e3acf",
+    "Eea9930a"
+   ]
+  },
+  {
+   "id": "NCT07740512",
+   "title": "Safety, Tolerability, Pharmacokinetics, and Preliminary Efficacy of PLX-200 in Pediatric Patients (Master Protocol)",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0008769",
+   "countries": [],
+   "near_user": false,
+   "interventions": [
+    "PLX-200"
+   ],
+   "edges": [
+    "E12fae6f",
+    "E0fb2a07"
+   ]
+  },
+  {
+   "id": "NCT05368038",
+   "title": "ScreenPlus: A Comprehensive, Flexible, Multi-disorder Newborn Screening Program",
+   "status": "ENROLLING_BY_INVITATION",
+   "phase": null,
+   "for_disease": "MONDO:0008769",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E17af82a",
+    "Ec294d25"
+   ]
+  },
+  {
+   "id": "NCT04476862",
+   "title": "Cerliponase Alfa Observational Study in the US",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0008769",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Cerliponase Alfa"
+   ],
+   "edges": [
+    "E88ec7f7",
+    "E92a7022",
+    "Ed82970f"
+   ]
+  },
+  {
+   "id": "NCT05152914",
+   "title": "Intravitreal ERT to Prevent Retinal Disease Progression in Children With CLN2",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0008769",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Cerliponase Alfa"
+   ],
+   "edges": [
+    "E01eb273",
+    "E63f5644",
+    "E79e2025"
+   ]
+  }
+ ],
+ "assets": [],
+ "researchers": [
+  {
+   "id": "PERSON:2452381",
+   "name": "Anil B Mukherjee",
+   "grants": [
+    "RePORTER:ZIAHD000910"
+   ],
+   "diseases": [
+    "MONDO:0008769"
+   ],
+   "edges": [
+    "E574608d",
+    "E53f8887"
+   ]
+  },
+  {
+   "id": "PERSON:9568426",
+   "name": "Erika Augustine",
+   "grants": [
+    "RePORTER:U54HD122210"
+   ],
+   "diseases": [
+    "MONDO:0008769"
+   ],
+   "edges": [
+    "Ec74b030",
+    "Eccc3ac9",
+    "E9434757",
+    "Ebbef661"
+   ]
+  },
+  {
+   "id": "PERSON:7864776",
+   "name": "Jill M Weimer",
+   "grants": [
+    "RePORTER:U54HD122210"
+   ],
+   "diseases": [
+    "MONDO:0008769"
+   ],
+   "edges": [
+    "E6d64cb3",
+    "Eccc3ac9",
+    "Ebbef661"
+   ]
+  },
+  {
+   "id": "PERSON:2427635",
+   "name": "Jonathan D Cooper",
+   "grants": [
+    "RePORTER:R01NS140682"
+   ],
+   "diseases": [
+    "MONDO:0008769"
+   ],
+   "edges": [
+    "Ed3a744a",
+    "E215c22c",
+    "E772b52b",
+    "Ecbd2222",
+    "Ee1b95c1",
+    "E44d2838"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Taylor's Tale (patient group, based in US), which the atlas links to CLN2.",
+   "from_disease": "MONDO:0008769",
+   "target_id": "ORG:Taylor_s_Tale",
+   "edges": [
+    "E8e670ee"
+   ]
+  },
+  {
+   "kind": "build",
+   "step": "registry",
+   "text": "No disease similar to CLN2 in the atlas has a patient registry yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  },
+  {
+   "kind": "build",
+   "step": "natural_history_study",
+   "text": "No disease similar to CLN2 in the atlas has a natural history study yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What is CLN2?",
+   "text": "A paper reports that CLN2 disease is caused by changes in a gene called TPP1 [E4eae0df, Ed248e83]. A paper reports that this gene normally makes an enzyme, a small helper protein, called tripeptidyl peptidase 1, and in CLN2 this enzyme does not work enough, which is called a lysosomal enzyme deficiency, where a lysosome is a tiny recycling part inside a cell [E3c230b3, Ec8b6491]. A paper reports that because this enzyme is deficient, a material called ceroid lipofuscin builds up inside cells [Ee036853]. A paper reports that this material builds up inside nerve cells, which are the cells that carry signals in the brain [E04adc14]. A paper reports that this storage is linked with a loss of neurons over time, though exactly how is not fully known [E8ddd2a4]. According to ClinVar, one specific change in the TPP1 gene, called c.509-2A>T, has been found to cause CLN2 [E4ddeac4].",
+   "citations": [
+    "E4eae0df",
+    "Ed248e83",
+    "E3c230b3",
+    "Ec8b6491",
+    "Ee036853",
+    "E04adc14",
+    "E8ddd2a4",
+    "E4ddeac4"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Diseases that look or share biology like CLN2",
+   "text": "CLN3 is a disease with similar symptoms, different cause compared to CLN2; according to HPO, both conditions can include myoclonus, meaning sudden muscle jerks [E7982300, E0282bf7]. According to HPO, both CLN2 and CLN3 can cause progressive loss of vision over time [E24d0838, Ece5a0d1]. According to HPO, both can also show an undetectable electroretinogram, which is a test that checks how the eye reacts to light [E692fe55, E505ff82].",
+   "citations": [
+    "E7982300",
+    "E0282bf7",
+    "E24d0838",
+    "Ece5a0d1",
+    "E692fe55",
+    "E505ff82"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "Groups, researchers, and trials connected to CLN2",
+   "text": "A paper reports that Taylor's Tale, a patient group based in the United States, is linked to CLN2 [E8e670ee]. A paper reports that the Batten Disease Support and Research Association keeps up-to-date information on every known form of Batten disease [E613fcb3]. According to NIH RePORTER, NIH NICHD and NIH NINDS fund several research grants that study CLN2, including work connected to Erika Augustine, Jill M Weimer, Anil B Mukherjee, and Jonathan D Cooper [Eba9be50, Eccc3ac9, E055be57, E53f8887, E979376d, E215c22c, Ec74b030, E6d64cb3, E574608d, Ed3a744a]. We matched by name that Jonathan D Cooper also authored a paper about chronic oral cannabidiol in a mouse model of CLN2 disease [Ee1b95c1]. According to ClinicalTrials.gov, BioMarin Pharmaceutical runs an observational study of Cerliponase Alfa for CLN2 that is active but not recruiting, with a site in the United States [E6239b0d, E88ec7f7, E92a7022, Ed82970f]. According to ClinicalTrials.gov, David L Rogers, MD runs a trial giving Cerliponase Alfa directly into the eye to look at retinal disease progression in children with CLN2, which is active but not recruiting, with a site in the United States [E63570b1, E01eb273, E63f5644, E79e2025]. According to ClinicalTrials.gov, Polaryx Therapeutics runs a trial testing PLX-200 for children with CLN2 that is not yet recruiting [E2aaf128, E12fae6f, E0fb2a07]. According to ClinicalTrials.gov, The Charlotte and Gwenyth Gray Foundation runs a gene therapy trial that studies CLN2, testing scAAV9.CB.CLN6, which is not yet recruiting, with a site in the United States [E5406472, E54b7767, E94e3acf, Eea9930a]. According to ClinicalTrials.gov, Albert Einstein College of Medicine runs a newborn screening study called ScreenPlus that includes CLN2 and is enrolling by invitation, with a site in the United States [E2523361, E17af82a, Ec294d25].",
+   "citations": [
+    "E8e670ee",
+    "E613fcb3",
+    "Eba9be50",
+    "Eccc3ac9",
+    "E055be57",
+    "E53f8887",
+    "E979376d",
+    "E215c22c",
+    "Ec74b030",
+    "E6d64cb3",
+    "E574608d",
+    "Ed3a744a",
+    "Ee1b95c1",
+    "E6239b0d",
+    "E88ec7f7",
+    "E92a7022",
+    "Ed82970f",
+    "E63570b1",
+    "E01eb273",
+    "E63f5644",
+    "E79e2025",
+    "E2aaf128",
+    "E12fae6f",
+    "E0fb2a07",
+    "E5406472",
+    "E54b7767",
+    "E94e3acf",
+    "Eea9930a",
+    "E2523361",
+    "E17af82a",
+    "Ec294d25"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "A paper reports that Taylor's Tale is a patient group based in the United States that the atlas links to CLN2, so reaching out to them could be a first step to learn about support and information [E8e670ee].",
+   "citations": [
+    "E8e670ee"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:204500",
+   "n_results": 15,
+   "n_kept": 15
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0008769",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "CLN2 disease OR neuronal ceroid lipofuscinosis type 2",
+   "n_results": 28,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "CLN2",
+   "n_results": 11,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"CLN2 disease\"[tiab] OR \"neuronal ceroid lipofuscinosis type 2\"[tiab]",
+   "n_results": 165,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"CLN2 disease\"[tiab] OR \"neuronal ceroid lipofuscinosis type 2\"[tiab]) AND hasabstract",
+   "n_results": 156,
+   "n_kept": 30
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://bdsraaustralia.org/about/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.a-ncl.it/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.taylorstale.org/rare-disease/about-batten-disease/",
+   "n_results": 2,
+   "n_kept": 3
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

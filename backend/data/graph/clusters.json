@@ -1,0 +1,129 @@
+[
+  {
+    "cluster": 0,
+    "diseases": [
+      "MONDO:0009655",
+      "MONDO:0009656",
+      "MONDO:0009657",
+      "MONDO:0009658",
+      "MONDO:0010674",
+      "MONDO:0011758"
+    ],
+    "names": [
+      "MPS I (Hurler)",
+      "MPS II (Hunter)",
+      "MPS IIIA",
+      "MPS IIIB",
+      "MPS IIIC",
+      "MPS IIID"
+    ]
+  },
+  {
+    "cluster": 1,
+    "diseases": [
+      "MONDO:0008199",
+      "MONDO:0009265",
+      "MONDO:0009499",
+      "MONDO:0009591",
+      "MONDO:0010099",
+      "MONDO:0010526"
+    ],
+    "names": [
+      "Fabry",
+      "GM2 AB variant",
+      "Gaucher",
+      "Krabbe",
+      "MLD",
+      "Parkinson (late-onset)"
+    ]
+  },
+  {
+    "cluster": 2,
+    "diseases": [
+      "MONDO:0009260",
+      "MONDO:0009756",
+      "MONDO:0010006",
+      "MONDO:0010100"
+    ],
+    "names": [
+      "GM1 (infantile)",
+      "Niemann-Pick A",
+      "Sandhoff",
+      "Tay-Sachs"
+    ]
+  },
+  {
+    "cluster": 3,
+    "diseases": [
+      "MONDO:0008767",
+      "MONDO:0008769"
+    ],
+    "names": [
+      "CLN2",
+      "CLN3"
+    ]
+  },
+  {
+    "cluster": 4,
+    "diseases": [
+      "MONDO:0017694"
+    ],
+    "names": [
+      "Pompe"
+    ]
+  },
+  {
+    "cluster": 5,
+    "diseases": [
+      "MONDO:0009757"
+    ],
+    "names": [
+      "Niemann-Pick C"
+    ]
+  },
+  {
+    "cluster": 6,
+    "diseases": [
+      "MONDO:0010281"
+    ],
+    "names": [
+      "Danon"
+    ]
+  },
+  {
+    "cluster": 7,
+    "diseases": [
+      "MONDO:0010726"
+    ],
+    "names": [
+      "Rett"
+    ]
+  },
+  {
+    "cluster": 8,
+    "diseases": [
+      "MONDO:0010679"
+    ],
+    "names": [
+      "Duchenne"
+    ]
+  },
+  {
+    "cluster": 9,
+    "diseases": [
+      "MONDO:0008647"
+    ],
+    "names": [
+      "HCM (MYH7)"
+    ]
+  },
+  {
+    "cluster": 10,
+    "diseases": [
+      "MONDO:0010079"
+    ],
+    "names": [
+      "Canavan"
+    ]
+  }
+]

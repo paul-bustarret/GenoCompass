@@ -1,0 +1,884 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0010679",
+  "name": "Duchenne muscular dystrophy",
+  "short": "Duchenne"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:1756",
+    "name": "DMD",
+    "edges": [
+     "Eacae766",
+     "E569d7fc"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:dystrophin_loss",
+    "name": "Dystrophin loss",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E0233056",
+     "E456e501",
+     "E0050591"
+    ]
+   },
+   {
+    "id": "MECH:other",
+    "name": "Other mechanism",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E0077550"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-3000171",
+    "name": "Non-integrin membrane-ECM interactions",
+    "edges": [
+     "Eacae766",
+     "Eaf57f8a",
+     "E569d7fc"
+    ]
+   },
+   {
+    "id": "R-HSA-390522",
+    "name": "Striated Muscle Contraction",
+    "edges": [
+     "Eacae766",
+     "Ec463676",
+     "E569d7fc"
+    ]
+   },
+   {
+    "id": "R-HSA-9913351",
+    "name": "Formation of the dystrophin-glycoprotein complex (DGC)",
+    "edges": [
+     "Eacae766",
+     "Ecd48059",
+     "E569d7fc"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0001256",
+    "name": "Mild intellectual disability",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ec98906d"
+    ]
+   },
+   {
+    "id": "HP:0002091",
+    "name": "Restrictive ventilatory defect",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "E5e04d4f"
+    ]
+   },
+   {
+    "id": "HP:0002194",
+    "name": "Delayed gross motor development",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "E6a19111"
+    ]
+   },
+   {
+    "id": "HP:0002515",
+    "name": "Waddling gait",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "E655eff4"
+    ]
+   },
+   {
+    "id": "HP:0002791",
+    "name": "Hypoventilation",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ed1216c8"
+    ]
+   },
+   {
+    "id": "HP:0002878",
+    "name": "Respiratory failure",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Eebeda07"
+    ]
+   },
+   {
+    "id": "HP:0003089",
+    "name": "Hamstring contractures",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "E7212d00"
+    ]
+   },
+   {
+    "id": "HP:0003115",
+    "name": "Abnormal EKG",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E952f9c2"
+    ]
+   },
+   {
+    "id": "HP:0003307",
+    "name": "Hyperlordosis",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Efc6fae4"
+    ]
+   },
+   {
+    "id": "HP:0003391",
+    "name": "Gowers sign",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E300586d"
+    ]
+   }
+  ],
+  "variants": []
+ },
+ "similar": [],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:Duchenne_Parent_Project_España",
+   "name": "Duchenne Parent Project España",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": null,
+   "contact_email": "pedidos@duchenne-spain.org",
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "Eba2d0fe",
+    "Eefe936f",
+    "E7090ec1"
+   ]
+  },
+  {
+   "id": "ORG:Duchenne_UK",
+   "name": "Duchenne UK",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": null,
+   "contact_email": "info@duchenneuk.org",
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E3cfa85b",
+    "E978dac6",
+    "E09a3600"
+   ]
+  },
+  {
+   "id": "ORG:Parent_Project_Muscular_Dystrophy",
+   "name": "Parent Project Muscular Dystrophy",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@parentprojectmd.org",
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E26b2604",
+    "E912fe22",
+    "Eda8f932"
+   ]
+  },
+  {
+   "id": "ORG:Parent_Project_Muscular_Dystrophy_PPMD",
+   "name": "Parent Project Muscular Dystrophy (PPMD)",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "coordinator@duchenneregistry.org",
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "Eb1dd624",
+    "E0d1fb96",
+    "E4cf1692"
+   ]
+  },
+  {
+   "id": "ORG:Parent_Project_aps",
+   "name": "Parent Project aps",
+   "kind": "patient_group",
+   "country": "IT",
+   "website": null,
+   "contact_email": "info@parentproject.it",
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E966542f"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NIAID",
+   "name": "NIH NIAID",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E7836040",
+    "Efa65347"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NIAMS",
+   "name": "NIH NIAMS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E4217983",
+    "E30518c6"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NICHD",
+   "name": "NIH NICHD",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E35dc4a7",
+    "Eea693c5"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NIGMS",
+   "name": "NIH NIGMS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E1437d1d",
+    "E04f2fe2"
+   ]
+  },
+  {
+   "id": "ORG:Avidity_Biosciences_Inc",
+   "name": "Avidity Biosciences, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E5da2d1b",
+    "Ecb36749"
+   ]
+  },
+  {
+   "id": "ORG:Keros_Therapeutics_Inc",
+   "name": "Keros Therapeutics, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E4a681ba",
+    "Ecad00ee"
+   ]
+  },
+  {
+   "id": "ORG:Satellos_Bioscience_Inc",
+   "name": "Satellos Bioscience, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E57e4c6f",
+    "E37573dd"
+   ]
+  },
+  {
+   "id": "ORG:Solid_Biosciences_Inc",
+   "name": "Solid Biosciences Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E5151ec3",
+    "Ed976d5e"
+   ]
+  },
+  {
+   "id": "ORG:Genethon",
+   "name": "Genethon",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E807d05a",
+    "E7658ee0"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT07160634",
+   "title": "A Study of SGT-003 Gene Therapy in Ambulant Males With Duchenne Muscular Dystrophy (IMPACT DUCHENNE)",
+   "status": "RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0010679",
+   "countries": [
+    "AU",
+    "CA",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "SGT-003",
+    "Placebo"
+   ],
+   "edges": [
+    "Ed976d5e",
+    "E75a80a7",
+    "E0414ea2",
+    "Eba199a2",
+    "E22e9a82",
+    "E9ce3e84"
+   ]
+  },
+  {
+   "id": "NCT07587242",
+   "title": "A Phase 3 Study to Evaluate the Safety and Efficacy of AOC 1044 (Also Referred to as Delpacibart Zotadirsen) in Participants With DMD With Gene Mutations Amenable to Exon 44 Skipping",
+   "status": "RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0010679",
+   "countries": [
+    "BE",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "IT",
+    "NL"
+   ],
+   "near_user": false,
+   "interventions": [
+    "AOC 1044",
+    "Placebo"
+   ],
+   "edges": [
+    "Ecb36749",
+    "E207f4f9",
+    "E735eeea",
+    "E858b473",
+    "E8def594",
+    "Ecea297d",
+    "E014760e",
+    "E033d543"
+   ]
+  },
+  {
+   "id": "NCT07704099",
+   "title": "Safety and Efficacy of KER-065 in Participants With Duchenne Muscular Dystrophy",
+   "status": "RECRUITING",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0010679",
+   "countries": [
+    "NZ"
+   ],
+   "near_user": false,
+   "interventions": [
+    "KER-065"
+   ],
+   "edges": [
+    "Ecad00ee",
+    "E242ef41",
+    "E13e9f9e"
+   ]
+  },
+  {
+   "id": "NCT07856329",
+   "title": "A Clinical Study to Assess Safety, Efficacy and Pharmacodynamic Profile of GNT0004 in Duchenne Muscular Dystrophy",
+   "status": "RECRUITING",
+   "phase": "PHASE2,PHASE3",
+   "for_disease": "MONDO:0010679",
+   "countries": [
+    "BE",
+    "ES",
+    "FR",
+    "GB"
+   ],
+   "near_user": false,
+   "interventions": [
+    "GNT0004 (1x10e13 vg/kg)",
+    "GNT0004 (3x10e13 vg/kg)",
+    "Placebo"
+   ],
+   "edges": [
+    "E7658ee0",
+    "E59f545c",
+    "E40a6943",
+    "Ea4ac40a",
+    "E37a6ead",
+    "Ed2a2e22",
+    "Ecb1e887",
+    "E1f2f606"
+   ]
+  },
+  {
+   "id": "NCT07287189",
+   "title": "Phase 2 Study of SAT-3247 in Pediatric Ambulatory Patients",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0010679",
+   "countries": [
+    "AU",
+    "BE",
+    "CA",
+    "ES",
+    "GB",
+    "PL",
+    "RS",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "SAT-3247",
+    "Placebo"
+   ],
+   "edges": [
+    "E37573dd",
+    "E9360699",
+    "E36b809c",
+    "Ec6f839a",
+    "E2f6f9e7",
+    "E7249c1f",
+    "E3c9b004",
+    "E06c0ab9"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "id": "ASSET:Duchenne_Registry",
+   "name": "Duchenne Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "Eda8f932",
+    "E912fe22"
+   ]
+  },
+  {
+   "id": "ASSET:The_Duchenne_Registry",
+   "name": "The Duchenne Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E4cf1692",
+    "E0d1fb96"
+   ]
+  },
+  {
+   "id": "ASSET:Duchenne_Hub_UK",
+   "name": "Duchenne Hub UK",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E09a3600",
+    "E978dac6"
+   ]
+  },
+  {
+   "id": "ASSET:SARA",
+   "name": "SARA",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010679",
+   "edges": [
+    "E7090ec1",
+    "Eefe936f"
+   ]
+  }
+ ],
+ "researchers": [
+  {
+   "id": "PERSON:15039716",
+   "name": "Andreia Nunes",
+   "grants": [
+    "RePORTER:P20GM130459"
+   ],
+   "diseases": [
+    "MONDO:0010679"
+   ],
+   "edges": [
+    "Eebac42f",
+    "E04f2fe2"
+   ]
+  },
+  {
+   "id": "PERSON:8011294",
+   "name": "Dongsheng Duan",
+   "grants": [
+    "RePORTER:R01AI177600"
+   ],
+   "diseases": [
+    "MONDO:0010679"
+   ],
+   "edges": [
+    "E7e30b9e",
+    "Efa65347"
+   ]
+  },
+  {
+   "id": "PERSON:10114437",
+   "name": "Douglas Paul Millay",
+   "grants": [
+    "RePORTER:R01AR083368"
+   ],
+   "diseases": [
+    "MONDO:0010679"
+   ],
+   "edges": [
+    "E2fa7647",
+    "E30518c6"
+   ]
+  },
+  {
+   "id": "PERSON:6262581",
+   "name": "Kurt Derek Christensen",
+   "grants": [
+    "RePORTER:R01HD090019"
+   ],
+   "diseases": [
+    "MONDO:0010679"
+   ],
+   "edges": [
+    "E95361ab",
+    "Eea693c5"
+   ]
+  },
+  {
+   "id": "PERSON:6720719",
+   "name": "Roland W. Herzog",
+   "grants": [
+    "RePORTER:R01AI177600"
+   ],
+   "diseases": [
+    "MONDO:0010679"
+   ],
+   "edges": [
+    "Ec404bc0",
+    "Efa65347"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Duchenne Parent Project España (patient group, based in ES), which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ORG:Duchenne_Parent_Project_España",
+   "edges": [
+    "Eba2d0fe",
+    "Eefe936f",
+    "E7090ec1"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Duchenne UK (patient group, based in GB), which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ORG:Duchenne_UK",
+   "edges": [
+    "E3cfa85b",
+    "E978dac6",
+    "E09a3600"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Duchenne Registry, which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ASSET:Duchenne_Registry",
+   "edges": [
+    "Eda8f932",
+    "E912fe22"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry The Duchenne Registry, which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ASSET:The_Duchenne_Registry",
+   "edges": [
+    "E4cf1692",
+    "E0d1fb96"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Duchenne Hub UK, which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ASSET:Duchenne_Hub_UK",
+   "edges": [
+    "E09a3600",
+    "E978dac6"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Parent Project Muscular Dystrophy (patient group, based in US), which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ORG:Parent_Project_Muscular_Dystrophy",
+   "edges": [
+    "E26b2604",
+    "E912fe22",
+    "Eda8f932"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Parent Project Muscular Dystrophy (PPMD) (patient group, based in US), which the atlas links to Duchenne.",
+   "from_disease": "MONDO:0010679",
+   "target_id": "ORG:Parent_Project_Muscular_Dystrophy_PPMD",
+   "edges": [
+    "Eb1dd624",
+    "E0d1fb96",
+    "E4cf1692"
+   ]
+  },
+  {
+   "kind": "build",
+   "step": "natural_history_study",
+   "text": "No disease similar to Duchenne in the atlas has a natural history study yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What is Duchenne, in simple terms?",
+   "text": "Duchenne happens because of changes in a gene called DMD, which is the body's instructions for making a protein called dystrophin [E569d7fc, Eacae766]. A paper reports that when the dystrophin protein is missing, muscle fibers get damaged over and over, the body reacts with ongoing swelling and irritation (inflammation), scar-like tissue called fibrosis builds up, and the muscle's own repair cells stop working well [E0233056]. Scientists are still working to understand exactly how dystrophin normally works and what goes wrong without it [E456e501]. A paper also reports that in muscles without dystrophin, a chemical messenger called nitric oxide behaves differently, which turns on certain helper proteins called HDACs that change how genes switch on and off [E0077550]. The DMD gene's instructions are also used by teams of proteins called pathways, including ones for building the connections between muscle cells and their surroundings, for muscles tightening and moving, and for forming a group of proteins called the dystrophin-glycoprotein complex [Eaf57f8a, Ec463676, Ecd48059]. According to HPO, a database of symptoms seen in diseases, children with Duchenne can have a waddling way of walking [E655eff4], slower progress with movement skills such as sitting up or walking [E6a19111], a breathing pattern called a restrictive ventilatory defect [E5e04d4f], shallow or slow breathing called hypoventilation [Ed1216c8], times when breathing needs extra help called respiratory failure [Eebeda07], and sometimes mild intellectual disability [Ec98906d].",
+   "citations": [
+    "E569d7fc",
+    "Eacae766",
+    "E0233056",
+    "E456e501",
+    "E0077550",
+    "Eaf57f8a",
+    "Ec463676",
+    "Ecd48059",
+    "E655eff4",
+    "E6a19111",
+    "E5e04d4f",
+    "Ed1216c8",
+    "Eebeda07",
+    "Ec98906d"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Is Duchenne similar to other diseases?",
+   "text": "The atlas has no cited evidence for this yet.",
+   "citations": [],
+   "status": "no_supported_evidence"
+  },
+  {
+   "key": "what_exists",
+   "title": "What research and trials exist?",
+   "text": "There is a recruiting Phase 3 trial of a gene therapy called SGT-003, run by Solid Biosciences Inc., with study sites in Australia, Canada, and the United States [E5151ec3, Ed976d5e, Eba199a2, E22e9a82, E9ce3e84]. There is a recruiting Phase 3 trial of AOC 1044, run by Avidity Biosciences, Inc., with sites in Belgium, Germany, Spain, France, the United Kingdom, Italy, and the Netherlands [E5da2d1b, Ecb36749, E858b473, E8def594, Ecea297d, E014760e, E033d543]. There is a recruiting Phase 2 trial of KER-065, run by Keros Therapeutics, Inc., with a site in New Zealand [E4a681ba, Ecad00ee, E13e9f9e]. There is a recruiting Phase 2 and 3 trial of GNT0004, run by Genethon, with sites in Belgium, Spain, France, and the United Kingdom [E807d05a, E7658ee0, E37a6ead, Ed2a2e22, Ecb1e887, E1f2f606]. There is a Phase 2 trial of SAT-3247, run by Satellos Bioscience, Inc., that is active but no longer recruiting, with sites across several countries including the United States, Australia, Belgium, and Canada [E57e4c6f, E37573dd, Ec6f839a, E2f6f9e7, E7249c1f, E3c9b004]. Several United States government funders, NIH NIAID, NIH NIAMS, NIH NICHD, and NIH NIGMS, fund research grants connected to Duchenne [E7836040, Efa65347, E4217983, E30518c6, E35dc4a7, Eea693c5, E1437d1d, E04f2fe2]. Researchers named in these grants include Andreia Nunes [Eebac42f, E04f2fe2], Dongsheng Duan and Roland W. Herzog on the same grant [E7e30b9e, Ec404bc0, Efa65347], Douglas Paul Millay [E2fa7647, E30518c6], and Kurt Derek Christensen [E95361ab, Eea693c5].",
+   "citations": [
+    "E5151ec3",
+    "Ed976d5e",
+    "Eba199a2",
+    "E22e9a82",
+    "E9ce3e84",
+    "E5da2d1b",
+    "Ecb36749",
+    "E858b473",
+    "E8def594",
+    "Ecea297d",
+    "E014760e",
+    "E033d543",
+    "E4a681ba",
+    "Ecad00ee",
+    "E13e9f9e",
+    "E807d05a",
+    "E7658ee0",
+    "E37a6ead",
+    "Ed2a2e22",
+    "Ecb1e887",
+    "E1f2f606",
+    "E57e4c6f",
+    "E37573dd",
+    "Ec6f839a",
+    "E2f6f9e7",
+    "E7249c1f",
+    "E3c9b004",
+    "E7836040",
+    "Efa65347",
+    "E4217983",
+    "E30518c6",
+    "E35dc4a7",
+    "Eea693c5",
+    "E1437d1d",
+    "E04f2fe2",
+    "Eebac42f",
+    "E7e30b9e",
+    "Ec404bc0",
+    "E2fa7647",
+    "E95361ab"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "What can you do next?",
+   "text": "You could contact Duchenne Parent Project España, a patient group based in Spain that the atlas links to Duchenne [Eba2d0fe, Eefe936f, E7090ec1]. You could also contact Duchenne UK, a patient group based in the United Kingdom that the atlas links to Duchenne [E3cfa85b, E978dac6, E09a3600]. You could ask about joining the Duchenne Registry, a registry that the atlas links to Duchenne [Eda8f932, E912fe22].",
+   "citations": [
+    "Eba2d0fe",
+    "Eefe936f",
+    "E7090ec1",
+    "E3cfa85b",
+    "E978dac6",
+    "E09a3600",
+    "Eda8f932",
+    "E912fe22"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:310200",
+   "n_results": 32,
+   "n_kept": 32
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0010679",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Duchenne muscular dystrophy",
+   "n_results": 499,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "Duchenne",
+   "n_results": 284,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Duchenne muscular dystrophy\"[tiab]",
+   "n_results": 13914,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Duchenne muscular dystrophy\"[tiab]) AND hasabstract",
+   "n_results": 12604,
+   "n_kept": 12
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.parentprojectmd.org/about-ppmd/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.parentprojectmd.org/clinical-trial/the-duchenne-registry/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.duchenneuk.org/about",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://ppmdindia.org/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.duchenne-spain.org/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.parentproject.it/chi-siamo/",
+   "n_results": 1,
+   "n_kept": 1
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

@@ -1,0 +1,301 @@
+a,b,therapeutic,phenotype_view,gene,pathway,phenotype,lookalike,top_witnesses
+MONDO:0008199,MONDO:0009265,0.577,0.2,1.0,1.0,0.0,False,GBA1 | Glycosphingolipid catabolism | Glycosphingolipid metabolism
+MONDO:0009265,MONDO:0010526,0.488,0.225,0.0,1.0,0.031,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hypertension | Anemia
+MONDO:0010674,MONDO:0011758,0.46,0.189,0.0,0.375,0.143,False,CS/DS degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Urinary glycosaminoglycan excretion | Dermatan sulfate excretion in urine
+MONDO:0009265,MONDO:0009499,0.44,0.202,0.0,1.0,0.002,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Autosomal recessive inheritance
+MONDO:0009499,MONDO:0010526,0.419,0.213,0.0,1.0,0.016,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Vomiting | Seizure
+MONDO:0009655,MONDO:0009656,0.415,0.53,0.0,0.411,0.56,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Dense calvaria | Hyperactivity
+MONDO:0008199,MONDO:0010526,0.411,0.211,0.0,1.0,0.014,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Abnormal autonomic nervous system physiology
+MONDO:0008199,MONDO:0009499,0.398,0.2,0.0,1.0,0.0,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism
+MONDO:0010006,MONDO:0010100,0.379,0.202,0.0,0.717,0.073,False,Diseases associated with glycosaminoglycan metabolism | Hyaluronan degradation | Exaggerated startle response | Cherry red spot of the macula
+MONDO:0009655,MONDO:0009657,0.372,0.44,0.0,0.411,0.447,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Dense calvaria | Growth abnormality
+MONDO:0009499,MONDO:0010099,0.368,0.271,0.0,1.0,0.089,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Axial hypotonia | Hypertonia
+MONDO:0009655,MONDO:0009658,0.367,0.165,0.0,0.087,0.185,False,Mucopolysaccharidoses | Growth abnormality | Hyperactivity
+MONDO:0010099,MONDO:0010100,0.356,0.295,0.0,0.094,0.345,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Poor head control | Aspiration
+MONDO:0008199,MONDO:0010099,0.355,0.219,0.0,1.0,0.024,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Dystonia | Dementia
+MONDO:0009265,MONDO:0010099,0.351,0.202,0.0,1.0,0.003,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Autosomal recessive inheritance
+MONDO:0010099,MONDO:0010526,0.351,0.202,0.0,1.0,0.003,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Seizure
+MONDO:0009260,MONDO:0009756,0.329,0.049,0.0,0.056,0.047,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Cherry red spot of the macula | Infantile onset
+MONDO:0009656,MONDO:0009657,0.325,0.414,0.0,0.411,0.415,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Dense calvaria | Hyperactivity
+MONDO:0009499,MONDO:0009591,0.28,0.108,0.0,0.222,0.08,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Increased CSF protein concentration | Peripheral demyelination
+MONDO:0008767,MONDO:0008769,0.234,0.187,0.0,0.0,0.234,True,Curvilinear intracellular accumulation of autofluorescent lipopigment storage material | Increased extraneuronal autofluorescent lipopigment
+MONDO:0009655,MONDO:0010674,0.234,0.124,0.0,0.259,0.09,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Umbilical hernia | Inguinal hernia
+MONDO:0009655,MONDO:0011758,0.233,0.121,0.0,0.259,0.086,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Umbilical hernia | Hirsutism
+MONDO:0009265,MONDO:0009591,0.224,0.046,0.0,0.222,0.002,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Autosomal recessive inheritance
+MONDO:0009656,MONDO:0009658,0.224,0.155,0.0,0.087,0.172,False,Mucopolysaccharidoses | Aggressive behavior | Hyperactivity
+MONDO:0009657,MONDO:0009658,0.205,0.162,0.0,0.087,0.181,False,Mucopolysaccharidoses | Cellular metachromasia | Growth abnormality
+MONDO:0009656,MONDO:0010674,0.197,0.109,0.0,0.259,0.072,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Diarrhea | Heparan sulfate excretion in urine
+MONDO:0009656,MONDO:0011758,0.197,0.11,0.0,0.259,0.073,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Progressive neurologic deterioration | Hirsutism
+MONDO:0009657,MONDO:0010674,0.193,0.125,0.0,0.259,0.092,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Dolichocephaly | Hypertrichosis
+MONDO:0009657,MONDO:0011758,0.189,0.108,0.0,0.259,0.07,False,HS-GAG degradation | Heparan sulfate/heparin (HS-GAG) metabolism | Hernia | Hirsutism
+MONDO:0009265,MONDO:0009756,0.187,0.082,0.0,0.363,0.012,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Splenomegaly | Hepatomegaly
+MONDO:0009658,MONDO:0011758,0.172,0.115,0.0,0.061,0.128,False,Mucopolysaccharidoses | Thick vermilion border | Depressed nasal bridge
+MONDO:0009591,MONDO:0010526,0.168,0.047,0.0,0.222,0.003,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Seizure
+MONDO:0009658,MONDO:0010674,0.167,0.091,0.0,0.061,0.099,False,Mucopolysaccharidoses | Thick lower lip vermilion | Pes cavus
+MONDO:0009499,MONDO:0009756,0.155,0.117,0.0,0.363,0.055,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Failure to thrive | Vomiting
+MONDO:0009756,MONDO:0010526,0.155,0.082,0.0,0.363,0.012,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Vomiting
+MONDO:0008199,MONDO:0009756,0.148,0.095,0.0,0.363,0.028,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Rigidity | Constipation
+MONDO:0008199,MONDO:0009591,0.145,0.073,0.0,0.222,0.036,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hallucinations | Dystonia
+MONDO:0010006,MONDO:0010099,0.145,0.084,0.0,0.094,0.082,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Myoclonic seizure | Exaggerated startle response
+MONDO:0009260,MONDO:0009658,0.136,0.107,0.0,0.152,0.096,False,Keratan sulfate degradation | Keratan sulfate/keratin metabolism | Hypoplastic vertebral bodies | Hypertelorism
+MONDO:0009260,MONDO:0010100,0.135,0.095,0.0,0.217,0.065,False,Keratan sulfate degradation | Keratan sulfate/keratin metabolism | Cherry red spot of the macula | Hypertonia
+MONDO:0009756,MONDO:0010099,0.131,0.09,0.0,0.363,0.022,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Infantile onset | Global developmental delay
+MONDO:0009499,MONDO:0010006,0.124,0.046,0.0,0.094,0.034,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Developmental regression | Blindness
+MONDO:0008769,MONDO:0009656,0.103,0.01,0.0,0.0,0.012,False,Seizure | Autosomal recessive inheritance
+MONDO:0009260,MONDO:0009655,0.102,0.108,0.0,0.036,0.126,False,Mucopolysaccharidoses | Scoliosis | Thickened ribs
+MONDO:0009260,MONDO:0010006,0.101,0.075,0.0,0.217,0.039,False,Keratan sulfate degradation | Keratan sulfate/keratin metabolism | Cherry red spot of the macula | Coarse facial features
+MONDO:0009591,MONDO:0010099,0.097,0.12,0.0,0.222,0.095,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Chorea | Hyperreflexia
+MONDO:0009591,MONDO:0010079,0.091,0.018,0.0,0.0,0.022,False,Optic atrophy | Hypotonia
+MONDO:0009260,MONDO:0010674,0.089,0.113,0.0,0.115,0.112,False,CS/DS degradation | Chondroitin sulfate/dermatan sulfate metabolism | Abnormal heart valve morphology | Severe short stature
+MONDO:0009591,MONDO:0009756,0.089,0.05,0.0,0.16,0.023,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hyporeflexia | Hypotonia
+MONDO:0008767,MONDO:0009657,0.087,0.033,0.0,0.0,0.041,False,Rod-cone dystrophy | Juvenile onset
+MONDO:0009260,MONDO:0011758,0.086,0.098,0.0,0.115,0.094,False,CS/DS degradation | Chondroitin sulfate/dermatan sulfate metabolism | Gingival overgrowth | Hypertelorism
+MONDO:0009499,MONDO:0010079,0.086,0.087,0.0,0.0,0.109,False,Nystagmus | CNS demyelination
+MONDO:0009658,MONDO:0010100,0.085,0.039,0.0,0.153,0.01,False,Keratan sulfate degradation | Keratan sulfate/keratin metabolism | Infantile onset | Seizure
+MONDO:0009260,MONDO:0009265,0.083,0.023,0.0,0.063,0.013,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Splenomegaly | Hepatomegaly
+MONDO:0009756,MONDO:0010100,0.082,0.044,0.0,0.081,0.035,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Cherry red spot of the macula | Infantile onset
+MONDO:0009656,MONDO:0010006,0.081,0.027,0.0,0.0,0.034,False,Cardiomegaly | Coarse facial features
+MONDO:0009658,MONDO:0010006,0.074,0.056,0.0,0.153,0.032,False,Keratan sulfate degradation | Keratan sulfate/keratin metabolism | Macroglossia | Macrocephaly
+MONDO:0008769,MONDO:0010006,0.072,0.026,0.0,0.0,0.032,False,Ataxia | Developmental regression
+MONDO:0009655,MONDO:0009756,0.07,0.023,0.0,0.0,0.029,False,Global developmental delay | Splenomegaly
+MONDO:0009658,MONDO:0009756,0.07,0.025,0.0,0.0,0.031,False,Short stature | Macrocephaly
+MONDO:0008767,MONDO:0009656,0.065,0.021,0.0,0.0,0.026,False,Juvenile onset | Intellectual disability
+MONDO:0009260,MONDO:0009657,0.065,0.098,0.0,0.036,0.114,False,Mucopolysaccharidoses | Beaking of vertebral bodies | Hypertrichosis
+MONDO:0010281,MONDO:0010526,0.064,0.012,0.0,0.0,0.015,False,Congestive heart failure | Juvenile onset
+MONDO:0009260,MONDO:0009656,0.063,0.072,0.0,0.036,0.081,False,Mucopolysaccharidoses | Thickened ribs | Joint stiffness
+MONDO:0009265,MONDO:0010100,0.062,0.021,0.0,0.094,0.003,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Autosomal recessive inheritance
+MONDO:0009756,MONDO:0010006,0.062,0.083,0.0,0.081,0.083,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Skeletal muscle atrophy | Cherry red spot of the macula
+MONDO:0009499,MONDO:0010100,0.059,0.069,0.0,0.094,0.063,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hypertonia | Blindness
+MONDO:0009657,MONDO:0010281,0.058,0.022,0.0,0.0,0.027,False,Juvenile onset | Childhood onset
+MONDO:0009656,MONDO:0009757,0.057,0.034,0.0,0.0,0.043,False,Juvenile onset | Intellectual disability
+MONDO:0010100,MONDO:0010674,0.057,0.03,0.0,0.106,0.011,False,CS/DS degradation | Chondroitin sulfate/dermatan sulfate metabolism | Infantile onset | Seizure
+MONDO:0010006,MONDO:0010674,0.056,0.055,0.0,0.106,0.042,False,CS/DS degradation | Chondroitin sulfate/dermatan sulfate metabolism | Hepatosplenomegaly | Macroglossia
+MONDO:0010100,MONDO:0011758,0.055,0.023,0.0,0.106,0.002,False,CS/DS degradation | Chondroitin sulfate/dermatan sulfate metabolism | Autosomal recessive inheritance
+MONDO:0010006,MONDO:0011758,0.054,0.047,0.0,0.106,0.032,False,CS/DS degradation | Chondroitin sulfate/dermatan sulfate metabolism | Hepatosplenomegaly | Macroglossia
+MONDO:0009260,MONDO:0010526,0.053,0.034,0.0,0.063,0.027,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Angiokeratoma corporis diffusum | Congestive heart failure
+MONDO:0008767,MONDO:0009757,0.051,0.05,0.0,0.0,0.063,False,Psychosis | Dementia
+MONDO:0010100,MONDO:0010526,0.051,0.022,0.0,0.094,0.004,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Seizure
+MONDO:0008767,MONDO:0010006,0.05,0.028,0.0,0.0,0.035,False,Bilateral tonic-clonic seizure | Dysarthria
+MONDO:0009591,MONDO:0010100,0.05,0.041,0.0,0.071,0.033,False,Glycosphingolipid metabolism | Glycosphingolipid catabolism | Generalized hypotonia | Hypotonia
+MONDO:0008199,MONDO:0010281,0.049,0.0,0.0,0.0,0.0,False,
+MONDO:0008769,MONDO:0009757,0.049,0.022,0.0,0.0,0.027,False,Ataxia | Seizure
+MONDO:0009260,MONDO:0009591,0.049,0.023,0.0,0.051,0.016,False,Glycosphingolipid metabolism | Glycosphingolipid catabolism | Hypotonia | Intellectual disability
+MONDO:0010006,MONDO:0010526,0.049,0.042,0.0,0.094,0.029,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Fasciculations | Hypohidrosis
+MONDO:0008199,MONDO:0010100,0.048,0.031,0.0,0.094,0.015,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Dementia
+MONDO:0009265,MONDO:0010006,0.048,0.024,0.0,0.094,0.007,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hepatomegaly | Autosomal recessive inheritance
+MONDO:0009591,MONDO:0010006,0.047,0.06,0.0,0.071,0.057,False,Glycosphingolipid metabolism | Glycosphingolipid catabolism | Hyperreflexia | Urinary incontinence
+MONDO:0008767,MONDO:0010281,0.046,0.01,0.0,0.0,0.013,False,Juvenile onset | Intellectual disability
+MONDO:0009260,MONDO:0009499,0.046,0.038,0.0,0.063,0.032,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hypertonia | Infantile onset
+MONDO:0009757,MONDO:0010006,0.046,0.038,0.0,0.0,0.048,False,Spasticity | Ataxia
+MONDO:0008199,MONDO:0010006,0.043,0.026,0.0,0.094,0.009,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Dysarthria
+MONDO:0009756,MONDO:0017694,0.041,0.036,0.0,0.0,0.045,False,Recurrent respiratory infections | Hyporeflexia
+MONDO:0009656,MONDO:0009756,0.038,0.017,0.0,0.0,0.021,False,Intellectual disability | Splenomegaly
+MONDO:0008199,MONDO:0009260,0.037,0.013,0.0,0.063,0.0,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism
+MONDO:0009265,MONDO:0009655,0.037,0.014,0.0,0.0,0.017,False,Splenomegaly | Hepatomegaly
+MONDO:0009265,MONDO:0009658,0.037,0.014,0.0,0.0,0.017,False,Mitral regurgitation | Splenomegaly
+MONDO:0009756,MONDO:0011758,0.036,0.039,0.0,0.0,0.049,False,Protuberant abdomen | Recurrent respiratory infections
+MONDO:0009260,MONDO:0017694,0.035,0.013,0.0,0.0,0.016,False,Hypotonia | Splenomegaly
+MONDO:0009657,MONDO:0009756,0.034,0.019,0.0,0.0,0.024,False,Global developmental delay | Intellectual disability
+MONDO:0009655,MONDO:0010100,0.032,0.01,0.0,0.0,0.012,False,Seizure | Autosomal recessive inheritance
+MONDO:0009756,MONDO:0010674,0.032,0.022,0.0,0.0,0.028,False,Short stature | Macrocephaly
+MONDO:0009260,MONDO:0010099,0.031,0.048,0.0,0.063,0.044,False,Glycosphingolipid catabolism | Glycosphingolipid metabolism | Hypertonia | Infantile onset
+MONDO:0008769,MONDO:0009756,0.029,0.012,0.0,0.0,0.015,False,Developmental regression | Autosomal recessive inheritance
+MONDO:0009658,MONDO:0017694,0.028,0.021,0.0,0.0,0.026,False,Gait disturbance | Macroglossia
+MONDO:0008769,MONDO:0009260,0.027,0.006,0.0,0.0,0.008,False,Seizure | Autosomal recessive inheritance
+MONDO:0009265,MONDO:0017694,0.027,0.021,0.0,0.0,0.026,False,Dyspnea | Splenomegaly
+MONDO:0009655,MONDO:0017694,0.027,0.017,0.0,0.0,0.021,False,Hearing impairment | Splenomegaly
+MONDO:0009265,MONDO:0009656,0.026,0.014,0.0,0.0,0.017,False,Splenomegaly | Hepatomegaly
+MONDO:0009591,MONDO:0009658,0.025,0.018,0.0,0.0,0.022,False,Gait disturbance | Dysarthria
+MONDO:0009265,MONDO:0009657,0.024,0.011,0.0,0.0,0.014,False,Splenomegaly | Hepatomegaly
+MONDO:0009591,MONDO:0009655,0.024,0.011,0.0,0.0,0.014,False,Intellectual disability | Seizure
+MONDO:0009591,MONDO:0017694,0.024,0.034,0.0,0.0,0.042,False,Urinary incontinence | Gait disturbance
+MONDO:0009656,MONDO:0017694,0.024,0.027,0.0,0.0,0.034,False,Cardiomegaly | Hearing impairment
+MONDO:0008769,MONDO:0009658,0.023,0.014,0.0,0.0,0.017,False,Delayed speech and language development | Seizure
+MONDO:0009265,MONDO:0011758,0.023,0.014,0.0,0.0,0.018,False,Mitral regurgitation | Splenomegaly
+MONDO:0009656,MONDO:0010100,0.023,0.01,0.0,0.0,0.012,False,Seizure | Autosomal recessive inheritance
+MONDO:0010526,MONDO:0010674,0.023,0.036,0.0,0.0,0.045,False,Airway obstruction | X-linked recessive inheritance
+MONDO:0011758,MONDO:0017694,0.023,0.03,0.0,0.0,0.037,False,Abnormal CNS myelination | Recurrent respiratory infections
+MONDO:0008769,MONDO:0009655,0.022,0.01,0.0,0.0,0.012,False,Seizure | Autosomal recessive inheritance
+MONDO:0009655,MONDO:0010526,0.022,0.011,0.0,0.0,0.014,False,Diarrhea | Seizure
+MONDO:0010006,MONDO:0017694,0.022,0.042,0.0,0.0,0.052,False,Urinary incontinence | Cardiomegaly
+MONDO:0010100,MONDO:0017694,0.022,0.007,0.0,0.0,0.009,False,Hypotonia | Autosomal recessive inheritance
+MONDO:0009265,MONDO:0010674,0.021,0.006,0.0,0.0,0.008,False,Splenomegaly | Hepatomegaly
+MONDO:0009499,MONDO:0010674,0.021,0.042,0.0,0.0,0.052,False,Hydrocephalus | Young adult onset
+MONDO:0009657,MONDO:0010100,0.021,0.007,0.0,0.0,0.009,False,Seizure | Autosomal recessive inheritance
+MONDO:0009658,MONDO:0010526,0.021,0.006,0.0,0.0,0.008,False,Diarrhea | Seizure
+MONDO:0010674,MONDO:0017694,0.021,0.022,0.0,0.0,0.028,False,Young adult onset | Macroglossia
+MONDO:0008769,MONDO:0010100,0.02,0.011,0.0,0.0,0.014,False,Seizure | Autosomal recessive inheritance
+MONDO:0009499,MONDO:0009655,0.02,0.021,0.0,0.0,0.026,False,Childhood onset | Hearing impairment
+MONDO:0009591,MONDO:0009657,0.02,0.02,0.0,0.0,0.025,False,Loss of speech | Intellectual disability
+MONDO:0009656,MONDO:0010526,0.02,0.019,0.0,0.0,0.024,False,Diarrhea | Juvenile onset
+MONDO:0009657,MONDO:0017694,0.02,0.014,0.0,0.0,0.018,False,Hearing impairment | Splenomegaly
+MONDO:0008199,MONDO:0009658,0.019,0.024,0.0,0.0,0.03,False,Progressive | Dysphagia
+MONDO:0008769,MONDO:0009265,0.019,0.002,0.0,0.0,0.003,False,Autosomal recessive inheritance
+MONDO:0008769,MONDO:0009591,0.019,0.02,0.0,0.0,0.025,False,Ataxia | Seizure
+MONDO:0009499,MONDO:0009657,0.019,0.031,0.0,0.0,0.039,False,Motor deterioration | Hearing impairment
+MONDO:0009591,MONDO:0009656,0.019,0.011,0.0,0.0,0.014,False,Intellectual disability | Seizure
+MONDO:0009756,MONDO:0009757,0.019,0.077,0.0,0.0,0.096,False,Sea-blue histiocytosis | Bone-marrow foam cells
+MONDO:0009499,MONDO:0009658,0.018,0.014,0.0,0.0,0.017,False,Infantile onset | Childhood onset
+MONDO:0009655,MONDO:0010006,0.018,0.014,0.0,0.0,0.018,False,Coarse facial features | Hepatomegaly
+MONDO:0009657,MONDO:0010526,0.018,0.016,0.0,0.0,0.02,False,Diarrhea | Juvenile onset
+MONDO:0010281,MONDO:0017694,0.018,0.072,0.0,0.0,0.09,False,Proximal muscle weakness | Exercise intolerance
+MONDO:0009499,MONDO:0009656,0.017,0.022,0.0,0.0,0.027,False,Childhood onset | Hearing impairment
+MONDO:0009499,MONDO:0017694,0.017,0.019,0.0,0.0,0.024,False,Young adult onset | Hearing impairment
+MONDO:0008769,MONDO:0009657,0.016,0.007,0.0,0.0,0.009,False,Seizure | Autosomal recessive inheritance
+MONDO:0008769,MONDO:0011758,0.016,0.01,0.0,0.0,0.013,False,Retinal degeneration | Autosomal recessive inheritance
+MONDO:0009499,MONDO:0011758,0.016,0.019,0.0,0.0,0.024,False,Hydrocephalus | Neurodegeneration
+MONDO:0009591,MONDO:0009757,0.016,0.064,0.0,0.0,0.08,False,Loss of speech | Generalized hypotonia
+MONDO:0009757,MONDO:0010099,0.016,0.066,0.0,0.0,0.082,False,Loss of speech | Generalized hypotonia
+MONDO:0008199,MONDO:0009655,0.015,0.01,0.0,0.0,0.012,False,Sleep disturbance
+MONDO:0008199,MONDO:0009657,0.015,0.018,0.0,0.0,0.023,False,Dysphagia | Sleep disturbance
+MONDO:0008769,MONDO:0009499,0.015,0.018,0.0,0.0,0.023,False,Developmental regression | Seizure
+MONDO:0008769,MONDO:0017694,0.015,0.002,0.0,0.0,0.002,False,Autosomal recessive inheritance
+MONDO:0009591,MONDO:0010674,0.015,0.002,0.0,0.0,0.003,False,Seizure
+MONDO:0009591,MONDO:0011758,0.015,0.004,0.0,0.0,0.005,False,Intellectual disability | Autosomal recessive inheritance
+MONDO:0009657,MONDO:0009757,0.015,0.058,0.0,0.0,0.073,False,Dysphagia | Loss of speech
+MONDO:0010526,MONDO:0017694,0.015,0.0,0.0,0.0,0.0,False,
+MONDO:0008769,MONDO:0010526,0.014,0.003,0.0,0.0,0.004,False,Seizure
+MONDO:0008769,MONDO:0010674,0.014,0.002,0.0,0.0,0.003,False,Seizure
+MONDO:0009657,MONDO:0010006,0.014,0.012,0.0,0.0,0.015,False,Coarse facial features | Hepatomegaly
+MONDO:0010526,MONDO:0011758,0.014,0.0,0.0,0.0,0.0,False,
+MONDO:0008199,MONDO:0009656,0.013,0.01,0.0,0.0,0.012,False,Sleep disturbance
+MONDO:0008199,MONDO:0009757,0.013,0.05,0.0,0.0,0.063,False,Neuronal loss in central nervous system | Dysphagia
+MONDO:0008767,MONDO:0010100,0.013,0.053,0.0,0.0,0.066,False,Psychomotor deterioration | Dementia
+MONDO:0010006,MONDO:0010079,0.013,0.051,0.0,0.0,0.064,False,Bilateral tonic-clonic seizure | Macrocephaly
+MONDO:0010079,MONDO:0010099,0.013,0.052,0.0,0.0,0.065,False,Abnormal pyramidal sign | Blindness
+MONDO:0010679,MONDO:0017694,0.013,0.053,0.0,0.0,0.066,False,Respiratory insufficiency due to muscle weakness | Difficulty climbing stairs
+MONDO:0008199,MONDO:0017694,0.011,0.0,0.0,0.0,0.0,False,
+MONDO:0009756,MONDO:0010726,0.011,0.042,0.0,0.0,0.053,False,Skeletal muscle atrophy | Constipation
+MONDO:0009757,MONDO:0010100,0.011,0.044,0.0,0.0,0.055,False,Generalized hypotonia | Dementia
+MONDO:0008199,MONDO:0008769,0.01,0.0,0.0,0.0,0.0,False,
+MONDO:0008199,MONDO:0010674,0.01,0.0,0.0,0.0,0.0,False,
+MONDO:0008199,MONDO:0011758,0.01,0.0,0.0,0.0,0.0,False,
+MONDO:0008767,MONDO:0010099,0.01,0.039,0.0,0.0,0.049,False,Cerebral atrophy | Dementia
+MONDO:0009260,MONDO:0010281,0.01,0.041,0.0,0.0,0.051,False,Hypertrophic cardiomyopathy | Dilated cardiomyopathy
+MONDO:0009499,MONDO:0010726,0.01,0.04,0.0,0.0,0.05,False,EEG abnormality | Motor deterioration
+MONDO:0010281,MONDO:0010679,0.01,0.041,0.0,0.0,0.051,False,Dilated cardiomyopathy | Elevated circulating creatine kinase activity
+MONDO:0010674,MONDO:0010679,0.01,0.038,0.0,0.0,0.048,False,Obstructive sleep apnea | X-linked recessive inheritance
+MONDO:0008767,MONDO:0010079,0.009,0.035,0.0,0.0,0.044,False,Bilateral tonic-clonic seizure | Optic atrophy
+MONDO:0008647,MONDO:0010679,0.008,0.03,0.0,0.0,0.038,False,Arrhythmia | Congestive heart failure
+MONDO:0009260,MONDO:0010679,0.008,0.033,0.0,0.0,0.041,False,Dilated cardiomyopathy | Scoliosis
+MONDO:0009655,MONDO:0009757,0.008,0.031,0.0,0.0,0.039,False,Global developmental delay | Splenomegaly
+MONDO:0009655,MONDO:0010726,0.008,0.03,0.0,0.0,0.038,False,Scoliosis | Sleep disturbance
+MONDO:0009656,MONDO:0010281,0.008,0.032,0.0,0.0,0.04,False,Cardiomegaly | Juvenile onset
+MONDO:0009756,MONDO:0010079,0.008,0.033,0.0,0.0,0.041,False,Macrocephaly | Developmental regression
+MONDO:0009757,MONDO:0010726,0.008,0.034,0.0,0.0,0.042,False,Gait ataxia | Spasticity
+MONDO:0010079,MONDO:0010100,0.008,0.034,0.0,0.0,0.042,False,Blindness | Infantile onset
+MONDO:0008199,MONDO:0008767,0.007,0.03,0.0,0.0,0.037,False,Parkinsonism | Dementia
+MONDO:0008647,MONDO:0010526,0.007,0.026,0.0,0.0,0.033,False,Arrhythmia | Congestive heart failure
+MONDO:0008767,MONDO:0009591,0.007,0.026,0.0,0.0,0.033,False,Optic atrophy | Dysarthria
+MONDO:0008769,MONDO:0010099,0.007,0.028,0.0,0.0,0.035,False,Cerebral atrophy | Seizure
+MONDO:0009260,MONDO:0009757,0.007,0.029,0.0,0.0,0.036,False,Global developmental delay | Hypotonia
+MONDO:0009657,MONDO:0010726,0.007,0.027,0.0,0.0,0.034,False,Motor deterioration | Sleep disturbance
+MONDO:0009658,MONDO:0009757,0.007,0.026,0.0,0.0,0.033,False,Dysphagia | Dysarthria
+MONDO:0010526,MONDO:0010679,0.007,0.026,0.0,0.0,0.033,False,X-linked recessive inheritance | Arrhythmia
+MONDO:0010674,MONDO:0010726,0.007,0.03,0.0,0.0,0.037,False,Profound intellectual disability | Kyphosis
+MONDO:0008199,MONDO:0010726,0.006,0.025,0.0,0.0,0.031,False,Constipation | Dystonia
+MONDO:0008647,MONDO:0009655,0.006,0.024,0.0,0.0,0.03,False,Asymmetric septal hypertrophy
+MONDO:0008647,MONDO:0009656,0.006,0.024,0.0,0.0,0.03,False,Asymmetric septal hypertrophy
+MONDO:0008767,MONDO:0009260,0.006,0.023,0.0,0.0,0.029,False,Vacuolated lymphocytes | Intellectual disability
+MONDO:0008767,MONDO:0009499,0.006,0.023,0.0,0.0,0.029,False,Optic atrophy | Blindness
+MONDO:0009657,MONDO:0010099,0.006,0.025,0.0,0.0,0.031,False,Loss of speech | Global developmental delay
+MONDO:0009658,MONDO:0010079,0.006,0.025,0.0,0.0,0.031,False,Visual impairment | Macrocephaly
+MONDO:0009658,MONDO:0010281,0.006,0.023,0.0,0.0,0.029,False,Pes cavus | Visual impairment
+MONDO:0009757,MONDO:0010674,0.006,0.022,0.0,0.0,0.028,False,Young adult onset | Juvenile onset
+MONDO:0010006,MONDO:0010726,0.006,0.026,0.0,0.0,0.032,False,Skeletal muscle atrophy | Spasticity
+MONDO:0010281,MONDO:0010674,0.006,0.023,0.0,0.0,0.029,False,Pes cavus | Congestive heart failure
+MONDO:0008199,MONDO:0008647,0.005,0.022,0.0,0.0,0.027,False,Autosomal dominant inheritance
+MONDO:0008767,MONDO:0011758,0.005,0.021,0.0,0.0,0.026,False,Glaucoma | Retinal degeneration
+MONDO:0009260,MONDO:0010079,0.005,0.018,0.0,0.0,0.023,False,Infantile onset | Global developmental delay
+MONDO:0009260,MONDO:0010726,0.005,0.021,0.0,0.0,0.026,False,Kyphosis | Scoliosis
+MONDO:0009499,MONDO:0009757,0.005,0.021,0.0,0.0,0.026,False,Young adult onset | Hypotonia
+MONDO:0009655,MONDO:0010079,0.005,0.018,0.0,0.0,0.023,False,Hearing impairment | Global developmental delay
+MONDO:0009655,MONDO:0010679,0.005,0.019,0.0,0.0,0.024,False,Scoliosis | Childhood onset
+MONDO:0009656,MONDO:0010726,0.005,0.018,0.0,0.0,0.023,False,Sleep disturbance | Childhood onset
+MONDO:0009756,MONDO:0010679,0.005,0.02,0.0,0.0,0.025,False,Hyporeflexia | Muscle weakness
+MONDO:0009757,MONDO:0017694,0.005,0.022,0.0,0.0,0.027,False,Young adult onset | Hypotonia
+MONDO:0008647,MONDO:0009657,0.004,0.017,0.0,0.0,0.021,False,Asymmetric septal hypertrophy
+MONDO:0008769,MONDO:0010079,0.004,0.015,0.0,0.0,0.019,False,Developmental regression | Autosomal recessive inheritance
+MONDO:0009655,MONDO:0010099,0.004,0.015,0.0,0.0,0.019,False,Global developmental delay | Seizure
+MONDO:0009655,MONDO:0010281,0.004,0.018,0.0,0.0,0.022,False,Childhood onset | Global developmental delay
+MONDO:0009657,MONDO:0010079,0.004,0.015,0.0,0.0,0.019,False,Hearing impairment | Global developmental delay
+MONDO:0009658,MONDO:0010726,0.004,0.014,0.0,0.0,0.018,False,Short stature | Sleep disturbance
+MONDO:0009756,MONDO:0010281,0.004,0.015,0.0,0.0,0.019,False,Muscle weakness | Global developmental delay
+MONDO:0009757,MONDO:0010281,0.004,0.016,0.0,0.0,0.02,False,Juvenile onset | Global developmental delay
+MONDO:0010006,MONDO:0010281,0.004,0.017,0.0,0.0,0.021,False,Cardiomegaly | Muscle weakness
+MONDO:0010079,MONDO:0010281,0.004,0.017,0.0,0.0,0.021,False,Visual impairment | Global developmental delay
+MONDO:0010079,MONDO:0010674,0.004,0.016,0.0,0.0,0.02,False,Macrocephaly | Infantile onset
+MONDO:0010079,MONDO:0011758,0.004,0.014,0.0,0.0,0.018,False,Macrocephaly | Hearing impairment
+MONDO:0010099,MONDO:0010674,0.004,0.016,0.0,0.0,0.02,False,Neurodegeneration | Infantile onset
+MONDO:0010281,MONDO:0010726,0.004,0.016,0.0,0.0,0.02,False,X-linked dominant inheritance | Childhood onset
+MONDO:0010679,MONDO:0011758,0.004,0.016,0.0,0.0,0.02,False,Cardiomyopathy | Flexion contracture
+MONDO:0008647,MONDO:0009260,0.003,0.013,0.0,0.0,0.016,False,Congestive heart failure
+MONDO:0008647,MONDO:0010281,0.003,0.011,0.0,0.0,0.014,False,Congestive heart failure
+MONDO:0008767,MONDO:0009655,0.003,0.012,0.0,0.0,0.015,False,Intellectual disability | Seizure
+MONDO:0008767,MONDO:0009658,0.003,0.01,0.0,0.0,0.013,False,Dysarthria | Intellectual disability
+MONDO:0008767,MONDO:0010679,0.003,0.013,0.0,0.0,0.016,False,Loss of ambulation
+MONDO:0008769,MONDO:0010726,0.003,0.013,0.0,0.0,0.016,False,Developmental regression | Seizure
+MONDO:0009265,MONDO:0009757,0.003,0.011,0.0,0.0,0.014,False,Splenomegaly | Hepatomegaly
+MONDO:0009591,MONDO:0010679,0.003,0.014,0.0,0.0,0.017,False,Hyporeflexia | Hypotonia
+MONDO:0009591,MONDO:0010726,0.003,0.01,0.0,0.0,0.013,False,Dystonia | Seizure
+MONDO:0009656,MONDO:0010079,0.003,0.01,0.0,0.0,0.013,False,Hearing impairment | Autosomal recessive inheritance
+MONDO:0009658,MONDO:0010099,0.003,0.01,0.0,0.0,0.013,False,Infantile onset | Global developmental delay
+MONDO:0009658,MONDO:0010679,0.003,0.012,0.0,0.0,0.015,False,Achilles tendon contracture | Childhood onset
+MONDO:0009757,MONDO:0010079,0.003,0.013,0.0,0.0,0.016,False,Global developmental delay | Hypotonia
+MONDO:0009757,MONDO:0011758,0.003,0.014,0.0,0.0,0.017,False,Global developmental delay | Intellectual disability
+MONDO:0010006,MONDO:0010679,0.003,0.012,0.0,0.0,0.015,False,Muscle weakness | Hypotonia
+MONDO:0010079,MONDO:0017694,0.003,0.011,0.0,0.0,0.014,False,Hearing impairment | Hypotonia
+MONDO:0010099,MONDO:0010726,0.003,0.012,0.0,0.0,0.015,False,Dystonia | Seizure
+MONDO:0010099,MONDO:0011758,0.003,0.012,0.0,0.0,0.015,False,Neurodegeneration | Global developmental delay
+MONDO:0010679,MONDO:0010726,0.003,0.014,0.0,0.0,0.017,False,Scoliosis | Childhood onset
+MONDO:0010726,MONDO:0011758,0.003,0.011,0.0,0.0,0.014,False,Kyphosis | Short stature
+MONDO:0008647,MONDO:0009658,0.002,0.007,0.0,0.0,0.009,False,Asymmetric septal hypertrophy
+MONDO:0008647,MONDO:0010674,0.002,0.009,0.0,0.0,0.011,False,Congestive heart failure
+MONDO:0008767,MONDO:0010526,0.002,0.009,0.0,0.0,0.011,False,Juvenile onset | Seizure
+MONDO:0008767,MONDO:0010674,0.002,0.007,0.0,0.0,0.009,False,Juvenile onset | Seizure
+MONDO:0009499,MONDO:0010679,0.002,0.01,0.0,0.0,0.012,False,Childhood onset | Hypotonia
+MONDO:0009656,MONDO:0010099,0.002,0.007,0.0,0.0,0.009,False,Seizure | Autosomal recessive inheritance
+MONDO:0009656,MONDO:0010679,0.002,0.006,0.0,0.0,0.008,False,Childhood onset
+MONDO:0009757,MONDO:0010526,0.002,0.009,0.0,0.0,0.011,False,Juvenile onset | Seizure
+MONDO:0010079,MONDO:0010726,0.002,0.008,0.0,0.0,0.01,False,Developmental regression
+MONDO:0008767,MONDO:0009756,0.001,0.006,0.0,0.0,0.007,False,Intellectual disability | Autosomal recessive inheritance
+MONDO:0008767,MONDO:0010726,0.001,0.002,0.0,0.0,0.003,False,Seizure
+MONDO:0009265,MONDO:0010079,0.001,0.002,0.0,0.0,0.003,False,Autosomal recessive inheritance
+MONDO:0009499,MONDO:0010281,0.001,0.006,0.0,0.0,0.007,False,Childhood onset
+MONDO:0009591,MONDO:0010281,0.001,0.004,0.0,0.0,0.005,False,Intellectual disability
+MONDO:0009657,MONDO:0010679,0.001,0.006,0.0,0.0,0.007,False,Childhood onset
+MONDO:0009757,MONDO:0010679,0.001,0.004,0.0,0.0,0.005,False,Hypotonia
+MONDO:0010079,MONDO:0010679,0.001,0.005,0.0,0.0,0.006,False,Hypotonia
+MONDO:0010099,MONDO:0010281,0.001,0.005,0.0,0.0,0.006,False,Global developmental delay
+MONDO:0010099,MONDO:0010679,0.001,0.005,0.0,0.0,0.006,False,Hypotonia
+MONDO:0010099,MONDO:0017694,0.001,0.006,0.0,0.0,0.007,False,Hypotonia | Autosomal recessive inheritance
+MONDO:0010100,MONDO:0010679,0.001,0.006,0.0,0.0,0.007,False,Hypotonia
+MONDO:0010100,MONDO:0010726,0.001,0.003,0.0,0.0,0.004,False,Seizure
+MONDO:0010281,MONDO:0011758,0.001,0.006,0.0,0.0,0.007,False,Global developmental delay | Intellectual disability
+MONDO:0010526,MONDO:0010726,0.001,0.002,0.0,0.0,0.003,False,Seizure
+MONDO:0008199,MONDO:0010079,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008199,MONDO:0010679,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0008767,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0008769,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0009265,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0009499,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0009591,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0009756,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0009757,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0010006,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0010079,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0010099,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0010100,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0010726,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0011758,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008647,MONDO:0017694,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008767,MONDO:0009265,0.0,0.002,0.0,0.0,0.002,False,Autosomal recessive inheritance
+MONDO:0008767,MONDO:0017694,0.0,0.002,0.0,0.0,0.002,False,Autosomal recessive inheritance
+MONDO:0008769,MONDO:0010281,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0008769,MONDO:0010679,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0009265,MONDO:0010281,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0009265,MONDO:0010679,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0009265,MONDO:0010726,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0010079,MONDO:0010526,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0010100,MONDO:0010281,0.0,0.0,0.0,0.0,0.0,False,
+MONDO:0010726,MONDO:0017694,0.0,0.0,0.0,0.0,0.0,False,

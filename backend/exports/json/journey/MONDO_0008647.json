@@ -1,0 +1,613 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0008647",
+  "name": "Cardiomyopathy, familial hypertrophic 1",
+  "short": "HCM (MYH7)"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:4625",
+    "name": "MYH7",
+    "edges": [
+     "Ec8c1e4e",
+     "E53f2d13",
+     "E14a5c39",
+     "E41fc273",
+     "E819eed6",
+     "E4c43191",
+     "E104959c",
+     "Edaf4fc6",
+     "E7d9c4fa"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:sarcomere_defect",
+    "name": "Sarcomere defect",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E1ed33e0",
+     "E94b588b",
+     "Eff502cb"
+    ]
+   }
+  ],
+  "pathways": [],
+  "top_phenotypes": [
+   {
+    "id": "HP:0001682",
+    "name": "Subvalvular aortic stenosis",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E73fcc53"
+    ]
+   },
+   {
+    "id": "HP:0001699",
+    "name": "Sudden death",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ee4ff1aa"
+    ]
+   },
+   {
+    "id": "HP:0000006",
+    "name": "Autosomal dominant inheritance",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E33b64f2"
+    ]
+   },
+   {
+    "id": "HP:0011675",
+    "name": "Arrhythmia",
+    "weight": 2.12,
+    "frequency": null,
+    "edges": [
+     "E0582de0"
+    ]
+   },
+   {
+    "id": "HP:0001670",
+    "name": "Asymmetric septal hypertrophy",
+    "weight": 1.609,
+    "frequency": null,
+    "edges": [
+     "Ef27c7d9"
+    ]
+   },
+   {
+    "id": "HP:0001635",
+    "name": "Congestive heart failure",
+    "weight": 1.427,
+    "frequency": null,
+    "edges": [
+     "E713082f"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": "ClinVar:4884318",
+    "name": "NM_000257.4(MYH7):c.1543A>G (p.Met515Val)",
+    "significance": "Pathogenic",
+    "consequence": "missense variant",
+    "edges": [
+     "Eaf9f32c"
+    ]
+   },
+   {
+    "id": "ClinVar:3901153",
+    "name": "NM_000257.4(MYH7):c.2185G>C (p.Ala729Pro)",
+    "significance": "Pathogenic",
+    "consequence": "missense variant",
+    "edges": [
+     "E529adb0"
+    ]
+   },
+   {
+    "id": "ClinVar:3775810",
+    "name": "NM_000257.4(MYH7):c.1833G>C (p.Lys611Asn)",
+    "significance": "Pathogenic",
+    "consequence": "missense variant",
+    "edges": [
+     "E9a10458"
+    ]
+   }
+  ]
+ },
+ "similar": [],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:Cardiomyopathy_Patient_Council",
+   "name": "Cardiomyopathy Patient Council",
+   "kind": "patient_group",
+   "country": "IE",
+   "website": null,
+   "contact_email": "info@globalhearthub.org",
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "E5a3bbe2"
+   ]
+  },
+  {
+   "id": "ORG:Cardiomyopathy_UK",
+   "name": "Cardiomyopathy UK",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": "cardiomyopathy.org",
+   "contact_email": "contact@cardiomyopathy.org",
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "Eb426000"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NHLBI",
+   "name": "NIH NHLBI",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "E76283dd",
+    "E3bc422d",
+    "E923883a",
+    "Ea5fb710",
+    "E2e9cb67",
+    "Eb7a841e"
+   ]
+  },
+  {
+   "id": "ORG:NIH_VA",
+   "name": "NIH VA",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "E91deb44",
+    "Ed7a10a1",
+    "E39db6ec",
+    "E288ee21"
+   ]
+  },
+  {
+   "id": "ORG:Bristol_Myers_Squibb",
+   "name": "Bristol-Myers Squibb",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "Eba1ca1e",
+    "Ea2ef61b",
+    "E472ceb8",
+    "E3c4c78d"
+   ]
+  },
+  {
+   "id": "ORG:Braveheart_Bio_Inc",
+   "name": "Braveheart Bio, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "E3899f76",
+    "E03eaf11"
+   ]
+  },
+  {
+   "id": "ORG:National_Center_for_Complementary_and_In",
+   "name": "National Center for Complementary and Integrative Health (NCCIH)",
+   "kind": "nih",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "E225367a",
+    "Ef0e8687"
+   ]
+  },
+  {
+   "id": "ORG:National_Heart_Lung_and_Blood_Institute",
+   "name": "National Heart, Lung, and Blood Institute (NHLBI)",
+   "kind": "nih",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008647",
+   "edges": [
+    "Ea264cea",
+    "E73a3f2f"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT07755904",
+   "title": "BHB-1893 Versus Metoprolol for Symptomatic Obstructive Hypertrophic Cardiomyopathy",
+   "status": "RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0008647",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "BHB-1893",
+    "Metoprolol"
+   ],
+   "edges": [
+    "E03eaf11",
+    "Ea232fc2",
+    "E19a14a7",
+    "Ee56b7c4"
+   ]
+  },
+  {
+   "id": "NCT07549490",
+   "title": "Human Experimental Models of Pain (HEMP)",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0008647",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Placebo",
+    "Naproxen",
+    "Pregabalin"
+   ],
+   "edges": [
+    "Ef0e8687",
+    "Ed58e88b",
+    "E18aaba3",
+    "E396bf05",
+    "Ea02f18b"
+   ]
+  },
+  {
+   "id": "NCT07806149",
+   "title": "NHLBI SESAME (SEptal Scoring Along Midline Endocardium) Multi-Center Prospective Study Using Improvised Off-Label Devices",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0008647",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E73a3f2f",
+    "E6184941"
+   ]
+  },
+  {
+   "id": "NCT06372457",
+   "title": "COLLIGO-HCM: A Multinational Observational Study of the Real-World Effectiveness of Mavacamten Among Patients With Symptomatic Obstructive Hypertrophic Cardiomyopathy (oHCM)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0008647",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Approved Hypertrophic Cardiomyopathy drug treatments",
+    "Mavacamten"
+   ],
+   "edges": [
+    "Ea2ef61b",
+    "Ecb9b6d4",
+    "E3f08204",
+    "E91d04a6"
+   ]
+  },
+  {
+   "id": "NCT07107373",
+   "title": "A Study to Assess the Treatment of Obstructive Hypertrophic Cardiomyopathy (oHCM) With Mavacamten in the US",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0008647",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Mavacamten"
+   ],
+   "edges": [
+    "E3c4c78d",
+    "Ed3a547d",
+    "E93f43f8"
+   ]
+  }
+ ],
+ "assets": [],
+ "researchers": [
+  {
+   "id": "PERSON:15689308",
+   "name": "Kai-Chun Daniel Yang",
+   "grants": [
+    "RePORTER:I01BX006428",
+    "RePORTER:R01HL171174"
+   ],
+   "diseases": [
+    "MONDO:0008647"
+   ],
+   "edges": [
+    "E809eb01",
+    "Ed7a10a1",
+    "E78815a9",
+    "E288ee21",
+    "Efa5df04",
+    "E3bc422d"
+   ]
+  },
+  {
+   "id": "PERSON:12617121",
+   "name": "Clayton E Friedman",
+   "grants": [
+    "RePORTER:K99HL177347"
+   ],
+   "diseases": [
+    "MONDO:0008647"
+   ],
+   "edges": [
+    "E58eecef",
+    "Eb7a841e"
+   ]
+  },
+  {
+   "id": "PERSON:14106350",
+   "name": "Tanner O Monroe",
+   "grants": [
+    "RePORTER:R00HL168239"
+   ],
+   "diseases": [
+    "MONDO:0008647"
+   ],
+   "edges": [
+    "E086f488",
+    "Ea5fb710"
+   ]
+  },
+  {
+   "id": "PERSON:80910868",
+   "name": "Yanling Wang",
+   "grants": [],
+   "diseases": [
+    "MONDO:0008647"
+   ],
+   "edges": [
+    "E5bcedec",
+    "E53a17cf"
+   ]
+  },
+  {
+   "id": "PERSON:11084045",
+   "name": "Ying Sun",
+   "grants": [],
+   "diseases": [
+    "MONDO:0008647"
+   ],
+   "edges": [
+    "E82620c1",
+    "E53a17cf"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Cardiomyopathy Patient Council (patient group, based in IE), which the atlas links to HCM (MYH7).",
+   "from_disease": "MONDO:0008647",
+   "target_id": "ORG:Cardiomyopathy_Patient_Council",
+   "edges": [
+    "E5a3bbe2"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Cardiomyopathy UK (patient group, based in GB), which the atlas links to HCM (MYH7).",
+   "from_disease": "MONDO:0008647",
+   "target_id": "ORG:Cardiomyopathy_UK",
+   "edges": [
+    "Eb426000"
+   ]
+  },
+  {
+   "kind": "build",
+   "step": "registry",
+   "text": "No disease similar to HCM (MYH7) in the atlas has a patient registry yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  },
+  {
+   "kind": "build",
+   "step": "natural_history_study",
+   "text": "No disease similar to HCM (MYH7) in the atlas has a natural history study yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on",
+   "text": "Your child's condition is called Hypertrophic Cardiomyopathy, often shortened to HCM, and it is linked to a gene called MYH7 [Ec8c1e4e, E53f2d13]. Genes are like instruction pages that tell the body how to build and run parts of itself, and MYH7 carries instructions for a protein that heart muscle uses to squeeze and relax [E14a5c39]. Changes in this gene are one of the most common causes found in families with this condition [E4c43191]. Researchers describe the problem as happening in the sarcomere, which is a tiny working part inside heart muscle cells [E1ed33e0, E94b588b]. One well-studied gene change, called p.R403Q, is linked to the heart muscle squeezing harder than usual and to HCM starting [E104959c, Eff502cb]. Specific changes in the MYH7 gene, including p.Met515Val, p.Ala729Pro, and p.Lys611Asn, have been recorded as disease-causing for this condition [Eaf9f32c, E529adb0, E9a10458]. Children with this condition have been recorded as having features such as narrowing below a heart valve, an uneven heartbeat, a thicker wall between the heart's pumping chambers, heart failure signs, and sudden death as an associated feature [E73fcc53, E0582de0, Ef27c7d9, E713082f, Ee4ff1aa]. This condition can be passed down in families in a pattern called autosomal dominant, meaning a change in just one copy of the gene can be enough [E33b64f2].",
+   "citations": [
+    "Ec8c1e4e",
+    "E53f2d13",
+    "E14a5c39",
+    "E4c43191",
+    "E1ed33e0",
+    "E94b588b",
+    "E104959c",
+    "Eff502cb",
+    "Eaf9f32c",
+    "E529adb0",
+    "E9a10458",
+    "E73fcc53",
+    "E0582de0",
+    "Ef27c7d9",
+    "E713082f",
+    "Ee4ff1aa",
+    "E33b64f2"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "How it compares to other conditions",
+   "text": "A paper does note that several other genes besides MYH7, including MYBPC3, TNNT2, TNNI3, TPM1, ACTC1, MYL2, and MYL3, have also been linked to causing this same condition in other families [E7d9c4fa]. Another paper reports that MYBPC3 changes are also a leading cause of HCM and that these cases can look the same as HCM caused by MYH7 changes [Edaf4fc6].",
+   "citations": [
+    "E7d9c4fa",
+    "Edaf4fc6"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "What exists already",
+   "text": "There are patient groups focused on this condition, including the Cardiomyopathy Patient Council based in Ireland and Cardiomyopathy UK based in the United Kingdom [E5a3bbe2, Eb426000]. A trial in the United States is currently recruiting to compare a medicine called BHB-1893 with a medicine called Metoprolol for people with symptoms of obstructive HCM [E03eaf11, Ea232fc2, E19a14a7, Ee56b7c4]. Two other trials in the United States, run by Bristol-Myers Squibb, are looking at a medicine called Mavacamten for obstructive HCM, though neither is currently recruiting [Ea2ef61b, E3c4c78d, Eba1ca1e, E472ceb8, E3f08204, Ed3a547d]. A study called NHLBI SESAME, looking at a device-based procedure for this condition in the United States, has not yet started recruiting [E73a3f2f, Ea264cea, E6184941]. NIH NHLBI and NIH VA are funding research into how MYH7 gene changes affect heart muscle cells, with researchers Kai-Chun Daniel Yang, Clayton E Friedman, and Tanner O Monroe leading these grants [E76283dd, E3bc422d, E923883a, Ea5fb710, E2e9cb67, Eb7a841e, E91deb44, Ed7a10a1, E39db6ec, E288ee21, E809eb01, E78815a9, Efa5df04, E58eecef, E086f488]. A paper that mentions this condition was authored by researchers Yanling Wang and Ying Sun, looking at how a gene-editing approach affects the non-changed copy of a gene in dominant conditions [E5bcedec, E82620c1, E53a17cf].",
+   "citations": [
+    "E5a3bbe2",
+    "Eb426000",
+    "E03eaf11",
+    "Ea232fc2",
+    "E19a14a7",
+    "Ee56b7c4",
+    "Ea2ef61b",
+    "E3c4c78d",
+    "Eba1ca1e",
+    "E472ceb8",
+    "E3f08204",
+    "Ed3a547d",
+    "E73a3f2f",
+    "Ea264cea",
+    "E6184941",
+    "E76283dd",
+    "E3bc422d",
+    "E923883a",
+    "Ea5fb710",
+    "E2e9cb67",
+    "Eb7a841e",
+    "E91deb44",
+    "Ed7a10a1",
+    "E39db6ec",
+    "E288ee21",
+    "E809eb01",
+    "E78815a9",
+    "Efa5df04",
+    "E58eecef",
+    "E086f488",
+    "E5bcedec",
+    "E82620c1",
+    "E53a17cf"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "A first step could be reaching out to the Cardiomyopathy Patient Council, a patient group based in Ireland that the atlas connects to HCM (MYH7), to learn more and connect with other families [E5a3bbe2]. You could also contact Cardiomyopathy UK, a patient group based in the United Kingdom that the atlas connects to HCM (MYH7), for information and support [Eb426000].",
+   "citations": [
+    "E5a3bbe2",
+    "Eb426000"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:192600",
+   "n_results": 6,
+   "n_kept": 6
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0008647",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "hypertrophic cardiomyopathy",
+   "n_results": 405,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "MYH7 AND hypertrophic cardiomyopathy",
+   "n_results": 18,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "MYH7[tiab] AND hypertrophic cardiomyopathy[tiab]",
+   "n_results": 595,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(MYH7[tiab] AND hypertrophic cardiomyopathy[tiab]) AND hasabstract",
+   "n_results": 582,
+   "n_kept": 11
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.4hcm.org/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.cardiomyopathy.org/about-us",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://globalhearthub.org/patient-councils/cardiomyopathy-patient-council/",
+   "n_results": 1,
+   "n_kept": 1
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

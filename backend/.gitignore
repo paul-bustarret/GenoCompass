@@ -1,0 +1,7 @@
+data/raw/
+.venv/
+__pycache__/
+spike_sample/raw/
+.DS_Store
+.env
+data/llm_cache/

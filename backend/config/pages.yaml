@@ -1,0 +1,578 @@
+# Pages read by the LLM to extract patient organisations, registries and natural history studies.
+# Collected and verified (HTTP 200, readable) on 2026-10-03.
+pages:
+  # --- Sanfilippo (MPS III A-D); groups usually cover all four subtypes ---
+  - omim: "OMIM:252900"
+    disease_name: "Mucopolysaccharidosis type IIIA (Sanfilippo A)"
+    url: "https://rarediseases.org/organizations/cure-sanfilippo-foundation/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "NORD listing for Cure Sanfilippo Foundation (own site blocks fetches)"
+  - omim: "OMIM:252900"
+    disease_name: "Mucopolysaccharidosis type IIIA (Sanfilippo A)"
+    url: "https://www.sanfilippo.org.au/about-us/our-purpose"
+    kind_hint: patient_group
+    country_hint: "AU"
+    note: "Sanfilippo Children's Foundation (Australia) purpose page"
+  - omim: "OMIM:252900"
+    disease_name: "Mucopolysaccharidosis type IIIA (Sanfilippo A)"
+    url: "https://mpssociety.org.uk/conditions/mps-conditions/mps-iii-sanfilippo"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "MPS Society (UK) MPS III condition page"
+  - omim: "OMIM:252920"
+    disease_name: "Mucopolysaccharidosis type IIIB (Sanfilippo B)"
+    url: "https://teamsanfilippo.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Team Sanfilippo Foundation home page"
+  - omim: "OMIM:252920"
+    disease_name: "Mucopolysaccharidosis type IIIB (Sanfilippo B)"
+    url: "https://www.stopsanfilippo.org/"
+    kind_hint: patient_group
+    country_hint: "ES"
+    note: "Fundación Stop Sanfilippo (Spain), Spanish-language"
+  - omim: "OMIM:252930"
+    disease_name: "Mucopolysaccharidosis type IIIC (Sanfilippo C)"
+    url: "https://sanfilippofonds.nl/"
+    kind_hint: patient_group
+    country_hint: "NL"
+    note: "Stichting Sanfilippo Fonds (Netherlands), Dutch-language"
+  - omim: "OMIM:252930"
+    disease_name: "Mucopolysaccharidosis type IIIC (Sanfilippo C)"
+    url: "https://www.vml-asso.org/"
+    kind_hint: patient_group
+    country_hint: "FR"
+    note: "Vaincre les Maladies Lysosomales (France), French-language"
+  - omim: "OMIM:252940"
+    disease_name: "Mucopolysaccharidosis type IIID (Sanfilippo D)"
+    url: "https://mps-ev.de/"
+    kind_hint: patient_group
+    country_hint: "DE"
+    note: "MPS-Deutschland e.V. (German MPS society), German-language"
+  - omim: "OMIM:252940"
+    disease_name: "Mucopolysaccharidosis type IIID (Sanfilippo D)"
+    url: "https://mpslisosomales.org/"
+    kind_hint: patient_group
+    country_hint: "ES"
+    note: "Asociación MPS-Lisosomales España, Spanish-language"
+  - omim: "OMIM:252940"
+    disease_name: "Mucopolysaccharidosis type IIID (Sanfilippo D)"
+    url: "https://www.aimps.it/chi-siamo/"
+    kind_hint: patient_group
+    country_hint: "IT"
+    note: "AIMPS Associazione Italiana Mucopolisaccaridosi, about page (Italian)"
+
+  # --- MPS I (Hurler) ---
+  - omim: "OMIM:607014"
+    disease_name: "Mucopolysaccharidosis type I (Hurler)"
+    url: "https://mpssociety.org/en/about-mps-society/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "National MPS Society about page"
+  - omim: "OMIM:607014"
+    disease_name: "Mucopolysaccharidosis type I (Hurler)"
+    url: "https://mpssociety.org.uk/conditions/mps-conditions/mps-i-hurler"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "MPS Society (UK) MPS I page"
+  - omim: "OMIM:607014"
+    disease_name: "Mucopolysaccharidosis type I (Hurler)"
+    url: "https://www.mpssociety.ca/about-us/"
+    kind_hint: patient_group
+    country_hint: "CA"
+    note: "Canadian MPS Society about page (founded by MPS I family)"
+  - omim: "OMIM:607014"
+    disease_name: "Mucopolysaccharidosis type I (Hurler)"
+    url: "https://www.mpsargertina.org/"
+    kind_hint: patient_group
+    country_hint: "AR"
+    note: "Asociación Mucopolisacaridosis Argentina (AMA), Spanish-language"
+  - omim: "OMIM:607014"
+    disease_name: "Mucopolysaccharidosis type I (Hurler)"
+    url: "https://www.mps-austria.at/"
+    kind_hint: patient_group
+    country_hint: "AT"
+    note: "MPS Austria, German-language"
+
+  # --- MPS II (Hunter) ---
+  - omim: "OMIM:309900"
+    disease_name: "Mucopolysaccharidosis type II (Hunter)"
+    url: "https://projectalive.org/about"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Project Alive (parent-led Hunter syndrome org) about page"
+  - omim: "OMIM:309900"
+    disease_name: "Mucopolysaccharidosis type II (Hunter)"
+    url: "https://mpssociety.org.uk/conditions/mps-conditions/mps-ii-hunter"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "MPS Society (UK) MPS II page"
+  - omim: "OMIM:309900"
+    disease_name: "Mucopolysaccharidosis type II (Hunter)"
+    url: "https://mpsii.theisaacfoundation.com/"
+    kind_hint: patient_group
+    country_hint: "CA"
+    note: "MPS II Research Fund / Isaac Foundation (Canada)"
+  - omim: "OMIM:232300"
+    disease_name: "Pompe disease"
+    url: "https://worldpompe.org/about-us/ipa-members-a-contacts/"
+    kind_hint: directory
+    country_hint: "NL"
+    note: "International Pompe Association member list (patient groups by country)"
+  - omim: "OMIM:232300"
+    disease_name: "Pompe disease"
+    url: "https://amda-pompe.org/about-us/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Acid Maltase Deficiency Association (AMDA) about page"
+  - omim: "OMIM:232300"
+    disease_name: "Pompe disease"
+    url: "https://amda-pompe.org/pompe-registry-a-decade-of-making-a-difference/"
+    kind_hint: registry
+    country_hint: "US"
+    note: "AMDA article on the Pompe Registry"
+  - omim: "OMIM:232300"
+    disease_name: "Pompe disease"
+    url: "https://www.mpompe.de/"
+    kind_hint: patient_group
+    country_hint: "DE"
+    note: "Pompe Deutschland e.V., German-language"
+  - omim: "OMIM:232300"
+    disease_name: "Pompe disease"
+    url: "https://agsd.org.uk/about-us/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Association for Glycogen Storage Disease UK (covers Pompe/GSD II)"
+
+  # --- Gaucher ---
+  - omim: "OMIM:230800"
+    disease_name: "Gaucher disease"
+    url: "https://www.gaucherdisease.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "National Gaucher Foundation home page"
+  - omim: "OMIM:230800"
+    disease_name: "Gaucher disease"
+    url: "https://www.gaucher.org.uk/associations_around_the_world"
+    kind_hint: directory
+    country_hint: "GB"
+    note: "Gaucher Association UK list of Gaucher associations worldwide"
+  - omim: "OMIM:230800"
+    disease_name: "Gaucher disease"
+    url: "https://www.ggd-ev.de/"
+    kind_hint: patient_group
+    country_hint: "DE"
+    note: "Gaucher Gesellschaft Deutschland e.V., German-language"
+  - omim: "OMIM:230800"
+    disease_name: "Gaucher disease"
+    url: "https://aeefegaucher.es/"
+    kind_hint: patient_group
+    country_hint: "ES"
+    note: "AEEFE Asociación Española de Enfermos y Familiares de Gaucher, Spanish-language"
+
+  # --- Fabry ---
+  - omim: "OMIM:301500"
+    disease_name: "Fabry disease"
+    url: "https://fabryintnetwork.com/members"
+    kind_hint: directory
+    country_hint: null
+    note: "Fabry International Network member organisations by region"
+  - omim: "OMIM:301500"
+    disease_name: "Fabry disease"
+    url: "https://www.fabrynetwork.org/about-us/"
+    kind_hint: patient_group
+    country_hint: null
+    note: "Fabry International Network about page (global umbrella)"
+  - omim: "OMIM:301500"
+    disease_name: "Fabry disease"
+    url: "https://www.fabry.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Fabry Support & Information Group (FSIG) home page"
+  - omim: "OMIM:301500"
+    disease_name: "Fabry disease"
+    url: "https://www.fabrycanada.com/"
+    kind_hint: patient_group
+    country_hint: "CA"
+    note: "Canadian Fabry Association home page"
+
+  # --- Krabbe ---
+  - omim: "OMIM:245200"
+    disease_name: "Krabbe disease"
+    url: "https://www.huntershope.org/about-us/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Hunter's Hope Foundation about page"
+  - omim: "OMIM:245200"
+    disease_name: "Krabbe disease"
+    url: "https://krabbeconnect.org/about-krabbeconnect/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "KrabbeConnect about page"
+  - omim: "OMIM:245200"
+    disease_name: "Krabbe disease"
+    url: "https://www.krabbeuk.org/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Krabbe UK charity home page"
+  - omim: "OMIM:245200"
+    disease_name: "Krabbe disease"
+    url: "https://www.ninds.nih.gov/health-information/clinical-trials/krabbe-disease-global-patient-registry"
+    kind_hint: registry
+    country_hint: "US"
+    note: "NINDS page on the Krabbe Disease Global Patient Registry"
+  - omim: "OMIM:250100"
+    disease_name: "Metachromatic leukodystrophy"
+    url: "https://mld.foundation/about-us/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "MLD Foundation about page"
+  - omim: "OMIM:250100"
+    disease_name: "Metachromatic leukodystrophy"
+    url: "https://mld.foundation/registry/"
+    kind_hint: registry
+    country_hint: "US"
+    note: "MLD Foundation patient-powered registry"
+  - omim: "OMIM:250100"
+    disease_name: "Metachromatic leukodystrophy"
+    url: "https://www.mldinitiative.com/home/about-us/"
+    kind_hint: registry
+    country_hint: "NL"
+    note: "MLD initiative international registry (Amsterdam UMC) about page"
+  - omim: "OMIM:250100"
+    disease_name: "Metachromatic leukodystrophy"
+    url: "https://alextlc.org/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Alex - The Leukodystrophy Charity (UK)"
+  - omim: "OMIM:272800"
+    disease_name: "Tay-Sachs disease"
+    url: "https://ntsad.org/about-ntsad/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "NTSAD about page"
+  - omim: "OMIM:272800"
+    disease_name: "Tay-Sachs disease"
+    url: "https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/"
+    kind_hint: natural_history_study
+    country_hint: "US"
+    note: "NTSAD list of natural history studies (Tay-Sachs, Sandhoff, GM1, Canavan)"
+  - omim: "OMIM:272800"
+    disease_name: "Tay-Sachs disease"
+    url: "https://cats-foundation.org/the-cats-foundation/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Cure & Action for Tay-Sachs (CATS) Foundation (UK)"
+  - omim: "OMIM:272800"
+    disease_name: "Tay-Sachs disease"
+    url: "https://www.curetay-sachs.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Cure Tay-Sachs Foundation home page"
+
+  # --- Sandhoff ---
+  - omim: "OMIM:268800"
+    disease_name: "Sandhoff disease"
+    url: "https://ntsad.org/diseases/sandhoff-disease/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "NTSAD Sandhoff disease page"
+  - omim: "OMIM:268800"
+    disease_name: "Sandhoff disease"
+    url: "https://www.rarefindfoundation.org/"
+    kind_hint: patient_group
+    country_hint: "AU"
+    note: "Rare Find Foundation (Tay-Sachs and Sandhoff, Australia)"
+  - omim: "OMIM:268800"
+    disease_name: "Sandhoff disease"
+    url: "https://globalgenes.org/disorder/sandhoff-disease/"
+    kind_hint: directory
+    country_hint: null
+    note: "Global Genes Sandhoff page listing advocacy organisations"
+
+  # --- Niemann-Pick C ---
+  - omim: "OMIM:257220"
+    disease_name: "Niemann-Pick disease type C"
+    url: "https://nnpdf.org/about-us/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "National Niemann-Pick Disease Foundation about page"
+  - omim: "OMIM:257220"
+    disease_name: "Niemann-Pick disease type C"
+    url: "https://www.npuk.org/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Niemann-Pick UK home page"
+  - omim: "OMIM:257220"
+    disease_name: "Niemann-Pick disease type C"
+    url: "https://www.npcd.org.au/"
+    kind_hint: patient_group
+    country_hint: "AU"
+    note: "Australian NPC Disease Foundation"
+  - omim: "OMIM:257220"
+    disease_name: "Niemann-Pick disease type C"
+    url: "https://www.inpda.org/useful-link/"
+    kind_hint: directory
+    country_hint: null
+    note: "INPDA list of NPD organisations in US, UK, Australia, Japan, Brazil"
+
+  # --- CLN2 ---
+  - omim: "OMIM:204500"
+    disease_name: "Neuronal ceroid lipofuscinosis 2 (CLN2)"
+    url: "https://bdsraaustralia.org/about/"
+    kind_hint: patient_group
+    country_hint: "AU"
+    note: "Batten Disease Support & Research Association Australia about page"
+  - omim: "OMIM:204500"
+    disease_name: "Neuronal ceroid lipofuscinosis 2 (CLN2)"
+    url: "https://www.a-ncl.it/"
+    kind_hint: patient_group
+    country_hint: "IT"
+    note: "A-NCL Associazione Nazionale Ceroidolipofuscinosi (Italy), Italian-language"
+  - omim: "OMIM:204500"
+    disease_name: "Neuronal ceroid lipofuscinosis 2 (CLN2)"
+    url: "https://www.taylorstale.org/rare-disease/about-batten-disease/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Taylor's Tale (Batten disease foundation) disease page"
+
+  # --- CLN3 ---
+  - omim: "OMIM:204200"
+    disease_name: "Neuronal ceroid lipofuscinosis 3 (CLN3, juvenile Batten)"
+    url: "https://beyondbatten.org/about/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Beyond Batten Disease Foundation about page"
+  - omim: "OMIM:204200"
+    disease_name: "Neuronal ceroid lipofuscinosis 3 (CLN3, juvenile Batten)"
+    url: "https://beyondbatten.org/research/state-of-science/"
+    kind_hint: natural_history_study
+    country_hint: "US"
+    note: "Beyond Batten state of science (CLN3 natural history and trials)"
+  - omim: "OMIM:204200"
+    disease_name: "Neuronal ceroid lipofuscinosis 3 (CLN3, juvenile Batten)"
+    url: "https://www.ncl-stiftung.de/"
+    kind_hint: patient_group
+    country_hint: "DE"
+    note: "NCL-Stiftung (Germany), German-language"
+
+  # --- Danon ---
+  - omim: "OMIM:300257"
+    disease_name: "Danon disease"
+    url: "https://www.danonfoundation.org/about-us/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Danon Foundation about page"
+  - omim: "OMIM:300257"
+    disease_name: "Danon disease"
+    url: "https://www.danonfoundation.org/about-us/partners/"
+    kind_hint: directory
+    country_hint: "US"
+    note: "Danon Foundation partner organisations"
+  - omim: "OMIM:300257"
+    disease_name: "Danon disease"
+    url: "https://rarediseases.org/organizations/danondisease-org/"
+    kind_hint: registry
+    country_hint: "US"
+    note: "NORD listing for DanonDisease.org (University of Colorado, runs a registry)"
+
+  # --- Parkinson disease (GBA1-associated) ---
+  - omim: "OMIM:168600"
+    disease_name: "Parkinson disease (GBA1-associated)"
+    url: "https://www.michaeljfox.org/publication/michael-j-fox-foundation-and-silverstein-foundation-parkinsons-gba-grant-nearly-3"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "MJFF and Silverstein Foundation GBA research programme announcement"
+  - omim: "OMIM:168600"
+    disease_name: "Parkinson disease (GBA1-associated)"
+    url: "https://silversteinfoundation.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Silverstein Foundation for Parkinson's with GBA"
+  - omim: "OMIM:168600"
+    disease_name: "Parkinson disease (GBA1-associated)"
+    url: "https://www.ppmi-info.org/about-ppmi"
+    kind_hint: natural_history_study
+    country_hint: "US"
+    note: "Parkinson's Precision Medicine Initiative (PPMI) cohort, includes GBA carriers"
+  - omim: "OMIM:168600"
+    disease_name: "Parkinson disease (GBA1-associated)"
+    url: "https://cureparkinsons.org.uk/about-us/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Cure Parkinson's (UK) about page"
+
+  # --- Rett ---
+  - omim: "OMIM:312750"
+    disease_name: "Rett syndrome"
+    url: "https://reverserett.org/about-rsrt/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Rett Syndrome Research Trust about page"
+  - omim: "OMIM:312750"
+    disease_name: "Rett syndrome"
+    url: "https://www.rettsyndrome.org/researchers/rett-syndrome-natural-history-study/"
+    kind_hint: natural_history_study
+    country_hint: "US"
+    note: "IRSF page on the Rett syndrome natural history study"
+  - omim: "OMIM:312750"
+    disease_name: "Rett syndrome"
+    url: "https://www.rettuk.org/about-us/"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Rett UK about page"
+  - omim: "OMIM:312750"
+    disease_name: "Rett syndrome"
+    url: "https://abrete.org.br/"
+    kind_hint: patient_group
+    country_hint: "BR"
+    note: "Abre-te Associação Brasileira de Síndrome de Rett, Portuguese-language"
+  - omim: "OMIM:312750"
+    disease_name: "Rett syndrome"
+    url: "https://www.rett.org.il/"
+    kind_hint: patient_group
+    country_hint: "IL"
+    note: "Israel Rett Syndrome Association, Hebrew-language"
+  - omim: "OMIM:312750"
+    disease_name: "Rett syndrome"
+    url: "https://rett.ca/"
+    kind_hint: patient_group
+    country_hint: "CA"
+    note: "Ontario Rett Syndrome Association (ORSA Canada)"
+  - omim: "OMIM:310200"
+    disease_name: "Duchenne muscular dystrophy"
+    url: "https://www.parentprojectmd.org/about-ppmd/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Parent Project Muscular Dystrophy about page"
+  - omim: "OMIM:310200"
+    disease_name: "Duchenne muscular dystrophy"
+    url: "https://www.parentprojectmd.org/clinical-trial/the-duchenne-registry/"
+    kind_hint: registry
+    country_hint: "US"
+    note: "PPMD Duchenne Registry"
+  - omim: "OMIM:310200"
+    disease_name: "Duchenne muscular dystrophy"
+    url: "https://www.duchenneuk.org/about"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Duchenne UK about page"
+  - omim: "OMIM:310200"
+    disease_name: "Duchenne muscular dystrophy"
+    url: "https://ppmdindia.org/"
+    kind_hint: patient_group
+    country_hint: "IN"
+    note: "Parent Project Muscular Dystrophy India"
+  - omim: "OMIM:310200"
+    disease_name: "Duchenne muscular dystrophy"
+    url: "https://www.duchenne-spain.org/"
+    kind_hint: patient_group
+    country_hint: "ES"
+    note: "Duchenne Parent Project España, Spanish-language"
+  - omim: "OMIM:310200"
+    disease_name: "Duchenne muscular dystrophy"
+    url: "https://www.parentproject.it/chi-siamo/"
+    kind_hint: patient_group
+    country_hint: "IT"
+    note: "Parent Project aps (Italy) about page, Italian-language"
+
+  # --- Hypertrophic cardiomyopathy ---
+  - omim: "OMIM:192600"
+    disease_name: "Hypertrophic cardiomyopathy"
+    url: "https://www.4hcm.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Hypertrophic Cardiomyopathy Association (HCMA) home page"
+  - omim: "OMIM:192600"
+    disease_name: "Hypertrophic cardiomyopathy"
+    url: "https://www.cardiomyopathy.org/about-us"
+    kind_hint: patient_group
+    country_hint: "GB"
+    note: "Cardiomyopathy UK about page"
+  - omim: "OMIM:192600"
+    disease_name: "Hypertrophic cardiomyopathy"
+    url: "https://globalhearthub.org/patient-councils/cardiomyopathy-patient-council/"
+    kind_hint: directory
+    country_hint: "IE"
+    note: "Global Heart Hub cardiomyopathy patient council (member orgs across 19 countries)"
+
+  # --- GM1 gangliosidosis (no OMIM in this slice) ---
+  - omim: null
+    disease_name: "GM1 gangliosidosis"
+    url: "https://www.curegm1.org/the-foundation-and-its-members/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Cure GM1 Foundation about page"
+  - omim: null
+    disease_name: "GM1 gangliosidosis"
+    url: "https://ntsad.org/diseases/gm1-gangliosidosis-disease/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "NTSAD GM1 gangliosidosis page"
+  - omim: null
+    disease_name: "GM1 gangliosidosis"
+    url: "https://www.mps-japan.org/"
+    kind_hint: patient_group
+    country_hint: "JP"
+    note: "LysoBridge Japan (MPS family association, also GM1/GM2), Japanese-language"
+
+  # --- GM2 activator deficiency (AB variant) ---
+  - omim: null
+    disease_name: "GM2 activator deficiency (AB variant)"
+    url: "https://globalgenes.org/disorder/gm2-gangliosidosis-ab-variant/"
+    kind_hint: directory
+    country_hint: null
+    note: "Global Genes AB variant page listing advocacy organisations"
+  - omim: null
+    disease_name: "GM2 activator deficiency (AB variant)"
+    url: "https://ntsad.org/diseases/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "NTSAD diseases page (covers GM2 Activator Protein Deficiency)"
+
+  # --- Niemann-Pick type A ---
+  - omim: null
+    disease_name: "Niemann-Pick disease type A"
+    url: "https://rarediseases.org/rare-diseases/acid-sphingomyelinase-deficiency/"
+    kind_hint: directory
+    country_hint: "US"
+    note: "NORD ASMD (Niemann-Pick A/B) report with associated organisations"
+  - omim: null
+    disease_name: "Niemann-Pick disease type A"
+    url: "https://nnpdf.org/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "National Niemann-Pick Disease Foundation home page"
+  - omim: null
+    disease_name: "Niemann-Pick disease type A"
+    url: "https://www.inpda.org/about-us/"
+    kind_hint: patient_group
+    country_hint: null
+    note: "International Niemann-Pick Disease Alliance about page"
+
+  # --- Canavan ---
+  - omim: null
+    disease_name: "Canavan disease"
+    url: "https://www.canavanfoundation.org/about"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Canavan Foundation about page"
+  - omim: null
+    disease_name: "Canavan disease"
+    url: "https://www.canavan.org/what-we-do"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "Canavan Research Foundation story page"
+  - omim: null
+    disease_name: "Canavan disease"
+    url: "https://canavandisease.org/"
+    kind_hint: registry
+    country_hint: "US"
+    note: "Canavan Disease Research (Canavan Research Illinois), runs a patient registry"
+  - omim: null
+    disease_name: "Canavan disease"
+    url: "https://ntsad.org/diseases/canavan-disease/"
+    kind_hint: patient_group
+    country_hint: "US"
+    note: "NTSAD Canavan disease page"

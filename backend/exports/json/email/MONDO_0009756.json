@@ -1,0 +1,15 @@
+{
+ "org_id": "ORG:International_Niemann_Pick_Disease_Allia",
+ "disease_id": "MONDO:0009756",
+ "to": "info@inpda.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting on Niemann-Pick A collaboration",
+ "body": "Dear INPDA team,\n\nMy name is Maria, and I lead a patient group supporting families affected by Niemann-Pick disease, type A.\n\nI'm reaching out because the International Niemann Pick Disease Alliance (INPDA) is a global network of non-profit organisations supporting persons affected by Niemann Pick diseases (NPD) [Ef2a2426]. Given that your alliance's work already encompasses Niemann-Pick A, I believe there may be valuable opportunities for our groups to learn from one another and support our shared community more effectively.\n\nWould you be open to a short introductory call in the coming weeks to explore how our organisations might collaborate or share resources? I'd welcome the chance to hear more about INPDA's current work and discuss how our patient group could align with or contribute to your efforts.\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[Ef2a2426] https://www.inpda.org/about-us/",
+ "citations": [
+  "Ef2a2426"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

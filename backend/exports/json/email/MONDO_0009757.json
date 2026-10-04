@@ -1,0 +1,15 @@
+{
+ "org_id": "ORG:International_Niemann_Pick_Disease_Allia",
+ "disease_id": "MONDO:0009757",
+ "to": "info@inpda.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting on Niemann-Pick C support efforts",
+ "body": "Dear INPDA team,\n\nMy name is Maria, and I lead a patient group for Niemann-Pick C, a disease that affects my own family.\n\nI understand that INPDA is a global network of non-profit organisations supporting persons affected by Niemann-Pick diseases [Eaff0524]. Given that our communities share this focus, I believe there may be valuable opportunities for us to learn from one another and support families together.\n\nI would be glad to arrange a short call, at your convenience, simply to introduce our group and hear more about INPDA's work, with an eye toward exploring whether closer collaboration might benefit the families we both serve.\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader, Niemann-Pick C Patient Group\n\nSources:\n[Eaff0524] https://www.inpda.org/about-us/",
+ "citations": [
+  "Eaff0524"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

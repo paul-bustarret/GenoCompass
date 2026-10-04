@@ -1,0 +1,15 @@
+{
+ "org_id": "ORG:Silverstein_Foundation_for_Parkinson_s_w",
+ "disease_id": "MONDO:0008199",
+ "to": "info@silversteinfoundation.org",
+ "recipient_reason": "organisation linked to this disease with a contact email",
+ "subject": "Proposing a conversation on Parkinson's and GBA-related research",
+ "body": "Dear Silverstein Foundation team,\n\nMy name is Maria, and I lead a patient group for late-onset Parkinson disease.\n\nA paper reports that the Silverstein Foundation for Parkinson's with GBA \"began with the goal of aggressively seeking out new, cutting-edge therapeutic approaches to treating and preventing Parkinson's in GBA mutation carriers\" [Ea3b320e].\n\nGiven this shared focus on Parkinson's, I believe there could be valuable common ground between our patient community and your foundation's work.\n\nWould you be open to a brief introductory call, perhaps 20-30 minutes, to learn more about your current priorities and explore whether there are natural ways for our patient group to support or connect with your efforts?\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[Ea3b320e] https://silversteinfoundation.org/",
+ "citations": [
+  "Ea3b320e"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

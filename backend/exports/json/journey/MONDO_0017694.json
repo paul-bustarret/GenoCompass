@@ -1,0 +1,1515 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0017694",
+  "name": "Glycogen storage disease II",
+  "short": "Pompe"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:2548",
+    "name": "GAA",
+    "edges": [
+     "E23b738a",
+     "Eb8a5930",
+     "Ea30102f",
+     "Ec4ca19d",
+     "Ebae57f3",
+     "E19e7fce"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:lysosomal_enzyme_deficiency",
+    "name": "Lysosomal enzyme deficiency",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E358037f",
+     "E16efee3",
+     "Ed4143fa",
+     "Efb102b2",
+     "E5b4cd33",
+     "Eb6ba1d5",
+     "E2c9a981",
+     "E79487bb"
+    ]
+   },
+   {
+    "id": "MECH:substrate_storage_glycogen",
+    "name": "Glycogen storage",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "Ea482757",
+     "Eec12f36",
+     "Ea58055b",
+     "E846d5b6",
+     "E12d073c",
+     "Ec9fc8f0"
+    ]
+   },
+   {
+    "id": "MECH:lysosomal_dysfunction",
+    "name": "General lysosomal dysfunction",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "Efa6247d"
+    ]
+   },
+   {
+    "id": "MECH:autophagy_defect",
+    "name": "Autophagy / lysosomal clearance defect",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E1b87a08"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-5357609",
+    "name": "Glycogen storage disease type II (GAA)",
+    "edges": [
+     "E23b738a",
+     "Eac0da0e",
+     "Eb8a5930",
+     "Ea30102f",
+     "Ec4ca19d",
+     "Ebae57f3",
+     "E19e7fce"
+    ]
+   },
+   {
+    "id": "R-HSA-3229121",
+    "name": "Glycogen storage diseases",
+    "edges": [
+     "E23b738a",
+     "Eac0da0e",
+     "Eab2549c",
+     "Eb8a5930",
+     "Ea30102f",
+     "Ec4ca19d",
+     "Ebae57f3",
+     "E19e7fce"
+    ]
+   },
+   {
+    "id": "R-HSA-70221",
+    "name": "Glycogen breakdown (glycogenolysis)",
+    "edges": [
+     "E23b738a",
+     "E24f9433",
+     "Eb8a5930",
+     "Ea30102f",
+     "Ec4ca19d",
+     "Ebae57f3",
+     "E19e7fce"
+    ]
+   },
+   {
+    "id": "R-HSA-8982491",
+    "name": "Glycogen metabolism",
+    "edges": [
+     "E23b738a",
+     "E24f9433",
+     "Ec5a1c89",
+     "Eb8a5930",
+     "Ea30102f",
+     "Ec4ca19d",
+     "Ebae57f3",
+     "E19e7fce"
+    ]
+   },
+   {
+    "id": "R-HSA-6798695",
+    "name": "Neutrophil degranulation",
+    "edges": [
+     "E23b738a",
+     "E455f009",
+     "Eb8a5930",
+     "Ea30102f",
+     "Ec4ca19d",
+     "Ebae57f3",
+     "E19e7fce"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0001284",
+    "name": "Areflexia",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E754a4ad"
+    ]
+   },
+   {
+    "id": "HP:0001790",
+    "name": "Nonimmune hydrops fetalis",
+    "weight": 3.219,
+    "frequency": "11/11",
+    "edges": [
+     "E6dac62a"
+    ]
+   },
+   {
+    "id": "HP:0001945",
+    "name": "Fever",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E320f13f"
+    ]
+   },
+   {
+    "id": "HP:0002093",
+    "name": "Respiratory insufficiency",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E4cee8cd"
+    ]
+   },
+   {
+    "id": "HP:0002138",
+    "name": "Subarachnoid hemorrhage",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "E373cace"
+    ]
+   },
+   {
+    "id": "HP:0002202",
+    "name": "Pleural effusion",
+    "weight": 3.219,
+    "frequency": "1/1",
+    "edges": [
+     "Ef7efc62"
+    ]
+   },
+   {
+    "id": "HP:0003725",
+    "name": "Firm muscles",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Eda2ebc1"
+    ]
+   },
+   {
+    "id": "HP:0004944",
+    "name": "Dilatation of the cerebral artery",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E68710d6"
+    ]
+   },
+   {
+    "id": "HP:0005165",
+    "name": "Shortened PR interval",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ef602bca"
+    ]
+   },
+   {
+    "id": "HP:0006597",
+    "name": "Diaphragmatic paralysis",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E6cee6b8"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "id": "ClinVar:4876681",
+    "name": "NM_000152.5(GAA):c.1047del (p.Ser349fs)",
+    "significance": "Pathogenic",
+    "consequence": "frameshift variant",
+    "edges": [
+     "E04998d5"
+    ]
+   },
+   {
+    "id": "ClinVar:4876679",
+    "name": "NM_000152.5(GAA):c.982del (p.Ser329fs)",
+    "significance": "Pathogenic",
+    "consequence": "frameshift variant",
+    "edges": [
+     "E6a2dcd1"
+    ]
+   },
+   {
+    "id": "ClinVar:4876678",
+    "name": "NM_000152.5(GAA):c.794del (p.Ser265fs)",
+    "significance": "Pathogenic",
+    "consequence": "frameshift variant",
+    "edges": [
+     "E74a6390"
+    ]
+   }
+  ]
+ },
+ "similar": [],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:Acid_Maltase_Deficiency_Association",
+   "name": "Acid Maltase Deficiency Association",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@amda-pompe.org",
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E516c908",
+    "E3fa57b9",
+    "Ec799c2f"
+   ]
+  },
+  {
+   "id": "ORG:Pompe_Deutschland_e_V",
+   "name": "Pompe Deutschland e.V.",
+   "kind": "patient_group",
+   "country": "DE",
+   "website": "www.mpompe.de",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E1d8cf27",
+    "E696335b"
+   ]
+  },
+  {
+   "id": "ORG:Sanfilippo_Children_s_Foundation",
+   "name": "Sanfilippo Children's Foundation",
+   "kind": "patient_group",
+   "country": "AU",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E74da709",
+    "Ec799c2f"
+   ]
+  },
+  {
+   "id": "ORG:APMPS_Doencas_Raras",
+   "name": "APMPS – Doencas Raras",
+   "kind": "patient_group",
+   "country": "BR",
+   "website": "www.apmps.org.br",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E7f91830"
+   ]
+  },
+  {
+   "id": "ORG:Acid_Maltase_Deficiency_Association_AMDA",
+   "name": "Acid Maltase Deficiency Association (AMDA)",
+   "kind": "patient_group",
+   "country": "US",
+   "website": "http://amda-pompe.org/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Edb39c55"
+   ]
+  },
+  {
+   "id": "ORG:Alianța_Națională_pentru_Boli_Rare_din_R",
+   "name": "Alianța Națională pentru Boli Rare din România",
+   "kind": "patient_group",
+   "country": "RO",
+   "website": "www.bolirareromania.ro",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E4b2f10e"
+   ]
+  },
+  {
+   "id": "ORG:Asociace_muskulárních_dystofikù_v_ÈR",
+   "name": "Asociace muskulárních dystofikù v ÈR",
+   "kind": "patient_group",
+   "country": "CZ",
+   "website": "www.amd-mda.cz",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E1dbbd46"
+   ]
+  },
+  {
+   "id": "ORG:Asociacion_Espanola_de_Enfermos_de_Gluco",
+   "name": "Asociacion Espanola de Enfermos de Glucogenosis (AEEG)",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": "www.glucogenosis.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E7204f47"
+   ]
+  },
+  {
+   "id": "ORG:Asociacion_Uruguaya_De_Pacientes_Con_Enf",
+   "name": "Asociacion Uruguaya De Pacientes Con Enfermedades Lisosomales (AUPEL)",
+   "kind": "patient_group",
+   "country": "UY",
+   "website": "www.aupeluruguay.com",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E367c486"
+   ]
+  },
+  {
+   "id": "ORG:Asociación_Colombiana_de_Pacientes_con_E",
+   "name": "Asociación Colombiana de Pacientes con Enfermedades de Depósito Liposomal (ACOPEL)",
+   "kind": "patient_group",
+   "country": "CO",
+   "website": "www.acopel.org/web",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E420eab2"
+   ]
+  },
+  {
+   "id": "ORG:Asociación_Española_de_Enfermos_de_Pompe",
+   "name": "Asociación Española de Enfermos de Pompe (AEEP)",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": "http://www.asociaciondepompe.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E48afff6"
+   ]
+  },
+  {
+   "id": "ORG:Asociación_de_Pacientes_de_Enfermedades",
+   "name": "Asociación de Pacientes de Enfermedades Lisosomales de la Republica Argentina (APELRA)",
+   "kind": "patient_group",
+   "country": "AR",
+   "website": "http://web.apelra.org.ar",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed4b7ed8"
+   ]
+  },
+  {
+   "id": "ORG:Association_Francophone_Glycogenose_AFG",
+   "name": "Association Francophone Glycogenose (AFG)",
+   "kind": "patient_group",
+   "country": "FR",
+   "website": "www.glycogenoses.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E1730964"
+   ]
+  },
+  {
+   "id": "ORG:Association_Shifa_des_Maladies_NeuroMusc",
+   "name": "Association Shifa des Maladies NeuroMusculaires (ASMNM)",
+   "kind": "patient_group",
+   "country": "DZ",
+   "website": "http://shifadz.wix.com/asso",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6b61693"
+   ]
+  },
+  {
+   "id": "ORG:Association_for_Glycogen_Storage_Disease",
+   "name": "Association for Glycogen Storage Disease (UK) (AGSD-UK)",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": "www.agsd.org.uk/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Eaf8d65e"
+   ]
+  },
+  {
+   "id": "ORG:Association_for_citizens_for_rare_diseas",
+   "name": "Association for citizens for rare diseases LIFE WITH CHALLENGES",
+   "kind": "patient_group",
+   "country": "MK",
+   "website": "challenges.mk",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ea1bd877"
+   ]
+  },
+  {
+   "id": "ORG:Associazione_Italiana_Glicogenosi_AIGlic",
+   "name": "Associazione Italiana Glicogenosi (AIGlico)",
+   "kind": "patient_group",
+   "country": "IT",
+   "website": "www.aiglico.it",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ef16b0e0"
+   ]
+  },
+  {
+   "id": "ORG:Australian_Pompe_Association_APA",
+   "name": "Australian Pompe Association (APA)",
+   "kind": "patient_group",
+   "country": "AU",
+   "website": "http://australianpompe.org.au/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6813c22"
+   ]
+  },
+  {
+   "id": "ORG:Belgische_Organisatie_voor_kinderen_en_v",
+   "name": "Belgische Organisatie voor kinderen en volwassenen met een stofwisselingsziekte (BOKS)",
+   "kind": "patient_group",
+   "country": "BE",
+   "website": "www.boks.be",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6fe956f"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_Association_of_Pompe",
+   "name": "Canadian Association of Pompe",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": "www.pompecanada.com",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E0c2397c"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_Society_for_Mucopolysaccharide",
+   "name": "Canadian Society for Mucopolysaccharide & Related Diseases Inc.",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ee163169"
+   ]
+  },
+  {
+   "id": "ORG:Drustvo_Distrofikov_Slovenije",
+   "name": "Drustvo Distrofikov Slovenije",
+   "kind": "patient_group",
+   "country": "SI",
+   "website": "www.drustvo-distrofikov.si",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed36c858"
+   ]
+  },
+  {
+   "id": "ORG:Foreningen_for_Muskelsyke",
+   "name": "Foreningen for Muskelsyke",
+   "kind": "patient_group",
+   "country": "NO",
+   "website": "www.ffm.no",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Eb010df9"
+   ]
+  },
+  {
+   "id": "ORG:Fundación_Chilena_de_Pacientes_de_Enferm",
+   "name": "Fundación Chilena de Pacientes de Enfermedades Lisosomales (FELCH)",
+   "kind": "patient_group",
+   "country": "CL",
+   "website": "www.felch.cl",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed7eeb2f"
+   ]
+  },
+  {
+   "id": "ORG:Fundación_Ecuatoriana_de_Pacientes_con_E",
+   "name": "Fundación Ecuatoriana de Pacientes con Enfermedades de Depósito Lisosomal (FEPEL DASHA)",
+   "kind": "patient_group",
+   "country": "EC",
+   "website": "www.fepeldasha.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E643ec08"
+   ]
+  },
+  {
+   "id": "ORG:Genetic_LSD_Foundation_Thailand",
+   "name": "Genetic LSD Foundation Thailand",
+   "kind": "patient_group",
+   "country": "TH",
+   "website": "www.lsdthailand.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6aad595"
+   ]
+  },
+  {
+   "id": "ORG:Greek_Lysosomal_Diseases_Association",
+   "name": "Greek Lysosomal Diseases Association",
+   "kind": "patient_group",
+   "country": "GR",
+   "website": "greeklysosomal.blogspot.com",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Efa3f43c"
+   ]
+  },
+  {
+   "id": "ORG:Hrvatski_Savez_za_rijetke_bolesti",
+   "name": "Hrvatski Savez za rijetke bolesti",
+   "kind": "patient_group",
+   "country": "HR",
+   "website": "www.rijetke-bolesti.hr",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E5433ad5"
+   ]
+  },
+  {
+   "id": "ORG:Interregional_Non_government_charitable",
+   "name": "Interregional Non-government charitable invalid organisation",
+   "kind": "patient_group",
+   "country": "RU",
+   "website": "www.spiporz.ru",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Eb1fa50c"
+   ]
+  },
+  {
+   "id": "ORG:Korea_Pompe_Disease_Society_KPDS",
+   "name": "Korea Pompe Disease Society (KPDS)",
+   "kind": "patient_group",
+   "country": "KR",
+   "website": "www.kpds.kr/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ecc1e5bf"
+   ]
+  },
+  {
+   "id": "ORG:LSD_Support_Society_LSDSS",
+   "name": "LSD Support Society (LSDSS)",
+   "kind": "patient_group",
+   "country": "IN",
+   "website": "www.lsdss.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E1a1e32f"
+   ]
+  },
+  {
+   "id": "ORG:Malaysia_Lysosomal_Diseases_Association",
+   "name": "Malaysia Lysosomal Diseases Association",
+   "kind": "patient_group",
+   "country": "MY",
+   "website": "www.mymlda.com",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed501bcd"
+   ]
+  },
+  {
+   "id": "ORG:National_Alliance_of_People_with_Rare_Di",
+   "name": "National Alliance of People with Rare Diseases",
+   "kind": "patient_group",
+   "country": "BG",
+   "website": "www.rarebg.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E759903e"
+   ]
+  },
+  {
+   "id": "ORG:National_Organisation_for_Rare_Diseases",
+   "name": "National Organisation for Rare Diseases of Serbia (NORBS)",
+   "kind": "patient_group",
+   "country": "RS",
+   "website": "www.norbs.rs",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E50c6f2f"
+   ]
+  },
+  {
+   "id": "ORG:New_Zealand_Pompe_Network",
+   "name": "New Zealand Pompe Network",
+   "kind": "patient_group",
+   "country": "NZ",
+   "website": "https://www.nzpompe.network",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed567be5"
+   ]
+  },
+  {
+   "id": "ORG:Organisation_for_Rare_Diseases_India_ORD",
+   "name": "Organisation for Rare Diseases India (ORDI)",
+   "kind": "patient_group",
+   "country": "IN",
+   "website": "ordindia.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E5b0e1c5"
+   ]
+  },
+  {
+   "id": "ORG:Philippine_Society_for_Orphan_Disorders",
+   "name": "Philippine Society for Orphan Disorders (PSOD)",
+   "kind": "patient_group",
+   "country": "PH",
+   "website": "www.psod.org.ph",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6bae48b"
+   ]
+  },
+  {
+   "id": "ORG:Pide_Un_Deseo",
+   "name": "Pide Un Deseo",
+   "kind": "patient_group",
+   "country": "MX",
+   "website": "iap.pideundeseo.org",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E570fda2"
+   ]
+  },
+  {
+   "id": "ORG:Pompe_House",
+   "name": "Pompe House",
+   "kind": "patient_group",
+   "country": "JP",
+   "website": "pompe-family.com",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E8a2fee5"
+   ]
+  },
+  {
+   "id": "ORG:Pompe_South_Africa",
+   "name": "Pompe South Africa",
+   "kind": "patient_group",
+   "country": "ZA",
+   "website": "www.pompesa.co.za",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Eec7391d"
+   ]
+  },
+  {
+   "id": "ORG:Pompe_Support_Network",
+   "name": "Pompe Support Network",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": "www.pompe.uk",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Edcdc6c6"
+   ]
+  },
+  {
+   "id": "ORG:Portuguese_Association_of_Neuromuscular",
+   "name": "Portuguese Association of Neuromuscular Diseases",
+   "kind": "patient_group",
+   "country": "PT",
+   "website": "http://apn.pt/apn",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ecf01c95"
+   ]
+  },
+  {
+   "id": "ORG:Rare_Disease_Organisation_Poland",
+   "name": "Rare Disease Organisation Poland",
+   "kind": "patient_group",
+   "country": "PL",
+   "website": "www.rzadkiechoroby.pl",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed54f608"
+   ]
+  },
+  {
+   "id": "ORG:Rare_Disease_Society_of_South_Africa",
+   "name": "Rare Disease Society of South Africa",
+   "kind": "patient_group",
+   "country": "ZA",
+   "website": "http://rarediseases.co.za",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E66927b7"
+   ]
+  },
+  {
+   "id": "ORG:Rare_Disorders_Society_Singapore",
+   "name": "Rare Disorders Society (Singapore)",
+   "kind": "patient_group",
+   "country": "SG",
+   "website": "www.rdss.org.sg",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E55448b5"
+   ]
+  },
+  {
+   "id": "ORG:Raríssimas_Associação_Nacional_de_Defici",
+   "name": "Raríssimas – Associação Nacional de Deficiências Mentais e Raras",
+   "kind": "patient_group",
+   "country": "PT",
+   "website": "www.linharara.pt",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E1a34577"
+   ]
+  },
+  {
+   "id": "ORG:Russian_Association_for_Rare_Diseases_RA",
+   "name": "Russian Association for Rare Diseases (RARD)",
+   "kind": "patient_group",
+   "country": "RU",
+   "website": "www.rare-diseases.ru",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Edda607b"
+   ]
+  },
+  {
+   "id": "ORG:Selbsthilfegruppe_Glykogenose_Deutschlan",
+   "name": "Selbsthilfegruppe Glykogenose Deutschland e.V.",
+   "kind": "patient_group",
+   "country": "DE",
+   "website": "www.glykogenose.de",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E2a24c99"
+   ]
+  },
+  {
+   "id": "ORG:Selbsthilfegruppe_M_Pompe_Schweiz",
+   "name": "Selbsthilfegruppe M. Pompe Schweiz",
+   "kind": "patient_group",
+   "country": "CH",
+   "website": "www.mpompe.ch/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E8ba39e0"
+   ]
+  },
+  {
+   "id": "ORG:Selbsthilfeorganisation_Morbus_Pompe_Öst",
+   "name": "Selbsthilfeorganisation Morbus Pompe Österreich",
+   "kind": "patient_group",
+   "country": "AT",
+   "website": "www.morbus-pompe.at/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Eca45cab"
+   ]
+  },
+  {
+   "id": "ORG:Spierziekten_Nederland",
+   "name": "Spierziekten Nederland",
+   "kind": "patient_group",
+   "country": "NL",
+   "website": "www.spierziekten.nl",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E8c9a8fb"
+   ]
+  },
+  {
+   "id": "ORG:Taiwan_Foundation_for_Rare_Disorders",
+   "name": "Taiwan Foundation for Rare Disorders",
+   "kind": "patient_group",
+   "country": "TW",
+   "website": "www.tfrd.org.tw",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Eb1fda75"
+   ]
+  },
+  {
+   "id": "ORG:United_Pompe_Foundation_UPF",
+   "name": "United Pompe Foundation (UPF)",
+   "kind": "patient_group",
+   "country": "US",
+   "website": "www.unitedpompe.com/",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E0859919"
+   ]
+  },
+  {
+   "id": "ORG:Vlaamse_Vereniging_Neuromusculaire_Aando",
+   "name": "Vlaamse Vereniging Neuromusculaire Aandoeningen (NEMA)",
+   "kind": "patient_group",
+   "country": "BE",
+   "website": "www.nema.be",
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6eb3eb3"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NICHD",
+   "name": "NIH NICHD",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E67f497e",
+    "E523a0d8",
+    "E1295705",
+    "E24b51f5",
+    "E3fd67d6",
+    "E2b72142"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NHLBI",
+   "name": "NIH NHLBI",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ed988082",
+    "Eb7a8d74"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NIAMS",
+   "name": "NIH NIAMS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E0b234d4",
+    "E5d43ac1"
+   ]
+  },
+  {
+   "id": "ORG:Amicus_Therapeutics",
+   "name": "Amicus Therapeutics",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Edbac865",
+    "E4d943dc"
+   ]
+  },
+  {
+   "id": "ORG:Astellas_Gene_Therapies",
+   "name": "Astellas Gene Therapies",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E7687445",
+    "Ec9cdaf8"
+   ]
+  },
+  {
+   "id": "ORG:Genzyme_a_Sanofi_Company",
+   "name": "Genzyme, a Sanofi Company",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E7147ec2",
+    "E2e90d53"
+   ]
+  },
+  {
+   "id": "ORG:Genzyme",
+   "name": "Genzyme",
+   "kind": "company",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E6b38519"
+   ]
+  },
+  {
+   "id": "ORG:Duke_University",
+   "name": "Duke University",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E30ce9a7",
+    "E1929246"
+   ]
+  },
+  {
+   "id": "ORG:National_Taiwan_University_Hospital",
+   "name": "National Taiwan University Hospital",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "E05add6f",
+    "Ee77aa3e"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT07834320",
+   "title": "Pompe Disease RWE Long-term Monitoring Program",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0017694",
+   "countries": [
+    "TW"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Ee77aa3e",
+    "Eb143273"
+   ]
+  },
+  {
+   "id": "NCT03694561",
+   "title": "Developing a Management Approach for Patients With \"Late-Onset\" Pompe Disease",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0017694",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E1929246",
+    "E5b01652"
+   ]
+  },
+  {
+   "id": "NCT03911505",
+   "title": "ZIP Study-OL Study of Safety, PK, Efficacy, PD, Immunogenicity of ATB200/AT2221 in Pediatrics Aged 0 to < 18 y.o. w/LOPD",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0017694",
+   "countries": [
+    "AU",
+    "CA",
+    "DE",
+    "IT",
+    "JP",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Cipaglucosidase Alfa",
+    "Miglustat"
+   ],
+   "edges": [
+    "E4d943dc",
+    "Ee74d13f",
+    "Ed5cbc50",
+    "Ed1cb82b",
+    "E0a10c17",
+    "E830d74f",
+    "Efd56386",
+    "Eccbeb90"
+   ]
+  },
+  {
+   "id": "NCT05164055",
+   "title": "Avalglucosidase Alfa French Post-trial Access for Participants With Pompe Disease (PTA Avalglucosidase)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE4",
+   "for_disease": "MONDO:0017694",
+   "countries": [
+    "FR"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Avalglucosidase alfa (GZ402666)"
+   ],
+   "edges": [
+    "E2e90d53",
+    "Ec435dd0",
+    "E8592216"
+   ]
+  },
+  {
+   "id": "NCT06150820",
+   "title": "A Study About Antibody Levels and Biomarkers in the Blood in People With Late-onset Pompe Disease",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0017694",
+   "countries": [
+    "AU",
+    "BR",
+    "CA",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "IT",
+    "JP",
+    "TW",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Ec9cdaf8",
+    "E3f6f261",
+    "E0c7b3d4",
+    "E39d5c99",
+    "Efef54a7",
+    "Eb9a04d8"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "id": "ASSET:Patient_Registry",
+   "name": "Patient Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0017694",
+   "edges": [
+    "Ec799c2f",
+    "E74da709",
+    "E3fa57b9"
+   ]
+  }
+ ],
+ "researchers": [
+  {
+   "id": "PERSON:12357770",
+   "name": "Angela L. Roger",
+   "grants": [
+    "RePORTER:R00HL161420"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "E062dd82",
+    "Eb7a8d74"
+   ]
+  },
+  {
+   "id": "PERSON:6623546",
+   "name": "Daniel Woo",
+   "grants": [
+    "RePORTER:R01HD104814"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "Ee9acdad",
+    "E2b72142"
+   ]
+  },
+  {
+   "id": "PERSON:15812635",
+   "name": "Filippo Pinto E Vairo",
+   "grants": [
+    "RePORTER:U24HD121485"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "E32ef15d",
+    "E24b51f5"
+   ]
+  },
+  {
+   "id": "PERSON:14751576",
+   "name": "Kabir Jalal",
+   "grants": [
+    "RePORTER:R01HD104814"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "E11b06fa",
+    "E2b72142"
+   ]
+  },
+  {
+   "id": "PERSON:2792229",
+   "name": "Kyoko Yokomori",
+   "grants": [
+    "RePORTER:T32AR083870"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "E878a1e9",
+    "E5d43ac1"
+   ]
+  },
+  {
+   "id": "PERSON:6895967",
+   "name": "Sergio Armando Villalta",
+   "grants": [
+    "RePORTER:T32AR083870"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "Ecdc9f1d",
+    "E5d43ac1"
+   ]
+  },
+  {
+   "id": "PERSON:7369255",
+   "name": "Tahseen Mozaffar",
+   "grants": [
+    "RePORTER:T32AR083870"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "E06bb758",
+    "E5d43ac1"
+   ]
+  },
+  {
+   "id": "PERSON:6803749",
+   "name": "Virginia Eunice Kimonis",
+   "grants": [
+    "RePORTER:R21HD122115"
+   ],
+   "diseases": [
+    "MONDO:0017694"
+   ],
+   "edges": [
+    "E68b2bd0",
+    "E523a0d8"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Acid Maltase Deficiency Association (patient group, based in US), which the atlas links to Pompe.",
+   "from_disease": "MONDO:0017694",
+   "target_id": "ORG:Acid_Maltase_Deficiency_Association",
+   "edges": [
+    "E516c908",
+    "E3fa57b9",
+    "Ec799c2f"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Pompe Deutschland e.V. (patient group, based in DE), which the atlas links to Pompe.",
+   "from_disease": "MONDO:0017694",
+   "target_id": "ORG:Pompe_Deutschland_e_V",
+   "edges": [
+    "E1d8cf27",
+    "E696335b"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Patient Registry, which the atlas links to Pompe.",
+   "from_disease": "MONDO:0017694",
+   "target_id": "ASSET:Patient_Registry",
+   "edges": [
+    "Ec799c2f",
+    "E74da709",
+    "E3fa57b9"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Sanfilippo Children's Foundation (patient group, based in AU), which the atlas links to Pompe.",
+   "from_disease": "MONDO:0017694",
+   "target_id": "ORG:Sanfilippo_Children_s_Foundation",
+   "edges": [
+    "E74da709",
+    "Ec799c2f"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact APMPS – Doencas Raras (patient group, based in BR), which the atlas links to Pompe.",
+   "from_disease": "MONDO:0017694",
+   "target_id": "ORG:APMPS_Doencas_Raras",
+   "edges": [
+    "E7f91830"
+   ]
+  },
+  {
+   "kind": "build",
+   "step": "natural_history_study",
+   "text": "No disease similar to Pompe in the atlas has a natural history study yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on with Pompe disease",
+   "text": "Pompe disease happens when there are changes in a gene called GAA [Eb8a5930, Ea30102f, Ec4ca19d, Ebae57f3, E19e7fce]. GAA normally tells the body how to make an enzyme, which is a helper that speeds up chemical jobs in cells, and this one breaks down a stored sugar called glycogen inside small parts of the cell called lysosomes [Ec4ca19d, Ed4143fa, E5b4cd33]. When this enzyme is missing or does not work well, glycogen builds up inside the lysosomes, especially in muscle [Ea482757, Ec9fc8f0, E12d073c]. This is described as a problem with the lysosome itself, and also with the cell's clean-up process called autophagy, which normally helps clear waste out of cells [Efa6247d, E1b87a08].",
+   "citations": [
+    "Eb8a5930",
+    "Ea30102f",
+    "Ec4ca19d",
+    "Ebae57f3",
+    "E19e7fce",
+    "Ed4143fa",
+    "E5b4cd33",
+    "Ea482757",
+    "Ec9fc8f0",
+    "E12d073c",
+    "Efa6247d",
+    "E1b87a08"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "How Pompe disease compares to other conditions",
+   "text": "The GAA gene sits inside a group of related pathways that Reactome calls 'Glycogen storage diseases,' which brings together conditions that involve similar glycogen-handling biology [Eac0da0e, Eab2549c].",
+   "citations": [
+    "Eac0da0e",
+    "Eab2549c"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "What research and support already exist",
+   "text": "The Acid Maltase Deficiency Association, a patient group based in the United States, works on Pompe disease, according to their website [E516c908]. This group also runs a Patient Registry for Pompe disease, according to their website [E3fa57b9, Ec799c2f]. Pompe Deutschland e.V., a patient group based in Germany, also works on Pompe disease, according to their website [E1d8cf27, E696335b]. There is a study called the ZIP Study testing medicines called Cipaglucosidase Alfa and Miglustat in children with Pompe disease, run by Amicus Therapeutics, with sites in Australia, Canada, Germany, Italy, Japan, and the United States, according to ClinicalTrials.gov [Edbac865, E4d943dc, Ee74d13f, Ed5cbc50]. Another study is looking at antibody levels and biomarkers in blood in people with late-onset Pompe disease, run by Astellas Gene Therapies, with sites in several countries including the United States, Australia, Brazil, Canada, and France, according to ClinicalTrials.gov [E7687445, Ec9cdaf8, E3f6f261, E0c7b3d4, E39d5c99, Eb9a04d8]. In France, a study lets people keep receiving a medicine called Avalglucosidase alfa after an earlier trial ended, run by Genzyme, a Sanofi Company, according to ClinicalTrials.gov [E7147ec2, E2e90d53, Ec435dd0, E8592216]. In Taiwan, a study called the Pompe Disease RWE Long-term Monitoring Program is recruiting, run by National Taiwan University Hospital, according to ClinicalTrials.gov [E05add6f, Ee77aa3e, Eb143273]. In the United States, Duke University runs a study on managing late-onset Pompe disease, according to ClinicalTrials.gov [E30ce9a7, E1929246, E5b01652]. The NIH NICHD funds grants connected to Pompe disease, including one on newborn screening and one exploring a possible oligonucleotide treatment, according to NIH RePORTER [E67f497e, E523a0d8, E3fd67d6, E2b72142]. Researchers Daniel Woo and Kabir Jalal lead one of these funded projects, according to NIH RePORTER [Ee9acdad, E11b06fa].",
+   "citations": [
+    "E516c908",
+    "E3fa57b9",
+    "Ec799c2f",
+    "E1d8cf27",
+    "E696335b",
+    "Edbac865",
+    "E4d943dc",
+    "Ee74d13f",
+    "Ed5cbc50",
+    "E7687445",
+    "Ec9cdaf8",
+    "E3f6f261",
+    "E0c7b3d4",
+    "E39d5c99",
+    "Eb9a04d8",
+    "E7147ec2",
+    "E2e90d53",
+    "Ec435dd0",
+    "E8592216",
+    "E05add6f",
+    "Ee77aa3e",
+    "Eb143273",
+    "E30ce9a7",
+    "E1929246",
+    "E5b01652",
+    "E67f497e",
+    "E523a0d8",
+    "E3fd67d6",
+    "E2b72142",
+    "Ee9acdad",
+    "E11b06fa"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Some concrete next steps",
+   "text": "You could contact the Acid Maltase Deficiency Association, a patient group based in the United States that the atlas links to Pompe disease [E516c908, E3fa57b9, Ec799c2f]. You could also contact Pompe Deutschland e.V., a patient group based in Germany that the atlas links to Pompe disease [E1d8cf27, E696335b]. You could ask about joining the Patient Registry that the atlas links to Pompe disease [Ec799c2f, E74da709, E3fa57b9].",
+   "citations": [
+    "E516c908",
+    "E3fa57b9",
+    "Ec799c2f",
+    "E1d8cf27",
+    "E696335b",
+    "E74da709"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:232300",
+   "n_results": 41,
+   "n_kept": 41
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0017694",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Pompe disease",
+   "n_results": 179,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "Pompe",
+   "n_results": 34,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Pompe disease\"[tiab]",
+   "n_results": 2520,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Pompe disease\"[tiab]) AND hasabstract",
+   "n_results": 2175,
+   "n_kept": 34
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://worldpompe.org/about-us/ipa-members-a-contacts/",
+   "n_results": 51,
+   "n_kept": 51
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://amda-pompe.org/about-us/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://amda-pompe.org/pompe-registry-a-decade-of-making-a-difference/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.mpompe.de/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://agsd.org.uk/about-us/",
+   "n_results": 1,
+   "n_kept": 0
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

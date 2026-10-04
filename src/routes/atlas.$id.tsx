@@ -22,6 +22,7 @@ import { getSearchCoverage, getNextSteps, type Partner } from "@/lib/atlas";
 import { useAtlasGraph } from "@/lib/use-atlas-graph";
 import type { AtlasEdge } from "@/lib/atlas-db";
 import { AtlasChatDemo } from "@/components/atlas/atlas-chat-demo";
+import { getJourney, useLocalApi } from "@/lib/atlas-api";
 import {
   Sheet,
   SheetContent,
@@ -115,6 +116,25 @@ function Atlas() {
       active = false;
     };
   }, [selected, persona]);
+  // Local backend: how many links the atlas can actually support for the selected disease.
+  // Weak top-K similarity lines keep the map connected but are not evidence.
+  const [supported, setSupported] = useState<number | null>(null);
+  useEffect(() => {
+    if (!useLocalApi || !/^MONDO:/.test(selected)) {
+      setSupported(null);
+      return;
+    }
+    let active = true;
+    setSupported(null);
+    getJourney(selected)
+      .then((j) => {
+        if (active) setSupported(j.similar.length + j.lookalikes.length);
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [selected]);
   const graph = useAtlasGraph(id);
   const { diseases, edges: mapEdges, clusters, positions } = graph;
   const points = (nodeId: string): [number, number] => positions[nodeId] ?? [50, 50];
@@ -360,7 +380,11 @@ function Atlas() {
         {inspectedEdge && !isGap && (
           <div className="edge-explanation" role="status" aria-live="polite">
             <div className="edge-explanation-top">
-              <span className="eyebrow">RELATIONSHIP / ILLUSTRATIVE RECORD</span>
+              <span className="eyebrow">
+                {graph.fromDatabase
+                  ? "RELATIONSHIP / ATLAS RECORD"
+                  : "RELATIONSHIP / ILLUSTRATIVE RECORD"}
+              </span>
               <Button
                 variant="ghost"
                 size="icon"
@@ -474,6 +498,13 @@ function Atlas() {
                       </div>
                     ))}
                     {activeEdges.length === 0 && <small>No mapped relationships yet.</small>}
+                    {supported === 0 && (
+                      <small className="edge-caution">
+                        An honest gap: nothing in the atlas shares this condition’s biology strongly
+                        enough to support a link. Any line drawn to it is a weak overall similarity
+                        score, not evidence. We won’t guess.
+                      </small>
+                    )}
                   </div>
                 </div>
               </div>
@@ -575,8 +606,11 @@ function Atlas() {
       <Sheet open={chatOpen} onOpenChange={setChatOpen}>
         <SheetContent side="right" className="chat-sheet">
           <SheetHeader>
-            <SheetTitle>Chart assistant · test</SheetTitle>
-            <SheetDescription>{item.label} · sample answers only</SheetDescription>
+            <SheetTitle>{useLocalApi ? "Atlas assistant" : "Chart assistant · test"}</SheetTitle>
+            <SheetDescription>
+              {item.label} ·{" "}
+              {useLocalApi ? "answers from cited atlas records" : "sample answers only"}
+            </SheetDescription>
           </SheetHeader>
           <AtlasChatDemo diseaseId={selected} variant="drawer" />
         </SheetContent>

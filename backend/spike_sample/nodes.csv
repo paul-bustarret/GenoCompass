@@ -1,0 +1,16 @@
+id,type,name,attrs
+MONDO:0009290,disease,glycogen storage disease II,"{""synonyms"": ""Pompe disease""}"
+HP:0003690,phenotype,Limb muscle weakness,{}
+HP:0001288,phenotype,Gait disturbance,{}
+HP:0001284,phenotype,Areflexia,{}
+NCBIGene:2548,gene,GAA,{}
+ORPHA:365,xref,Glycogen storage disease due to acid maltase deficiency,{}
+ClinVar:4876681,variant,NM_000152.5(GAA):c.1047del (p.Ser349fs),"{""significance"": ""Pathogenic""}"
+R-HSA-5357609,pathway,Glycogen storage disease type II (GAA),{}
+NCT03694561,trial,Developing a Management Approach for Patients,{}
+ORG:Duke_University,organization,Duke University,"{""kind"": ""sponsor""}"
+RePORTER:5R01HL177642-02,grant,Alveolar injury and repair in Pompe Disease,{}
+PERSON:10807538,person,Mai  ElMallah,{}
+ORG:NHLBI,organization,NHLBI,"{""kind"": ""funder""}"
+PMID:42760993,paper,PMID 42760993,{}
+ORG:MedicAlert_Foundation,organization,MedicAlert Foundation,"{""kind"": ""patient_group?""}"

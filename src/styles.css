@@ -645,3 +645,16 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 .cluster-mark.cluster-c9, .list-node.cluster-c9 { background: var(--cluster-9); }.graph-node.cluster-c9 .node-core { background: var(--cluster-9); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-9) 16%,transparent); }
 .cluster-mark.cluster-c10, .list-node.cluster-c10 { background: var(--cluster-10); }.graph-node.cluster-c10 .node-core { background: var(--cluster-10); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-10) 16%,transparent); }
 .cluster-mark.cluster-c11, .list-node.cluster-c11 { background: var(--cluster-11); }.graph-node.cluster-c11 .node-core { background: var(--cluster-11); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-11) 16%,transparent); }
+
+/* Local-backend integration: sourced records in the evidence drawer, live chat, partner cards. */
+.supporting-records { display: grid; gap: 16px; margin-top: 28px; border-top: 1px solid var(--border); padding-top: 20px; }
+.supporting-record { display: grid; gap: 8px; font-size: 12px; }
+.supporting-record > strong small { color: var(--muted-foreground); font-weight: 400; }
+.supporting-edge { display: grid; gap: 4px; padding-left: 10px; border-left: 2px solid var(--border); }
+.supporting-edge blockquote { margin: 0; color: var(--ink-soft); font-size: 12px; line-height: 1.55; }
+.supporting-edge small { color: var(--muted-foreground); font-size: 11px; }
+.supporting-edge a { display: inline-flex; align-items: center; gap: 4px; font-size: 11px; color: var(--primary); text-decoration: underline; width: fit-content; }
+.chat-waiting { color: var(--muted-foreground); font-size: 13px; padding: 6px 0; }
+.chat-grounding { color: var(--muted-foreground); font-size: 11px; margin-top: 6px; }
+.chat-out-of-scope { border-left: 2px solid var(--border); padding-left: 10px; }
+.outreach-warnings { color: var(--muted-foreground); font-size: 12px; line-height: 1.5; margin: 0; padding-left: 16px; }

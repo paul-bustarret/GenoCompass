@@ -1,0 +1,2257 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0009499",
+  "name": "Krabbe disease",
+  "short": "Krabbe"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:2581",
+    "name": "GALC",
+    "edges": [
+     "Ee104a30",
+     "E6e63617",
+     "E285421b",
+     "Ebf743d2",
+     "Edd954e4",
+     "E0b09d5b",
+     "E40645bc",
+     "E0d9cdc4"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:lysosomal_enzyme_deficiency",
+    "name": "Lysosomal enzyme deficiency",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E60744b8",
+     "E25007cf",
+     "E7ba2aee",
+     "E7ee77ad",
+     "Ee586157",
+     "E050a41e",
+     "E2774850",
+     "E405f851"
+    ]
+   },
+   {
+    "id": "MECH:substrate_storage_glycosphingolipid",
+    "name": "Glycosphingolipid storage",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E3f6bbf0",
+     "Eecc2812"
+    ]
+   },
+   {
+    "id": "MECH:demyelination",
+    "name": "Demyelination",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "Ecba7ed0",
+     "E8b1c4df"
+    ]
+   },
+   {
+    "id": "MECH:neuroinflammation",
+    "name": "Neuroinflammation",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E5aaac6b",
+     "E7268b24"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-9840310",
+    "name": "Glycosphingolipid catabolism",
+    "edges": [
+     "Ee104a30",
+     "E6be1459",
+     "E6e63617",
+     "E285421b",
+     "Ebf743d2",
+     "Edd954e4",
+     "E0b09d5b",
+     "E40645bc",
+     "E0d9cdc4"
+    ]
+   },
+   {
+    "id": "R-HSA-1660662",
+    "name": "Glycosphingolipid metabolism",
+    "edges": [
+     "Ee104a30",
+     "E6be1459",
+     "E41520eb",
+     "E6e63617",
+     "E285421b",
+     "Ebf743d2",
+     "Edd954e4",
+     "E0b09d5b",
+     "E40645bc",
+     "E0d9cdc4"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0001954",
+    "name": "Recurrent fever",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Edb73668"
+    ]
+   },
+   {
+    "id": "HP:0001973",
+    "name": "Autoimmune thrombocytopenia",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Eea55833"
+    ]
+   },
+   {
+    "id": "HP:0002191",
+    "name": "Progressive spasticity",
+    "weight": 3.219,
+    "frequency": "30/30",
+    "edges": [
+     "E6e53ac2"
+    ]
+   },
+   {
+    "id": "HP:0002506",
+    "name": "Diffuse cerebral atrophy",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ea2c680e"
+    ]
+   },
+   {
+    "id": "HP:0006801",
+    "name": "Hyperactive deep tendon reflexes",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E2385df9"
+    ]
+   },
+   {
+    "id": "HP:0007141",
+    "name": "Sensorimotor neuropathy",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E3616b62"
+    ]
+   },
+   {
+    "id": "HP:0007928",
+    "name": "Abnormal flash visual evoked potentials",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E5d73145"
+    ]
+   },
+   {
+    "id": "HP:0025013",
+    "name": "Decerebrate rigidity",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ededb728"
+    ]
+   },
+   {
+    "id": "HP:0034322",
+    "name": "Reduced tissue galactocerebrosidase activity",
+    "weight": 3.219,
+    "frequency": "29/29",
+    "edges": [
+     "E403b386"
+    ]
+   },
+   {
+    "id": "HP:0000639",
+    "name": "Nystagmus",
+    "weight": 2.526,
+    "frequency": null,
+    "edges": [
+     "E2be411e"
+    ]
+   }
+  ],
+  "variants": []
+ },
+ "similar": [
+  {
+   "id": "MONDO:0009265",
+   "name": "Gaucher",
+   "score": 0.44,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 1.0,
+    "phenotype": 0.002,
+    "mechanism": 0.3
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_glycosphingolipid",
+     "name": "Glycosphingolipid storage",
+     "kind": "mechanism",
+     "edges": [
+      "E3f6bbf0",
+      "Eecc2812",
+      "Ec8d1187",
+      "E96ea7eb",
+      "Eb29eb38"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E60744b8",
+      "E25007cf",
+      "E7ba2aee",
+      "E7ee77ad",
+      "Ee586157",
+      "E050a41e",
+      "E2774850",
+      "E405f851",
+      "E309fa8a",
+      "E4cac688",
+      "E28eb929",
+      "E8ace403",
+      "Ed59ee48"
+     ]
+    },
+    {
+     "id": "R-HSA-1660662",
+     "name": "Glycosphingolipid metabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E41520eb",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E77b18c9",
+      "E8a2d502",
+      "Ed85e96b",
+      "Ed3ff3f7"
+     ]
+    },
+    {
+     "id": "R-HSA-9840310",
+     "name": "Glycosphingolipid catabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E77b18c9",
+      "E8a2d502",
+      "Ed85e96b",
+      "Ed3ff3f7"
+     ]
+    },
+    {
+     "id": "HP:0000007",
+     "name": "Autosomal recessive inheritance",
+     "kind": "phenotype",
+     "edges": [
+      "Efbb3af3",
+      "E4180b6b"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0010526",
+   "name": "Fabry",
+   "score": 0.419,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 1.0,
+    "phenotype": 0.016,
+    "mechanism": 0.218
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_glycosphingolipid",
+     "name": "Glycosphingolipid storage",
+     "kind": "mechanism",
+     "edges": [
+      "E3f6bbf0",
+      "Eecc2812",
+      "Ee0e2214",
+      "E5b662da",
+      "E2cdb1f6",
+      "E4442b91",
+      "E5f25d91",
+      "E487816a",
+      "E871c351",
+      "Ef74cc75"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E60744b8",
+      "E25007cf",
+      "E7ba2aee",
+      "E7ee77ad",
+      "Ee586157",
+      "E050a41e",
+      "E2774850",
+      "E405f851",
+      "E4b5796e",
+      "E7328024",
+      "Eb305e87",
+      "E81c4573",
+      "E58d2a7e",
+      "E3b56952",
+      "E66d6b66",
+      "E7dab347",
+      "E1577d5e"
+     ]
+    },
+    {
+     "id": "R-HSA-1660662",
+     "name": "Glycosphingolipid metabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E41520eb",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E732dff2",
+      "Eaeb2dd9",
+      "Ebeec4d7",
+      "Ed4574b4",
+      "E7f9dfd8",
+      "E3d58547",
+      "Ef0870fb",
+      "E993c5a9"
+     ]
+    },
+    {
+     "id": "R-HSA-9840310",
+     "name": "Glycosphingolipid catabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E732dff2",
+      "Eaeb2dd9",
+      "Ebeec4d7",
+      "Ed4574b4",
+      "E7f9dfd8",
+      "E3d58547",
+      "Ef0870fb",
+      "E993c5a9"
+     ]
+    },
+    {
+     "id": "HP:0002013",
+     "name": "Vomiting",
+     "kind": "phenotype",
+     "edges": [
+      "E0c2b15c",
+      "E39530fd"
+     ]
+    },
+    {
+     "id": "HP:0001250",
+     "name": "Seizure",
+     "kind": "phenotype",
+     "edges": [
+      "E8a17e1c",
+      "Efee1024"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0008199",
+   "name": "Parkinson (late-onset)",
+   "score": 0.398,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 1.0,
+    "phenotype": 0.0,
+    "mechanism": 0.161
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_glycosphingolipid",
+     "name": "Glycosphingolipid storage",
+     "kind": "mechanism",
+     "edges": [
+      "E3f6bbf0",
+      "Eecc2812",
+      "E8b12886",
+      "Eb9285bb"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E60744b8",
+      "E25007cf",
+      "E7ba2aee",
+      "E7ee77ad",
+      "Ee586157",
+      "E050a41e",
+      "E2774850",
+      "E405f851",
+      "Ece278e5",
+      "E2361d59",
+      "E6d3e762",
+      "Ec180f15"
+     ]
+    },
+    {
+     "id": "R-HSA-1660662",
+     "name": "Glycosphingolipid metabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E41520eb",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "Ede2b693",
+      "E8a2d502",
+      "Ea15cf24",
+      "Efe66196",
+      "E5983b49",
+      "E2709a66",
+      "Eb737bb6",
+      "E768cb26",
+      "E6273e91",
+      "Ea17b35b",
+      "E15b3b87",
+      "Ec7726e8"
+     ]
+    },
+    {
+     "id": "R-HSA-9840310",
+     "name": "Glycosphingolipid catabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "Ede2b693",
+      "E8a2d502",
+      "Ea15cf24",
+      "Efe66196",
+      "E5983b49",
+      "E2709a66",
+      "Eb737bb6",
+      "E768cb26",
+      "E6273e91",
+      "Ea17b35b",
+      "E15b3b87",
+      "Ec7726e8"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0010099",
+   "name": "GM2 AB variant",
+   "score": 0.368,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 1.0,
+    "phenotype": 0.089,
+    "mechanism": 0.0
+   },
+   "witnesses": [
+    {
+     "id": "R-HSA-1660662",
+     "name": "Glycosphingolipid metabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E41520eb",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E2252927",
+      "Ee27a382",
+      "Edcf2ca7",
+      "E38e152d",
+      "Ec4c4b25",
+      "E8577cd5",
+      "E4676f6b",
+      "E35d8336",
+      "E2c5bd51"
+     ]
+    },
+    {
+     "id": "R-HSA-9840310",
+     "name": "Glycosphingolipid catabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E2252927",
+      "Ee27a382",
+      "Edcf2ca7",
+      "E38e152d",
+      "Ec4c4b25",
+      "E8577cd5",
+      "E4676f6b",
+      "E35d8336",
+      "E2c5bd51"
+     ]
+    },
+    {
+     "id": "HP:0008936",
+     "name": "Axial hypotonia",
+     "kind": "phenotype",
+     "edges": [
+      "Ebb770bf",
+      "E3b6cdca"
+     ]
+    },
+    {
+     "id": "HP:0002180",
+     "name": "Neurodegeneration",
+     "kind": "phenotype",
+     "edges": [
+      "E861bd0e",
+      "Ef793a01"
+     ]
+    },
+    {
+     "id": "HP:0001276",
+     "name": "Hypertonia",
+     "kind": "phenotype",
+     "edges": [
+      "E0936c1c",
+      "E6b7d4d8"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0009591",
+   "name": "MLD",
+   "score": 0.28,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.222,
+    "phenotype": 0.08,
+    "mechanism": 0.62
+   },
+   "witnesses": [
+    {
+     "id": "MECH:demyelination",
+     "name": "Demyelination",
+     "kind": "mechanism",
+     "edges": [
+      "Ecba7ed0",
+      "E8b1c4df",
+      "E623c955",
+      "Ed56cd1c",
+      "E5782481",
+      "E6f580f8",
+      "E0f0023c",
+      "E5cf73aa",
+      "Eacb364c"
+     ]
+    },
+    {
+     "id": "MECH:substrate_storage_glycosphingolipid",
+     "name": "Glycosphingolipid storage",
+     "kind": "mechanism",
+     "edges": [
+      "E3f6bbf0",
+      "Eecc2812",
+      "E7470be0",
+      "Ef9f74f4"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E60744b8",
+      "E25007cf",
+      "E7ba2aee",
+      "E7ee77ad",
+      "Ee586157",
+      "E050a41e",
+      "E2774850",
+      "E405f851",
+      "E2af53d8",
+      "E4a77853",
+      "E97bd66c",
+      "Ef63ba6a",
+      "E1919f8f",
+      "Ee547594"
+     ]
+    },
+    {
+     "id": "R-HSA-1660662",
+     "name": "Glycosphingolipid metabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E41520eb",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E74f6b04",
+      "Eb39398b",
+      "Ed6d6d6d",
+      "Ee9410bd",
+      "E8e516a4",
+      "Ec8ffad9",
+      "E183315f",
+      "E56cfdf7",
+      "E2e68711",
+      "E7428e49",
+      "E38ac4d1"
+     ]
+    },
+    {
+     "id": "R-HSA-9840310",
+     "name": "Glycosphingolipid catabolism",
+     "kind": "pathway",
+     "edges": [
+      "Ee104a30",
+      "E6be1459",
+      "E6e63617",
+      "E285421b",
+      "Ebf743d2",
+      "Edd954e4",
+      "E0b09d5b",
+      "E40645bc",
+      "E0d9cdc4",
+      "E74f6b04",
+      "Eb39398b",
+      "Ed6d6d6d",
+      "Ee9410bd",
+      "E8e516a4",
+      "Ec8ffad9",
+      "E183315f",
+      "E56cfdf7",
+      "E2e68711",
+      "E7428e49",
+      "E38ac4d1"
+     ]
+    },
+    {
+     "id": "HP:0002922",
+     "name": "Increased CSF protein concentration",
+     "kind": "phenotype",
+     "edges": [
+      "E8f41824",
+      "E1e675ab"
+     ]
+    },
+    {
+     "id": "HP:0011096",
+     "name": "Peripheral demyelination",
+     "kind": "phenotype",
+     "edges": [
+      "Ea2c011c",
+      "Ed4f35c8"
+     ]
+    },
+    {
+     "id": "HP:0000762",
+     "name": "Decreased nerve conduction velocity",
+     "kind": "phenotype",
+     "edges": [
+      "E13dd0cf",
+      "E3abe212"
+     ]
+    }
+   ]
+  }
+ ],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:Krabbe_UK",
+   "name": "Krabbe UK",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": null,
+   "contact_email": "contactus@krabbeuk.org",
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "Ed349bff"
+   ]
+  },
+  {
+   "id": "ORG:KrabbeConnect",
+   "name": "KrabbeConnect",
+   "kind": "patient_group",
+   "country": "US",
+   "website": "krabbeconnect.org",
+   "contact_email": "Info@KrabbeConnect.org",
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E7aa1953"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NINDS",
+   "name": "NIH NINDS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E50bb630",
+    "Ef352296",
+    "Ecfe2466",
+    "Eaa7364b",
+    "E4d8b50c",
+    "E5332e1a"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NICHD",
+   "name": "NIH NICHD",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E3fd67d6",
+    "E24c0efd"
+   ]
+  },
+  {
+   "id": "ORG:Gemma_Biotherapeutics",
+   "name": "Gemma Biotherapeutics",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E84bed90",
+    "E8e004b3"
+   ]
+  },
+  {
+   "id": "ORG:Polaryx_Therapeutics_Inc",
+   "name": "Polaryx Therapeutics, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E2aaf128",
+    "Ec260f91"
+   ]
+  },
+  {
+   "id": "ORG:National_Institute_of_Neurological_Disor",
+   "name": "National Institute of Neurological Disorders and Stroke (NINDS)",
+   "kind": "nih",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "Ecbb1cae",
+    "E578ad23",
+    "E92ff8aa"
+   ]
+  },
+  {
+   "id": "ORG:Joanne_Kurtzberg_MD",
+   "name": "Joanne Kurtzberg, MD",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E478a4f9",
+    "E66c8c49"
+   ]
+  },
+  {
+   "id": "ORG:RTI_International",
+   "name": "RTI International",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E4997bb8",
+    "E90c9a95"
+   ]
+  },
+  {
+   "id": "ORG:State_University_of_New_York_at_Buffalo",
+   "name": "State University of New York at Buffalo",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E931f21a",
+    "E4203c02"
+   ]
+  },
+  {
+   "id": "ORG:MPS_Society",
+   "name": "MPS Society",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": null,
+   "contact_email": "fundraising@mpssociety.org.uk",
+   "for_disease": "MONDO:0009265",
+   "edges": [
+    "E040d968",
+    "E9ff813a",
+    "E6ed20fd"
+   ]
+  },
+  {
+   "id": "ORG:AEEFE_Gaucher",
+   "name": "AEEFE Gaucher",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009265",
+   "edges": [
+    "E4099fdd"
+   ]
+  },
+  {
+   "id": "ORG:ASOCIACIÓN_ESPAÑOLA_DE_ENFERMOS_Y_FAMILI",
+   "name": "ASOCIACIÓN ESPAÑOLA DE ENFERMOS Y FAMILIARES DE LA ENFERMEDAD",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": "www.aeefegaucher.es",
+   "contact_email": "gaucher@eresmas.com",
+   "for_disease": "MONDO:0009265",
+   "edges": [
+    "E69bcb65"
+   ]
+  },
+  {
+   "id": "ORG:Asociación_MPS_LISOSOMALES_España",
+   "name": "Asociación MPS-LISOSOMALES España",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": null,
+   "contact_email": "info@mpslisosomales.org",
+   "for_disease": "MONDO:0009265",
+   "edges": [
+    "Ed1d0a38"
+   ]
+  },
+  {
+   "id": "ORG:AssociazioneItaliana_Gaucher_ONLUS",
+   "name": "AssociazioneItaliana Gaucher - ONLUS",
+   "kind": "patient_group",
+   "country": "IT",
+   "website": "www.gaucheritalia.org",
+   "contact_email": "info@gaucheritalia.org",
+   "for_disease": "MONDO:0009265",
+   "edges": [
+    "Edf446f8"
+   ]
+  },
+  {
+   "id": "ORG:Društvo_bolnikov_z_gaucherjevo_boleznijo",
+   "name": "Društvo bolnikov z gaucherjevo boleznijo Slovenije",
+   "kind": "patient_group",
+   "country": "SI",
+   "website": "www.gaucher-drustvo.si",
+   "contact_email": "info@gaucher-drustvo.si",
+   "for_disease": "MONDO:0009265",
+   "edges": [
+    "Eceb308d"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_Fabry_Association",
+   "name": "Canadian Fabry Association",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": "http://fabrycanada.com",
+   "contact_email": null,
+   "for_disease": "MONDO:0010526",
+   "edges": [
+    "E6e80d7b",
+    "Eb8dff79"
+   ]
+  },
+  {
+   "id": "ORG:Fabry_Support_Information_Group",
+   "name": "Fabry Support & Information Group",
+   "kind": "patient_group",
+   "country": "US",
+   "website": "http://www.fabry.org",
+   "contact_email": "info@fabry.org",
+   "for_disease": "MONDO:0010526",
+   "edges": [
+    "Edcdc139",
+    "E245eca1"
+   ]
+  },
+  {
+   "id": "ORG:ABRAFF",
+   "name": "ABRAFF",
+   "kind": "patient_group",
+   "country": "BR",
+   "website": "http://www.fabry.org.br",
+   "contact_email": null,
+   "for_disease": "MONDO:0010526",
+   "edges": [
+    "E9abab66"
+   ]
+  },
+  {
+   "id": "ORG:ADAC",
+   "name": "ADAC",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": "http://www.asociacionadac.com/adac/home.seam",
+   "contact_email": null,
+   "for_disease": "MONDO:0010526",
+   "edges": [
+    "Ef8d8b82"
+   ]
+  },
+  {
+   "id": "ORG:Associação_Portuguesa_das_Doenças_do_Lis",
+   "name": "Associação Portuguesa das Doenças do Lisosoma",
+   "kind": "patient_group",
+   "country": "PT",
+   "website": "http://www.aplisosoma.org/",
+   "contact_email": null,
+   "for_disease": "MONDO:0010526",
+   "edges": [
+    "Ec6d405f"
+   ]
+  },
+  {
+   "id": "ORG:BOKS",
+   "name": "BOKS",
+   "kind": "patient_group",
+   "country": "BE",
+   "website": "http://www.boks.be/site/",
+   "contact_email": null,
+   "for_disease": "MONDO:0010526",
+   "edges": [
+    "Ebc2557c"
+   ]
+  },
+  {
+   "id": "ORG:Silverstein_Foundation_for_Parkinson_s_w",
+   "name": "Silverstein Foundation for Parkinson's with GBA",
+   "kind": "academic",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@silversteinfoundation.org",
+   "for_disease": "MONDO:0008199",
+   "edges": [
+    "Ea3b320e"
+   ]
+  },
+  {
+   "id": "ORG:Bial_R_D_Investments_S_A",
+   "name": "Bial R&D Investments, S.A.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008199",
+   "edges": [
+    "Eff10cb4",
+    "E634914c"
+   ]
+  },
+  {
+   "id": "ORG:Prevail_Therapeutics",
+   "name": "Prevail Therapeutics",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008199",
+   "edges": [
+    "E54173b0",
+    "E709971f"
+   ]
+  },
+  {
+   "id": "ORG:National_Human_Genome_Research_Institute",
+   "name": "National Human Genome Research Institute (NHGRI)",
+   "kind": "nih",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008199",
+   "edges": [
+    "Eebd6e8b",
+    "E38e3af2",
+    "E4f58b66",
+    "Eb944295"
+   ]
+  },
+  {
+   "id": "ORG:Pacific_Parkinson_s_Research_Centre",
+   "name": "Pacific Parkinson's Research Centre",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0008199",
+   "edges": [
+    "E0fab56b",
+    "E8433915"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_Society_for_Mucopolysaccharide",
+   "name": "Canadian Society for Mucopolysaccharide & Related Diseases Inc.",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010099",
+   "edges": [
+    "E61905c2"
+   ]
+  },
+  {
+   "id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "name": "National Tay-Sachs & Allied Diseases Association",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@ntsad.org",
+   "for_disease": "MONDO:0010099",
+   "edges": [
+    "Ed912a71"
+   ]
+  },
+  {
+   "id": "ORG:Idorsia_Pharmaceuticals_Ltd",
+   "name": "Idorsia Pharmaceuticals Ltd.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010099",
+   "edges": [
+    "E2bbdda4",
+    "E5a0d41e"
+   ]
+  },
+  {
+   "id": "ORG:SphinCS_Lyso_Gemeinnutzige_UG_Haftungsbe",
+   "name": "SphinCS Lyso Gemeinnutzige UG (Haftungsbeschrankt)",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010099",
+   "edges": [
+    "E5c45a48",
+    "E1de801c"
+   ]
+  },
+  {
+   "id": "ORG:The_Hospital_for_Sick_Children",
+   "name": "The Hospital for Sick Children",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010099",
+   "edges": [
+    "Ec8e5090",
+    "E9f76fd6"
+   ]
+  },
+  {
+   "id": "ORG:MLD_Foundation",
+   "name": "MLD Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "Ef09b1a9",
+    "E191273d",
+    "E7bd4f6c",
+    "E5a2235b"
+   ]
+  },
+  {
+   "id": "ORG:MLD_initiative_MLDi",
+   "name": "MLD initiative (MLDi)",
+   "kind": "registry_host",
+   "country": "NL",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "Ec750679",
+    "E0dd2ea1",
+    "E8156254"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NCATS",
+   "name": "NIH NCATS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "Ec8e91d6",
+    "E0d1da99"
+   ]
+  },
+  {
+   "id": "ORG:Shire",
+   "name": "Shire",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "E928a58f",
+    "Eaab309d"
+   ]
+  },
+  {
+   "id": "ORG:Shenzhen_Geno_Immune_Medical_Institute",
+   "name": "Shenzhen Geno-Immune Medical Institute",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "Ee28d284",
+    "Ea6a0efe",
+    "E8234b12",
+    "E66bddab"
+   ]
+  },
+  {
+   "id": "ORG:Albert_Einstein_College_of_Medicine",
+   "name": "Albert Einstein College of Medicine",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "E2523361",
+    "E788b2ff"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT02254863",
+   "title": "UCB Transplant of Inherited Metabolic Diseases With Administration of Intrathecal UCB Derived Oligodendrocyte-Like Cells",
+   "status": "RECRUITING",
+   "phase": "PHASE1",
+   "for_disease": "MONDO:0009499",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "DUOC-01"
+   ],
+   "edges": [
+    "E66c8c49",
+    "E55ebc77",
+    "Ec109198"
+   ]
+  },
+  {
+   "id": "NCT02993796",
+   "title": "Krabbe Disease Global Patient Registry",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009499",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E4203c02",
+    "E699b80d"
+   ]
+  },
+  {
+   "id": "NCT07740512",
+   "title": "Safety, Tolerability, Pharmacokinetics, and Preliminary Efficacy of PLX-200 in Pediatric Patients (Master Protocol)",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0009499",
+   "countries": [],
+   "near_user": false,
+   "interventions": [
+    "PLX-200"
+   ],
+   "edges": [
+    "Ec260f91",
+    "E0fb2a07"
+   ]
+  },
+  {
+   "id": "NCT03655223",
+   "title": "Early Check: Expanded Screening in Newborns",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009499",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E90c9a95",
+    "E98a978e"
+   ]
+  },
+  {
+   "id": "NCT04771416",
+   "title": "Study of Safety, Tolerability and Efficacy of PBKR03 in Pediatric Subjects With Early Infantile Krabbe Disease",
+   "status": "SUSPENDED",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0009499",
+   "countries": [
+    "BR",
+    "CA",
+    "GB",
+    "IL",
+    "NL",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "PBKR03"
+   ],
+   "edges": [
+    "E8e004b3",
+    "E6011634",
+    "Ebc22e94",
+    "Eed48766",
+    "Efebd3a1",
+    "E983de01",
+    "Edac8643"
+   ]
+  },
+  {
+   "id": "NCT00029965",
+   "title": "Natural History of Glycosphingolipid Storage Disorders and Glycoprotein Disorders",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009265",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E750208f",
+    "Ed665e20"
+   ]
+  },
+  {
+   "id": "NCT05669729",
+   "title": "A Survey to Assess Participants', Caregivers', and Nurses' Use and Understanding of Educational Material on Velaglucerase Alfa (VPRIV) Home Infusion",
+   "status": "NOT_YET_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009265",
+   "countries": [],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E0c91255"
+   ]
+  },
+  {
+   "id": "NCT07845188",
+   "title": "Nutritional Status of Gaucher Disease Patients",
+   "status": "NOT_YET_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009265",
+   "countries": [],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Ea2d7818"
+   ]
+  },
+  {
+   "id": "NCT07847411",
+   "title": "Study of Velaglucerase Beta ERT in Children With Gaucher Disease",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0009265",
+   "countries": [
+    "CN"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Velaglucerase beta"
+   ],
+   "edges": [
+    "Ec46e2f8",
+    "Ef0d3d60",
+    "E1449560"
+   ]
+  },
+  {
+   "id": "NCT00302146",
+   "title": "Positron Emission Tomography (PET) Imaging in People With Gaucher Mutations",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0009265",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "15-0 H20"
+   ],
+   "edges": [
+    "Efaabe92",
+    "Eced0c79",
+    "E718140c"
+   ]
+  },
+  {
+   "id": "NCT06270316",
+   "title": "Safety, PK/PD, and Exploratory Efficacy Study of AMT-191 in Classic Fabry Disease",
+   "status": "RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0010526",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "AMT-191"
+   ],
+   "edges": [
+    "Ec26ea35",
+    "E51e1c00",
+    "Ebaf84c8"
+   ]
+  },
+  {
+   "id": "NCT06906367",
+   "title": "A Study of Patients With Fabry Disease (US Specific)",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0010526",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "migalastat HCl",
+    "ERT"
+   ],
+   "edges": [
+    "Ea2c0813",
+    "Ee204e48",
+    "E68f4368",
+    "E5fa73db"
+   ]
+  },
+  {
+   "id": "NCT07495410",
+   "title": "Anderson-Fabry Disease Fitness Improvement Training",
+   "status": "RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0010526",
+   "countries": [
+    "CZ"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E68b5013",
+    "Ef495801"
+   ]
+  },
+  {
+   "id": "NCT04040049",
+   "title": "A Fabry Disease Gene Therapy Study",
+   "status": "TERMINATED",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0010526",
+   "countries": [
+    "AT",
+    "CA",
+    "DE",
+    "GB",
+    "IT",
+    "NO",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "FLT190"
+   ],
+   "edges": [
+    "E8bd7349",
+    "Ea7858af",
+    "E3053ed8",
+    "E05cc8ba",
+    "E4cf6e88",
+    "E60dd319",
+    "Eae3134e"
+   ]
+  },
+  {
+   "id": "NCT07494058",
+   "title": "A Study of Home vs Hospital Treatment in People With Fabry, Gaucher or Hunter Conditions in Mexico",
+   "status": "TERMINATED",
+   "phase": null,
+   "for_disease": "MONDO:0010526",
+   "countries": [
+    "MX"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Efeb4c09",
+    "Efcb6cbb"
+   ]
+  },
+  {
+   "id": "NCT00001215",
+   "title": "Genetic Studies of Lysosomal Storage Disorders",
+   "status": "ENROLLING_BY_INVITATION",
+   "phase": null,
+   "for_disease": "MONDO:0008199",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Eb944295",
+    "Eecc72bc"
+   ]
+  },
+  {
+   "id": "NCT04127578",
+   "title": "Phase 1/2a Clinical Trial of PR001 (LY3884961) in Patients With Parkinson's Disease With at Least One GBA1 Mutation (PROPEL)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0008199",
+   "countries": [
+    "IL",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "LY3884961",
+    "Methylprednisolone",
+    "Sirolimus"
+   ],
+   "edges": [
+    "E709971f",
+    "E99d93eb",
+    "E840bf28",
+    "Ee4dc801",
+    "E9a1447d",
+    "Efced915"
+   ]
+  },
+  {
+   "id": "NCT04101968",
+   "title": "The GBA Multimodal Study in Parkinson's Disease",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0008199",
+   "countries": [
+    "CA",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E8433915",
+    "E0b7c828",
+    "E45748b0"
+   ]
+  },
+  {
+   "id": "NCT07522606",
+   "title": "Compassionate Use for BIA 28-6156 in Patients With Parkinson's Disease (PD) Who Have a Pathogenic Variant in the GBA1 Gene (GBA-PD) and Completed the ACTIVATE Study",
+   "status": "NO_LONGER_AVAILABLE",
+   "phase": null,
+   "for_disease": "MONDO:0008199",
+   "countries": [
+    "ES",
+    "GB",
+    "IT",
+    "PT",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "BIA 28-6156"
+   ],
+   "edges": [
+    "E634914c",
+    "Eee1d4d7",
+    "E09720eb",
+    "Ee304b33",
+    "E0e0a228",
+    "E2f615a3",
+    "E89ac436"
+   ]
+  },
+  {
+   "id": "NCT00418847",
+   "title": "Pharmacokinetics and Tolerability of Zavesca® (Miglustat) In Patients With Juvenile GM2 Gangliosidosis",
+   "status": "COMPLETED",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0010099",
+   "countries": [
+    "CA"
+   ],
+   "near_user": false,
+   "interventions": [
+    "miglustat"
+   ],
+   "edges": [
+    "E9f76fd6",
+    "Ee868ceb",
+    "E1d2e970"
+   ]
+  },
+  {
+   "id": "NCT04470713",
+   "title": "Natural History Study for Pediatric Patients With Early Onset of Either GM1 Gangliosidosis, GM2 Gangliosidoses, or Gaucher Disease Type 2",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0010099",
+   "countries": [
+    "BE",
+    "BR",
+    "CH",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "IT",
+    "PT",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E5a0d41e",
+    "E1dbdecb",
+    "Eff60089",
+    "E2dace9b",
+    "E081cc5e",
+    "E15195ab"
+   ]
+  },
+  {
+   "id": "NCT04624789",
+   "title": "Registry Gangliosidoses",
+   "status": "UNKNOWN",
+   "phase": null,
+   "for_disease": "MONDO:0010099",
+   "countries": [
+    "DE"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E1de801c",
+    "E3e65ff6"
+   ]
+  },
+  {
+   "id": "NCT03725670",
+   "title": "Direct Lentiviral Injection Gene Therapy for MLD",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0009591",
+   "countries": [
+    "CN"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Intrathecal and intravenous LV gene therapy"
+   ],
+   "edges": [
+    "Ea6a0efe",
+    "Eb3c643d",
+    "E6dc2a0c"
+   ]
+  },
+  {
+   "id": "NCT07046338",
+   "title": "Lentiviral Hematopoietic Stem Cell Gene Therapy for MLD",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0009591",
+   "countries": [
+    "CN"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Lentiviral TYF-ARSA correction of patient's autologous HSCs"
+   ],
+   "edges": [
+    "E66bddab",
+    "E8bcdd9e",
+    "E5fdf26d"
+   ]
+  },
+  {
+   "id": "NCT05368038",
+   "title": "ScreenPlus: A Comprehensive, Flexible, Multi-disorder Newborn Screening Program",
+   "status": "ENROLLING_BY_INVITATION",
+   "phase": null,
+   "for_disease": "MONDO:0009591",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E788b2ff",
+    "Ec294d25"
+   ]
+  },
+  {
+   "id": "NCT03771898",
+   "title": "A Study of Intrathecal SHP611 in Children With Metachromatic Leukodystrophy",
+   "status": "COMPLETED",
+   "phase": "PHASE2",
+   "for_disease": "MONDO:0009591",
+   "countries": [
+    "AR",
+    "BE",
+    "BR",
+    "CA",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "GR",
+    "IL",
+    "IT",
+    "JP",
+    "NL",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "SHP611"
+   ],
+   "edges": [
+    "Eaab309d",
+    "E88a4ad3",
+    "E9c4ae61",
+    "E9695100",
+    "Ee98f450",
+    "E30f3d0e",
+    "Ea1ffbf4"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "id": "ASSET:Krabbe_Disease_Global_Patient_Registry",
+   "name": "Krabbe Disease Global Patient Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0009499",
+   "edges": [
+    "E92ff8aa",
+    "E578ad23"
+   ]
+  },
+  {
+   "id": "ASSET:MLD_Patient_Powered_Registry",
+   "name": "MLD Patient Powered Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "E5a2235b",
+    "E7bd4f6c"
+   ]
+  },
+  {
+   "id": "ASSET:International_MLD_registry",
+   "name": "International MLD registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0009591",
+   "edges": [
+    "E8156254",
+    "E0dd2ea1"
+   ]
+  }
+ ],
+ "researchers": [
+  {
+   "id": "PERSON:8763971",
+   "name": "Ernesto Roque Bongarzone",
+   "grants": [
+    "RePORTER:R01NS127403"
+   ],
+   "diseases": [
+    "MONDO:0009499",
+    "MONDO:0010099"
+   ],
+   "edges": [
+    "E88025ac",
+    "Ef352296",
+    "E0ec305d",
+    "Eb793fdc"
+   ]
+  },
+  {
+   "id": "PERSON:11084045",
+   "name": "Ying Sun",
+   "grants": [
+    "RePORTER:R01NS138309"
+   ],
+   "diseases": [
+    "MONDO:0009265",
+    "MONDO:0010526"
+   ],
+   "edges": [
+    "E9471f75",
+    "E6e9a867",
+    "Ec35bcb3",
+    "E9cedf57"
+   ]
+  },
+  {
+   "id": "PERSON:11815483",
+   "name": "Daesung Shin",
+   "grants": [
+    "RePORTER:R01NS112327"
+   ],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "E9e586bf",
+    "Eaa7364b"
+   ]
+  },
+  {
+   "id": "PERSON:6623546",
+   "name": "Daniel Woo",
+   "grants": [
+    "RePORTER:R01HD104814"
+   ],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "Ee9acdad",
+    "E24c0efd"
+   ]
+  },
+  {
+   "id": "PERSON:12344369",
+   "name": "Frederick Bennett",
+   "grants": [
+    "RePORTER:R01NS136487"
+   ],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "E8bdc3b4",
+    "E5332e1a"
+   ]
+  },
+  {
+   "id": "PERSON:10267440",
+   "name": "Gustavo Henrique Boff Maegawa",
+   "grants": [
+    "RePORTER:R01NS137638"
+   ],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "E8754eb0",
+    "Ed017472"
+   ]
+  },
+  {
+   "id": "PERSON:2090964",
+   "name": "Hans-Peter Kiem",
+   "grants": [
+    "RePORTER:R01NS136487"
+   ],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "Ec18deb8",
+    "E5332e1a"
+   ]
+  },
+  {
+   "id": "PERSON:14751576",
+   "name": "Kabir Jalal",
+   "grants": [
+    "RePORTER:R01HD104814"
+   ],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "E11b06fa",
+    "E24c0efd"
+   ]
+  },
+  {
+   "id": "PERSON:80910868",
+   "name": "Yanling Wang",
+   "grants": [],
+   "diseases": [
+    "MONDO:0009499"
+   ],
+   "edges": [
+    "Ef4ba592",
+    "Eee593ab"
+   ]
+  },
+  {
+   "id": "PERSON:15467615",
+   "name": "Laura Ann Adang",
+   "grants": [
+    "RePORTER:R61NS135584",
+    "RePORTER:R25TR005269"
+   ],
+   "diseases": [
+    "MONDO:0009591"
+   ],
+   "edges": [
+    "E7430a7a",
+    "E3a94308",
+    "E449a907",
+    "E0d1da99"
+   ]
+  },
+  {
+   "id": "PERSON:12210790",
+   "name": "Aaron Henry Colby",
+   "grants": [
+    "RePORTER:R43DK146746"
+   ],
+   "diseases": [
+    "MONDO:0009265"
+   ],
+   "edges": [
+    "Ee9791ad",
+    "Ee9bdefc"
+   ]
+  },
+  {
+   "id": "PERSON:16435023",
+   "name": "Bernard Bloem",
+   "grants": [
+    "RePORTER:R44GM154585"
+   ],
+   "diseases": [
+    "MONDO:0009265"
+   ],
+   "edges": [
+    "E5a848f0",
+    "E3bc9616"
+   ]
+  },
+  {
+   "id": "PERSON:1953845",
+   "name": "Cheryl Louise Stucky",
+   "grants": [
+    "RePORTER:R37NS108278"
+   ],
+   "diseases": [
+    "MONDO:0010526"
+   ],
+   "edges": [
+    "Eb0b551e",
+    "Eb9f2b8e"
+   ]
+  },
+  {
+   "id": "PERSON:14796901",
+   "name": "Gary P. H. Ho",
+   "grants": [
+    "RePORTER:R21NS146759"
+   ],
+   "diseases": [
+    "MONDO:0008199"
+   ],
+   "edges": [
+    "Ef5a06f5",
+    "Eed2a9bc"
+   ]
+  },
+  {
+   "id": "PERSON:11215239",
+   "name": "Joana M Murad",
+   "grants": [
+    "RePORTER:R43TR006062"
+   ],
+   "diseases": [
+    "MONDO:0009265"
+   ],
+   "edges": [
+    "Ea2f6cde",
+    "E071543e"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Krabbe UK (patient group, based in GB), which the atlas links to Krabbe.",
+   "from_disease": "MONDO:0009499",
+   "target_id": "ORG:Krabbe_UK",
+   "edges": [
+    "Ed349bff"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact KrabbeConnect (patient group, based in US), which the atlas links to Krabbe.",
+   "from_disease": "MONDO:0009499",
+   "target_id": "ORG:KrabbeConnect",
+   "edges": [
+    "E7aa1953"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Krabbe Disease Global Patient Registry, which the atlas links to Krabbe.",
+   "from_disease": "MONDO:0009499",
+   "target_id": "ASSET:Krabbe_Disease_Global_Patient_Registry",
+   "edges": [
+    "E92ff8aa",
+    "E578ad23"
+   ]
+  },
+  {
+   "kind": "reuse",
+   "step": "natural_history_study",
+   "text": "Gaucher already has a natural history study (Natural History of Glycosphingolipid Storage Disorders and Glycoprotein Disorders); Krabbe does not yet. Ask whether it could include or be copied for Krabbe.",
+   "from_disease": "MONDO:0009265",
+   "target_id": "NCT00029965",
+   "edges": [
+    "E750208f"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact MPS Society (patient_group, based in GB), which the atlas links to Gaucher, a related disease.",
+   "from_disease": "MONDO:0009265",
+   "target_id": "ORG:MPS_Society",
+   "edges": [
+    "E040d968",
+    "E9ff813a",
+    "E6ed20fd"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact AEEFE Gaucher (patient_group, based in ES), which the atlas links to Gaucher, a related disease.",
+   "from_disease": "MONDO:0009265",
+   "target_id": "ORG:AEEFE_Gaucher",
+   "edges": [
+    "E4099fdd"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact ASOCIACIÓN ESPAÑOLA DE ENFERMOS Y FAMILIARES DE LA ENFERMEDAD (patient_group, based in ES), which the atlas links to Gaucher, a related disease.",
+   "from_disease": "MONDO:0009265",
+   "target_id": "ORG:ASOCIACIÓN_ESPAÑOLA_DE_ENFERMOS_Y_FAMILI",
+   "edges": [
+    "E69bcb65"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on",
+   "text": "A paper reports that Krabbe disease is caused by changes in a gene called GALC [E6e63617]. A paper reports that this gene is normally needed to break down a fatty substance that is part of the material protecting nerves, called myelin [Ee586157]. A paper reports that without enough of this enzyme working, a toxic substance called psychosine builds up and harms the cells that protect nerves [Eecc2812]. A paper also reports that Krabbe disease happens because of a missing enzyme inside tiny cell parts called lysosomes, which normally help break things down, so this is called a lysosomal enzyme deficiency [E050a41e]. A paper reports that this leads to loss and damage of the myelin covering around nerves, called demyelination [E8b1c4df]. A paper reports that it also causes swelling and irritation in the nervous system, called neuroinflammation [E5aaac6b].",
+   "citations": [
+    "E6e63617",
+    "Ee586157",
+    "Eecc2812",
+    "E050a41e",
+    "E8b1c4df",
+    "E5aaac6b"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Other diseases that share this biology",
+   "text": "According to Reactome, the GALC gene and the genes behind several other diseases all work in the body's pathway for breaking down fatty substances called glycosphingolipids [E6be1459, E41520eb]. A paper reports that Gaucher disease also involves fatty substances building up in cells because of a missing lysosomal enzyme, the same kind of problem as Krabbe [E3f6bbf0, Ec8d1187, E60744b8, E309fa8a]. A paper reports that Fabry disease shares this same pattern of a missing lysosomal enzyme and fat buildup in cells [E4b5796e, Ee0e2214]. A paper reports that some late-onset forms of Parkinson's disease also involve a missing enzyme and fat buildup similar to Krabbe's disease process [Ece278e5, E8b12886]. According to HPO, children with GM2 AB variant can have some of the same signs as Krabbe, such as low muscle tone, stiff muscles, and loss of brain function over time [Ebb770bf, E3b6cdca, E0936c1c, E6b7d4d8, E861bd0e, Ef793a01]. A paper reports that metachromatic leukodystrophy, also called MLD, is caused by a different missing lysosomal enzyme but leads to similar fat buildup and nerve-covering damage as Krabbe [E2af53d8, Ef9f74f4]. According to HPO, children with MLD and Krabbe can both have increased protein in their spinal fluid and slower nerve signal speed [E8f41824, E1e675ab, E13dd0cf, E3abe212].",
+   "citations": [
+    "E6be1459",
+    "E41520eb",
+    "E3f6bbf0",
+    "Ec8d1187",
+    "E60744b8",
+    "E309fa8a",
+    "E4b5796e",
+    "Ee0e2214",
+    "Ece278e5",
+    "E8b12886",
+    "Ebb770bf",
+    "E3b6cdca",
+    "E0936c1c",
+    "E6b7d4d8",
+    "E861bd0e",
+    "Ef793a01",
+    "E2af53d8",
+    "Ef9f74f4",
+    "E8f41824",
+    "E1e675ab",
+    "E13dd0cf",
+    "E3abe212"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "What exists already",
+   "text": "A paper reports that Krabbe UK is a charity that supports families affected by Krabbe disease [Ed349bff]. A paper reports that KrabbeConnect, based in the United States, works to connect Krabbe disease science with families [E7aa1953]. According to NIH RePORTER, the National Institute of Neurological Disorders and Stroke funds a grant working on replacing certain brain cells for Krabbe and related diseases [E4d8b50c, E5332e1a]. According to NIH RePORTER, this same institute also funds a grant studying how loss of the GALC gene leads to Krabbe disease [Ecfe2466, Eaa7364b]. According to ClinicalTrials.gov, there is a trial recruiting in the United States that is testing umbilical cord blood derived cells given into the spinal fluid for Krabbe and related metabolic diseases [E478a4f9, E66c8c49]. According to ClinicalTrials.gov, another trial testing a treatment called PBKR03 for early infantile Krabbe disease had sites in several countries but is currently paused [E84bed90, E8e004b3]. According to ClinicalTrials.gov, a newer trial plans to test a treatment called PLX-200 in children with Krabbe disease, though it has not started recruiting yet [E2aaf128, Ec260f91]. A paper reports that there is also a Krabbe Disease Global Patient Registry that collects information to help improve the accuracy of diagnosis [Ecbb1cae, E92ff8aa].",
+   "citations": [
+    "Ed349bff",
+    "E7aa1953",
+    "E4d8b50c",
+    "E5332e1a",
+    "Ecfe2466",
+    "Eaa7364b",
+    "E478a4f9",
+    "E66c8c49",
+    "E84bed90",
+    "E8e004b3",
+    "E2aaf128",
+    "Ec260f91",
+    "Ecbb1cae",
+    "E92ff8aa"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "You could reach out to Krabbe UK, a patient group based in the United Kingdom that a paper reports supports families affected by Krabbe disease [Ed349bff]. You could also reach out to KrabbeConnect, a patient group based in the United States that a paper reports connects Krabbe disease science with families [E7aa1953]. You might ask about joining the Krabbe Disease Global Patient Registry, which a paper reports collects information to help improve the accuracy of diagnosis [E92ff8aa, E578ad23].",
+   "citations": [
+    "Ed349bff",
+    "E7aa1953",
+    "E92ff8aa",
+    "E578ad23"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:245200",
+   "n_results": 32,
+   "n_kept": 32
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0009499",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Krabbe disease",
+   "n_results": 36,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "Krabbe",
+   "n_results": 19,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Krabbe disease\"[tiab]",
+   "n_results": 1109,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Krabbe disease\"[tiab]) AND hasabstract",
+   "n_results": 951,
+   "n_kept": 32
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.huntershope.org/about-us/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://krabbeconnect.org/about-krabbeconnect/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.krabbeuk.org/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.ninds.nih.gov/health-information/clinical-trials/krabbe-disease-global-patient-registry",
+   "n_results": 1,
+   "n_kept": 1
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "org_id": "ORG:AIMPS_ETS",
+ "disease_id": "MONDO:0009658",
+ "to": "info@aimps.it",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Proposal to connect - MPS IIID patient group collaboration",
+ "body": "Dear AIMPS ETS,\n\nMy name is Maria, and I lead a patient group for MPS IIID. I'm writing to introduce myself and explore whether we might collaborate.\n\nA paper reports that AIMPS ETS was founded in 1991 to support children and adult patients affected by these rare genetic metabolic diseases, which often lead to severe disability [Ea6b3adc]. The same source indicates your organisation supports families affected by MPS IIIA, MPS IIIB, MPS IIIC, MPS I, and MPS II as well [E080e178][E994105e][E30302cc][E68fcb3d][Ebb059e1].\n\nMPS IIID shares a closely related biological mechanism with these conditions: a paper reports that MPS IIID is caused by deficiency of the lysosomal enzyme N-acetylglucosamine 6-sulfatase, leading to accumulation of heparan sulfate [E9f300a9][Ef8f5811]. Similarly, a paper reports that MPS IIIA results from a deficient lysosomal enzyme causing defective degradation and storage of heparan sulfate [Ec586fdd][E8282821]. Given this overlap, I believe our communities could learn from each other's experience.\n\nWould you be open to a short call in the coming weeks to share how our groups work and see where we might support one another?\n\nThank you for your time.\n\nWarm regards,\nMaria\nPatient group leader, MPS IIID patient group\n\nSources:\n[Ea6b3adc] https://www.aimps.it/chi-siamo/\n[E080e178] https://www.aimps.it/chi-siamo/\n[E994105e] https://www.aimps.it/chi-siamo/\n[E30302cc] https://www.aimps.it/chi-siamo/\n[E68fcb3d] https://www.aimps.it/chi-siamo/\n[Ebb059e1] https://www.aimps.it/chi-siamo/\n[E9f300a9] https://pubmed.ncbi.nlm.nih.gov/11243730/\n[Ef8f5811] https://pubmed.ncbi.nlm.nih.gov/11243730/\n[Ec586fdd] https://pubmed.ncbi.nlm.nih.gov/10601282/\n[E8282821] https://pubmed.ncbi.nlm.nih.gov/10601282/",
+ "citations": [
+  "Ea6b3adc",
+  "E080e178",
+  "E994105e",
+  "E30302cc",
+  "E68fcb3d",
+  "Ebb059e1",
+  "E9f300a9",
+  "Ef8f5811",
+  "Ec586fdd",
+  "E8282821"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

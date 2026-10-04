@@ -1,0 +1,2212 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0009655",
+  "name": "Mucopolysaccharidosis type IIIA",
+  "short": "MPS IIIA"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:6448",
+    "name": "SGSH",
+    "edges": [
+     "E6659f43",
+     "E7b907fc",
+     "E9276c06",
+     "E6f133a2",
+     "E76a2693"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:lysosomal_enzyme_deficiency",
+    "name": "Lysosomal enzyme deficiency",
+    "effect": "LoF",
+    "evidence": "extracted",
+    "edges": [
+     "E8282821",
+     "E6c3b383",
+     "E2e92e5f",
+     "E6ff8e71",
+     "E0d3b201",
+     "E81e28a7",
+     "Eee0e5f8"
+    ]
+   },
+   {
+    "id": "MECH:substrate_storage_heparan_sulfate",
+    "name": "Heparan sulfate storage",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "Ec586fdd",
+     "E98013d4",
+     "E87be76b",
+     "E4c6d421",
+     "Edc95f21",
+     "E5637629",
+     "Ed62fa17"
+    ]
+   },
+   {
+    "id": "MECH:substrate_storage_glycogen",
+    "name": "Glycogen storage",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E6e128f9"
+    ]
+   },
+   {
+    "id": "MECH:neuroinflammation",
+    "name": "Neuroinflammation",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E4af2811"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-2206307",
+    "name": "MPS IIIA - Sanfilippo syndrome A",
+    "edges": [
+     "E6659f43",
+     "E32d11c0",
+     "E7b907fc",
+     "E9276c06",
+     "E6f133a2",
+     "E76a2693"
+    ]
+   },
+   {
+    "id": "R-HSA-2024096",
+    "name": "HS-GAG degradation",
+    "edges": [
+     "E6659f43",
+     "E760ba2a",
+     "E7b907fc",
+     "E9276c06",
+     "E6f133a2",
+     "E76a2693"
+    ]
+   },
+   {
+    "id": "R-HSA-1638091",
+    "name": "Heparan sulfate/heparin (HS-GAG) metabolism",
+    "edges": [
+     "E6659f43",
+     "E760ba2a",
+     "Ec9060e7",
+     "E7b907fc",
+     "E9276c06",
+     "E6f133a2",
+     "E76a2693"
+    ]
+   },
+   {
+    "id": "R-HSA-2206281",
+    "name": "Mucopolysaccharidoses",
+    "edges": [
+     "E6659f43",
+     "E32d11c0",
+     "E472e813",
+     "E7b907fc",
+     "E9276c06",
+     "E6f133a2",
+     "E76a2693"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:4000193",
+    "name": "Reduced leukocyte N-sulfoglucosamine sulfohydrolase activity",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ec7ceed0"
+    ]
+   },
+   {
+    "id": "HP:0000250",
+    "name": "Dense calvaria",
+    "weight": 2.12,
+    "frequency": null,
+    "edges": [
+     "E92597bb"
+    ]
+   },
+   {
+    "id": "HP:0001507",
+    "name": "Growth abnormality",
+    "weight": 2.12,
+    "frequency": null,
+    "edges": [
+     "Ef2eccfc"
+    ]
+   },
+   {
+    "id": "HP:0001537",
+    "name": "Umbilical hernia",
+    "weight": 2.12,
+    "frequency": "15/45",
+    "edges": [
+     "Ef6b9bf5"
+    ]
+   },
+   {
+    "id": "HP:0000664",
+    "name": "Synophrys",
+    "weight": 1.833,
+    "frequency": null,
+    "edges": [
+     "E86de87e"
+    ]
+   },
+   {
+    "id": "HP:0000752",
+    "name": "Hyperactivity",
+    "weight": 1.833,
+    "frequency": null,
+    "edges": [
+     "Ec528550"
+    ]
+   },
+   {
+    "id": "HP:0002208",
+    "name": "Coarse hair",
+    "weight": 1.833,
+    "frequency": null,
+    "edges": [
+     "E282b7e6"
+    ]
+   },
+   {
+    "id": "HP:0002650",
+    "name": "Scoliosis",
+    "weight": 1.833,
+    "frequency": "10/110",
+    "edges": [
+     "E909da2b"
+    ]
+   },
+   {
+    "id": "HP:0002788",
+    "name": "Recurrent upper respiratory tract infections",
+    "weight": 1.833,
+    "frequency": "61/70",
+    "edges": [
+     "E446e8df"
+    ]
+   },
+   {
+    "id": "HP:0003309",
+    "name": "Ovoid thoracolumbar vertebrae",
+    "weight": 1.833,
+    "frequency": null,
+    "edges": [
+     "Ee93636d"
+    ]
+   }
+  ],
+  "variants": []
+ },
+ "similar": [
+  {
+   "id": "MONDO:0009656",
+   "name": "MPS IIIB",
+   "score": 0.415,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.411,
+    "phenotype": 0.56,
+    "mechanism": 0.53
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_heparan_sulfate",
+     "name": "Heparan sulfate storage",
+     "kind": "mechanism",
+     "edges": [
+      "Ec586fdd",
+      "E98013d4",
+      "E87be76b",
+      "E4c6d421",
+      "Edc95f21",
+      "E5637629",
+      "Ed62fa17",
+      "Eae4e3d8",
+      "E1ed5a6b",
+      "E188a5a7",
+      "E7a77f58",
+      "E4da5d49"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E8282821",
+      "E6c3b383",
+      "E2e92e5f",
+      "E6ff8e71",
+      "E0d3b201",
+      "E81e28a7",
+      "Eee0e5f8",
+      "E8a7d8c7",
+      "Ee5d66d2",
+      "E8ce1e30",
+      "Eac469c9",
+      "Ec0d2955",
+      "Ec104964",
+      "E9657a4d"
+     ]
+    },
+    {
+     "id": "R-HSA-1638091",
+     "name": "Heparan sulfate/heparin (HS-GAG) metabolism",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "Ec9060e7",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Eca7aeb3",
+      "E7719c79",
+      "Eaae4088",
+      "Efa290d7",
+      "E9e67715",
+      "E4c1bac8",
+      "Ed4c45cc",
+      "Ece19b4d"
+     ]
+    },
+    {
+     "id": "R-HSA-2024096",
+     "name": "HS-GAG degradation",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Eca7aeb3",
+      "E7719c79",
+      "Eaae4088",
+      "Efa290d7",
+      "E9e67715",
+      "E4c1bac8",
+      "Ed4c45cc",
+      "Ece19b4d"
+     ]
+    },
+    {
+     "id": "R-HSA-2206281",
+     "name": "Mucopolysaccharidoses",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E32d11c0",
+      "E472e813",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Eca7aeb3",
+      "E287118f",
+      "Ef52839f",
+      "Eaae4088",
+      "Efa290d7",
+      "E9e67715",
+      "E4c1bac8",
+      "Ed4c45cc",
+      "Ece19b4d"
+     ]
+    },
+    {
+     "id": "HP:0000250",
+     "name": "Dense calvaria",
+     "kind": "phenotype",
+     "edges": [
+      "E92597bb",
+      "E8ddb732"
+     ]
+    },
+    {
+     "id": "HP:0002208",
+     "name": "Coarse hair",
+     "kind": "phenotype",
+     "edges": [
+      "E282b7e6",
+      "Ec4ac373"
+     ]
+    },
+    {
+     "id": "HP:0000664",
+     "name": "Synophrys",
+     "kind": "phenotype",
+     "edges": [
+      "E86de87e",
+      "Efa494f5"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0009657",
+   "name": "MPS IIIC",
+   "score": 0.372,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.411,
+    "phenotype": 0.447,
+    "mechanism": 0.461
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_heparan_sulfate",
+     "name": "Heparan sulfate storage",
+     "kind": "mechanism",
+     "edges": [
+      "Ec586fdd",
+      "E98013d4",
+      "E87be76b",
+      "E4c6d421",
+      "Edc95f21",
+      "E5637629",
+      "Ed62fa17",
+      "E7373ae4",
+      "Efdcc8cb"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E8282821",
+      "E6c3b383",
+      "E2e92e5f",
+      "E6ff8e71",
+      "E0d3b201",
+      "E81e28a7",
+      "Eee0e5f8",
+      "E108a4c3",
+      "Ec16062e",
+      "E557ac17",
+      "E7db959c",
+      "E86ebfa2",
+      "E9c0ab1c",
+      "E6d036dd"
+     ]
+    },
+    {
+     "id": "R-HSA-1638091",
+     "name": "Heparan sulfate/heparin (HS-GAG) metabolism",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "Ec9060e7",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "E63cdaf8",
+      "E977014a",
+      "E75a697a",
+      "E39478ab",
+      "Ea62de2e",
+      "E530d030",
+      "Ec23ca9d",
+      "Ed4e2d95",
+      "E9ca0fac",
+      "E5e16efb"
+     ]
+    },
+    {
+     "id": "R-HSA-2024096",
+     "name": "HS-GAG degradation",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "E63cdaf8",
+      "E977014a",
+      "E75a697a",
+      "E39478ab",
+      "Ea62de2e",
+      "E530d030",
+      "Ec23ca9d",
+      "Ed4e2d95",
+      "E9ca0fac",
+      "E5e16efb"
+     ]
+    },
+    {
+     "id": "R-HSA-2206281",
+     "name": "Mucopolysaccharidoses",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E32d11c0",
+      "E472e813",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "E63cdaf8",
+      "E744d1f1",
+      "Ed1d9a61",
+      "E75a697a",
+      "E39478ab",
+      "Ea62de2e",
+      "E530d030",
+      "Ec23ca9d",
+      "Ed4e2d95",
+      "E9ca0fac",
+      "E5e16efb"
+     ]
+    },
+    {
+     "id": "HP:0000250",
+     "name": "Dense calvaria",
+     "kind": "phenotype",
+     "edges": [
+      "E92597bb",
+      "E4bf3fd5"
+     ]
+    },
+    {
+     "id": "HP:0001507",
+     "name": "Growth abnormality",
+     "kind": "phenotype",
+     "edges": [
+      "Ef2eccfc",
+      "E009c275"
+     ]
+    },
+    {
+     "id": "HP:0002208",
+     "name": "Coarse hair",
+     "kind": "phenotype",
+     "edges": [
+      "E282b7e6",
+      "E98b729c"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0009658",
+   "name": "MPS IIID",
+   "score": 0.367,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.087,
+    "phenotype": 0.185,
+    "mechanism": 1.0
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_heparan_sulfate",
+     "name": "Heparan sulfate storage",
+     "kind": "mechanism",
+     "edges": [
+      "Ec586fdd",
+      "E98013d4",
+      "E87be76b",
+      "E4c6d421",
+      "Edc95f21",
+      "E5637629",
+      "Ed62fa17",
+      "E9f300a9",
+      "E6365b34",
+      "Ec308e4d",
+      "E23827e6",
+      "E575d76c",
+      "E2b61bee",
+      "Ecc5ea79",
+      "E59b997d"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E8282821",
+      "E6c3b383",
+      "E2e92e5f",
+      "E6ff8e71",
+      "E0d3b201",
+      "E81e28a7",
+      "Eee0e5f8",
+      "Ef8f5811",
+      "E99283cc",
+      "Ed690453",
+      "Ea9709cd",
+      "E925dc7e",
+      "E6438c8b",
+      "Eb072b10",
+      "E6a6b8da",
+      "E0b78635",
+      "Ecc495db"
+     ]
+    },
+    {
+     "id": "R-HSA-2206281",
+     "name": "Mucopolysaccharidoses",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E32d11c0",
+      "E472e813",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Ec79c691",
+      "Ef75bef1",
+      "Ea3f8b18",
+      "E4d28745",
+      "Eae09261",
+      "Edb41b16",
+      "E0851638",
+      "E2c36d89"
+     ]
+    },
+    {
+     "id": "HP:0001507",
+     "name": "Growth abnormality",
+     "kind": "phenotype",
+     "edges": [
+      "Ef2eccfc",
+      "E1730082"
+     ]
+    },
+    {
+     "id": "HP:0002208",
+     "name": "Coarse hair",
+     "kind": "phenotype",
+     "edges": [
+      "E282b7e6",
+      "Eb385fc2"
+     ]
+    },
+    {
+     "id": "HP:0000664",
+     "name": "Synophrys",
+     "kind": "phenotype",
+     "edges": [
+      "E86de87e",
+      "Ed2941d0"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0010674",
+   "name": "MPS II (Hunter)",
+   "score": 0.234,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.259,
+    "phenotype": 0.09,
+    "mechanism": 0.418
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_heparan_sulfate",
+     "name": "Heparan sulfate storage",
+     "kind": "mechanism",
+     "edges": [
+      "Ec586fdd",
+      "E98013d4",
+      "E87be76b",
+      "E4c6d421",
+      "Edc95f21",
+      "E5637629",
+      "Ed62fa17",
+      "E1f3fa46",
+      "E873fb62"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E8282821",
+      "E6c3b383",
+      "E2e92e5f",
+      "E6ff8e71",
+      "E0d3b201",
+      "E81e28a7",
+      "Eee0e5f8",
+      "Ef5d5a50",
+      "Efa51226",
+      "E5228a4d",
+      "E56975ae",
+      "Ee86ed71",
+      "E5651ac5",
+      "E4703481",
+      "Eb898b74"
+     ]
+    },
+    {
+     "id": "R-HSA-1638091",
+     "name": "Heparan sulfate/heparin (HS-GAG) metabolism",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "Ec9060e7",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "E13243b7",
+      "Ecba7335",
+      "E0474421",
+      "E664b7a7",
+      "E923afe7",
+      "Eb8502a7",
+      "Ec66c086",
+      "E093e132",
+      "E5897e27"
+     ]
+    },
+    {
+     "id": "R-HSA-2024096",
+     "name": "HS-GAG degradation",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "E13243b7",
+      "Ecba7335",
+      "E0474421",
+      "E664b7a7",
+      "E923afe7",
+      "Eb8502a7",
+      "Ec66c086",
+      "E093e132",
+      "E5897e27"
+     ]
+    },
+    {
+     "id": "R-HSA-2206281",
+     "name": "Mucopolysaccharidoses",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E32d11c0",
+      "E472e813",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "E13243b7",
+      "Eba7c40d",
+      "E1ba2695",
+      "Ee350f6b",
+      "Ef650b8c",
+      "E0474421",
+      "E664b7a7",
+      "E923afe7",
+      "Eb8502a7",
+      "Ec66c086",
+      "E093e132",
+      "E5897e27"
+     ]
+    },
+    {
+     "id": "HP:0001537",
+     "name": "Umbilical hernia",
+     "kind": "phenotype",
+     "edges": [
+      "Ef6b9bf5",
+      "E38be86b"
+     ]
+    },
+    {
+     "id": "HP:0000023",
+     "name": "Inguinal hernia",
+     "kind": "phenotype",
+     "edges": [
+      "E2e8a12a",
+      "E7a6225d"
+     ]
+    },
+    {
+     "id": "HP:0002159",
+     "name": "Heparan sulfate excretion in urine",
+     "kind": "phenotype",
+     "edges": [
+      "E9083755",
+      "Ed62ae66"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "MONDO:0011758",
+   "name": "MPS I (Hurler)",
+   "score": 0.233,
+   "lookalike": false,
+   "components": {
+    "gene": 0.0,
+    "pathway": 0.259,
+    "phenotype": 0.086,
+    "mechanism": 0.418
+   },
+   "witnesses": [
+    {
+     "id": "MECH:substrate_storage_heparan_sulfate",
+     "name": "Heparan sulfate storage",
+     "kind": "mechanism",
+     "edges": [
+      "Ec586fdd",
+      "E98013d4",
+      "E87be76b",
+      "E4c6d421",
+      "Edc95f21",
+      "E5637629",
+      "Ed62fa17",
+      "Ea90608d",
+      "E9add978",
+      "Ecc81260"
+     ]
+    },
+    {
+     "id": "MECH:lysosomal_enzyme_deficiency",
+     "name": "Lysosomal enzyme deficiency",
+     "kind": "mechanism",
+     "edges": [
+      "E8282821",
+      "E6c3b383",
+      "E2e92e5f",
+      "E6ff8e71",
+      "E0d3b201",
+      "E81e28a7",
+      "Eee0e5f8",
+      "E834d07e",
+      "E60f9b02",
+      "E99c17bc",
+      "E166a1b5",
+      "E626832f",
+      "E85d5bcd",
+      "Ee9d9d1e",
+      "E4f69a3f",
+      "Ebb30cb1"
+     ]
+    },
+    {
+     "id": "R-HSA-1638091",
+     "name": "Heparan sulfate/heparin (HS-GAG) metabolism",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "Ec9060e7",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Ede703e7",
+      "Ee3a2899",
+      "Ea3d2556",
+      "Ebdd7c55",
+      "Ea251e60",
+      "Ee43cb3f",
+      "E9977f00",
+      "E12070de",
+      "E9ae13b7"
+     ]
+    },
+    {
+     "id": "R-HSA-2024096",
+     "name": "HS-GAG degradation",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E760ba2a",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Ede703e7",
+      "Ee3a2899",
+      "Ea3d2556",
+      "Ebdd7c55",
+      "Ea251e60",
+      "Ee43cb3f",
+      "E9977f00",
+      "E12070de",
+      "E9ae13b7"
+     ]
+    },
+    {
+     "id": "R-HSA-2206281",
+     "name": "Mucopolysaccharidoses",
+     "kind": "pathway",
+     "edges": [
+      "E6659f43",
+      "E32d11c0",
+      "E472e813",
+      "E7b907fc",
+      "E9276c06",
+      "E6f133a2",
+      "E76a2693",
+      "Ede703e7",
+      "E16e1ca0",
+      "Eb6e6b47",
+      "E2717323",
+      "Ef72d89c",
+      "Ea3d2556",
+      "Ebdd7c55",
+      "Ea251e60",
+      "Ee43cb3f",
+      "E9977f00",
+      "E12070de",
+      "E9ae13b7"
+     ]
+    },
+    {
+     "id": "HP:0001537",
+     "name": "Umbilical hernia",
+     "kind": "phenotype",
+     "edges": [
+      "Ef6b9bf5",
+      "Eac52a80"
+     ]
+    },
+    {
+     "id": "HP:0000023",
+     "name": "Inguinal hernia",
+     "kind": "phenotype",
+     "edges": [
+      "E2e8a12a",
+      "Ee4ad89c"
+     ]
+    },
+    {
+     "id": "HP:0001007",
+     "name": "Hirsutism",
+     "kind": "phenotype",
+     "edges": [
+      "Ef9c0ea2",
+      "E53b3254"
+     ]
+    }
+   ]
+  }
+ ],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:MPS_Society",
+   "name": "MPS Society",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": null,
+   "contact_email": "fundraising@mpssociety.org.uk",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E10d7132",
+    "Eb1a8d49",
+    "E10c2b00"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_Society_for_Mucopolysaccharide",
+   "name": "Canadian Society for Mucopolysaccharide & Related Diseases Inc.",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E770ad8f",
+    "E3e59d08"
+   ]
+  },
+  {
+   "id": "ORG:AIMPS_ETS",
+   "name": "AIMPS ETS",
+   "kind": "patient_group",
+   "country": "IT",
+   "website": null,
+   "contact_email": "info@aimps.it",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E080e178"
+   ]
+  },
+  {
+   "id": "ORG:Asociación_MPS_LISOSOMALES_España",
+   "name": "Asociación MPS-LISOSOMALES España",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": null,
+   "contact_email": "info@mpslisosomales.org",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E9d0375e"
+   ]
+  },
+  {
+   "id": "ORG:Cure_Sanfilippo_Foundation",
+   "name": "Cure Sanfilippo Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": "https://curesanfilippofoundation.org/",
+   "contact_email": "Contact@CureSanfilippoFoundation.org",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E80ea2ad"
+   ]
+  },
+  {
+   "id": "ORG:Fundación_Stop_Sanfilippo",
+   "name": "Fundación Stop Sanfilippo",
+   "kind": "patient_group",
+   "country": "ES",
+   "website": "stopsanfilippo.org",
+   "contact_email": "info@stopsanfilippo.org",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E211dd58"
+   ]
+  },
+  {
+   "id": "ORG:MPS_Deutschland_e_V",
+   "name": "MPS-Deutschland e.V.",
+   "kind": "patient_group",
+   "country": "DE",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E58a2384"
+   ]
+  },
+  {
+   "id": "ORG:National_MPS_Society",
+   "name": "National MPS Society",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@mpssociety.org",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E0f6cb5e"
+   ]
+  },
+  {
+   "id": "ORG:Sanfilippo_Children_s_Foundation",
+   "name": "Sanfilippo Children's Foundation",
+   "kind": "patient_group",
+   "country": "AU",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "Eb6b5ea1"
+   ]
+  },
+  {
+   "id": "ORG:Stichting_Sanfilippo_Fonds",
+   "name": "Stichting Sanfilippo Fonds",
+   "kind": "patient_group",
+   "country": "NL",
+   "website": null,
+   "contact_email": "info@sanfilippofonds.nl",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E1f2ae8c"
+   ]
+  },
+  {
+   "id": "ORG:Team_Sanfilippo_Foundation",
+   "name": "Team Sanfilippo Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "contact@teamsanfilippo.com",
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E2fbfe1f"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NINDS",
+   "name": "NIH NINDS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E53b781a",
+    "E3577148",
+    "Ecf455ef",
+    "E31d9ebb"
+   ]
+  },
+  {
+   "id": "ORG:Ultragenyx_Pharmaceutical_Inc",
+   "name": "Ultragenyx Pharmaceutical Inc",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "Eebc59b6",
+    "E9c5e5c2",
+    "E2ed7b1b",
+    "Eebc4df2"
+   ]
+  },
+  {
+   "id": "ORG:GC_Biopharma_Corp",
+   "name": "GC Biopharma Corp",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "Eeb03be2",
+    "E061da6f"
+   ]
+  },
+  {
+   "id": "ORG:NeuroGT",
+   "name": "NeuroGT",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "E19686d8",
+    "E8115f7a"
+   ]
+  },
+  {
+   "id": "ORG:Spruce_Biosciences",
+   "name": "Spruce Biosciences",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009655",
+   "edges": [
+    "Ed0387fe",
+    "E30bd1da"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NCATS",
+   "name": "NIH NCATS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009656",
+   "edges": [
+    "Ea480d65",
+    "E0b4a14c"
+   ]
+  },
+  {
+   "id": "ORG:JCR_Pharmaceuticals_Co_Ltd",
+   "name": "JCR Pharmaceuticals Co., Ltd.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009656",
+   "edges": [
+    "E21184e6",
+    "Eeb73a12",
+    "E66fac1d",
+    "Eaba71d6"
+   ]
+  },
+  {
+   "id": "ORG:Phoenix_Nest",
+   "name": "Phoenix Nest",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009657",
+   "edges": [
+    "E98470ba",
+    "E04abf2e",
+    "E59089de",
+    "E63413e3"
+   ]
+  },
+  {
+   "id": "ORG:CENTOGENE_GmbH_Rostock",
+   "name": "CENTOGENE GmbH Rostock",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009657",
+   "edges": [
+    "E7168299",
+    "E1ca5f35"
+   ]
+  },
+  {
+   "id": "ORG:Albert_Einstein_College_of_Medicine",
+   "name": "Albert Einstein College of Medicine",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009657",
+   "edges": [
+    "E2523361",
+    "E550e4bd"
+   ]
+  },
+  {
+   "id": "ORG:RTI_International",
+   "name": "RTI International",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0009657",
+   "edges": [
+    "E4997bb8",
+    "E45546ef"
+   ]
+  },
+  {
+   "id": "ORG:Canadian_MPS_Society",
+   "name": "Canadian MPS Society",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": null,
+   "contact_email": "info@mpssociety.ca",
+   "for_disease": "MONDO:0010674",
+   "edges": [
+    "E261673b"
+   ]
+  },
+  {
+   "id": "ORG:MPS_Austria",
+   "name": "MPS Austria",
+   "kind": "patient_group",
+   "country": "AT",
+   "website": null,
+   "contact_email": "office@mps-austria.at",
+   "for_disease": "MONDO:0010674",
+   "edges": [
+    "Ee2a5683"
+   ]
+  },
+  {
+   "id": "ORG:Project_Alive",
+   "name": "Project Alive",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010674",
+   "edges": [
+    "Eb0160a0"
+   ]
+  },
+  {
+   "id": "ORG:The_MPS_II_Research_Fund",
+   "name": "The MPS II Research Fund",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": "www.theisaacfoundation.com/MPSII/",
+   "contact_email": null,
+   "for_disease": "MONDO:0010674",
+   "edges": [
+    "Eea9b26d"
+   ]
+  },
+  {
+   "id": "ORG:AO_GENERIUM",
+   "name": "AO GENERIUM",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010674",
+   "edges": [
+    "E7d237d1",
+    "E7911ac7"
+   ]
+  },
+  {
+   "id": "ORG:Denali_Therapeutics_Inc",
+   "name": "Denali Therapeutics Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010674",
+   "edges": [
+    "E24c408b",
+    "Ec92098b"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NIGMS",
+   "name": "NIH NIGMS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0011758",
+   "edges": [
+    "E941b226",
+    "Efec0abc"
+   ]
+  },
+  {
+   "id": "ORG:Sangamo_Therapeutics",
+   "name": "Sangamo Therapeutics",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0011758",
+   "edges": [
+    "Ecaf12a1",
+    "E811d9f2"
+   ]
+  },
+  {
+   "id": "ORG:National_Institute_of_Neurological_Disor",
+   "name": "National Institute of Neurological Disorders and Stroke (NINDS)",
+   "kind": "nih",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0011758",
+   "edges": [
+    "E5d79bba",
+    "Eabc1746"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT02716246",
+   "title": "Phase I/II/III Gene Transfer Clinical Trial of scAAV9.U1a.hSGSH",
+   "status": "RECRUITING",
+   "phase": "PHASE2,PHASE3",
+   "for_disease": "MONDO:0009655",
+   "countries": [
+    "AU",
+    "ES",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "UX111",
+    "Prophylactic Immunomodulatory (IM) Therapy",
+    "Optimized Prophylactic IM Therapy",
+    "Adjuvant IM Therapy"
+   ],
+   "edges": [
+    "Eebc4df2",
+    "E3023148",
+    "E707cac7",
+    "Ebfac162",
+    "Eec66bd8",
+    "Eb3c0db6",
+    "E4164417",
+    "E5dbae4a"
+   ]
+  },
+  {
+   "id": "NCT07579910",
+   "title": "Intracerebroventricular Tralesinidase Alfa in Participants With MPS IIIB (Sanfilippo Syndrome Type B)",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0009655",
+   "countries": [],
+   "near_user": false,
+   "interventions": [
+    "Tralesinidase alfa (TA)"
+   ],
+   "edges": [
+    "E30bd1da",
+    "E5905aee"
+   ]
+  },
+  {
+   "id": "NCT07818759",
+   "title": "Single Injection of rAAV9-CMV-hNAGLUop Gene for Patients With Mucopolysaccharidosis (MPS) IIIB",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0009655",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "rAAV9-CMV-hNAGLUop"
+   ],
+   "edges": [
+    "E8115f7a",
+    "E88ddde1",
+    "E4e0c623"
+   ]
+  },
+  {
+   "id": "NCT07855562",
+   "title": "MPS IIIA Disease Monitoring Program",
+   "status": "NOT_YET_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009655",
+   "countries": [],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E9c5e5c2"
+   ]
+  },
+  {
+   "id": "NCT06567769",
+   "title": "Phase 1 Study of GC1130A in Patients With Sanfilippo Syndrome Type A (MPS IIIA)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE1",
+   "for_disease": "MONDO:0009655",
+   "countries": [
+    "KR",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "GC1130A"
+   ],
+   "edges": [
+    "E061da6f",
+    "Efe44c2b",
+    "Efebcb7f",
+    "E16fc2e1"
+   ]
+  },
+  {
+   "id": "NCT07640984",
+   "title": "A Phase I/II Trial of JR-446 in Mucopolysaccharidosis Type IIIB (MPS IIIB)",
+   "status": "RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0009656",
+   "countries": [
+    "DE",
+    "GB",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "JR-446"
+   ],
+   "edges": [
+    "Eaba71d6",
+    "Efbeeff7",
+    "E78c4e47",
+    "E8b3818d",
+    "E84ae8d7"
+   ]
+  },
+  {
+   "id": "NCT06488924",
+   "title": "An Open-label Phase I/II Study of JR-446 in Mucopolysaccharidosis Type IIIB",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0009656",
+   "countries": [
+    "JP"
+   ],
+   "near_user": false,
+   "interventions": [
+    "JR-446"
+   ],
+   "edges": [
+    "Eeb73a12",
+    "E4266ba7",
+    "E4fcb0b9"
+   ]
+  },
+  {
+   "id": "NCT07733856",
+   "title": "Early Access Treatment With Tralesinidase Alfa in Mucopolysaccharidosis Type IIIB (Sanfilippo Syndrome Type B)",
+   "status": "AVAILABLE",
+   "phase": null,
+   "for_disease": "MONDO:0009656",
+   "countries": [],
+   "near_user": false,
+   "interventions": [
+    "Tralesinidase alfa (TA)"
+   ],
+   "edges": [
+    "E88775fa",
+    "Ec16392e"
+   ]
+  },
+  {
+   "id": "NCT05825131",
+   "title": "Natural History Study of Participants With Sanfilippo Syndrome Type IIIC",
+   "status": "RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009657",
+   "countries": [
+    "FR",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E63413e3",
+    "Eba7dc9c",
+    "E20316bb"
+   ]
+  },
+  {
+   "id": "NCT07712003",
+   "title": "Natural History to Assess Disease in Patients With MPS IIIC",
+   "status": "NOT_YET_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009657",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E04abf2e",
+    "E569cb0a"
+   ]
+  },
+  {
+   "id": "NCT05368038",
+   "title": "ScreenPlus: A Comprehensive, Flexible, Multi-disorder Newborn Screening Program",
+   "status": "ENROLLING_BY_INVITATION",
+   "phase": null,
+   "for_disease": "MONDO:0009657",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E550e4bd",
+    "Ec294d25"
+   ]
+  },
+  {
+   "id": "NCT03655223",
+   "title": "Early Check: Expanded Screening in Newborns",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": null,
+   "for_disease": "MONDO:0009657",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E45546ef",
+    "E98a978e"
+   ]
+  },
+  {
+   "id": "NCT02298686",
+   "title": "Biomarker for Sanfilippo Type A-B-C-D Disease (BioSanfilippo)",
+   "status": "WITHDRAWN",
+   "phase": null,
+   "for_disease": "MONDO:0009657",
+   "countries": [
+    "DE",
+    "EG",
+    "IN",
+    "LK"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E1ca5f35",
+    "E8d9ad0c",
+    "E6b9c141",
+    "Ec588a39",
+    "Ef54261c"
+   ]
+  },
+  {
+   "id": "NCT05648851",
+   "title": "A Natural History Study of Sanfilippo Syndrome Type D",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0009658",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E2fea033",
+    "E2014b4f"
+   ]
+  },
+  {
+   "id": "NCT04573023",
+   "title": "A Phase III Study of JR-141 in Patients With Mucopolysaccharidosis II (STARLIGHT)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0010674",
+   "countries": [
+    "AR",
+    "BR",
+    "CO",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "IL",
+    "IT",
+    "PL",
+    "TR",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "JR-141",
+    "Idursulfase",
+    "JR-141 or Idursulfase"
+   ],
+   "edges": [
+    "Ee30ed6b",
+    "E4092bd0",
+    "E9917bba",
+    "E4ce6bb4",
+    "E3c52cb2",
+    "Ee95854d",
+    "E8500988",
+    "E32f2753",
+    "Eb0ba726"
+   ]
+  },
+  {
+   "id": "NCT05208281",
+   "title": "A Multi-cohort Study of Safety, Efficacy, PK and PD of GNR-055 in Patients With Mucopolysaccharidosis Type II",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE2,PHASE3",
+   "for_disease": "MONDO:0010674",
+   "countries": [
+    "RU"
+   ],
+   "near_user": false,
+   "interventions": [
+    "GNR-055 1.0-2.0-3.0 mg/kg",
+    "GNR-055 2.0 mg/kg",
+    "GNR-055 3.0 mg/kg"
+   ],
+   "edges": [
+    "E7911ac7",
+    "Ee13c262",
+    "Ea4f59ad",
+    "Ed7959da",
+    "Ea810d6b"
+   ]
+  },
+  {
+   "id": "NCT05371613",
+   "title": "A Study to Determine the Efficacy and Safety of Tividenofusp Alfa (DNL310) vs Idursulfase in Pediatric and Young Adult Participants With Neuronopathic (nMPS II) or Non-Neuronopathic Mucopolysaccharidosis Type II (nnMPS II)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE2,PHASE3",
+   "for_disease": "MONDO:0010674",
+   "countries": [
+    "AR",
+    "BE",
+    "BR",
+    "CA",
+    "CZ",
+    "DE",
+    "ES",
+    "FR",
+    "GB",
+    "IT",
+    "NL",
+    "SE",
+    "TR",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "tividenofusp alfa",
+    "idursulfase"
+   ],
+   "edges": [
+    "Ec92098b",
+    "E00a6f85",
+    "Ed6ac932",
+    "Ecf42eaf",
+    "Ef4d174d",
+    "E38e2e79",
+    "E45d7384",
+    "Eb24e51e"
+   ]
+  },
+  {
+   "id": "NCT06095388",
+   "title": "Phase I/II Study of JR-441 in Patients With Mucopolysaccharidosis Type IIIA",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "PHASE1,PHASE2",
+   "for_disease": "MONDO:0011758",
+   "countries": [
+    "DE"
+   ],
+   "near_user": false,
+   "interventions": [
+    "JR-441"
+   ],
+   "edges": [
+    "Eaeeff97",
+    "E58f27df",
+    "E5619f09"
+   ]
+  },
+  {
+   "id": "NCT00004738",
+   "title": "Genetic Analysis of the Chiari I Malformation",
+   "status": "COMPLETED",
+   "phase": null,
+   "for_disease": "MONDO:0011758",
+   "countries": [
+    "RU",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "Eabc1746",
+    "Ee7259bb",
+    "Ed8176bf"
+   ]
+  },
+  {
+   "id": "NCT04628871",
+   "title": "Long Term Follow-up (LTFU) of Subjects Who Received SB-318, SB-913, or SB-FIX",
+   "status": "TERMINATED",
+   "phase": null,
+   "for_disease": "MONDO:0011758",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "SB-318",
+    "SB-913",
+    "SB-FIX"
+   ],
+   "edges": [
+    "E811d9f2",
+    "Ecf092bd",
+    "Ef203dcd",
+    "Effde60c",
+    "Ea0618b3"
+   ]
+  }
+ ],
+ "assets": [],
+ "researchers": [
+  {
+   "id": "PERSON:8251653",
+   "name": "Patricia I Dickson",
+   "grants": [
+    "RePORTER:R01NS132057"
+   ],
+   "diseases": [
+    "MONDO:0009658",
+    "MONDO:0010674",
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "Eece50c8",
+    "E75e9aed",
+    "E9090be4",
+    "E4f7cf86",
+    "Ebe05552",
+    "E3a84fb2",
+    "E62484e3",
+    "E5a56eb4"
+   ]
+  },
+  {
+   "id": "PERSON:15847694",
+   "name": "Srikanth Singamsetty",
+   "grants": [
+    "RePORTER:R44NS147802",
+    "RePORTER:R44NS137892",
+    "RePORTER:UB1NS122644"
+   ],
+   "diseases": [
+    "MONDO:0009657",
+    "MONDO:0009658"
+   ],
+   "edges": [
+    "Ed1dcbf0",
+    "E0ddfd31",
+    "E9cf1af7",
+    "Edbe4076",
+    "E87601f6",
+    "Ec1eec8d",
+    "Ee9e2a13",
+    "E360c9c5"
+   ]
+  },
+  {
+   "id": "PERSON:10510547",
+   "name": "Nadja Zeltner",
+   "grants": [
+    "RePORTER:R21NS135412"
+   ],
+   "diseases": [
+    "MONDO:0009655"
+   ],
+   "edges": [
+    "Ea01ae90",
+    "E3577148",
+    "E512071b",
+    "E31d9ebb"
+   ]
+  },
+  {
+   "id": "PERSON:12619406",
+   "name": "Ryan Joseph Weiss",
+   "grants": [
+    "RePORTER:R21NS135412"
+   ],
+   "diseases": [
+    "MONDO:0009655"
+   ],
+   "edges": [
+    "E3390656",
+    "E3577148",
+    "Ee088248",
+    "E31d9ebb"
+   ]
+  },
+  {
+   "id": "PERSON:6405998",
+   "name": "Barry J Byrne",
+   "grants": [
+    "RePORTER:UH3NS137533",
+    "RePORTER:UG3NS137533"
+   ],
+   "diseases": [
+    "MONDO:0009656"
+   ],
+   "edges": [
+    "E14e9bfa",
+    "E1d51bde",
+    "Ebb94652",
+    "E37d14b5"
+   ]
+  },
+  {
+   "id": "PERSON:9766740",
+   "name": "Coy D Heldermon",
+   "grants": [
+    "RePORTER:UH3NS137533",
+    "RePORTER:UG3NS137533"
+   ],
+   "diseases": [
+    "MONDO:0009656"
+   ],
+   "edges": [
+    "E1aee145",
+    "E1d51bde",
+    "Ee0594db",
+    "E37d14b5"
+   ]
+  },
+  {
+   "id": "PERSON:10717409",
+   "name": "Beau Richard Webber",
+   "grants": [
+    "RePORTER:R61NS149137"
+   ],
+   "diseases": [
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "Eaec07c3",
+    "Eece15aa"
+   ]
+  },
+  {
+   "id": "PERSON:1943648",
+   "name": "Beverly L. Davidson",
+   "grants": [
+    "RePORTER:U19NS132301"
+   ],
+   "diseases": [
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "E8717a60",
+    "Ec27516a"
+   ]
+  },
+  {
+   "id": "PERSON:6652183",
+   "name": "Dao Pan",
+   "grants": [
+    "RePORTER:R01NS132504"
+   ],
+   "diseases": [
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "E554c292",
+    "E3b9159d"
+   ]
+  },
+  {
+   "id": "PERSON:6409365",
+   "name": "Douglas M Mccarty",
+   "grants": [
+    "RePORTER:R44NS143501"
+   ],
+   "diseases": [
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "E5f0dac2",
+    "E3eecbab"
+   ]
+  },
+  {
+   "id": "PERSON:15679031",
+   "name": "Erin E Doherty",
+   "grants": [
+    "RePORTER:F32GM153031"
+   ],
+   "diseases": [
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "Ec6285fb",
+    "Efec0abc"
+   ]
+  },
+  {
+   "id": "PERSON:14380109",
+   "name": "Wei Zheng",
+   "grants": [
+    "RePORTER:ZIATR000570"
+   ],
+   "diseases": [
+    "MONDO:0009656"
+   ],
+   "edges": [
+    "E64a1986",
+    "E0b4a14c",
+    "Ecd707f0",
+    "E44f5ef4"
+   ]
+  },
+  {
+   "id": "PERSON:8690084",
+   "name": "William J Buchser",
+   "grants": [
+    "RePORTER:R01NS132057"
+   ],
+   "diseases": [
+    "MONDO:0010674"
+   ],
+   "edges": [
+    "E5f5b9ba",
+    "E4f7cf86",
+    "Ec76d4a9",
+    "E495a0ad",
+    "E62484e3",
+    "E5a56eb4"
+   ]
+  },
+  {
+   "id": "PERSON:80910868",
+   "name": "Yanling Wang",
+   "grants": [
+    "RePORTER:R61NS149137"
+   ],
+   "diseases": [
+    "MONDO:0011758"
+   ],
+   "edges": [
+    "E7fe8591",
+    "Eece15aa"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact MPS Society (patient group, based in GB), which the atlas links to MPS IIIA.",
+   "from_disease": "MONDO:0009655",
+   "target_id": "ORG:MPS_Society",
+   "edges": [
+    "E10d7132",
+    "Eb1a8d49",
+    "E10c2b00"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Canadian Society for Mucopolysaccharide & Related Diseases Inc. (patient group, based in CA), which the atlas links to MPS IIIA.",
+   "from_disease": "MONDO:0009655",
+   "target_id": "ORG:Canadian_Society_for_Mucopolysaccharide",
+   "edges": [
+    "E770ad8f",
+    "E3e59d08"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact AIMPS ETS (patient group, based in IT), which the atlas links to MPS IIIA.",
+   "from_disease": "MONDO:0009655",
+   "target_id": "ORG:AIMPS_ETS",
+   "edges": [
+    "E080e178"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Asociación MPS-LISOSOMALES España (patient group, based in ES), which the atlas links to MPS IIIA.",
+   "from_disease": "MONDO:0009655",
+   "target_id": "ORG:Asociación_MPS_LISOSOMALES_España",
+   "edges": [
+    "E9d0375e"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Canadian MPS Society (patient_group, based in CA), which the atlas links to MPS II (Hunter), a related disease.",
+   "from_disease": "MONDO:0010674",
+   "target_id": "ORG:Canadian_MPS_Society",
+   "edges": [
+    "E261673b"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact MPS Austria (patient_group, based in AT), which the atlas links to MPS II (Hunter), a related disease.",
+   "from_disease": "MONDO:0010674",
+   "target_id": "ORG:MPS_Austria",
+   "edges": [
+    "Ee2a5683"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Project Alive (patient_group, based in US), which the atlas links to MPS II (Hunter), a related disease.",
+   "from_disease": "MONDO:0010674",
+   "target_id": "ORG:Project_Alive",
+   "edges": [
+    "Eb0160a0"
+   ]
+  },
+  {
+   "kind": "build",
+   "step": "registry",
+   "text": "No disease similar to MPS IIIA in the atlas has a patient registry yet; this would have to be built.",
+   "from_disease": null,
+   "target_id": null,
+   "edges": []
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What's going on",
+   "text": "MPS IIIA happens because a gene called SGSH does not make a working enzyme, which is like a tiny tool that helps the body do a job [E7b907fc, E9276c06]. This enzyme's normal job is to help break down a long sugar chain in the body called heparan sulfate [E0d3b201]. When the enzyme is missing, heparan sulfate cannot be broken down properly and builds up inside small parts of cells called lysosomes [Ec586fdd, Ed62fa17]. A paper reports that this buildup can also lead to extra glycogen, another kind of sugar, collecting in the liver [E6e128f9]. A paper reports that behavior changes and a decline in thinking skills may be a possible result of this buildup along with inflammation in the brain [E4af2811].",
+   "citations": [
+    "E7b907fc",
+    "E9276c06",
+    "E0d3b201",
+    "Ec586fdd",
+    "Ed62fa17",
+    "E6e128f9",
+    "E4af2811"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Diseases that are biologically similar",
+   "text": "MPS IIIB, MPS IIIC, and MPS IIID are biologically similar to MPS IIIA because each one is also caused by a missing lysosomal enzyme needed to break down heparan sulfate [E8a7d8c7, E108a4c3, Ef8f5811]. In all of these conditions, heparan sulfate builds up inside lysosomes, the same kind of storage problem seen in MPS IIIA [Eae4e3d8, E7373ae4, E9f300a9]. According to Reactome, the genes behind MPS IIIA, MPS IIIB, MPS IIIC, and MPS IIID all sit together on the same heparan sulfate breakdown pathway [E32d11c0, E7719c79, E977014a, Ef75bef1]. MPS I (Hurler) and MPS II (Hunter) are also biologically similar, since their genes sit on that same heparan sulfate breakdown pathway according to Reactome [Ee3a2899, Ecba7335]. According to HPO, MPS IIIA, MPS IIIB, and MPS IIIC can all show a feature called dense calvaria, a change in the skull bones [E92597bb, E8ddb732, E4bf3fd5].",
+   "citations": [
+    "E8a7d8c7",
+    "E108a4c3",
+    "Ef8f5811",
+    "Eae4e3d8",
+    "E7373ae4",
+    "E9f300a9",
+    "E32d11c0",
+    "E7719c79",
+    "E977014a",
+    "Ef75bef1",
+    "Ee3a2899",
+    "Ecba7335",
+    "E92597bb",
+    "E8ddb732",
+    "E4bf3fd5"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "What exists already",
+   "text": "Several patient groups around the world focus on MPS IIIA, including the Cure Sanfilippo Foundation in the United States and the MPS Society in the United Kingdom [E80ea2ad, E10d7132]. According to ClinicalTrials.gov, there is a trial testing a gene therapy called UX111 for MPS IIIA, listed as recruiting with sites in the United States, Australia, and Spain [Eebc4df2, Eb3c0db6, E4164417, E5dbae4a]. According to ClinicalTrials.gov, there is also a Phase 1 trial of a treatment called GC1130A for MPS IIIA, with sites in South Korea and the United States [E061da6f, Efebcb7f, E16fc2e1]. According to ClinicalTrials.gov, a disease monitoring program for MPS IIIA run by Ultragenyx Pharmaceutical Inc is listed as not yet recruiting [E9c5e5c2, Eebc59b6]. According to NIH RePORTER, a research grant called 'Characterizing and treating peripheral nervous system dysfunction in Sanfilippo Syndrome,' funded by NIH NINDS, studies MPS IIIA [E53b781a, E3577148].",
+   "citations": [
+    "E80ea2ad",
+    "E10d7132",
+    "Eebc4df2",
+    "Eb3c0db6",
+    "E4164417",
+    "E5dbae4a",
+    "E061da6f",
+    "Efebcb7f",
+    "E16fc2e1",
+    "E9c5e5c2",
+    "Eebc59b6",
+    "E53b781a",
+    "E3577148"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "A first step could be reaching out to the MPS Society, a patient group based in the United Kingdom that the atlas links to MPS IIIA [E10d7132, Eb1a8d49, E10c2b00]. Another step could be contacting the Canadian Society for Mucopolysaccharide & Related Diseases Inc, a patient group based in Canada that the atlas also links to MPS IIIA [E770ad8f, E3e59d08]. A third step could be reaching out to AIMPS ETS, a patient group based in Italy that the atlas links to MPS IIIA [E080e178].",
+   "citations": [
+    "E10d7132",
+    "Eb1a8d49",
+    "E10c2b00",
+    "E770ad8f",
+    "E3e59d08",
+    "E080e178"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:252900",
+   "n_results": 28,
+   "n_kept": 28
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0009655",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Sanfilippo syndrome type A OR mucopolysaccharidosis IIIA",
+   "n_results": 50,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "Sanfilippo",
+   "n_results": 16,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Sanfilippo syndrome type A\"[tiab] OR \"mucopolysaccharidosis IIIA\"[tiab]",
+   "n_results": 104,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Sanfilippo syndrome type A\"[tiab] OR \"mucopolysaccharidosis IIIA\"[tiab]) AND hasabstract",
+   "n_results": 96,
+   "n_kept": 24
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://rarediseases.org/organizations/cure-sanfilippo-foundation/",
+   "n_results": 1,
+   "n_kept": 4
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.sanfilippo.org.au/about-us/our-purpose",
+   "n_results": 1,
+   "n_kept": 4
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://mpssociety.org.uk/conditions/mps-conditions/mps-iii-sanfilippo",
+   "n_results": 1,
+   "n_kept": 10
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

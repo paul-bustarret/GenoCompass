@@ -1,0 +1,15 @@
+{
+ "org_id": "ORG:AIMPS_ETS",
+ "disease_id": "MONDO:0009655",
+ "to": "info@aimps.it",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Exploring collaboration between our MPS IIIA patient communities",
+ "body": "Dear AIMPS ETS team,\n\nMy name is Maria, and I lead a patient group supporting families affected by MPS IIIA (Sanfilippo syndrome type A). I am writing to introduce our group and to explore whether there might be an opportunity to work together.\n\nAIMPS ETS was founded in 1991 to support children and adult patients affected by rare genetic metabolic diseases, including MPS IIIA, which often lead to severe disability [E080e178].\n\nSince our two groups both support families living with MPS IIIA, I believe there could be real value in connecting, whether to share experiences, exchange resources, or simply learn from one another's approaches to supporting patients and families.\n\nAs a modest first step, would you be open to a short introductory call in the coming weeks to discuss our respective work and see where common ground might exist?\n\nThank you very much for considering this. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient group leader\n\nSources:\n[E080e178] https://www.aimps.it/chi-siamo/",
+ "citations": [
+  "E080e178"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

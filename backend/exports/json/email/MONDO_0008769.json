@@ -1,0 +1,16 @@
+{
+ "org_id": "ORG:Taylor_s_Tale",
+ "disease_id": "MONDO:0008769",
+ "to": null,
+ "recipient_reason": "patient group linked to this disease (no usable contact email)",
+ "subject": "Collaboration between our CLN2 community and Taylor's Tale",
+ "body": "Dear Taylor's Tale team,\n\nMy name is Maria, and I lead a patient group supporting families affected by CLN2 (Ceroid lipofuscinosis, neuronal, 2). I'm reaching out to introduce our group and explore whether there might be opportunities to connect.\n\nA paper reports that Taylor's Tale catalyzed a research project and funded early research at UNC Chapel Hill on CLN2, alongside The Saoirse Foundation, Hayden's Batten Disease Foundation, and BDSRA [E8e670ee]. Given this history of supporting CLN2 research, I believe our communities have a shared interest in advancing understanding of this disease.\n\nI would love to learn more about your current work and see if there are ways our organizations could support one another going forward. Would you be open to a brief introductory call in the coming weeks, just to share updates and explore potential synergies?\n\nThank you for all the work you do for families facing Batten disease. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader, CLN2 Family Support\n\nSources:\n[E8e670ee] https://www.taylorstale.org/rare-disease/about-batten-disease/",
+ "citations": [
+  "E8e670ee"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically.",
+  "No contact email found on the organisation's pages; use the contact form on www.taylorstale.org."
+ ],
+ "requires_human_review": true
+}

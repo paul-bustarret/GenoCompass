@@ -1,0 +1,16 @@
+{
+ "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+ "disease_id": "MONDO:0010079",
+ "to": "info@ntsad.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting on Canavan disease research efforts",
+ "body": "Dear NTSAD team,\n\nMy name is Maria, and I lead a patient group focused on Canavan disease. I'm writing to introduce myself and explore whether there might be room for collaboration.\n\nI understand that NTSAD leads efforts to treat and cure several diseases, including Canavan, through driving research, forging collaboration, and fostering community [E960696e]. I also see that NTSAD runs CanInform, a natural history study for Canavan disease sponsored by Aspa Therapeutics [Ebba29d7]. Given that our group shares a focus on Canavan disease, I believe there could be valuable overlap in our work, particularly around supporting families and advancing research efforts.\n\nWould you be open to a short call in the coming weeks to share notes on our respective activities and see where we might support one another? I'd be glad to work around your schedule.\n\nThank you for all the work NTSAD does for the Canavan community. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader, Canavan Disease Community\n\nSources:\n[E960696e] https://ntsad.org/about-ntsad/\n[Ebba29d7] https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/",
+ "citations": [
+  "E960696e",
+  "Ebba29d7"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

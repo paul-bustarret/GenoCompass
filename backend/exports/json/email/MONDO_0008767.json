@@ -1,0 +1,13 @@
+{
+ "org_id": "ORG:Beyond_Batten_Disease_Foundation",
+ "disease_id": "MONDO:0008767",
+ "to": "info@beyondbatten.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting on CLN3 (Batten Disease) Research",
+ "body": "Dear Beyond Batten Disease Foundation team,\n\nMy name is Maria, and I lead a patient group for CLN3.\n\nGiven our shared focus on CLN3, I believe there may be valuable opportunities for our communities to learn from each other's experiences and efforts.\n\nWould you be open to a brief introductory call in the coming weeks to share updates and explore whether there are ways we might support each other's work going forward?\n\nThank you for considering this, and I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader",
+ "citations": [],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

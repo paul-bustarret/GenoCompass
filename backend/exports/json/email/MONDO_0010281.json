@@ -1,0 +1,16 @@
+{
+ "org_id": "ORG:Danon_Foundation",
+ "disease_id": "MONDO:0010281",
+ "to": "contact@danonfoundation.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Connecting on Danon disease community efforts",
+ "body": "Dear Danon Foundation team,\n\nMy name is Maria, and I lead a patient group supporting families affected by Danon disease. I'm reaching out because your organisation describes itself as \"a community of people living with or affected by Danon disease\" [Ebb89110], and you've noted that your partnerships \"support our mission to serve the Danon community\" with a commitment to \"supporting people all over the world that live with Danon disease\" [E5453000]. Given our shared focus on this same community, I believe there could be valuable opportunities for us to learn from each other's work and potentially coordinate on outreach or resources for families.\n\nWould you be open to a brief call in the coming weeks to introduce our groups and explore whether there are natural ways to collaborate or support one another's efforts?\n\nThank you for the work you do for the Danon community. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[Ebb89110] https://www.danonfoundation.org/about-us/\n[E5453000] https://www.danonfoundation.org/about-us/partners/",
+ "citations": [
+  "Ebb89110",
+  "E5453000"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

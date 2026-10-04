@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { useAtlas } from "@/components/atlas/atlas-shell";
 import { diseases, getNextSteps, type Partner } from "@/lib/atlas";
+import { useLocalApi } from "@/lib/atlas-api";
+import { LiveDiseasePage } from "@/components/atlas/live-disease-page";
 
 export const Route = createFileRoute("/disease/$id")({
   head: () => ({ meta: [
@@ -14,8 +16,13 @@ export const Route = createFileRoute("/disease/$id")({
     { property: "og:description", content: "Sourced partner contacts and research-stage next steps." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" },
   ] }),
-  component: DiseasePage,
+  component: DiseaseRoute,
 });
+
+function DiseaseRoute() {
+  const { id } = Route.useParams();
+  return useLocalApi ? <LiveDiseasePage id={id} /> : <DiseasePage />;
+}
 
 type Step = { partnerId: string; title: string; why: string; review: boolean };
 const steps: Record<string, Step[]> = {

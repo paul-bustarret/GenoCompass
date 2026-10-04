@@ -1,0 +1,20 @@
+edge_id,src,dst,relation,source,source_url,retrieved_at,confidence,evidence,polarity,effect,quote
+Eaa1152,MONDO:0009290,HP:0003690,has_phenotype,hpo,https://ontology.jax.org/api/network/annotation/OMIM:232300,2026-10-03,0.95,observed,supports,,
+E20518d,MONDO:0009290,HP:0001288,has_phenotype,hpo,https://ontology.jax.org/api/network/annotation/OMIM:232300,2026-10-03,0.95,observed,supports,,
+Ebfe49e,MONDO:0009290,HP:0001284,has_phenotype,hpo,https://ontology.jax.org/api/network/annotation/OMIM:232300,2026-10-03,0.95,observed,supports,,
+Ec2c6d1,MONDO:0009290,NCBIGene:2548,caused_by,hpo,https://ontology.jax.org/api/network/annotation/OMIM:232300,2026-10-03,0.95,observed,supports,,
+Ed713f8,MONDO:0009290,ORPHA:365,same_as,orphadata,https://api.orphadata.com/rd-cross-referencing/orphacodes/365?lang=en,2026-10-03,0.95,observed,supports,,
+Ed0849b,NCBIGene:2548,ClinVar:4876681,has_variant,clinvar,https://www.ncbi.nlm.nih.gov/clinvar/variation/4876681/,2026-10-03,0.95,observed,supports,,
+E372fca,ClinVar:4876681,MONDO:0009290,pathogenic_for,clinvar,https://www.ncbi.nlm.nih.gov/clinvar/variation/4876681/,2026-10-03,0.95,observed,supports,,Pathogenic
+Eac0da0,NCBIGene:2548,R-HSA-5357609,in_pathway,reactome,https://reactome.org/ContentService/data/mapping/UniProt/P10253/pathways?species=9606,2026-10-03,0.95,observed,supports,,
+Ecd9d87,NCT03694561,MONDO:0009290,studies,ctgov,https://clinicaltrials.gov/study/NCT03694561,2026-10-03,0.95,observed,supports,,
+E30ce9a,ORG:Duke_University,NCT03694561,runs,ctgov,https://clinicaltrials.gov/study/NCT03694561,2026-10-03,0.95,observed,supports,,
+Eeaba2a,RePORTER:5R01HL177642-02,MONDO:0009290,studies,reporter,https://reporter.nih.gov/project-details/11267230,2026-10-03,0.95,observed,supports,,Alveolar injury and repair in Pompe Disease
+E0cb398,PERSON:10807538,RePORTER:5R01HL177642-02,pi_of,reporter,https://reporter.nih.gov/project-details/11267230,2026-10-03,0.95,observed,supports,,
+Ef4b62f,ORG:NHLBI,RePORTER:5R01HL177642-02,funds,reporter,https://reporter.nih.gov/project-details/11267230,2026-10-03,0.95,observed,supports,,
+Ee1a64e,PMID:42760993,MONDO:0009290,mentions,pubmed,https://pubmed.ncbi.nlm.nih.gov/42760993/,2026-10-03,0.95,observed,supports,,
+Ebfa4d1,ORG:MedicAlert_Foundation,MONDO:0009290,studies,web,https://rarediseases.org/rare-diseases/pompe-disease/,2026-10-03,0.4,fixture,supports,,"Additional Assistance Programs  
+             
+                 
+                     MedicAlert Assistance Program 
+                     NORD and MedicAlert Foundation have teamed up on a new program"

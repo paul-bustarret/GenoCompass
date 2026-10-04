@@ -1,0 +1,17 @@
+{
+ "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+ "disease_id": "MONDO:0010100",
+ "to": "info@ntsad.org",
+ "recipient_reason": "patient group linked to this disease (studies edge) with a general contact email",
+ "subject": "Exploring Collaboration Between Our Tay-Sachs Patient Communities",
+ "body": "Dear NTSAD team,\n\nMy name is Maria, and I lead a patient group for Tay-Sachs disease. I'm writing to introduce our work and explore whether there might be an opportunity to collaborate.\n\nI understand that NTSAD leads work to treat and cure Tay-Sachs, Sandhoff, and GM1 diseases, driving research, forging collaboration, and fostering community [E951b691]. A paper reports that Tay-Sachs disease is caused by a deficiency of the enzyme hexosaminidase-A, resulting in accumulation of GM2 gangliosides [E0d0eb92]. I also understand that NTSAD runs the PRONTO natural history study, which covers GM1 and GM2 conditions including Sandhoff and Tay-Sachs [E48e5738].\n\nGiven our shared focus on Tay-Sachs and the related biology across these conditions, I think there could be real value in connecting our communities, whether through sharing resources, coordinating outreach, or simply learning from each other's experience.\n\nWould you be open to a short call, perhaps 20 minutes, to discuss whether a collaboration between our organizations might make sense?\n\nThank you for considering this. I look forward to hearing from you.\n\nWarm regards,\nMaria\nPatient Group Leader\n\nSources:\n[E951b691] https://ntsad.org/about-ntsad/\n[E0d0eb92] https://pubmed.ncbi.nlm.nih.gov/33232090/\n[E48e5738] https://ntsad.org/ntsad-research/research-for-families-and-individuals/natural-history-studies/",
+ "citations": [
+  "E951b691",
+  "E0d0eb92",
+  "E48e5738"
+ ],
+ "warnings": [
+  "Draft only: review and edit before sending; nothing is sent automatically."
+ ],
+ "requires_human_review": true
+}

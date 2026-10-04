@@ -1,0 +1,4 @@
+ID mismatch: MONDO search -> MONDO:0009290, HPO/JAX -> MONDO:0017694 for the same disease
+Reactome: GAA is in 3 pathways incl. broad ones (Neutrophil degranulation); naive pick is misleading -> need hub filtering
+PubMed stub extraction found no quotable mechanism sentence
+NORD: stub extracted 'MedicAlert Foundation' — quote passes verbatim check but org is not a Pompe group; quote check stops invention, not irrelevance

@@ -1,0 +1,226 @@
+{
+ "journeys": {
+  "MONDO:0009655": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009656": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009657": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009658": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0011758": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010674": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0017694": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009265": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010526": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009499": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009591": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010100": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010006": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009757": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0008769": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0008767": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009260": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010099": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0009756": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010281": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0008199": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010726": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010679": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0008647": {
+   "cards": 4,
+   "fallback": null
+  },
+  "MONDO:0010079": {
+   "cards": 4,
+   "fallback": null
+  }
+ },
+ "emails": {
+  "MONDO:0009655": {
+   "org_id": "ORG:AIMPS_ETS",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009656": {
+   "org_id": "ORG:AIMPS_ETS",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009657": {
+   "org_id": "ORG:AIMPS_ETS",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009658": {
+   "org_id": "ORG:AIMPS_ETS",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0011758": {
+   "org_id": "ORG:AIMPS_ETS",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010674": {
+   "org_id": "ORG:AIMPS_ETS",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0017694": {
+   "org_id": "ORG:Acid_Maltase_Deficiency_Association",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009265": {
+   "org_id": "ORG:Asociación_MPS_LISOSOMALES_España",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010526": {
+   "org_id": "ORG:Fabry_Support_Information_Group",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009499": {
+   "org_id": "ORG:Krabbe_UK",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009591": {
+   "org_id": "ORG:Krabbe_UK",
+   "why": "patient group of the most similar disease with a contact email (a related community)"
+  },
+  "MONDO:0010100": {
+   "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010006": {
+   "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009757": {
+   "org_id": "ORG:International_Niemann_Pick_Disease_Allia",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0008769": {
+   "org_id": "ORG:Taylor_s_Tale",
+   "why": "patient group linked to this disease (no usable contact email)"
+  },
+  "MONDO:0008767": {
+   "org_id": "ORG:Beyond_Batten_Disease_Foundation",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009260": {
+   "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010099": {
+   "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0009756": {
+   "org_id": "ORG:International_Niemann_Pick_Disease_Allia",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010281": {
+   "org_id": "ORG:Danon_Foundation",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0008199": {
+   "org_id": "ORG:Silverstein_Foundation_for_Parkinson_s_w",
+   "why": "organisation linked to this disease with a contact email"
+  },
+  "MONDO:0010726": {
+   "org_id": "ORG:Ontario_Rett_Syndrome_Association_of_Can",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010679": {
+   "org_id": "ORG:Duchenne_UK",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0008647": {
+   "org_id": "ORG:Cardiomyopathy_Patient_Council",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  },
+  "MONDO:0010079": {
+   "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  }
+ },
+ "examples": {
+  "cards": 4,
+  "email": {
+   "org_id": "ORG:National_Tay_Sachs_Allied_Diseases_Assoc",
+   "why": "patient group linked to this disease (studies edge) with a general contact email"
+  }
+ },
+ "generated_at": "2026-10-04T01:24:48+00:00",
+ "llm": true,
+ "supabase_rows": {
+  "nodes": 1734,
+  "edges": 3492,
+  "coverage": 313,
+  "similarity": 300,
+  "clusters": 25,
+  "journeys": 25,
+  "subgraphs": 25,
+  "emails": 25
+ },
+ "seconds": 558.7
+}

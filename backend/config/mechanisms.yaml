@@ -1,0 +1,101 @@
+# Controlled vocabulary for has_mechanism edges (disease -> MECH:<slug>).
+# The extraction LLM must pick a slug from this list; `other` is kept only with confidence <= 0.5.
+# `keywords` are used by the relevance check: a quote supports a mechanism claim if it names the
+# disease (or its gene) or one of these terms.
+mechanisms:
+  lysosomal_enzyme_deficiency:
+    label: Lysosomal enzyme deficiency
+    definition: Reduced or absent activity of a lysosomal hydrolase or transferase that degrades a substrate.
+    keywords: [deficiency, deficient, enzyme activity, hydrolase, sulfatase, glucosidase, glucosaminidase, galactosidase, hexosaminidase, iduronidase, sulfamidase, acetyltransferase, lysosomal enzyme]
+  substrate_storage_heparan_sulfate:
+    label: Heparan sulfate storage
+    definition: Accumulation of undegraded heparan sulfate glycosaminoglycan in lysosomes.
+    keywords: [heparan sulfate, heparan sulphate, glycosaminoglycan, GAG, GAGs]
+  substrate_storage_dermatan_sulfate:
+    label: Dermatan sulfate storage
+    definition: Accumulation of undegraded dermatan sulfate glycosaminoglycan in lysosomes.
+    keywords: [dermatan sulfate, dermatan sulphate, glycosaminoglycan, GAG, GAGs]
+  substrate_storage_glycosphingolipid:
+    label: Glycosphingolipid storage
+    definition: Accumulation of glycosphingolipids (e.g. glucosylceramide, Gb3, sulfatide, psychosine).
+    keywords: [glycosphingolipid, glucosylceramide, glucosylsphingosine, Gb3, globotriaosylceramide, lyso-Gb3, sulfatide, psychosine, galactosylceramide, sphingolipid]
+  gm2_ganglioside_storage:
+    label: GM2 ganglioside storage
+    definition: Accumulation of GM2 ganglioside in neurons due to beta-hexosaminidase deficiency.
+    keywords: [GM2, ganglioside, gangliosidosis]
+  substrate_storage_glycogen:
+    label: Glycogen storage
+    definition: Accumulation of glycogen in lysosomes or cytoplasm (e.g. acid alpha-glucosidase deficiency).
+    keywords: [glycogen]
+  ceroid_lipofuscin_storage:
+    label: Ceroid lipofuscin storage
+    definition: Accumulation of autofluorescent ceroid lipopigment / subunit c of mitochondrial ATP synthase.
+    keywords: [lipofuscin, ceroid, autofluorescent, subunit c, storage material]
+  lysosomal_membrane_protein_defect:
+    label: Lysosomal membrane protein defect
+    definition: Loss of a lysosomal membrane protein or transporter (e.g. LAMP2, CLN3, NPC1, HGSNAT).
+    keywords: [membrane protein, transmembrane, LAMP2, LAMP-2, transporter, lysosomal membrane]
+  cholesterol_trafficking_defect:
+    label: Cholesterol trafficking defect
+    definition: Impaired egress of unesterified cholesterol and lipids from late endosomes/lysosomes.
+    keywords: [cholesterol, filipin, sterol, lipid trafficking, egress]
+  autophagy_defect:
+    label: Autophagy / lysosomal clearance defect
+    definition: Impaired autophagosome formation, fusion or autophagic flux.
+    keywords: [autophagy, autophagic, autophagosome, mitophagy, LC3, p62]
+  lysosomal_dysfunction:
+    label: General lysosomal dysfunction
+    definition: Broad impairment of lysosomal pH, trafficking, exocytosis or degradative capacity not tied to one substrate.
+    keywords: [lysosomal dysfunction, lysosome, lysosomal, endolysosomal, lysosomal pH]
+  er_stress_misfolding:
+    label: Protein misfolding / ER stress
+    definition: Misfolded mutant protein retained in the ER, triggering the unfolded protein response.
+    keywords: [misfolding, misfolded, ER stress, unfolded protein response, chaperone, endoplasmic reticulum]
+  neuroinflammation:
+    label: Neuroinflammation
+    definition: Microglial / astrocyte activation and inflammatory signalling in the nervous system.
+    keywords: [neuroinflammation, microglia, microglial, astrocyte, astrogliosis, inflammation, inflammatory, cytokine]
+  demyelination:
+    label: Demyelination
+    definition: Loss of myelin or oligodendrocytes in the central or peripheral nervous system.
+    keywords: [demyelination, myelin, leukodystrophy, oligodendrocyte, white matter]
+  neuronal_loss:
+    label: Neuronal loss / neurodegeneration
+    definition: Progressive death or dysfunction of neurons.
+    keywords: [neurodegeneration, neurodegenerative, neuronal loss, neuronal death, neuron, neurons, atrophy]
+  mitochondrial_dysfunction:
+    label: Mitochondrial dysfunction
+    definition: Impaired mitochondrial respiration, membrane potential, dynamics or oxidative stress.
+    keywords: [mitochondria, mitochondrial, oxidative stress, respiration, ROS]
+  alpha_synuclein_aggregation:
+    label: Alpha-synuclein aggregation
+    definition: Accumulation and aggregation of alpha-synuclein (Lewy pathology).
+    keywords: [alpha-synuclein, α-synuclein, synuclein, Lewy]
+  cardiomyopathy_storage:
+    label: Cardiac involvement / cardiomyopathy
+    definition: Cardiomyocyte storage, hypertrophy or conduction disease as a disease mechanism.
+    keywords: [cardiomyopathy, cardiac, heart, hypertrophy, cardiomyocyte]
+  sarcomere_defect:
+    label: Sarcomere defect
+    definition: Mutation in a sarcomeric protein altering contractility (e.g. MYH7 hypercontractility).
+    keywords: [sarcomere, sarcomeric, myosin, MYH7, contractility, hypercontractility]
+  dystrophin_loss:
+    label: Dystrophin loss
+    definition: Absence or truncation of dystrophin causing sarcolemmal fragility and muscle degeneration.
+    keywords: [dystrophin, sarcolemma, exon skipping]
+  transcriptional_regulation_defect:
+    label: Transcriptional / chromatin regulation defect
+    definition: Loss of a transcriptional regulator or chromatin reader (e.g. MECP2) disrupting gene expression.
+    keywords: [MeCP2, MECP2, transcription, transcriptional, chromatin, methylation, gene expression]
+  synaptic_dysfunction:
+    label: Synaptic dysfunction
+    definition: Abnormal synapse formation, neurotransmission or plasticity.
+    keywords: [synapse, synaptic, neurotransmission, plasticity, dendritic]
+  aspartoacylase_deficiency_naa_accumulation:
+    label: Aspartoacylase deficiency / NAA accumulation
+    definition: Loss of aspartoacylase (ASPA) with accumulation of N-acetylaspartate (Canavan disease).
+    keywords: [aspartoacylase, ASPA, N-acetylaspartate, NAA]
+  other:
+    label: Other mechanism
+    definition: A mechanism that fits none of the above; use sparingly (kept with confidence <= 0.5).
+    keywords: []

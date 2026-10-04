@@ -1,0 +1,1383 @@
+diff --git a/INTEGRATION_NOTES.md b/INTEGRATION_NOTES.md
+new file mode 100644
+index 0000000..0804ca4
+--- /dev/null
++++ b/INTEGRATION_NOTES.md
+@@ -0,0 +1,99 @@
++# Backend integration notes
++
++The UI can read from the Rare Disease Atlas FastAPI backend (`rare_disease_atlas/docs/contract.md`).
++Every call still goes through `src/lib/atlas.ts`. Turn the switch off and the mocks behave exactly as before.
++
++## Files
++- `src/lib/atlas-api.ts`: typed fetch client with contract types, timeouts (20 s by default, 120 s for LLM endpoints) and `AtlasApiError` (`kind`: http, timeout, network or parse).
++- `src/lib/atlas-adapter.ts`: pure converters from backend responses to UI shapes. These are `toUiDisease`, `toUiSimilarEdges`, `toUiEvidence`, `toPartner`, `stripCitations` and `citationIds`.
++- `src/lib/atlas.ts`: the `USE_API` switch. API mode has no 180 ms delay. On API errors it logs `console.warn` and returns an empty result, so routes never hang.
++
++## Env vars
++| var | effect |
++|---|---|
++| `VITE_ATLAS_API_URL` | base URL. A non-empty value turns API mode on |
++| `VITE_USE_ATLAS_API=true` | turns API mode on with the default URL `http://localhost:8000` |
++| `VITE_ATLAS_USE_RECOMMEND=true` | profiles use `/recommend` (LLM cards, so the description comes from `whats_going_on`) instead of `/journey` |
++
++## Run
++```sh
++# backend (in rare_disease_atlas)
++uv run python -m atlas.server            # http://localhost:8000; needs CORS for the Vite origin
++# UI (in this repo)
++bun install   # or npm install
++VITE_ATLAS_API_URL=http://localhost:8000 bun run dev   # or: npx vite dev
++```
++The browser calls the backend directly. The FastAPI app must allow the dev origin through `CORSMiddleware`, for example `http://localhost:8080` or `*`. If it does not, add a Vite `server.proxy` instead.
++
++## Endpoint → function
++| atlas.ts function | backend |
++|---|---|
++| `searchEntities(q)` | `GET /search?q=`, then `GET /node/{id}` for each disease hit (max 10) |
++| `getDiseaseProfile(id)` | `GET /journey/{id}` (or `/recommend`) + `GET /subgraph/{id}` |
++| `getGraph(id)`, `getSimilarDiseases`, `getConnectionPath` | journey + subgraph, using `similar[]` and `lookalikes[]` |
++| `getNextSteps(id)`, `getPeople(id)` | `journey.organizations` (only `for_disease === id`), plus `GET /edge/{id}` when the cited edges are missing |
++| `getPatientGroups(id)` | `journey.organizations`, kind `patient_group` |
++| `getEvidence(ids)` | `GET /edge/{id}` (cached similarity edges are returned locally) |
++| `getSearchCoverage(q)` | `/search`, then `journey.searched` + `journey.missing` |
++| `askAtlas(id, messages)` *(new)* | `POST /chat` |
++| `draftOutreachEmail(id, sender, orgId?)` *(new)* | `POST /email` (`org_id` null lets the backend choose the recipient) |
++| `getRecommendation`, `addResearchDocument`, `getAtlasHealth` *(new)* | `/recommend`, `/documents`, `/health` |
++| `getClusterAssets`, `getFasterRoute`, `rankClustersByApproach` | unchanged (no backend equivalent) |
++
++Results are cached in memory per disease: journey, subgraph and graph. API mode fills the synchronous exports `diseases`, `clusters` and `allEdges` in place, so `getNode`, `edgesFor` and `clusterFor` work after the first async call.
++
++## Field mapping
++| UI | backend |
++|---|---|
++| Disease `label` / `plain_label` | `attrs.short` (falls back to `name`) / `name` |
++| `synonyms`, `xrefs.OMIM` | `synonyms`, `attrs.omim` without the `OMIM:` prefix (`""` if missing) |
++| `cluster` | slug of `attrs.group`, else `cluster-<n>`, else `unmapped`. A cluster node is created with `label` = group |
++| `attributes.gene` | `profile.genes[0].name`, else the neighbour's `caused_by` gene in the subgraph |
++| `attributes.description` | `whats_going_on` card with `[E…]` stripped, else `attrs.description`, else `""` |
++| `attributes.patient_group` | first `patient_group` org for the disease |
++| `research_activity` | 0–100 = `100·(1−e^(−n/15))`, where n = number of trial + grant + paper nodes in the subgraph |
++| similar edge `id` | `sim:<anchor>:<other>`, `type: similar_to` |
++| `score`, `*_score` | `score`, `components.{mechanism,pathway,phenotype}` (plus `gene_score`) |
++| `witnesses` | witness node ids. `evidence_edges` = all witness edge ids |
++| `negated` / `effect_compatible` | `lookalike` / `!lookalike`. Lookalike edges get the label "Symptom overlap only" |
++| similar `evidence_type` | strongest witness edge in the subgraph (observed → curated), else inferred |
++| evidence `evidence_type` | observed → curated, extracted → extracted, inferred → inferred |
++| `evidence_level` | trial relations/source → clinical_trial; context human or review → clinical_observation; animal or cell → preclinical; null → clinical_observation if observed, else hypothesis |
++| `plain_explanation` | `quote` in quotation marks, else a generated relation sentence |
++| `source_id` / extra `source_url` | `source_url` (falls back to the edge id) |
++| `negated` / `contradicted_by` | `polarity === contradicts` / ids of contradicting edges on the same endpoints |
++| Partner `region` | `country` → full name via `Intl.DisplayNames` |
++| `email` | `contact_email` (`""` if missing) |
++| `sourceUrl` | `website`, else the source_url of the first cited edge |
++| `contactSourceUrl` | source_url of a cited edge |
++| `approach` | quote from a cited `studies` edge, else a generic sentence |
++| `stage`, `question` | generated defaults |
++
++## Routes that still bypass the async API (minimal fixes)
++- `src/routes/atlas.$id.tsx`
++  - `mapEdges = allEdges.filter(...)` runs once at module load, so the map has no lines in API mode. Fix: compute it inside `Atlas()`, e.g. `const mapEdges = allEdges.filter(...)` after `loading` turns false, or store `getGraph()`'s returned `edges` in state.
++  - `positions` is keyed by mock ids, so every real node lands at (50,50). Fix: when there is no fixed position, fall back to a radial layout around the focus node, e.g. `(50+35cos(2πi/n), 50+35sin(2πi/n))`.
++  - `isGap = id === "disease-z"`. Fix: use `journey.status === "no_supported_link"`; expose it from `getGraph`.
++  - `plainDescriptions` is mock-only. It already falls back to `attributes.description`.
++  - Cluster CSS classes (`cluster-waste`, etc.) do not exist for the slugs. Nodes render without colour. Add a fallback class or map `cluster-*` to a palette.
++  - `focus = diseases.find(...)` shows "Record not found" until `getGraph` resolves. Show the loading state when `loading` is true.
++- `src/routes/disease.$id.tsx`: `diseases.find` is fine after `getNextSteps` hydrates the cache, but "Record not found" flashes first. `draftFor` hard-codes "(MPS IIIC)" and "Type C", so drop those strings or call `draftOutreachEmail`. Partners with `email: ""` produce an empty `mailto:`.
++- `src/routes/search.tsx`: text and examples are tuned to the mocks (Sanfilippo, HGSNAT). Gene and approach searches return no matches because only `type: disease` hits are shown. `diseases.length` counts only cached records. The honest-gap button links to `disease-z`.
++- `src/routes/contribute.tsx`: the condition `<select>` is empty until diseases are cached. Optionally wire it to `addResearchDocument`.
++- `src/components/atlas/atlas-chat-demo.tsx`: `answer()` is synchronous over `allEdges`/`diseases`.
++- `src/components/atlas/evidence-drawer.tsx`: shows `source_id`, now the URL, as text. Make it a link and resolve `evidence_edges` with `getEvidence` to list the quotes.
++- `src/lib/ai/atlas-context.server.ts`: reads `diseases`/`allEdges` on the server, which are empty in API mode.
++- `src/components/atlas/atlas-shell.tsx`: uses `diseases.slice(0,10)` only for the decorative canvas. Harmless.
++
++## Chat plan
++`POST /chat` is stateless JSON and does not stream. The live `AtlasChat` uses AI SDK streaming through `/api/chat` with Supabase threads. The simplest path:
++1. In `AtlasChatDemo.ask()`, push the user turn, call `askAtlas(diseaseId, turns.map(t => ({ role: t.role, content: t.text })))`, then push `answer`. Show a "Reviewing the chart…" placeholder while it waits.
++2. Render `[E…]` markers as chips. Split the answer on `/\[(E[0-9a-f]+(?:,\s*E[0-9a-f]+)*)\]/`. Use `citationIds` from the adapter, and on click call `getEvidence([id])` and open the existing `EvidenceDrawer`. Show a "not grounded" note when `grounded === false`.
++3. Leave `/api/chat` and the OpenAI attribution untouched for the live mode. If needed later, `/api/chat` could proxy to `POST /chat` and send the answer back as one text part.
++
++## Known gaps
++- There is no backend endpoint that lists diseases, so `diseases` starts empty. `exports/json/index.json` could seed it.
++- Similar-disease neighbours only have a gene when their `caused_by` edge is in the focus subgraph, and they have no description until they are opened.
++- `journey` (the default) has `cards: []`, so descriptions come from `attrs.description`. Use `VITE_ATLAS_USE_RECOMMEND=true` for card text. The first uncached call is slow.
++- `getClusterAssets`, `getFasterRoute` and `rankClustersByApproach` have no backend mapping.
++- Not tested against a running backend. Only type-checked (`tsc --noEmit` passes).
+diff --git a/src/lib/atlas-adapter.ts b/src/lib/atlas-adapter.ts
+new file mode 100644
+index 0000000..bf5091e
+--- /dev/null
++++ b/src/lib/atlas-adapter.ts
+@@ -0,0 +1,472 @@
++// Converts backend responses (src/lib/atlas-api.ts, docs/contract.md) into the UI's existing
++// record shapes (Node / Disease / Edge / Partner, inferred from src/data/*.json in src/lib/atlas.ts).
++// Pure functions only: no fetching, no caching.
++
++import type { Disease, Edge, Node, Partner } from "@/lib/atlas";
++import type {
++  ApiCard,
++  ApiContext,
++  ApiEdge,
++  ApiEvidence,
++  ApiJourneyResponse,
++  ApiNode,
++  ApiOrganization,
++  ApiSearchMatch,
++  ApiSimilar,
++  ApiSubgraphResponse,
++} from "@/lib/atlas-api";
++
++/** UI edge plus optional backend-only fields (extra keys are ignored by existing components). */
++export type UiEdge = Edge & {
++  source_url?: string | null;
++  quote?: string | null;
++  /** Backend edge ids that support a computed similarity edge (open with getEvidence). */
++  evidence_edges?: string[];
++  gene_score?: number;
++};
++
++// ---------------------------------------------------------------------------
++// Small helpers
++// ---------------------------------------------------------------------------
++
++/** Removes `[E1a2b3c4]` and `[Eae05983, Ebfd4d0a]` citation markers and tidies whitespace. */
++export function stripCitations(text: string): string {
++  return text
++    .replace(/\s*\[E[0-9a-f]+(?:\s*,\s*E[0-9a-f]+)*\]/gi, "")
++    .replace(/\s+([.,;:!?])/g, "$1")
++    .replace(/\s{2,}/g, " ")
++    .trim();
++}
++
++/** Extracts the cited edge ids from a text with `[E…]` markers, in order of first appearance. */
++export function citationIds(text: string): string[] {
++  const ids: string[] = [];
++  for (const m of text.matchAll(/\[(E[0-9a-f]+(?:\s*,\s*E[0-9a-f]+)*)\]/gi)) {
++    for (const id of (m[1] ?? "").split(/\s*,\s*/)) if (id && !ids.includes(id)) ids.push(id);
++  }
++  return ids;
++}
++
++export const slug = (s: string) =>
++  s
++    .toLowerCase()
++    .normalize("NFKD")
++    .replace(/[^a-z0-9]+/g, "-")
++    .replace(/^-+|-+$/g, "") || "group";
++
++const humanize = (s: string) => {
++  const t = s.replace(/_/g, " ");
++  return t.charAt(0).toUpperCase() + t.slice(1);
++};
++
++let regionNames: Intl.DisplayNames | null | undefined;
++/** ISO-3166 alpha-2 → country name ("GB" → "United Kingdom"); falls back to the code. */
++export function countryName(code: string | null | undefined): string {
++  if (!code) return "Region not listed";
++  if (regionNames === undefined) {
++    try {
++      regionNames = new Intl.DisplayNames(["en"], { type: "region" });
++    } catch {
++      regionNames = null;
++    }
++  }
++  try {
++    return regionNames?.of(code.toUpperCase()) ?? code;
++  } catch {
++    return code;
++  }
++}
++
++const RELATION_LABELS: Record<string, string> = {
++  caused_by: "Caused by gene",
++  has_phenotype: "Has symptom",
++  has_variant: "Has variant",
++  pathogenic_for: "Disease-causing variant",
++  in_pathway: "Part of pathway",
++  part_of: "Part of pathway",
++  has_mechanism: "Shared mechanism",
++  studied_with: "Studied with",
++  studies: "Works on",
++  runs: "Runs",
++  tests: "Tests",
++  pi_of: "Leads grant",
++  funds: "Funds",
++  mentions: "Mentioned in paper",
++  authored: "Authored",
++  has_site_in: "Trial site in",
++  based_in: "Based in",
++};
++export const relationLabel = (relation: string) => RELATION_LABELS[relation] ?? humanize(relation);
++
++// ---------------------------------------------------------------------------
++// Research activity (0–100)
++// ---------------------------------------------------------------------------
++
++/**
++ * 0–100 score from the number of trials, grants and papers in the disease's subgraph.
++ * Saturating curve: 0 → 0, 10 → ~49, 20 → ~74, 40 → ~93, ≥60 → ~98.
++ */
++export function researchActivity(
++  subgraph: Pick<ApiSubgraphResponse, "nodes"> | null | undefined,
++): number {
++  if (!subgraph) return 0;
++  const n = subgraph.nodes.filter(
++    (x) => x.type === "trial" || x.type === "grant" || x.type === "paper",
++  ).length;
++  return Math.round(100 * (1 - Math.exp(-n / 15)));
++}
++
++// ---------------------------------------------------------------------------
++// Disease / cluster nodes
++// ---------------------------------------------------------------------------
++
++export function clusterIdFor(
++  node: Pick<ApiNode, "attrs"> | null | undefined,
++  clusterId?: number | string | null,
++): string {
++  const group = node?.attrs.group;
++  if (typeof group === "string" && group) return slug(group);
++  if (clusterId !== undefined && clusterId !== null) return `cluster-${clusterId}`;
++  return "unmapped";
++}
++
++/** Builds a UI cluster node for a backend display group (attrs.group) or numeric cluster id. */
++export function toUiCluster(id: string, label?: string | null): Node {
++  const name = label ?? (id === "unmapped" ? "Not yet grouped" : humanize(id.replace(/-/g, " ")));
++  return {
++    id,
++    type: "cluster",
++    label: name,
++    plain_label: name,
++    synonyms: [],
++    xrefs: {},
++    cluster: null,
++    research_activity: 0,
++    attributes: { color_token: "teal" },
++  };
++}
++
++function whatsGoingOn(cards: ApiCard[] | undefined): string | null {
++  const card = cards?.find((c) => c.key === "whats_going_on" && c.status === "ok");
++  return card ? stripCitations(card.text) : null;
++}
++
++export interface ToUiDiseaseInput {
++  /** The disease node (from /node/{id} or the subgraph's anchor). */
++  node?: ApiNode | null;
++  /** /journey or /recommend response for this disease. */
++  journey?: ApiJourneyResponse | null;
++  /** /subgraph response anchored on this disease (used for research_activity). */
++  subgraph?: ApiSubgraphResponse | null;
++  /** Fallback when only an id/name is known (e.g. a search match or a similar[] entry). */
++  fallback?: { id: string; name: string; short?: string | null };
++  clusterId?: number | string | null;
++  patientGroup?: string;
++  /** Gene override (e.g. from a neighbour's caused_by edge in another disease's subgraph). */
++  gene?: string;
++}
++
++/**
++ * label ← short || name · plain_label ← name · synonyms · xrefs.OMIM ← attrs.omim ·
++ * cluster ← attrs.group (slug) or cluster id · attributes.gene ← profile.genes[0] ·
++ * attributes.description ← whats_going_on card (citations stripped), else attrs.description, else "" ·
++ * research_activity ← trials+grants+papers in the subgraph.
++ */
++export function toUiDisease(input: ToUiDiseaseInput): Disease {
++  const { journey, subgraph, fallback } = input;
++  const id = input.node?.id ?? journey?.disease.id ?? subgraph?.anchor ?? fallback?.id ?? "";
++  const node = input.node ?? subgraph?.nodes.find((n) => n.id === id) ?? null;
++  const name = node?.name ?? journey?.disease.name ?? fallback?.name ?? id;
++  const shortName =
++    (typeof node?.attrs.short === "string" && node.attrs.short) ||
++    journey?.disease.short ||
++    fallback?.short ||
++    null;
++  const omim = typeof node?.attrs.omim === "string" ? node.attrs.omim.replace(/^OMIM:/, "") : null;
++  const gene =
++    (input.gene || journey?.profile.genes[0]?.name) ??
++    subgraph?.nodes.find(
++      (n) =>
++        n.type === "gene" &&
++        subgraph.edges.some(
++          (e) => e.source === id && e.target === n.id && e.relation === "caused_by",
++        ),
++    )?.name ??
++    "";
++  const description =
++    whatsGoingOn(journey?.cards) ??
++    (typeof node?.attrs.description === "string" ? node.attrs.description : null) ??
++    "";
++  const patientGroup =
++    input.patientGroup ??
++    journey?.organizations
++      .filter((o) => o.for_disease === id && o.kind === "patient_group")
++      .map((o) => o.name)[0] ??
++    "";
++  const disease: Disease = {
++    id,
++    type: "disease",
++    label: shortName || name,
++    plain_label: name,
++    synonyms: node?.synonyms ?? [],
++    xrefs: { OMIM: omim ?? "" },
++    cluster: clusterIdFor(node, input.clusterId),
++    research_activity: researchActivity(subgraph),
++    attributes: { gene, description, patient_group: patientGroup },
++  };
++  return disease;
++}
++
++/** Minimal disease record for a search hit (enriched later by getDiseaseProfile / getGraph). */
++export function searchMatchToUiDisease(match: ApiSearchMatch, node?: ApiNode | null): Disease {
++  return toUiDisease({ node: node ?? null, fallback: { id: match.id, name: match.name } });
++}
++
++// ---------------------------------------------------------------------------
++// Evidence edges
++// ---------------------------------------------------------------------------
++
++/** observed → curated · extracted → extracted · inferred → inferred */
++export function toUiEvidenceType(evidence: ApiEvidence): "curated" | "extracted" | "inferred" {
++  return evidence === "observed" ? "curated" : evidence === "extracted" ? "extracted" : "inferred";
++}
++
++/**
++ * context → evidence_level (UI: hypothesis | preclinical | clinical_observation | clinical_trial):
++ * trial-derived relations → clinical_trial · human/review → clinical_observation ·
++ * animal_model/cell_model → preclinical · null → clinical_observation for observed database records,
++ * hypothesis otherwise.
++ */
++export function toUiEvidenceLevel(
++  edge: Pick<ApiEdge, "context" | "evidence" | "relation" | "source_name" | "source">,
++): string {
++  if (
++    /clinicaltrials/i.test(edge.source_name) ||
++    edge.relation === "tests" ||
++    edge.relation === "has_site_in" ||
++    edge.source.startsWith("NCT")
++  )
++    return "clinical_trial";
++  const ctx: ApiContext | null = edge.context;
++  if (ctx === "human" || ctx === "review") return "clinical_observation";
++  if (ctx === "animal_model" || ctx === "cell_model") return "preclinical";
++  return edge.evidence === "observed" ? "clinical_observation" : "hypothesis";
++}
++
++/**
++ * One backend edge → UI evidence record. quote → plain_explanation; polarity "contradicts" → negated;
++ * contradicted_by ← ids of `contradicts` edges between the same endpoints found in `pool`.
++ */
++export function toUiEvidence(
++  edge: ApiEdge,
++  pool: ApiEdge[] = [],
++  nodeName?: (id: string) => string | undefined,
++): UiEdge {
++  const label = relationLabel(edge.relation);
++  const fallbackText = `${nodeName?.(edge.source) ?? edge.source} — ${label.toLowerCase()} — ${nodeName?.(edge.target) ?? edge.target} (${edge.source_name} record).`;
++  const contradictedBy =
++    edge.polarity === "supports"
++      ? pool
++          .filter(
++            (o) =>
++              o.id !== edge.id &&
++              o.polarity === "contradicts" &&
++              o.relation === edge.relation &&
++              ((o.source === edge.source && o.target === edge.target) ||
++                (o.source === edge.target && o.target === edge.source)),
++          )
++          .map((o) => o.id)
++      : [];
++  return {
++    id: edge.id,
++    source: edge.source,
++    target: edge.target,
++    type: edge.relation,
++    plain_explanation: edge.quote ? `“${edge.quote}”` : fallbackText,
++    evidence_type: toUiEvidenceType(edge.evidence),
++    evidence_level: toUiEvidenceLevel(edge),
++    source_name: edge.source_name,
++    source_id: edge.source_url ?? edge.id,
++    retrieved_at: edge.retrieved_at ?? "",
++    confidence: edge.confidence,
++    negated: edge.polarity === "contradicts",
++    contradicted_by: contradictedBy,
++    score: edge.confidence,
++    mechanism_score: 0,
++    pathway_score: 0,
++    phenotype_score: 0,
++    effect_compatible: edge.polarity !== "contradicts",
++    witnesses: [edge.source, edge.target],
++    relationship_label: label,
++    source_url: edge.source_url,
++    quote: edge.quote,
++  };
++}
++
++// ---------------------------------------------------------------------------
++// Similarity edges (journey.similar[] / lookalikes[])
++// ---------------------------------------------------------------------------
++
++const KIND_LABEL: Record<string, string> = {
++  mechanism: "mechanism",
++  pathway: "pathway",
++  gene: "gene",
++  phenotype: "symptom",
++};
++
++/**
++ * journey.similar[] (+ lookalikes[]) → UI `similar_to` edges anchored on journey.disease.id.
++ * score/components/witnesses carried over; lookalike → negated (UI "Caution"), effect_compatible false.
++ * evidence_type is the strongest evidence among the witness edges found in `subgraph` (observed →
++ * curated), else "inferred" (similarity is computed by the atlas).
++ */
++export function toUiSimilarEdges(
++  journey: ApiJourneyResponse,
++  subgraph?: ApiSubgraphResponse | null,
++): UiEdge[] {
++  const anchor = journey.disease.id;
++  const byId = new Map((subgraph?.edges ?? []).map((e) => [e.id, e]));
++  const seen = new Set<string>();
++  const entries = [
++    ...journey.similar,
++    ...journey.lookalikes.map((s) => ({ ...s, lookalike: true })),
++  ];
++  const out: UiEdge[] = [];
++  for (const s of entries) {
++    if (seen.has(s.id) || s.id === anchor) continue;
++    seen.add(s.id);
++    out.push(similarToUiEdge(anchor, journey.disease.short ?? journey.disease.name, s, byId));
++  }
++  return out;
++}
++
++function similarToUiEdge(
++  anchor: string,
++  anchorName: string,
++  s: ApiSimilar,
++  byId: Map<string, ApiEdge>,
++): UiEdge {
++  const evidenceIds = [...new Set(s.witnesses.flatMap((w) => w.edges))];
++  const evidence = evidenceIds.map((id) => byId.get(id)).filter((e): e is ApiEdge => Boolean(e));
++  const evidenceType: UiEdge["evidence_type"] = s.lookalike
++    ? "inferred"
++    : evidence.some((e) => e.evidence === "observed")
++      ? "curated"
++      : evidence.some((e) => e.evidence === "extracted")
++        ? "extracted"
++        : "inferred";
++  const levels = evidence.map(toUiEvidenceLevel);
++  const evidenceLevel = s.lookalike
++    ? "hypothesis"
++    : levels.includes("clinical_trial")
++      ? "clinical_trial"
++      : levels.includes("clinical_observation")
++        ? "clinical_observation"
++        : levels.includes("preclinical")
++          ? "preclinical"
++          : "hypothesis";
++  const top = s.witnesses[0];
++  const relationship = s.lookalike
++    ? "Symptom overlap only"
++    : top
++      ? `Shared ${KIND_LABEL[top.kind] ?? top.kind}: ${top.name}`
++      : "Computed similarity";
++  const names = s.witnesses.slice(0, 3).map((w) => `${w.name} (${KIND_LABEL[w.kind] ?? w.kind})`);
++  const explanation = s.lookalike
++    ? `${anchorName} and ${s.name} share some symptoms, but the underlying mechanism differs; treatments may not transfer.`
++    : names.length
++      ? `${anchorName} and ${s.name} are both linked to ${names.join(", ")}${s.witnesses.length > 3 ? ` and ${s.witnesses.length - 3} more` : ""}.`
++      : `${anchorName} and ${s.name} have a computed similarity score of ${s.score.toFixed(2)}.`;
++  const firstSourced = evidence.find((e) => e.source_url);
++  const retrieved =
++    evidence
++      .map((e) => e.retrieved_at)
++      .filter((d): d is string => Boolean(d))
++      .sort()
++      .at(-1) ?? "";
++  return {
++    id: `sim:${anchor}:${s.id}`,
++    source: anchor,
++    target: s.id,
++    type: "similar_to",
++    plain_explanation: explanation,
++    evidence_type: evidenceType,
++    evidence_level: evidenceLevel,
++    source_name: `Atlas similarity (computed from ${evidenceIds.length} sourced edge${evidenceIds.length === 1 ? "" : "s"})`,
++    source_id: evidenceIds[0] ?? "—",
++    retrieved_at: retrieved,
++    confidence: s.score,
++    negated: s.lookalike,
++    contradicted_by: [],
++    score: s.score,
++    mechanism_score: s.components.mechanism,
++    pathway_score: s.components.pathway,
++    phenotype_score: s.components.phenotype,
++    gene_score: s.components.gene,
++    effect_compatible: !s.lookalike,
++    witnesses: s.witnesses.map((w) => w.id),
++    relationship_label: relationship,
++    source_url: firstSourced?.source_url ?? null,
++    evidence_edges: evidenceIds,
++  };
++}
++
++// ---------------------------------------------------------------------------
++// Partners (journey.organizations)
++// ---------------------------------------------------------------------------
++
++const ORG_KIND_LABEL: Record<string, string> = {
++  patient_group: "Patient group",
++  sponsor: "Trial sponsor",
++  funder: "Funder",
++  company: "Company",
++  industry: "Company",
++  academic: "Academic group",
++  registry_host: "Registry host",
++  nih: "NIH institute",
++  other: "Organization",
++};
++
++/**
++ * journey.organizations[] → Partner. region ← country (name) · email ← contact_email ("" when missing) ·
++ * sourceUrl ← website, else the first cited edge's source_url · contactSourceUrl ← cited edge source_url.
++ * `edgesById` should hold the org's cited edges (from the subgraph or /edge lookups).
++ */
++export function toPartner(
++  org: ApiOrganization,
++  opts: { diseaseName?: string; edgesById?: Map<string, ApiEdge> } = {},
++): Partner {
++  const cited = org.edges
++    .map((id) => opts.edgesById?.get(id))
++    .filter((e): e is ApiEdge => Boolean(e));
++  const sourced = cited.find((e) => e.source_url);
++  const withQuote =
++    cited.find((e) => e.quote && e.relation === "studies") ?? cited.find((e) => e.quote);
++  const kind = ORG_KIND_LABEL[org.kind ?? ""] ?? (org.kind ? humanize(org.kind) : "Organization");
++  const disease = opts.diseaseName ?? "this condition";
++  const sourceUrl = org.website ?? sourced?.source_url ?? "";
++  return {
++    id: org.id,
++    diseaseId: org.for_disease,
++    name: org.name,
++    kind,
++    region: countryName(org.country),
++    contactName: org.contact_email ? "General contact" : "No public contact email",
++    email: org.contact_email ?? "",
++    approach: withQuote?.quote
++      ? stripCitations(withQuote.quote)
++      : `${kind} linked to ${disease} in the atlas.`,
++    stage:
++      org.kind === "patient_group"
++        ? "Community / patient organization"
++        : "Research or development stage not recorded",
++    sourceLabel: org.website
++      ? "Organization website"
++      : sourced
++        ? `${sourced.source_name} source`
++        : "Atlas record",
++    sourceUrl,
++    contactSourceUrl: sourced?.source_url ?? sourceUrl,
++    question: `Could you share what your organization is currently doing for people with ${disease}, and how families or researchers can connect with that work?`,
++  };
++}
+diff --git a/src/lib/atlas-api.ts b/src/lib/atlas-api.ts
+new file mode 100644
+index 0000000..1fd4e0e
+--- /dev/null
++++ b/src/lib/atlas-api.ts
+@@ -0,0 +1,524 @@
++// Typed client for the Rare Disease Atlas backend (FastAPI, `python -m atlas.server`).
++// Shapes mirror rare_disease_atlas/docs/contract.md (§1 graph records, §3 responses).
++// Route components never import this file directly; they go through src/lib/atlas.ts.
++
++const env = import.meta.env as Record<string, string | undefined>;
++
++export const ATLAS_API_URL: string = (env["VITE_ATLAS_API_URL"] || "http://localhost:8000").replace(
++  /\/+$/,
++  "",
++);
++
++/** Default timeout for deterministic endpoints (search, subgraph, journey, node, edge, health). */
++export const DEFAULT_TIMEOUT_MS = 20_000;
++/** LLM-backed endpoints (recommend, email, chat, documents) can take much longer on a cold cache. */
++export const LLM_TIMEOUT_MS = 120_000;
++
++// ---------------------------------------------------------------------------
++// §1 Graph records
++// ---------------------------------------------------------------------------
++
++export type ApiNodeType =
++  | "disease"
++  | "gene"
++  | "variant"
++  | "phenotype"
++  | "pathway"
++  | "mechanism"
++  | "paper"
++  | "trial"
++  | "intervention"
++  | "grant"
++  | "person"
++  | "organization"
++  | "asset"
++  | "country";
++
++export type ApiDiseaseRole = "hero" | "lysosomal" | "bridge" | "lookalike";
++
++/** `attrs` differs by node type; every field is optional and may be null. */
++export interface ApiNodeAttrs {
++  // disease
++  short?: string | null;
++  omim?: string | null;
++  role?: ApiDiseaseRole | string | null;
++  group?: string | null;
++  description?: string | null;
++  mondo_label?: string | null;
++  // gene
++  hgnc?: string | null;
++  uniprot?: string | null;
++  // variant
++  significance?: string | null;
++  consequence?: string | null;
++  // mechanism
++  label?: string | null;
++  // paper
++  journal?: string | null;
++  pubdate?: string | null;
++  authors?: string | string[] | null;
++  // trial
++  status?: string | null;
++  phase?: string | null;
++  countries?: string[] | string | null;
++  // intervention / organization / asset
++  kind?: string | null;
++  // grant
++  fiscal_year?: number | string | null;
++  org?: string | null;
++  // person
++  first?: string | null;
++  last?: string | null;
++  // organization / asset
++  website?: string | null;
++  contact_email?: string | null;
++  country?: string | null;
++  // country
++  name?: string | null;
++  [key: string]: unknown;
++}
++
++export interface ApiNode {
++  id: string;
++  type: ApiNodeType | string;
++  name: string;
++  synonyms: string[];
++  attrs: ApiNodeAttrs;
++}
++
++export type ApiRelation =
++  | "caused_by"
++  | "has_phenotype"
++  | "has_variant"
++  | "pathogenic_for"
++  | "in_pathway"
++  | "part_of"
++  | "has_mechanism"
++  | "studied_with"
++  | "studies"
++  | "runs"
++  | "tests"
++  | "pi_of"
++  | "funds"
++  | "mentions"
++  | "authored"
++  | "has_site_in"
++  | "based_in";
++
++export type ApiEvidence = "observed" | "extracted" | "inferred";
++export type ApiPolarity = "supports" | "contradicts";
++export type ApiEffect = "LoF" | "GoF" | "dominant_negative";
++export type ApiContext = "human" | "animal_model" | "cell_model" | "review";
++
++export interface ApiEdge {
++  id: string;
++  source: string;
++  target: string;
++  relation: ApiRelation | string;
++  evidence: ApiEvidence;
++  confidence: number;
++  polarity: ApiPolarity;
++  effect: ApiEffect | null;
++  source_name: string;
++  source_url: string | null;
++  quote: string | null;
++  frequency: string | null;
++  context: ApiContext | null;
++  retrieved_at: string | null;
++  submitted_by: string | null;
++}
++
++// ---------------------------------------------------------------------------
++// §3 Response shapes
++// ---------------------------------------------------------------------------
++
++export interface ApiSearchMatch {
++  id: string;
++  type: ApiNodeType | string;
++  name: string;
++  score: number;
++  matched_on: string;
++}
++
++export interface ApiSearchResponse {
++  query: string;
++  status: "ok" | "ambiguous" | "not_found";
++  matches: ApiSearchMatch[];
++}
++
++export type ApiSubgraphFocus = "all" | "similar" | "assets" | "people";
++
++export interface ApiSubgraphResponse {
++  anchor: string;
++  focus: ApiSubgraphFocus;
++  k: number;
++  nodes: ApiNode[];
++  edges: ApiEdge[];
++  truncated: boolean;
++}
++
++export interface ApiProfileItem {
++  id: string;
++  name: string;
++  edges: string[];
++  effect?: ApiEffect | null;
++  evidence?: ApiEvidence;
++  [key: string]: unknown;
++}
++
++export interface ApiProfile {
++  genes: ApiProfileItem[];
++  mechanisms: ApiProfileItem[];
++  pathways: ApiProfileItem[];
++  top_phenotypes: ApiProfileItem[];
++  variants: ApiProfileItem[];
++}
++
++export interface ApiWitness {
++  id: string;
++  name: string;
++  kind: "gene" | "pathway" | "phenotype" | "mechanism" | string;
++  edges: string[];
++}
++
++export interface ApiSimilar {
++  id: string;
++  name: string;
++  score: number;
++  lookalike: boolean;
++  components: {
++    gene: number;
++    pathway: number;
++    phenotype: number;
++    mechanism: number;
++    [key: string]: number;
++  };
++  witnesses: ApiWitness[];
++}
++
++export interface ApiOrganization {
++  id: string;
++  name: string;
++  kind: string | null;
++  country: string | null;
++  website: string | null;
++  contact_email: string | null;
++  for_disease: string;
++  edges: string[];
++}
++
++export interface ApiTrial {
++  id: string;
++  title: string;
++  status: string | null;
++  phase: string | null;
++  for_disease: string;
++  countries: string[];
++  near_user: boolean;
++  interventions: string[];
++  edges: string[];
++}
++
++export interface ApiAsset {
++  id: string;
++  name: string;
++  kind: string | null;
++  website?: string | null;
++  for_disease: string;
++  edges: string[];
++}
++
++export interface ApiResearcher {
++  id: string;
++  name: string;
++  grants: string[];
++  diseases: string[];
++  edges: string[];
++}
++
++export interface ApiNextStep {
++  kind: "contact" | "join" | "reuse" | "build";
++  step: string;
++  text: string;
++  from_disease: string;
++  target_id: string | null;
++  edges: string[];
++}
++
++export interface ApiCard {
++  key: "whats_going_on" | "similar" | "what_exists" | "next_step" | string;
++  title: string;
++  text: string;
++  citations: string[];
++  status: "ok" | "no_supported_evidence";
++}
++
++export interface ApiSearched {
++  source: string;
++  query: string;
++  n_results: number;
++  n_kept: number;
++}
++
++export interface ApiJourneyResponse {
++  status: "ok" | "no_supported_link";
++  disease: { id: string; name: string; short: string | null };
++  user_country: string | null;
++  profile: ApiProfile;
++  similar: ApiSimilar[];
++  lookalikes: ApiSimilar[];
++  organizations: ApiOrganization[];
++  trials: ApiTrial[];
++  assets: ApiAsset[];
++  researchers: ApiResearcher[];
++  next_steps: ApiNextStep[];
++  cards: ApiCard[];
++  searched: ApiSearched[];
++  missing: string[];
++  generated_by: { backend: string; model: string | null; error?: string };
++}
++
++export interface ApiSender {
++  name: string;
++  role: string;
++  context: string;
++}
++
++export interface ApiEmailRequest {
++  org_id?: string | null;
++  disease_id: string;
++  sender: ApiSender;
++}
++
++export interface ApiEmailResponse {
++  org_id: string | null;
++  disease_id: string;
++  to: string | null;
++  recipient_reason: string;
++  subject: string;
++  body: string;
++  citations: string[];
++  warnings: string[];
++  requires_human_review: boolean;
++}
++
++export interface ApiChatMessage {
++  role: "user" | "assistant";
++  content: string;
++}
++
++export interface ApiChatRequest {
++  disease_id: string;
++  messages: ApiChatMessage[];
++}
++
++export interface ApiChatResponse {
++  answer: string;
++  citations: string[];
++  grounded: boolean;
++  out_of_scope: boolean;
++}
++
++export interface ApiDocumentRequest {
++  text?: string | null;
++  url?: string | null;
++  submitted_by?: string;
++  disease_ids?: string[] | null;
++}
++
++export interface ApiDocumentResponse {
++  source_url: string | null;
++  submitted_by: string;
++  added_edges: string[];
++  new_nodes: string[];
++  contradictions: string[];
++  dropped: {
++    quote_check: number;
++    relevance: number;
++    unresolved_entity: number;
++    invalid_type: number;
++    [key: string]: number;
++  };
++  papers_checked: number;
++}
++
++export interface ApiRefreshRequest {
++  since?: string | null;
++  disease_ids?: string[] | null;
++  per_disease?: number;
++}
++
++export interface ApiHealthResponse {
++  status: "ok" | string;
++  nodes: number;
++  edges: number;
++}
++
++// ---------------------------------------------------------------------------
++// Transport
++// ---------------------------------------------------------------------------
++
++export class AtlasApiError extends Error {
++  readonly status: number;
++  readonly path: string;
++  readonly kind: "http" | "timeout" | "network" | "parse";
++  constructor(
++    message: string,
++    opts: { status: number; path: string; kind: AtlasApiError["kind"] },
++  ) {
++    super(message);
++    this.name = "AtlasApiError";
++    this.status = opts.status;
++    this.path = opts.path;
++    this.kind = opts.kind;
++  }
++  get isNotFound() {
++    return this.status === 404;
++  }
++}
++
++type RequestOptions = {
++  method?: "GET" | "POST";
++  body?: unknown;
++  timeoutMs?: number;
++  signal?: AbortSignal;
++};
++
++async function request<T>(path: string, opts: RequestOptions = {}): Promise<T> {
++  const { method = "GET", body, timeoutMs = DEFAULT_TIMEOUT_MS, signal } = opts;
++  const controller = new AbortController();
++  const timer = setTimeout(
++    () => controller.abort(new DOMException("timeout", "TimeoutError")),
++    timeoutMs,
++  );
++  const onAbort = () => controller.abort(signal?.reason);
++  signal?.addEventListener("abort", onAbort, { once: true });
++  let res: Response;
++  try {
++    const init: RequestInit = {
++      method,
++      headers: { Accept: "application/json" },
++      signal: controller.signal,
++    };
++    if (body !== undefined) {
++      init.headers = { Accept: "application/json", "Content-Type": "application/json" };
++      init.body = JSON.stringify(body);
++    }
++    res = await fetch(`${ATLAS_API_URL}${path}`, init);
++  } catch (err) {
++    const timedOut = controller.signal.aborted && !signal?.aborted;
++    throw new AtlasApiError(
++      timedOut
++        ? `Atlas API timed out after ${timeoutMs} ms (${path})`
++        : `Atlas API unreachable at ${ATLAS_API_URL} (${path}): ${err instanceof Error ? err.message : String(err)}`,
++      { status: 0, path, kind: timedOut ? "timeout" : "network" },
++    );
++  } finally {
++    clearTimeout(timer);
++    signal?.removeEventListener("abort", onAbort);
++  }
++  const text = await res.text();
++  let data: unknown = null;
++  if (text) {
++    try {
++      data = JSON.parse(text);
++    } catch {
++      if (res.ok)
++        throw new AtlasApiError(`Atlas API returned non-JSON (${path})`, {
++          status: res.status,
++          path,
++          kind: "parse",
++        });
++    }
++  }
++  if (!res.ok) {
++    const detail =
++      data && typeof data === "object"
++        ? ((data as Record<string, unknown>)["error"] ??
++          (data as Record<string, unknown>)["detail"])
++        : text;
++    throw new AtlasApiError(
++      `Atlas API ${res.status} on ${path}: ${typeof detail === "string" ? detail : JSON.stringify(detail ?? res.statusText)}`,
++      { status: res.status, path, kind: "http" },
++    );
++  }
++  return data as T;
++}
++
++const enc = encodeURIComponent;
++const qs = (params: Record<string, string | number | null | undefined>) => {
++  const p = new URLSearchParams();
++  for (const [k, v] of Object.entries(params))
++    if (v !== undefined && v !== null && v !== "") p.set(k, String(v));
++  const s = p.toString();
++  return s ? `?${s}` : "";
++};
++
++// ---------------------------------------------------------------------------
++// Endpoints
++// ---------------------------------------------------------------------------
++
++export const atlasApi = {
++  /** GET /search?q= */
++  search: (q: string, signal?: AbortSignal) =>
++    request<ApiSearchResponse>(`/search${qs({ q })}`, signal ? { signal } : {}),
++
++  /** GET /subgraph/{id}?focus=&k= */
++  subgraph: (
++    diseaseId: string,
++    opts: { focus?: ApiSubgraphFocus; k?: number; signal?: AbortSignal } = {},
++  ) =>
++    request<ApiSubgraphResponse>(
++      `/subgraph/${enc(diseaseId)}${qs({ focus: opts.focus, k: opts.k })}`,
++      opts.signal ? { signal: opts.signal } : {},
++    ),
++
++  /** GET /journey/{id}?country=  (deterministic, cards: []) */
++  journey: (diseaseId: string, country?: string | null) =>
++    request<ApiJourneyResponse>(`/journey/${enc(diseaseId)}${qs({ country })}`),
++
++  /** GET /recommend/{id}?country=  (journey + LLM cards) */
++  recommend: (diseaseId: string, country?: string | null) =>
++    request<ApiJourneyResponse>(`/recommend/${enc(diseaseId)}${qs({ country })}`, {
++      timeoutMs: LLM_TIMEOUT_MS,
++    }),
++
++  /** POST /email — org_id optional (backend picks the recipient). Never sends. */
++  email: (req: ApiEmailRequest) =>
++    request<ApiEmailResponse>("/email", {
++      method: "POST",
++      body: { org_id: req.org_id ?? null, disease_id: req.disease_id, sender: req.sender },
++      timeoutMs: LLM_TIMEOUT_MS,
++    }),
++
++  /** POST /chat — stateless; send the full history each time. */
++  chat: (req: ApiChatRequest) =>
++    request<ApiChatResponse>("/chat", { method: "POST", body: req, timeoutMs: LLM_TIMEOUT_MS }),
++
++  /** POST /documents */
++  documents: (req: ApiDocumentRequest) =>
++    request<ApiDocumentResponse>("/documents", {
++      method: "POST",
++      body: req,
++      timeoutMs: LLM_TIMEOUT_MS,
++    }),
++
++  /** POST /refresh */
++  refresh: (req: ApiRefreshRequest = {}) =>
++    request<ApiDocumentResponse>("/refresh", {
++      method: "POST",
++      body: req,
++      timeoutMs: LLM_TIMEOUT_MS * 3,
++    }),
++
++  /** GET /edge/{edge_id} */
++  edge: (edgeId: string) => request<ApiEdge>(`/edge/${enc(edgeId)}`),
++
++  /** GET /node/{node_id} */
++  node: (nodeId: string) => request<ApiNode>(`/node/${enc(nodeId)}`),
++
++  /** GET /health */
++  health: () => request<ApiHealthResponse>("/health", { timeoutMs: 5_000 }),
++};
++
++export type AtlasApi = typeof atlasApi;
+diff --git a/src/lib/atlas.ts b/src/lib/atlas.ts
+index 64f23fd..f86059d 100644
+--- a/src/lib/atlas.ts
++++ b/src/lib/atlas.ts
+@@ -1,37 +1,248 @@
+ import rawNodes from "@/data/nodes.json";
+ import rawEdges from "@/data/edges.json";
+ import rawPartners from "@/data/partners.json";
++import { atlasApi, AtlasApiError, type ApiChatMessage, type ApiChatResponse, type ApiEdge, type ApiEmailResponse, type ApiHealthResponse, type ApiJourneyResponse, type ApiSender, type ApiSubgraphResponse, type ApiDocumentRequest, type ApiDocumentResponse } from "@/lib/atlas-api";
++import { searchMatchToUiDisease, toPartner, toUiCluster, toUiDisease, toUiEvidence, toUiSimilarEdges } from "@/lib/atlas-adapter";
+ 
+ export type Persona = "maria" | "devon" | "priya" | "osei";
+ export type Node = (typeof rawNodes)[number];
+ export type Edge = (typeof rawEdges)[number];
+ export type Disease = Node & { type: "disease" };
+ export type Partner = (typeof rawPartners)[number];
++
++// ---------------------------------------------------------------------------
++// Data-source switch. Set VITE_ATLAS_API_URL (e.g. http://localhost:8000) or VITE_USE_ATLAS_API=true
++// to read from the FastAPI backend; otherwise the illustrative JSON mocks are used (unchanged).
++// ---------------------------------------------------------------------------
++const env = import.meta.env as Record<string, string | undefined>;
++export const USE_API = Boolean(env["VITE_ATLAS_API_URL"]) || env["VITE_USE_ATLAS_API"] === "true";
++/** Use /recommend (LLM cards, cached) instead of /journey (deterministic) for disease profiles. */
++const USE_RECOMMEND = env["VITE_ATLAS_USE_RECOMMEND"] === "true";
++
+ const nodes = rawNodes as Node[];
+ const edges = rawEdges as Edge[];
+ const pause = () => new Promise<void>((resolve) => setTimeout(resolve, 180));
+-export const diseases = nodes.filter((n): n is Disease => n.type === "disease");
+-export const clusters = nodes.filter((n) => n.type === "cluster");
+-export const allEdges = edges;
+-export const getNode = (id: string) => nodes.find((n) => n.id === id);
++const mockDiseases = nodes.filter((n): n is Disease => n.type === "disease");
++
++// In API mode these arrays start empty and are filled in place as API calls resolve, so synchronous
++// readers (getNode, edgesFor, clusterFor, and routes that read `diseases`) see the hydrated records
++// on their next render.
++export const diseases: Disease[] = USE_API ? [] : mockDiseases;
++export const clusters: Node[] = USE_API ? [] : nodes.filter((n) => n.type === "cluster");
++export const allEdges: Edge[] = USE_API ? [] : edges;
++export const getNode = (id: string): Node | undefined => USE_API ? diseases.find((n) => n.id === id) ?? clusters.find((n) => n.id === id) : nodes.find((n) => n.id === id);
+ export const clusterFor = (id: string) => clusters.find((c) => c.id === id);
+-export const edgesFor = (id: string) => edges.filter((e) => e.source === id || e.target === id);
++export const edgesFor = (id: string) => allEdges.filter((e) => e.source === id || e.target === id);
++
+ export async function searchEntities(query: string) {
++  if (USE_API) return api.searchEntities(query);
+   await pause();
+   const q = query.trim().toLowerCase();
+   if (!q) return [];
+   const terms = q.split(/\s+/).filter((t) => t.length > 2);
+   return diseases.filter((n) => [n.label, n.plain_label, n.attributes.gene, ...n.synonyms].some((s) => typeof s === "string" && s.toLowerCase().includes(q)) || (terms.length > 1 && terms.every((t) => [n.label, ...n.synonyms].some((s) => s.toLowerCase().includes(t)))) || (q === "enzyme replacement" && n.cluster === "lysosomal") || (q === "gene therapy" && n.cluster === "waste"));
+ }
+-export async function getDiseaseProfile(id: string) { await pause(); return diseases.find((n) => n.id === id) ?? null; }
+-export async function getPatientGroups(id: string) { await pause(); return diseases.find((n) => n.id === id)?.attributes.patient_group ?? ""; }
+-export async function getGraph(focusId: string, _persona: Persona) { await pause(); return { nodes: diseases.filter((n) => n.id !== "disease-z" || focusId === "disease-z"), edges: focusId === "disease-z" ? [] : edges.filter((e) => e.id !== "e-rett-counter") }; }
+-export async function getSimilarDiseases(id: string, _persona: Persona) { await pause(); return edgesFor(id).filter((e) => !e.negated).map((e) => diseases.find((n) => n.id === (e.source === id ? e.target : e.source))).filter((n): n is Disease => Boolean(n)); }
+-export async function getConnectionPath(fromId: string, toId: string) { await pause(); return edges.filter((e) => [e.source, e.target].includes(fromId) && [e.source, e.target].includes(toId)); }
+-export async function getClusterAssets(_id: string) { await pause(); return []; }
+-export async function getNextSteps(id: string, _persona: Persona) { await pause(); return rawPartners.filter((partner) => partner.diseaseId === id); }
+-export async function getFasterRoute(_id: string) { await pause(); return null; }
+-export async function rankClustersByApproach(_approachId: string) { await pause(); return clusters; }
+-export async function getPeople(id: string) { await pause(); return rawPartners.filter((partner) => partner.diseaseId === id); }
+-export async function getEvidence(edgeIds: string[]) { await pause(); return edges.filter((e) => edgeIds.includes(e.id)); }
+-export async function getSearchCoverage(query: string) { await pause(); return { query, sources: ["PubMed", "ClinicalTrials.gov", "HPO", "Orphanet"].map((name) => ({ name, result: "Not connected in this demo" })) }; }
++export async function getDiseaseProfile(id: string) { if (USE_API) return api.getDiseaseProfile(id); await pause(); return diseases.find((n) => n.id === id) ?? null; }
++export async function getPatientGroups(id: string) { if (USE_API) return api.getPatientGroups(id); await pause(); return diseases.find((n) => n.id === id)?.attributes.patient_group ?? ""; }
++export async function getGraph(focusId: string, _persona: Persona) { if (USE_API) return api.getGraph(focusId); await pause(); return { nodes: diseases.filter((n) => n.id !== "disease-z" || focusId === "disease-z"), edges: focusId === "disease-z" ? [] : edges.filter((e) => e.id !== "e-rett-counter") }; }
++export async function getSimilarDiseases(id: string, _persona: Persona) { if (USE_API) await api.getGraph(id); else await pause(); return edgesFor(id).filter((e) => !e.negated).map((e) => diseases.find((n) => n.id === (e.source === id ? e.target : e.source))).filter((n): n is Disease => Boolean(n)); }
++export async function getConnectionPath(fromId: string, toId: string) { if (USE_API) await api.getGraph(fromId); else await pause(); return allEdges.filter((e) => [e.source, e.target].includes(fromId) && [e.source, e.target].includes(toId)); }
++export async function getClusterAssets(_id: string) { if (!USE_API) await pause(); return []; }
++export async function getNextSteps(id: string, _persona: Persona) { if (USE_API) return api.getPartners(id); await pause(); return rawPartners.filter((partner) => partner.diseaseId === id); }
++export async function getFasterRoute(_id: string) { if (!USE_API) await pause(); return null; }
++export async function rankClustersByApproach(_approachId: string) { if (!USE_API) await pause(); return clusters; }
++export async function getPeople(id: string) { if (USE_API) return api.getPartners(id); await pause(); return rawPartners.filter((partner) => partner.diseaseId === id); }
++export async function getEvidence(edgeIds: string[]) { if (USE_API) return api.getEvidence(edgeIds); await pause(); return edges.filter((e) => edgeIds.includes(e.id)); }
++export async function getSearchCoverage(query: string) { if (USE_API) return api.getSearchCoverage(query); await pause(); return { query, sources: ["PubMed", "ClinicalTrials.gov", "HPO", "Orphanet"].map((name) => ({ name, result: "Not connected in this demo" })) }; }
++
++// --- Backend-only capabilities (new; mocks return explicit "not connected" values) -----------------
++
++/** Stateless grounded chat (POST /chat). Answers carry `[E…]` citations; resolve them with getEvidence. */
++export async function askAtlas(diseaseId: string, messages: ApiChatMessage[]): Promise<ApiChatResponse> {
++  if (USE_API) return atlasApi.chat({ disease_id: diseaseId, messages });
++  await pause();
++  return { answer: "The live atlas API is not connected in this demo (set VITE_ATLAS_API_URL).", citations: [], grounded: false, out_of_scope: true };
++}
++/** Outreach draft (POST /email). Never sent; `orgId` omitted → the backend picks the recipient. */
++export async function draftOutreachEmail(diseaseId: string, sender: ApiSender, orgId?: string | null): Promise<ApiEmailResponse | null> {
++  if (!USE_API) { await pause(); return null; }
++  return atlasApi.email({ disease_id: diseaseId, sender, org_id: orgId ?? null });
++}
++/** Full journey with LLM cards (GET /recommend/{id}). */
++export async function getRecommendation(diseaseId: string, country?: string | null): Promise<ApiJourneyResponse | null> {
++  if (!USE_API) { await pause(); return null; }
++  return atlasApi.recommend(diseaseId, country);
++}
++/** Contribute a document for extraction (POST /documents). */
++export async function addResearchDocument(req: ApiDocumentRequest): Promise<ApiDocumentResponse | null> {
++  if (!USE_API) { await pause(); return null; }
++  return atlasApi.documents(req);
++}
++export async function getAtlasHealth(): Promise<ApiHealthResponse | null> {
++  if (!USE_API) return null;
++  try { return await atlasApi.health(); } catch { return null; }
++}
++
++// ---------------------------------------------------------------------------
++// API implementations (only used when USE_API)
++// ---------------------------------------------------------------------------
++
++function upsert<T extends { id: string }>(list: T[], item: T, merge?: (prev: T, next: T) => T) {
++  const i = list.findIndex((x) => x.id === item.id);
++  if (i < 0) list.push(item);
++  else { const prev = list[i]; list[i] = prev && merge ? merge(prev, item) : item; }
++}
++
++/** Keeps the richer value for each field, so a sparse search hit never erases a full profile. */
++function mergeDisease(prev: Disease, next: Disease): Disease {
++  return {
++    id: next.id,
++    type: "disease",
++    label: next.label || prev.label,
++    plain_label: next.plain_label || prev.plain_label,
++    synonyms: next.synonyms.length >= prev.synonyms.length ? next.synonyms : prev.synonyms,
++    xrefs: { OMIM: next.xrefs.OMIM || prev.xrefs.OMIM || "" },
++    cluster: (next.cluster && next.cluster !== "unmapped" ? next.cluster : prev.cluster) ?? "unmapped",
++    research_activity: next.research_activity || prev.research_activity,
++    attributes: {
++      gene: next.attributes.gene || prev.attributes.gene || "",
++      description: next.attributes.description || prev.attributes.description || "",
++      patient_group: next.attributes.patient_group || prev.attributes.patient_group || "",
++    },
++  };
++}
++
++function remember(disease: Disease, groupLabel?: string | null) {
++  upsert(diseases, disease, mergeDisease);
++  const stored = diseases.find((d) => d.id === disease.id);
++  const clusterId = stored?.cluster;
++  if (clusterId && !clusters.some((c) => c.id === clusterId)) clusters.push(toUiCluster(clusterId, groupLabel));
++  return stored ?? disease;
++}
++
++const journeys = new Map<string, Promise<ApiJourneyResponse>>();
++const subgraphs = new Map<string, Promise<ApiSubgraphResponse | null>>();
++const graphs = new Map<string, Promise<{ nodes: Disease[]; edges: Edge[] }>>();
++
++function cached<T>(map: Map<string, Promise<T>>, key: string, load: () => Promise<T>): Promise<T> {
++  let p = map.get(key);
++  if (!p) {
++    p = load();
++    map.set(key, p);
++    p.catch(() => map.delete(key));
++  }
++  return p;
++}
++
++const loadJourney = (id: string) => cached(journeys, id, () => USE_RECOMMEND ? atlasApi.recommend(id) : atlasApi.journey(id));
++// The subgraph enriches (research activity, evidence types, partner sources) but is not required.
++const loadSubgraph = (id: string) => cached(subgraphs, id, () => atlasApi.subgraph(id, { focus: "all" }).catch((err: unknown) => { warn("subgraph", err); return null; }));
++
++async function loadDisease(id: string) {
++  const [journey, subgraph] = await Promise.all([loadJourney(id), loadSubgraph(id)]);
++  const node = subgraph?.nodes.find((n) => n.id === id) ?? null;
++  const disease = remember(toUiDisease({ node, journey, subgraph }), node?.attrs.group ?? null);
++  return { disease, journey, subgraph };
++}
++
++function warn(where: string, err: unknown) {
++  console.warn(`[atlas api] ${where}:`, err instanceof Error ? err.message : err);
++}
++
++function geneFor(subgraph: ApiSubgraphResponse | null, diseaseId: string) {
++  if (!subgraph) return "";
++  const geneEdge = subgraph.edges.find((e) => e.source === diseaseId && e.relation === "caused_by");
++  return geneEdge ? subgraph.nodes.find((n) => n.id === geneEdge.target)?.name ?? "" : "";
++}
++
++const api = {
++  async searchEntities(query: string): Promise<Disease[]> {
++    const q = query.trim();
++    if (!q) return [];
++    try {
++      const res = await atlasApi.search(q);
++      const hits = res.matches.filter((m) => m.type === "disease").slice(0, 10);
++      const nodesById = await Promise.all(hits.map((m) => atlasApi.node(m.id).catch(() => null)));
++      return hits.map((m, i) => {
++        const node = nodesById[i] ?? null;
++        return remember(searchMatchToUiDisease(m, node), node?.attrs.group ?? null);
++      });
++    } catch (err) { warn("search", err); return []; }
++  },
++
++  async getDiseaseProfile(id: string): Promise<Disease | null> {
++    try { return (await loadDisease(id)).disease; }
++    catch (err) { if (!(err instanceof AtlasApiError && err.isNotFound)) warn("profile", err); return null; }
++  },
++
++  async getPatientGroups(id: string): Promise<string> {
++    try {
++      const journey = await loadJourney(id);
++      return journey.organizations.filter((o) => o.for_disease === id && o.kind === "patient_group").map((o) => o.name).join(", ");
++    } catch (err) { warn("patient groups", err); return ""; }
++  },
++
++  getGraph(focusId: string): Promise<{ nodes: Disease[]; edges: Edge[] }> {
++    return cached(graphs, focusId, async () => {
++      try {
++        const { disease, journey, subgraph } = await loadDisease(focusId);
++        const simEdges = toUiSimilarEdges(journey, subgraph);
++        const neighbours: Disease[] = [];
++        for (const e of simEdges) {
++          const sim = [...journey.similar, ...journey.lookalikes].find((s) => s.id === e.target);
++          const node = subgraph?.nodes.find((n) => n.id === e.target) ?? null;
++          const d = toUiDisease({ node, gene: geneFor(subgraph, e.target), fallback: { id: e.target, name: sim?.name ?? e.target, short: sim?.name ?? null } });
++          neighbours.push(remember(d, node?.attrs.group ?? null));
++          upsert(allEdges, e);
++        }
++        return { nodes: [disease, ...neighbours], edges: simEdges };
++      } catch (err) {
++        if (!(err instanceof AtlasApiError && err.isNotFound)) warn("graph", err);
++        throw err;
++      }
++    }).catch(() => ({ nodes: [], edges: [] }));
++  },
++
++  async getPartners(id: string): Promise<Partner[]> {
++    try {
++      const { disease, journey, subgraph } = await loadDisease(id);
++      const edgesById = new Map<string, ApiEdge>((subgraph?.edges ?? []).map((e) => [e.id, e]));
++      const orgs = journey.organizations.filter((o) => o.for_disease === id);
++      // Fetch one cited edge for orgs whose evidence is outside the subgraph (for source links).
++      await Promise.all(orgs.filter((o) => !o.edges.some((e) => edgesById.has(e)) && o.edges[0]).map(async (o) => {
++        const edge = await atlasApi.edge(o.edges[0] as string).catch(() => null);
++        if (edge) edgesById.set(edge.id, edge);
++      }));
++      return orgs.map((o) => toPartner(o, { diseaseName: disease.label, edgesById }));
++    } catch (err) { if (!(err instanceof AtlasApiError && err.isNotFound)) warn("partners", err); return []; }
++  },
++
++  async getEvidence(edgeIds: string[]): Promise<Edge[]> {
++    const out = await Promise.all(edgeIds.map(async (id) => {
++      const local = allEdges.find((e) => e.id === id);
++      if (local) return local;
++      try { return toUiEvidence(await atlasApi.edge(id)); }
++      catch (err) { warn(`edge ${id}`, err); return null; }
++    }));
++    return out.filter((e): e is Edge => Boolean(e));
++  },
++
++  async getSearchCoverage(query: string) {
++    try {
++      const res = await atlasApi.search(query);
++      const hit = res.matches.find((m) => m.type === "disease");
++      if (!hit) return { query, sources: [{ name: "Atlas search", result: `No disease matched (${res.status})` }] };
++      const journey = await loadJourney(hit.id);
++      return {
++        query,
++        sources: [
++          ...journey.searched.map((s) => ({ name: `${s.source} · ${s.query}`, result: s.n_results < 0 ? "Not searched yet" : `${s.n_results} found · ${s.n_kept} kept` })),
++          ...journey.missing.map((m) => ({ name: m.split(":")[0] ?? m, result: m.split(":").slice(1).join(":").trim() || m })),
++        ],
++      };
++    } catch (err) {
++      warn("coverage", err);
++      return { query, sources: [{ name: "Atlas API", result: "Unavailable" }] };
++    }
++  },
++};

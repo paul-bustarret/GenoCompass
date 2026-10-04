@@ -1,0 +1,1088 @@
+{
+ "status": "ok",
+ "disease": {
+  "id": "MONDO:0010726",
+  "name": "Rett syndrome",
+  "short": "Rett"
+ },
+ "user_country": null,
+ "profile": {
+  "genes": [
+   {
+    "id": "NCBIGene:4204",
+    "name": "MECP2",
+    "edges": [
+     "Eec29943",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   }
+  ],
+  "mechanisms": [
+   {
+    "id": "MECH:synaptic_dysfunction",
+    "name": "Synaptic dysfunction",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "Ee884043",
+     "E53e2c3c"
+    ]
+   },
+   {
+    "id": "MECH:transcriptional_regulation_defect",
+    "name": "Transcriptional / chromatin regulation defect",
+    "effect": null,
+    "evidence": "extracted",
+    "edges": [
+     "E499863b",
+     "E6e7e37a",
+     "Ea777cdb",
+     "Eb2d00d1",
+     "E47608a9"
+    ]
+   }
+  ],
+  "pathways": [
+   {
+    "id": "R-HSA-8986944",
+    "name": "Transcriptional Regulation by MECP2",
+    "edges": [
+     "Eec29943",
+     "E9b6889f",
+     "E3f7c3d6",
+     "Ee2ace3f",
+     "E6786505",
+     "Ef01d52d",
+     "E49afdb6",
+     "E7ea45e4",
+     "Eccbaf4d",
+     "Ed94c8f2",
+     "E01968ff",
+     "Ed88b6b8",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-212436",
+    "name": "Generic Transcription Pathway",
+    "edges": [
+     "Eec29943",
+     "E9b6889f",
+     "Eb7dd7f3",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022534",
+    "name": "Loss of MECP2 binding ability to 5hmC-DNA",
+    "edges": [
+     "Eec29943",
+     "Eb031b6d",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9005891",
+    "name": "Loss of function of MECP2 in Rett syndrome",
+    "edges": [
+     "Eec29943",
+     "Eb031b6d",
+     "E39fe7ff",
+     "E31d8b5a",
+     "E6ebba88",
+     "Ed8121c8",
+     "Eae062d6",
+     "Ebd0b38e",
+     "E57cb169",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022535",
+    "name": "Loss of phosphorylation of MECP2 at T308",
+    "edges": [
+     "Eec29943",
+     "E31d8b5a",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022537",
+    "name": "Loss of MECP2 binding ability to the NCoR/SMRT complex",
+    "edges": [
+     "Eec29943",
+     "Ed8121c8",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022538",
+    "name": "Loss of MECP2 binding ability to 5mC-DNA",
+    "edges": [
+     "Eec29943",
+     "Ebd0b38e",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022692",
+    "name": "Regulation of MECP2 expression and activity",
+    "edges": [
+     "Eec29943",
+     "E3f7c3d6",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022699",
+    "name": "MECP2 regulates neuronal receptors and channels",
+    "edges": [
+     "Eec29943",
+     "E6786505",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022702",
+    "name": "MECP2 regulates transcription of neuronal ligands",
+    "edges": [
+     "Eec29943",
+     "E49afdb6",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022707",
+    "name": "MECP2 regulates transcription factors",
+    "edges": [
+     "Eec29943",
+     "Eccbaf4d",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9022927",
+    "name": "MECP2 regulates transcription of genes involved in GABA signaling",
+    "edges": [
+     "Eec29943",
+     "E01968ff",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9725371",
+    "name": "Nuclear events stimulated by ALK signaling in cancer",
+    "edges": [
+     "Eec29943",
+     "E79e0f23",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   },
+   {
+    "id": "R-HSA-9725370",
+    "name": "Signaling by ALK fusions and activated point mutants",
+    "edges": [
+     "Eec29943",
+     "E79e0f23",
+     "E35f15cc",
+     "E43eb216",
+     "E60b5855",
+     "Ed634190",
+     "E075bb94",
+     "E19525f3",
+     "E69a251f",
+     "E3b2a44f"
+    ]
+   }
+  ],
+  "top_phenotypes": [
+   {
+    "id": "HP:0000164",
+    "name": "Abnormality of the dentition",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Eb2af038"
+    ]
+   },
+   {
+    "id": "HP:0000729",
+    "name": "Autistic behavior",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E3bcb094"
+    ]
+   },
+   {
+    "id": "HP:0001773",
+    "name": "Short foot",
+    "weight": 3.219,
+    "frequency": "2/12",
+    "edges": [
+     "E176674d"
+    ]
+   },
+   {
+    "id": "HP:0002020",
+    "name": "Gastroesophageal reflux",
+    "weight": 3.219,
+    "frequency": "212/455",
+    "edges": [
+     "E2b3343d"
+    ]
+   },
+   {
+    "id": "HP:0002078",
+    "name": "Truncal ataxia",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E96fdf9a"
+    ]
+   },
+   {
+    "id": "HP:0002104",
+    "name": "Apnea",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "Ec68ca73"
+    ]
+   },
+   {
+    "id": "HP:0002120",
+    "name": "Cerebral cortical atrophy",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E5c0c5cb"
+    ]
+   },
+   {
+    "id": "HP:0003763",
+    "name": "Bruxism",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E18e4c9e"
+    ]
+   },
+   {
+    "id": "HP:0004326",
+    "name": "Cachexia",
+    "weight": 3.219,
+    "frequency": null,
+    "edges": [
+     "E7570fc7"
+    ]
+   },
+   {
+    "id": "HP:0004879",
+    "name": "Intermittent hyperventilation",
+    "weight": 3.219,
+    "frequency": "2/2",
+    "edges": [
+     "E3afca1b"
+    ]
+   }
+  ],
+  "variants": []
+ },
+ "similar": [],
+ "lookalikes": [],
+ "organizations": [
+  {
+   "id": "ORG:International_Rett_Syndrome_Foundation",
+   "name": "International Rett Syndrome Foundation",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E6c11442",
+    "Ec739889",
+    "Ef49c2ad",
+    "E2dc1013",
+    "Eb3ee9ce"
+   ]
+  },
+  {
+   "id": "ORG:Abre_te_Associação_Brasileira_de_Sindrom",
+   "name": "Abre-te – Associação Brasileira de Sindrome de Rett",
+   "kind": "patient_group",
+   "country": "BR",
+   "website": null,
+   "contact_email": "abrete@abrete.org.br",
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ecc0302d",
+    "E452ae10",
+    "Efdddf4b"
+   ]
+  },
+  {
+   "id": "ORG:Ontario_Rett_Syndrome_Association_of_Can",
+   "name": "Ontario Rett Syndrome Association of Canada",
+   "kind": "patient_group",
+   "country": "CA",
+   "website": null,
+   "contact_email": "info@rett.ca",
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E4616ce3",
+    "E16f9f2f",
+    "Ea4743f8"
+   ]
+  },
+  {
+   "id": "ORG:Rett_Syndrome_Research_Trust",
+   "name": "Rett Syndrome Research Trust",
+   "kind": "patient_group",
+   "country": "US",
+   "website": null,
+   "contact_email": "info@rsrt.org",
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E8a6bc91",
+    "E9c4aa9b",
+    "Ee240eaa"
+   ]
+  },
+  {
+   "id": "ORG:Rett_UK",
+   "name": "Rett UK",
+   "kind": "patient_group",
+   "country": "GB",
+   "website": null,
+   "contact_email": "info@rettuk.org",
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Eb84116b",
+    "E8cc8bb0",
+    "Ea7da948"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NINDS",
+   "name": "NIH NINDS",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E0fea541",
+    "E09218ac",
+    "E0e89ef6",
+    "E29b599e",
+    "Eeaf58fd",
+    "Ed20f7fc"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NHLBI",
+   "name": "NIH NHLBI",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E632820d",
+    "E67a3b37"
+   ]
+  },
+  {
+   "id": "ORG:NIH_NICHD",
+   "name": "NIH NICHD",
+   "kind": "funder",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ec5489b7",
+    "E9f524a7"
+   ]
+  },
+  {
+   "id": "ORG:Fenix_Innovation_Group",
+   "name": "Fenix Innovation Group",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E502d76e",
+    "Ed75753b"
+   ]
+  },
+  {
+   "id": "ORG:UCB_BIOSCIENCES_Inc",
+   "name": "UCB BIOSCIENCES, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ee367257",
+    "E73a4cb1"
+   ]
+  },
+  {
+   "id": "ORG:Unravel_Biosciences_Inc",
+   "name": "Unravel Biosciences, Inc.",
+   "kind": "industry",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E848d05e",
+    "E7f56067"
+   ]
+  },
+  {
+   "id": "ORG:Genecombio_Ltd",
+   "name": "Genecombio Ltd.",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "E82eb583",
+    "E3b6c203"
+   ]
+  },
+  {
+   "id": "ORG:Rush_University_Medical_Center",
+   "name": "Rush University Medical Center",
+   "kind": "other",
+   "country": null,
+   "website": null,
+   "contact_email": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Eca424b6",
+    "E3fb6961"
+   ]
+  }
+ ],
+ "trials": [
+  {
+   "id": "NCT07150013",
+   "title": "Rett REVOLUTION Trial: An Exploratory Evaluation of the Safety and Efficacy of Vorinostat in Rett Syndrome",
+   "status": "RECRUITING",
+   "phase": "PHASE1",
+   "for_disease": "MONDO:0010726",
+   "countries": [
+    "CO"
+   ],
+   "near_user": false,
+   "interventions": [
+    "Vorinostat (SAHA)",
+    "Placebo"
+   ],
+   "edges": [
+    "E7f56067",
+    "Ed541c64",
+    "E2694c64",
+    "E1100a1a"
+   ]
+  },
+  {
+   "id": "NCT07503444",
+   "title": "A Phase 3 Study of Fenfluramine Hydrochloride in Rett Syndrome",
+   "status": "RECRUITING",
+   "phase": "PHASE3",
+   "for_disease": "MONDO:0010726",
+   "countries": [
+    "BE",
+    "DE",
+    "ES",
+    "FR",
+    "HU",
+    "IT",
+    "JP",
+    "PL",
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [
+    "fenfluramine hydrochloride"
+   ],
+   "edges": [
+    "E73a4cb1",
+    "E79f8289",
+    "E6c0022c",
+    "E39ff509",
+    "E8cebd94",
+    "E1080eee",
+    "Eed60960"
+   ]
+  },
+  {
+   "id": "NCT07257978",
+   "title": "Efficacy and Safety of NTI164 in Children and Young Adults With Rett Syndrome",
+   "status": "NOT_YET_RECRUITING",
+   "phase": "PHASE2,PHASE3",
+   "for_disease": "MONDO:0010726",
+   "countries": [
+    "AU"
+   ],
+   "near_user": false,
+   "interventions": [
+    "NTI164",
+    "Placebo"
+   ],
+   "edges": [
+    "Ed75753b",
+    "E62c0619",
+    "E4e74b09",
+    "E186ac35"
+   ]
+  },
+  {
+   "id": "NCT06739434",
+   "title": "GCB-002 in Treatment of Patients With Rett Syndrome",
+   "status": "ENROLLING_BY_INVITATION",
+   "phase": "NA",
+   "for_disease": "MONDO:0010726",
+   "countries": [
+    "CN"
+   ],
+   "near_user": false,
+   "interventions": [
+    "GCB-002"
+   ],
+   "edges": [
+    "E3b6c203",
+    "E83324e1",
+    "Ebb82434"
+   ]
+  },
+  {
+   "id": "NCT06139172",
+   "title": "Web Intervention for Parents of Youth With Genetic Syndromes (WINGS)",
+   "status": "ACTIVE_NOT_RECRUITING",
+   "phase": "NA",
+   "for_disease": "MONDO:0010726",
+   "countries": [
+    "US"
+   ],
+   "near_user": false,
+   "interventions": [],
+   "edges": [
+    "E3fb6961",
+    "E3796182"
+   ]
+  }
+ ],
+ "assets": [
+  {
+   "id": "ASSET:Rett_Syndrome_Global_Registry",
+   "name": "Rett Syndrome Global Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ee240eaa",
+    "E9c4aa9b"
+   ]
+  },
+  {
+   "id": "ASSET:Rett_Syndrome_Natural_History_Study",
+   "name": "Rett Syndrome Natural History Study",
+   "kind": "natural_history_study",
+   "website": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ef49c2ad",
+    "Ec739889"
+   ]
+  },
+  {
+   "id": "ASSET:Rett_Syndrome_Registry",
+   "name": "Rett Syndrome Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Eb3ee9ce",
+    "E2dc1013"
+   ]
+  },
+  {
+   "id": "ASSET:British_Isles_Rett_Syndrome_Survey_BIRSS",
+   "name": "British Isles Rett Syndrome Survey (BIRSS)",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ea7da948",
+    "E8cc8bb0"
+   ]
+  },
+  {
+   "id": "ASSET:Rett_Patient_Registry",
+   "name": "Rett Patient Registry",
+   "kind": "registry",
+   "website": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Efdddf4b",
+    "E452ae10"
+   ]
+  },
+  {
+   "id": "ASSET:BIO_BANK_REPOSITORY",
+   "name": "BIO-BANK REPOSITORY",
+   "kind": "biobank",
+   "website": null,
+   "for_disease": "MONDO:0010726",
+   "edges": [
+    "Ea4743f8",
+    "E16f9f2f"
+   ]
+  }
+ ],
+ "researchers": [
+  {
+   "id": "PERSON:14279238",
+   "name": "Kristine Anne Lyon",
+   "grants": [
+    "RePORTER:K99NS140545"
+   ],
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "edges": [
+    "E3a592e2",
+    "Ed20f7fc"
+   ]
+  },
+  {
+   "id": "PERSON:78496617",
+   "name": "Monica Strain",
+   "grants": [
+    "RePORTER:F31HL167553"
+   ],
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "edges": [
+    "E27ddbe1",
+    "E67a3b37"
+   ]
+  },
+  {
+   "id": "PERSON:79047388",
+   "name": "Natalie R. Boyle",
+   "grants": [
+    "RePORTER:F31NS143400"
+   ],
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "edges": [
+    "Ed8e53b0",
+    "E29b599e"
+   ]
+  },
+  {
+   "id": "PERSON:16529563",
+   "name": "Richard Li Cheng Pan",
+   "grants": [
+    "RePORTER:F30HD115371"
+   ],
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "edges": [
+    "E426f86b",
+    "E9f524a7"
+   ]
+  },
+  {
+   "id": "PERSON:8227165",
+   "name": "Saswati Chatterjee",
+   "grants": [
+    "RePORTER:R01NS138604"
+   ],
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "edges": [
+    "Eac63c81",
+    "E09218ac"
+   ]
+  },
+  {
+   "id": "PERSON:1905796",
+   "name": "Vinodh Narayanan",
+   "grants": [
+    "RePORTER:R01NS138604"
+   ],
+   "diseases": [
+    "MONDO:0010726"
+   ],
+   "edges": [
+    "Ea200cdc",
+    "E09218ac"
+   ]
+  }
+ ],
+ "next_steps": [
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact International Rett Syndrome Foundation (patient group, based in US), which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ORG:International_Rett_Syndrome_Foundation",
+   "edges": [
+    "E6c11442",
+    "Ec739889",
+    "Ef49c2ad",
+    "E2dc1013",
+    "Eb3ee9ce"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Abre-te – Associação Brasileira de Sindrome de Rett (patient group, based in BR), which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ORG:Abre_te_Associação_Brasileira_de_Sindrom",
+   "edges": [
+    "Ecc0302d",
+    "E452ae10",
+    "Efdddf4b"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Rett Syndrome Global Registry, which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ASSET:Rett_Syndrome_Global_Registry",
+   "edges": [
+    "Ee240eaa",
+    "E9c4aa9b"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "natural_history_study",
+   "text": "Ask about joining the natural history study Rett Syndrome Natural History Study, which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ASSET:Rett_Syndrome_Natural_History_Study",
+   "edges": [
+    "Ef49c2ad",
+    "Ec739889"
+   ]
+  },
+  {
+   "kind": "join",
+   "step": "registry",
+   "text": "Ask about joining the registry Rett Syndrome Registry, which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ASSET:Rett_Syndrome_Registry",
+   "edges": [
+    "Eb3ee9ce",
+    "E2dc1013"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Ontario Rett Syndrome Association of Canada (patient group, based in CA), which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ORG:Ontario_Rett_Syndrome_Association_of_Can",
+   "edges": [
+    "E4616ce3",
+    "E16f9f2f",
+    "Ea4743f8"
+   ]
+  },
+  {
+   "kind": "contact",
+   "step": "patient_group",
+   "text": "Contact Rett Syndrome Research Trust (patient group, based in US), which the atlas links to Rett.",
+   "from_disease": "MONDO:0010726",
+   "target_id": "ORG:Rett_Syndrome_Research_Trust",
+   "edges": [
+    "E8a6bc91",
+    "E9c4aa9b",
+    "Ee240eaa"
+   ]
+  }
+ ],
+ "cards": [
+  {
+   "key": "whats_going_on",
+   "title": "What is happening in the body",
+   "text": "Rett syndrome is caused by changes, called mutations, in a gene named MECP2 [E43eb216]. These changes stop the gene from working the way it normally should, which scientists call a loss of function [E60b5855]. MECP2 makes a protein that acts a bit like a switch, helping turn other genes up or down inside cells [Ed634190, E075bb94]. In most children with Rett syndrome, about 95 out of 100, this MECP2 change is what is found [Ed634190]. The MECP2 protein normally attaches to DNA and helps control whether other genes are read, a job called transcription [E19525f3, Eb2d00d1]. Because MECP2 is not working properly, many of the genes it controls get out of balance, something called a transcriptional or chromatin regulation defect [Ea777cdb, E6e7e37a, E47608a9]. This same gene problem also affects how brain cells talk to each other at their connection points, called synapses, known as synaptic dysfunction [Ee884043].",
+   "citations": [
+    "E43eb216",
+    "E60b5855",
+    "Ed634190",
+    "E075bb94",
+    "E19525f3",
+    "Eb2d00d1",
+    "Ea777cdb",
+    "E6e7e37a",
+    "E47608a9",
+    "Ee884043"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "similar",
+   "title": "Diseases that share biology",
+   "text": "A paper reports that the brain cell connection problems seen in Rett syndrome, called synaptic dysfunction, are discussed together with a condition named Fragile X syndrome, because both show changes in how synapses work [E53e2c3c]. This means the two conditions may share some of the same underlying biology at the level of brain cell connections [Ee884043, E53e2c3c]. It may be worth asking the care team whether research on this shared mechanism is relevant to your child [E53e2c3c].",
+   "citations": [
+    "E53e2c3c",
+    "Ee884043"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "what_exists",
+   "title": "Research, trials, and groups that exist",
+   "text": "Several patient groups focus on Rett syndrome, including the International Rett Syndrome Foundation in the US [E6c11442], Abre-te in Brazil [Ecc0302d], the Ontario Rett Syndrome Association of Canada [E4616ce3], Rett Syndrome Research Trust in the US [E8a6bc91], and Rett UK [Eb84116b]. These groups run registries and studies, such as the Rett Syndrome Global Registry [Ee240eaa], the Rett Syndrome Natural History Study [Ef49c2ad], the Rett Syndrome Registry [Eb3ee9ce], the Rett Patient Registry [Efdddf4b], and the British Isles Rett Syndrome Survey [Ea7da948]. According to ClinicalTrials.gov, there is a recruiting phase 1 trial testing vorinostat against placebo for Rett syndrome with a site in Colombia [Ed541c64, E2694c64, E1100a1a]. According to ClinicalTrials.gov, there is a recruiting phase 3 trial testing fenfluramine hydrochloride for Rett syndrome with sites in several countries including the United States, Belgium, France, Germany, and Hungary [E79f8289, E6c0022c, E39ff509, E8cebd94, E1080eee, Eed60960]. According to ClinicalTrials.gov, a trial of NTI164 against placebo for Rett syndrome is not yet recruiting, with a planned site in Australia [E62c0619, E4e74b09, E186ac35]. According to ClinicalTrials.gov, a trial of GCB-002 for Rett syndrome is enrolling by invitation, with a site in China [E83324e1, Ebb82434]. According to ClinicalTrials.gov, there is also a web-based support study for parents of children with genetic syndromes, active but not recruiting, with a site in the United States [E3fb6961, E3796182]. According to the NIH Reporter database, funders including NIH NINDS, NIH NHLBI, and NIH NICHD support research grants that study Rett syndrome, with named researchers listed as grant leaders [E09218ac, E67a3b37, E9f524a7, E3a592e2, E27ddbe1, Ed8e53b0, E426f86b, Eac63c81, Ea200cdc].",
+   "citations": [
+    "E6c11442",
+    "Ecc0302d",
+    "E4616ce3",
+    "E8a6bc91",
+    "Eb84116b",
+    "Ee240eaa",
+    "Ef49c2ad",
+    "Eb3ee9ce",
+    "Efdddf4b",
+    "Ea7da948",
+    "Ed541c64",
+    "E2694c64",
+    "E1100a1a",
+    "E79f8289",
+    "E6c0022c",
+    "E39ff509",
+    "E8cebd94",
+    "E1080eee",
+    "Eed60960",
+    "E62c0619",
+    "E4e74b09",
+    "E186ac35",
+    "E83324e1",
+    "Ebb82434",
+    "E3fb6961",
+    "E3796182",
+    "E09218ac",
+    "E67a3b37",
+    "E9f524a7",
+    "E3a592e2",
+    "E27ddbe1",
+    "Ed8e53b0",
+    "E426f86b",
+    "Eac63c81",
+    "Ea200cdc"
+   ],
+   "status": "ok"
+  },
+  {
+   "key": "next_step",
+   "title": "Possible next steps",
+   "text": "You could contact the International Rett Syndrome Foundation, a patient group based in the US that the atlas links to Rett syndrome [E6c11442, Ec739889, Ef49c2ad, E2dc1013, Eb3ee9ce]. You could also contact Abre-te, a patient group based in Brazil that the atlas links to Rett syndrome [Ecc0302d, E452ae10, Efdddf4b]. You might also ask the care team about joining the Rett Syndrome Global Registry, which the atlas links to Rett syndrome [Ee240eaa, E9c4aa9b].",
+   "citations": [
+    "E6c11442",
+    "Ec739889",
+    "Ef49c2ad",
+    "E2dc1013",
+    "Eb3ee9ce",
+    "Ecc0302d",
+    "E452ae10",
+    "Efdddf4b",
+    "Ee240eaa",
+    "E9c4aa9b"
+   ],
+   "status": "ok"
+  }
+ ],
+ "searched": [
+  {
+   "source": "hpo",
+   "query": "OMIM:312750",
+   "n_results": 35,
+   "n_kept": 35
+  },
+  {
+   "source": "mondo",
+   "query": "MONDO:0010726",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "ctgov",
+   "query": "Rett syndrome",
+   "n_results": 101,
+   "n_kept": 5
+  },
+  {
+   "source": "reporter",
+   "query": "\"Rett syndrome\"",
+   "n_results": 148,
+   "n_kept": 5
+  },
+  {
+   "source": "pubmed",
+   "query": "\"Rett syndrome\"[tiab]",
+   "n_results": 4652,
+   "n_kept": 5
+  },
+  {
+   "source": "patient_groups",
+   "query": "web + LLM",
+   "n_results": -1,
+   "n_kept": 0
+  },
+  {
+   "source": "pubmed_llm",
+   "query": "(\"Rett syndrome\"[tiab]) AND hasabstract",
+   "n_results": 4276,
+   "n_kept": 14
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://reverserett.org/about-rsrt/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.rettsyndrome.org/researchers/rett-syndrome-natural-history-study/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.rettuk.org/about-us/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://abrete.org.br/",
+   "n_results": 1,
+   "n_kept": 1
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://www.rett.org.il/",
+   "n_results": 1,
+   "n_kept": 0
+  },
+  {
+   "source": "patient_groups",
+   "query": "https://rett.ca/",
+   "n_results": 1,
+   "n_kept": 1
+  }
+ ],
+ "missing": [
+  "reactome: not searched yet",
+  "clinvar: not searched yet"
+ ],
+ "generated_by": {
+  "backend": "claude",
+  "model": "sonnet"
+ }
+}

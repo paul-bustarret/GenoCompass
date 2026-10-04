@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Rare Disease Atlas — graph explorer</title>
+<script src="https://cdn.jsdelivr.net/npm/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+<style>
+  body { margin: 0; font: 13px system-ui, sans-serif; display: flex; height: 100vh; color: #222; }
+  #side { width: 340px; padding: 12px; overflow-y: auto; border-right: 1px solid #ddd; box-sizing: border-box; }
+  #net { flex: 1; }
+  h1 { font-size: 16px; margin: 0 0 6px; }
+  .types label { display: inline-block; margin: 2px 8px 2px 0; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 3px; }
+  #detail { margin-top: 12px; padding: 8px; background: #f6f6f6; border-radius: 6px; white-space: pre-wrap; word-break: break-word; }
+  input[type=text] { width: 100%; padding: 6px; box-sizing: border-box; }
+  .muted { color: #777; font-size: 12px; }
+</style>
+</head>
+<body>
+<div id="side">
+  <h1>Rare Disease Atlas</h1>
+  <div class="muted">One graph, every edge sourced. Click an edge to see its evidence; click a node to focus.</div>
+  <p><input id="q" type="text" placeholder="Find a node (e.g. Sanfilippo, GBA1, Pompe)…"></p>
+  <div class="types" id="types"></div>
+  <div id="detail">Nothing selected.</div>
+</div>
+<div id="net"></div>
+<script>
+const NODES = /*NODES*/[];
+const EDGES = /*EDGES*/[];
+const hiddenByDefault = new Set(["phenotype", "variant", "paper"]);
+const types = [...new Set(NODES.map(n => n.group))];
+const shown = new Set(types.filter(t => !hiddenByDefault.has(t)));
+const typeColor = Object.fromEntries(NODES.map(n => [n.group, n.color]));
+const box = document.getElementById("types");
+types.forEach(t => {
+  const l = document.createElement("label");
+  l.innerHTML = `<input type="checkbox" ${shown.has(t) ? "checked" : ""}> <span class="dot" style="background:${typeColor[t]}"></span>${t} (${NODES.filter(n => n.group === t).length})`;
+  l.querySelector("input").onchange = e => { e.target.checked ? shown.add(t) : shown.delete(t); nodeView.refresh(); };
+  box.appendChild(l);
+});
+const nodes = new vis.DataSet(NODES.map(n => ({...n, shape: "dot", font: {size: n.group === "disease" ? 16 : 10}})));
+const edges = new vis.DataSet(EDGES.map(e => ({...e, label: undefined, arrows: "to",
+  dashes: e.evidence !== "observed", color: {color: e.evidence === "observed" ? "#c8c8c8" : "#9467bd"}})));
+const nodeView = new vis.DataView(nodes, {filter: n => shown.has(n.group)});
+const net = new vis.Network(document.getElementById("net"), {nodes: nodeView, edges},
+  {physics: {solver: "forceAtlas2Based", stabilization: {iterations: 250}}, interaction: {hover: true}});
+net.once("stabilizationIterationsDone", () => net.setOptions({physics: false}));
+const detail = document.getElementById("detail");
+const esc = s => String(s ?? "").replace(/[&<>]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;"}[c]));
+net.on("click", p => {
+  if (p.nodes.length) {
+    const n = nodes.get(p.nodes[0]);
+    const es = EDGES.filter(e => e.from === n.id || e.to === n.id);
+    const rel = {}; es.forEach(e => rel[e.label] = (rel[e.label] || 0) + 1);
+    detail.innerHTML = `<b>${esc(n.title)}</b>\n\n${es.length} edges:\n` +
+      Object.entries(rel).map(([k, v]) => `  ${k}: ${v}`).join("\n");
+    net.focus(n.id, {scale: 1.2, animation: true});
+  } else if (p.edges.length) {
+    const e = edges.get(p.edges[0]);
+    detail.innerHTML = `<b>${esc(nodes.get(e.from)?.label)} —${esc(e.label ?? EDGES.find(x => x.id === e.id).label)}→ ${esc(nodes.get(e.to)?.label)}</b>\n\n` +
+      `edge: ${esc(e.id)}\nsource: ${esc(e.source)}\nevidence: ${esc(e.evidence)}  confidence: ${esc(e.confidence)}\n` +
+      (e.quote ? `quote: “${esc(e.quote)}”\n` : "") + `<a href="${esc(e.url)}" target="_blank" rel="noopener">open source ↗</a>`;
+  }
+});
+document.getElementById("q").addEventListener("keydown", ev => {
+  if (ev.key !== "Enter") return;
+  const q = ev.target.value.toLowerCase();
+  const hit = NODES.find(n => n.label.toLowerCase().includes(q) || n.title.toLowerCase().includes(q));
+  if (hit) { shown.add(hit.group); nodeView.refresh(); net.selectNodes([hit.id]); net.focus(hit.id, {scale: 1.4, animation: true}); }
+});
+</script>
+</body>
+</html>
