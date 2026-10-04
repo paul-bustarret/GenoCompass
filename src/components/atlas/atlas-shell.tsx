@@ -61,11 +61,11 @@ export function AtlasShell({ children }: { children: ReactNode }) {
     <ScientificField />
     <div className={`app-frame ${path.startsWith("/atlas/") && !path.endsWith("/ambition") ? "atlas-page compact-page" : path.startsWith("/disease/") ? "compact-page" : ""}`}>
       <header className="site-header">
-        <Link to="/" className="brand" aria-label="Rare Disease Atlas home"><span className="brand-symbol"><Activity size={20} strokeWidth={1.7}/></span><span>rare disease <strong>atlas</strong></span></Link>
+        <Link to="/" className="brand" aria-label="geno compass home"><span className="brand-symbol"><Activity size={20} strokeWidth={1.7}/></span><span>geno <strong>compass</strong></span></Link>
         <nav className="top-nav" aria-label="Main navigation"><Link to="/who" search={{ as: persona } as never}>Explore the atlas</Link><Link to="/ambition">Our 10× path</Link><Link to="/team">The team behind</Link></nav>
       </header>
       <main className={path === "/" ? "home-main" : "page-main"}>{children}</main>
-      <footer className="site-footer"><span>RARE DISEASE ATLAS <span className="footer-divider">/</span> DEMONSTRATION DATA</span><span className="footer-end"><span>Research navigation tool, not medical advice. Discuss any next step with your care team.</span><span className="footer-powered">Powered by OpenAI</span></span></footer>
+      <footer className="site-footer"><span>GENO COMPASS <span className="footer-divider">/</span> DEMONSTRATION DATA</span><span className="footer-end"><span>Research navigation tool, not medical advice. Discuss any next step with your care team.</span><span className="footer-powered">Powered by OpenAI</span></span></footer>
     </div>
   </AtlasContext.Provider>;
 }

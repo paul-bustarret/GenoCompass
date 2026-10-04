@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/contribute")({
   validateSearch: (s: Record<string, unknown>) => ({ condition: typeof s["condition"] === "string" ? s["condition"] : "mps-iiic" }),
-  head: () => ({ meta: [{ title: "Contribute research — Rare Disease Atlas" }, { name: "description", content: "Clinician researchers can upload a thesis or paper to propose new connections for expert review." }, { property: "og:title", content: "Contribute research — Rare Disease Atlas" }, { property: "og:description", content: "Upload your thesis to help expand the rare-disease atlas, with every submission reviewed first." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
+  head: () => ({ meta: [{ title: "Contribute research — geno compass" }, { name: "description", content: "Clinician researchers can upload a thesis or paper to propose new connections for expert review." }, { property: "og:title", content: "Contribute research — geno compass" }, { property: "og:description", content: "Upload your thesis to help expand the rare-disease atlas, with every submission reviewed first." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
   component: Contribute,
 });
 

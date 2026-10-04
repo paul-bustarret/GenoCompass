@@ -27,7 +27,7 @@ export const Route = createFileRoute("/api/chat")({
     try {
       const modelMessages = await convertToModelMessages(conversation);
       const call = createResponsesCall(request, { baseURL: "https://ai.gateway.lovable.dev/v1", apiKey, model: "openai/gpt-6-astra" }, [
-        { role: "system", content: `You are the Rare Disease Atlas research guide. Explain only the supplied chart records, in clear, professional language. Distinguish curated, AI-extracted, inferred and caution links; explain dashed lines as AI-extracted, dotted as inferred. Never invent evidence, medicines, contacts, trials or real-time information. If not in the supplied data, say so. This is illustrative and not medical advice. Focus on the current condition. Chart context: ${await atlasContext(diseaseId)}` },
+        { role: "system", content: `You are the geno compass research guide. Explain only the supplied chart records, in clear, professional language. Distinguish curated, AI-extracted, inferred and caution links; explain dashed lines as AI-extracted, dotted as inferred. Never invent evidence, medicines, contacts, trials or real-time information. If not in the supplied data, say so. This is illustrative and not medical advice. Focus on the current condition. Chart context: ${await atlasContext(diseaseId)}` },
         ...modelMessages,
       ]);
       return await call.response({ originalMessages: conversation, onFinish: async ({ messages: completed }) => {

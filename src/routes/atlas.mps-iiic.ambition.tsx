@@ -8,7 +8,7 @@ import { ambition, type Step } from "@/data/ambition-mps-iiic";
 
 export const Route = createFileRoute("/atlas/mps-iiic/ambition")({
   head: () => ({ meta: [
-    { title: "The 10× ambition — Sanfilippo type C · Rare Disease Atlas" },
+    { title: "The 10× ambition — Sanfilippo type C · geno compass" },
     { name: "description", content: "How reusing an existing natural history study and biomarker precedent could shorten the path for Sanfilippo type C families, with every assumption visible." },
     { property: "og:title", content: "From one family to a shared study, 10× faster" },
     { property: "og:description", content: "Team estimates and visible assumptions for the Sanfilippo type C journey." },
@@ -120,7 +120,7 @@ function AmbitionPage() {
     </section>
     <section className="amb-close">
       <h2>Reuse, don't rebuild.</h2>
-      <p>Rare Disease Atlas · Every link sourced. Every assumption visible.</p>
+      <p>geno compass · Every link sourced. Every assumption visible.</p>
       <Button asChild variant="outline"><Link to="/search">Start a new search</Link></Button>
     </section>
   </div>;

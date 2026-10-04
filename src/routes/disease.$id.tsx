@@ -8,9 +8,9 @@ import { diseases, getNextSteps, type Partner } from "@/lib/atlas";
 
 export const Route = createFileRoute("/disease/$id")({
   head: () => ({ meta: [
-    { title: "Partner next steps — Rare Disease Atlas" },
+    { title: "Partner next steps — geno compass" },
     { name: "description", content: "Three practical next steps and the public research contacts who can help, for rare-disease families and researchers." },
-    { property: "og:title", content: "Partner next steps — Rare Disease Atlas" },
+    { property: "og:title", content: "Partner next steps — geno compass" },
     { property: "og:description", content: "Sourced partner contacts and research-stage next steps." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" },
   ] }),
