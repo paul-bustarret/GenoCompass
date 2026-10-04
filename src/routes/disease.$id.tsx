@@ -4,7 +4,8 @@ import { AlertTriangle, ArrowLeft, Check, ExternalLink, FlaskConical, HeartHands
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 import { useAtlas } from "@/components/atlas/atlas-shell";
-import { diseases, getNextSteps, type Partner } from "@/lib/atlas";
+import { getMockPartnerDisease, getNextSteps, type Partner } from "@/lib/atlas";
+import { useAtlasGraph } from "@/lib/use-atlas-graph";
 
 export const Route = createFileRoute("/disease/$id")({
   head: () => ({ meta: [
@@ -34,7 +35,11 @@ function draftFor(partner: Partner, disease: string) {
 function DiseasePage() {
   const { id } = Route.useParams();
   const { persona } = useAtlas();
-  const disease = diseases.find((d) => d.id === id);
+  const graph = useAtlasGraph(id);
+  const atlasDisease = graph.diseases.find((d) => d.id === id);
+  const partnerDisease = atlasDisease ? getMockPartnerDisease(atlasDisease) : undefined;
+  const disease = partnerDisease ?? atlasDisease;
+  const partnerId = partnerDisease?.id ?? id;
   const [partners, setPartners] = useState<Partner[]>([]);
   const [loading, setLoading] = useState(true);
   const [hovered, setHovered] = useState("");
@@ -46,12 +51,12 @@ function DiseasePage() {
   useEffect(() => {
     let active = true;
     setLoading(true); setPartners([]); setSelectedId("");
-    getNextSteps(id, persona).then((items) => { if (active) { setPartners(items); setLoading(false); } });
+    getNextSteps(partnerId, persona).then((items) => { if (active) { setPartners(items); setLoading(false); } });
     return () => { active = false; };
-  }, [id, persona]);
+  }, [partnerId, persona]);
 
   const selected = partners.find((p) => p.id === selectedId);
-  const plan = (steps[id] ?? []).filter((s) => partners.some((p) => p.id === s.partnerId));
+  const plan = (steps[partnerId] ?? []).filter((s) => partners.some((p) => p.id === s.partnerId));
   function selectPartner(partner: Partner) {
     setSelectedId(partner.id);
     setSubject(`Inquiry about ${disease?.label ?? "Sanfilippo syndrome"} research`);
@@ -64,6 +69,7 @@ function DiseasePage() {
     setOpened(true);
   }
 
+  if (graph.loading && !disease) return <section className="steps-page"><p className="partner-empty">Loading condition…</p></section>;
   if (!disease) return <section className="content-width journey-page"><h1>Record not found</h1><Button asChild><Link to="/search" search={{ as: persona } as never}>Search the atlas</Link></Button></section>;
 
   return <section className="steps-page">
