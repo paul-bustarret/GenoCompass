@@ -55,26 +55,33 @@ def complete(system: str, user: str, schema: dict | None = None, tier: str = "fa
 
 
 def _claude(system, user, schema, model, timeout, think=True):
+    # System prompt goes through a file: long prompts on the command line break claude.cmd on Windows (~8k limit).
+    with tempfile.NamedTemporaryFile("w", suffix=".txt", delete=False, encoding="utf-8") as tf:
+        tf.write(system)
+        prompt_file = tf.name
     cmd = [shutil.which("claude") or "claude", "-p", "--model", model, "--output-format", "json", "--tools", "",
-           "--no-session-persistence", "--setting-sources", "", "--system-prompt", system]
+           "--no-session-persistence", "--setting-sources", "", "--system-prompt-file", prompt_file]
     if schema:
         cmd += ["--json-schema", json.dumps(schema)]
     env = None if think else {**os.environ, "MAX_THINKING_TOKENS": "0"}
     res, last_err = None, None
-    for _attempt in range(2):  # claude -p occasionally fails transiently; retry once
-        try:
-            proc = subprocess.run(cmd, input=user, capture_output=True, text=True, encoding="utf-8",
-                                  timeout=timeout, cwd=tempfile.gettempdir(), env=env)
-            res = json.loads(proc.stdout)
-        except (subprocess.TimeoutExpired, json.JSONDecodeError) as e:
-            last_err = f"claude -p failed: {e}"
-            continue
-        if not res.get("is_error"):
-            break
-        last_err = (f"claude -p error ({res.get('subtype')}, api status {res.get('api_error_status')}): "
-                    f"{res.get('result') or (proc.stderr or '').strip()[:200]}")
-    else:
-        raise LLMError(last_err)
+    try:
+        for _attempt in range(2):  # claude -p occasionally fails transiently; retry once
+            try:
+                proc = subprocess.run(cmd, input=user, capture_output=True, text=True, encoding="utf-8",
+                                      timeout=timeout, cwd=tempfile.gettempdir(), env=env)
+                res = json.loads(proc.stdout)
+            except (subprocess.TimeoutExpired, json.JSONDecodeError) as e:
+                last_err = f"claude -p failed: {e}"
+                continue
+            if not res.get("is_error"):
+                break
+            last_err = (f"claude -p error ({res.get('subtype')}, api status {res.get('api_error_status')}): "
+                        f"{res.get('result') or (proc.stderr or '').strip()[:200]}")
+        else:
+            raise LLMError(last_err)
+    finally:
+        os.unlink(prompt_file)
     if schema:
         if res.get("structured_output") is not None:
             return res["structured_output"]
