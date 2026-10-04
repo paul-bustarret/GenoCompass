@@ -16,6 +16,17 @@ export const allEdges = edges;
 export const getNode = (id: string) => nodes.find((n) => n.id === id);
 export const clusterFor = (id: string) => clusters.find((c) => c.id === id);
 export const edgesFor = (id: string) => edges.filter((e) => e.source === id || e.target === id);
+export function getMockPartnerDisease(reference: { id: string; label: string; synonyms: string[]; attributes: { gene: string } }) {
+  const direct = diseases.find((d) => d.id === reference.id);
+  if (direct) return direct;
+  // Type C partner records use the original mock ID. Match the gene and subtype
+  // before linking a database disease to those records.
+  const names = [reference.label, ...reference.synonyms].join(" ");
+  if (reference.attributes.gene.toUpperCase() === "HGSNAT" && /\b(?:IIIC|Sanfilippo(?: syndrome)?(?: type)? C)\b/i.test(names)) {
+    return diseases.find((d) => d.id === "mps-iiic");
+  }
+  return undefined;
+}
 export async function searchEntities(query: string) {
   await pause();
   const q = query.trim().toLowerCase();
