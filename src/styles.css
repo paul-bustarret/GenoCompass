@@ -153,7 +153,7 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 
 /* Inline relationship captions keep the map readable before evidence is opened. */
 .graph-connection .graph-edge { pointer-events: none; }
-.graph-edge-hit { stroke: transparent; stroke-width: 18px; vector-effect: non-scaling-stroke; cursor: pointer; }
+.graph-edge-hit { stroke: transparent; stroke-width: 11px; vector-effect: non-scaling-stroke; cursor: pointer; }
 .graph-connection:hover .graph-edge, .graph-connection:focus-within .graph-edge, .graph-connection.inspected .graph-edge { stroke-opacity: 1; stroke-width: 3px; }
 .graph-edge-hit:focus-visible { stroke: var(--ring); stroke-opacity: .25; outline: none; }
 .graph-edge-label { position: absolute; z-index: 3; transform: translate(-50%,-50%); width: max-content; max-width: 102px; height: auto; min-height: 22px; padding: 3px 5px; white-space: normal; text-align: center; line-height: 1.15; font-size: 9px; font-weight: 650; color: var(--primary); background: var(--background); border: 1px solid var(--border); box-shadow: 0 1px 4px color-mix(in oklab,var(--foreground) 7%,transparent); }
@@ -203,7 +203,7 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 /* The map keeps its own clear canvas; navigation and explanations sit outside it. */
 .atlas-page .site-header { height: 60px; }
 .atlas-page .site-footer { min-height: 36px; }
-.atlas-layout { grid-template-columns: minmax(0,1fr) minmax(250px,300px); grid-template-rows: auto minmax(0,1fr); height: calc(100dvh - 96px); min-height: 500px; }
+.atlas-layout { grid-template-columns: minmax(0,1fr) minmax(250px,300px); grid-template-rows: auto minmax(0,1fr); height: max(calc(100dvh - 96px), 940px); min-height: 500px; }
 .atlas-sidebar { grid-column: 1/-1; grid-row: 1; min-height: 0; padding: 8px 22px; flex-direction: row; align-items: center; gap: 18px; border-right: 0; border-bottom: 1px solid var(--border); }
 .cluster-heading { flex-shrink: 0; font-size: 10px; }
 .cluster-list { display: flex; align-items: center; flex: 1; min-width: 0; margin: 0; gap: 5px; }
@@ -460,6 +460,10 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 .atlas-fit .atlas-list { overflow-y: auto; }
 .atlas-fit-legend { position: absolute; left: 12px; bottom: 12px; z-index: 3; margin: 0; padding: 6px 10px; display: flex; gap: 12px; font-size: 10px; background: color-mix(in oklab, var(--background) 92%, transparent); border: 1px solid var(--border); }
 .atlas-fit-panel { display: flex; flex-direction: column; min-height: 0; border-left: 1px solid var(--border); background: var(--background); }
+.atlas-fit-panel > .edge-explanation { position: static; flex: 0 0 auto; width: auto; max-height: min(42vh, 360px); overflow-y: auto; margin: 16px 18px 0; padding: 14px; background: var(--surface); box-shadow: none; }
+.atlas-fit-panel > .edge-explanation > strong { font-size: 14px; }
+.atlas-fit-panel > .edge-explanation p { font-size: 12px; }
+.atlas-fit-panel > .edge-explanation > button { height: auto; min-height: 28px; padding: 3px 0; white-space: normal; text-align: left; justify-content: flex-start; line-height: 1.3; font-size: 11px; }
 .atlas-fit-scroll { flex: 1; min-height: 0; overflow-y: auto; padding: 16px 18px; }
 .atlas-fit-scroll h2 { font-size: 20px; margin: 6px 0; }
 .atlas-fit-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--border); background: var(--background); }
@@ -606,3 +610,38 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 .vision-end { padding-block: 80px 100px; display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .vision-end h2 { font-size: 32px; max-width: 600px; margin: 0; }
 @media (max-width: 850px) { .vision-grid { grid-template-columns: 1fr; gap: 22px; } .vision-intro { padding-block: 65px; } .vision-intro > p { font-size: 17px; } .vision-end { flex-direction: column; align-items: flex-start; } }
+
+/* A node button is a 90x70 box, mostly empty space around the dot and label.
+   Now that related diseases sit close together, that empty padding was covering
+   the short edges between them and stealing their clicks. Let clicks fall
+   through the padding; the dot and the label stay clickable. */
+.graph-node { pointer-events: none; }
+.graph-node .node-core, .graph-node .node-name { pointer-events: auto; }
+
+/* Knowledge-graph cluster colours (clusters.cluster -> .cluster-c<n>). */
+:root {
+  --cluster-0: oklch(.55 .098 199);
+  --cluster-1: oklch(.55 .098 294);
+  --cluster-2: oklch(.55 .098 76);
+  --cluster-3: oklch(.55 .098 240);
+  --cluster-4: oklch(.55 .098 145);
+  --cluster-5: oklch(.55 .098 330);
+  --cluster-6: oklch(.55 .098 25);
+  --cluster-7: oklch(.55 .098 265);
+  --cluster-8: oklch(.55 .098 170);
+  --cluster-9: oklch(.55 .098 55);
+  --cluster-10: oklch(.55 .098 310);
+  --cluster-11: oklch(.55 .098 215);
+}
+.cluster-mark.cluster-c0, .list-node.cluster-c0 { background: var(--cluster-0); }.graph-node.cluster-c0 .node-core { background: var(--cluster-0); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-0) 16%,transparent); }
+.cluster-mark.cluster-c1, .list-node.cluster-c1 { background: var(--cluster-1); }.graph-node.cluster-c1 .node-core { background: var(--cluster-1); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-1) 16%,transparent); }
+.cluster-mark.cluster-c2, .list-node.cluster-c2 { background: var(--cluster-2); }.graph-node.cluster-c2 .node-core { background: var(--cluster-2); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-2) 16%,transparent); }
+.cluster-mark.cluster-c3, .list-node.cluster-c3 { background: var(--cluster-3); }.graph-node.cluster-c3 .node-core { background: var(--cluster-3); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-3) 16%,transparent); }
+.cluster-mark.cluster-c4, .list-node.cluster-c4 { background: var(--cluster-4); }.graph-node.cluster-c4 .node-core { background: var(--cluster-4); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-4) 16%,transparent); }
+.cluster-mark.cluster-c5, .list-node.cluster-c5 { background: var(--cluster-5); }.graph-node.cluster-c5 .node-core { background: var(--cluster-5); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-5) 16%,transparent); }
+.cluster-mark.cluster-c6, .list-node.cluster-c6 { background: var(--cluster-6); }.graph-node.cluster-c6 .node-core { background: var(--cluster-6); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-6) 16%,transparent); }
+.cluster-mark.cluster-c7, .list-node.cluster-c7 { background: var(--cluster-7); }.graph-node.cluster-c7 .node-core { background: var(--cluster-7); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-7) 16%,transparent); }
+.cluster-mark.cluster-c8, .list-node.cluster-c8 { background: var(--cluster-8); }.graph-node.cluster-c8 .node-core { background: var(--cluster-8); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-8) 16%,transparent); }
+.cluster-mark.cluster-c9, .list-node.cluster-c9 { background: var(--cluster-9); }.graph-node.cluster-c9 .node-core { background: var(--cluster-9); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-9) 16%,transparent); }
+.cluster-mark.cluster-c10, .list-node.cluster-c10 { background: var(--cluster-10); }.graph-node.cluster-c10 .node-core { background: var(--cluster-10); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-10) 16%,transparent); }
+.cluster-mark.cluster-c11, .list-node.cluster-c11 { background: var(--cluster-11); }.graph-node.cluster-c11 .node-core { background: var(--cluster-11); box-shadow: 0 0 0 4px color-mix(in oklab,var(--cluster-11) 16%,transparent); }
