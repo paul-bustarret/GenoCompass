@@ -186,7 +186,7 @@ def fetch_abstract(pmid: str) -> str:
     url = f"{EUTILS}/efetch.fcgi?db=pubmed&id={pmid}&rettype=abstract&retmode=text"
     path = _cache_path("pubmed_abstracts", url, "txt")
     if path.exists():
-        return path.read_text()
+        return path.read_text(encoding="utf-8")
     for attempt in range(3):
         with _ncbi_lock:
             wait = 0.34 - (time.time() - _http._last_ncbi[0])
@@ -202,7 +202,7 @@ def fetch_abstract(pmid: str) -> str:
                 raise
             time.sleep(2 ** attempt)
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(r.text)
+    path.write_text(r.text, encoding="utf-8")
     return r.text
 
 
@@ -210,11 +210,11 @@ def fetch_page(url: str) -> str:
     """Raw HTML of a web page (browser UA, 30 s timeout), cached in data/raw/pages/."""
     path = _cache_path("pages", url, "html")
     if path.exists():
-        return path.read_text()
+        return path.read_text(encoding="utf-8")
     r = requests.get(url, headers=BROWSER_UA, timeout=30)
     r.raise_for_status()
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(r.text)
+    path.write_text(r.text, encoding="utf-8")
     return r.text
 
 
@@ -226,12 +226,12 @@ def pubmed_summaries(pmids: list[str]) -> dict:
 
 # ---------------------------------------------------------------- vocabulary + disease context
 def load_mechanisms(path: Path = MECH_PATH) -> dict:
-    return yaml.safe_load(open(path))["mechanisms"]
+    return yaml.safe_load(open(path, encoding="utf-8"))["mechanisms"]
 
 
 def _slice_by_omim(path: Path = SLICE_PATH) -> dict:
     try:
-        return {d["omim"]: d for d in yaml.safe_load(open(path))["diseases"]}
+        return {d["omim"]: d for d in yaml.safe_load(open(path, encoding="utf-8"))["diseases"]}
     except FileNotFoundError:
         return {}
 
@@ -769,7 +769,7 @@ def extract_pages(gb: GraphBuilder, pages_path=PAGES_PATH, checkpoint=None) -> d
     if not pages_path.exists():
         st.c["missing_pages_file"] = 1
         return st.as_dict()
-    pages = yaml.safe_load(open(pages_path)).get("pages") or []
+    pages = yaml.safe_load(open(pages_path, encoding="utf-8")).get("pages") or []
     ctxs = disease_contexts(gb)
     by_omim = {gb.nodes[d]["attrs"].get("omim"): d for d in ctxs if gb.nodes[d]["attrs"].get("omim")}
 
@@ -959,12 +959,12 @@ def _write_report(parts: dict, out: Path = OUT):
     rep = {}
     if path.exists():
         try:
-            rep = json.loads(path.read_text())
+            rep = json.loads(path.read_text(encoding="utf-8"))
         except json.JSONDecodeError:
             rep = {}
     for k, v in parts.items():
         rep[k] = {**v, "run_date": date.today().isoformat()}
-    path.write_text(json.dumps(rep, indent=2, ensure_ascii=False))
+    path.write_text(json.dumps(rep, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
 def _summary(d: dict) -> dict:

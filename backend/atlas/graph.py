@@ -48,14 +48,14 @@ class GraphBuilder:
     def from_csv(cls, out: Path = OUT) -> "GraphBuilder":
         """Reload a written graph so new evidence can be appended (add_document, refresh_papers)."""
         gb = cls()
-        with open(out / "nodes.csv") as f:
+        with open(out / "nodes.csv", encoding="utf-8") as f:
             for n in csv.DictReader(f):
                 gb.nodes[n["id"]] = {**n, "attrs": json.loads(n["attrs"])}
-        with open(out / "edges.csv") as f:
+        with open(out / "edges.csv", encoding="utf-8") as f:
             for e in csv.DictReader(f):
                 gb.edges[e["edge_id"]] = {k: e.get(k, "") for k in EDGE_FIELDS}
         if (out / "coverage.csv").exists():
-            with open(out / "coverage.csv") as f:
+            with open(out / "coverage.csv", encoding="utf-8") as f:
                 gb.coverage = list(csv.DictReader(f))
         return gb
 
@@ -68,7 +68,7 @@ class GraphBuilder:
 
 
 def _write(path, fields, rows):
-    with open(path, "w", newline="") as f:
+    with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=fields)
         w.writeheader()
         w.writerows(rows)
@@ -77,11 +77,11 @@ def _write(path, fields, rows):
 def load(out: Path = OUT) -> nx.MultiDiGraph:
     """Load the CSVs into a MultiDiGraph (parallel edges = several sources for one relation)."""
     g = nx.MultiDiGraph()
-    with open(out / "nodes.csv") as f:
+    with open(out / "nodes.csv", encoding="utf-8") as f:
         for n in csv.DictReader(f):
             g.add_node(n["id"], type=n["type"], name=n["name"], synonyms=n["synonyms"],
                        attrs=json.loads(n["attrs"]))
-    with open(out / "edges.csv") as f:
+    with open(out / "edges.csv", encoding="utf-8") as f:
         for e in csv.DictReader(f):
             e["confidence"] = float(e["confidence"])
             g.add_edge(e["src"], e["dst"], key=e["edge_id"], **e)

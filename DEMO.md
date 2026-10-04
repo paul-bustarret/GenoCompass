@@ -6,40 +6,48 @@ families, researchers and a clinical trial that can help — including a trial w
 
 ## Before you start
 
-**Needs once per computer:** [uv](https://docs.astral.sh/uv/) (`brew install uv`), Node.js
-(`brew install node`), and Claude Code installed and logged in (`claude` works in a terminal —
-used for the chat and email drafts).
+**Needs once per computer**
 
-All commands start from the **repo root** (the folder that contains `backend/` and `src/`).
+| | macOS | Windows |
+|---|---|---|
+| [uv](https://docs.astral.sh/uv/) (Python) | `brew install uv` | `winget install astral-sh.uv` |
+| Node.js | `brew install node` | `winget install OpenJS.NodeJS.LTS` |
+| Claude Code, logged in (chat, email drafts, adding papers) | [install](https://docs.claude.com/en/docs/claude-code) then run `claude` once | same |
 
-**First time only** — install the website's packages:
+Open a terminal **in the repo root** (the folder with `backend/` and `src/`). First time only:
 
-```bash
+```
 npm install
 ```
 
-**Every time** — two terminals, both opened in the repo root:
+**Every time — two terminals, both starting in the repo root.** The commands are the same on
+macOS, Linux and Windows (PowerShell or Command Prompt); type them line by line.
 
-```bash
-# terminal 1 — backend (data + AI), http://localhost:8000
-cd backend && uv run python -m atlas.server
+Terminal 1 — backend (data + AI) on http://localhost:8000:
+
+```
+cd backend
+uv run python -m atlas.server
 ```
 
-```bash
-# terminal 2 — website, connected to the local backend
-VITE_ATLAS_API_URL=http://localhost:8000 npx vite dev
+Terminal 2 — website, connected to that backend:
+
+```
+npm run demo
 ```
 
-Open the address terminal 2 prints — normally **http://localhost:8080** (if 8080 is busy it picks
-the next free port; close any old atlas servers first). Stop both with `Ctrl+C`.
+Open **http://localhost:8080** (the address terminal 2 prints; if 8080 is busy it uses the next
+free port — close old servers first). Stop both with `Ctrl+C`.
 
-**Demo mode (default):** papers you add on the "Add a paper" page are removed when you stop the
-backend with `Ctrl+C`, so every run starts from the same data. To keep them, start the backend with
-`ATLAS_PERSIST=1 uv run python -m atlas.server`. If a terminal was closed without `Ctrl+C`, the next
-start-up cleans up automatically; to reset by hand: `git checkout -- backend/data/graph`.
-
-Check it's connected: the home page shows **"The atlas today"** with live numbers, and
-http://localhost:8000/health returns `"status": "ok"`.
+- Connected? The home page shows **"The atlas today"** with live numbers, and
+  http://localhost:8000/health returns `"status": "ok"`.
+- **Demo mode (default):** papers added on the "Add a paper" page are removed when the backend stops
+  with `Ctrl+C`, so each run starts from the same data. To keep them, start the backend with
+  `ATLAS_PERSIST=1 uv run python -m atlas.server` (macOS/Linux) or
+  `$env:ATLAS_PERSIST=1; uv run python -m atlas.server` (PowerShell). Reset by hand:
+  `git checkout -- backend/data/graph`.
+- `npm run demo` reads `.env.demo` (`VITE_ATLAS_API_URL=http://localhost:8000`). Plain `npm run dev`
+  runs the website without the backend (Supabase / sample data).
 
 Chat answers are generated live every time (Claude Sonnet reads the disease's evidence graph,
 ~5–10 seconds) — say so while it thinks.

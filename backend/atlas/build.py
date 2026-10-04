@@ -32,7 +32,7 @@ def link_authors_to_pis(gb: GraphBuilder):
 
 
 def build(config=ROOT / "config" / "slice.yaml"):
-    cfg = yaml.safe_load(open(config))
+    cfg = yaml.safe_load(open(config, encoding="utf-8"))
     lim = cfg["limits"]
     gb = GraphBuilder()
     diseases = {}  # did -> slice entry
@@ -72,7 +72,7 @@ def build(config=ROOT / "config" / "slice.yaml"):
         "edges_by_source": dict(Counter(e["source"] for e in gb.edges.values())),
         "not_yet_covered": ["patient groups / registries (web + LLM)", "mechanism + LoF/GoF (PubMed + LLM)"],
     }
-    (OUT / "build_report.json").write_text(json.dumps(report, indent=2))
+    (OUT / "build_report.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
     return report
 
 

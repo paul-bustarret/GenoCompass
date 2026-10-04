@@ -14,7 +14,9 @@ import hashlib
 import json
 import os
 import re
+import shutil
 import subprocess
+import tempfile
 import urllib.request
 from pathlib import Path
 
@@ -41,7 +43,7 @@ def complete(system: str, user: str, schema: dict | None = None, tier: str = "fa
     key = hashlib.sha1(json.dumps([be, model, system, user, schema], sort_keys=True).encode()).hexdigest()
     path = CACHE / f"{key}.json"
     if cache and path.exists() and not os.environ.get("ATLAS_LLM_NOCACHE"):
-        return json.loads(path.read_text())["output"]
+        return json.loads(path.read_text(encoding="utf-8"))["output"]
     if be == "claude":
         out = _claude(system, user, schema, model, timeout, think=tier != "fast")
     else:
@@ -53,7 +55,7 @@ def complete(system: str, user: str, schema: dict | None = None, tier: str = "fa
 
 
 def _claude(system, user, schema, model, timeout, think=True):
-    cmd = ["claude", "-p", "--model", model, "--output-format", "json", "--tools", "",
+    cmd = [shutil.which("claude") or "claude", "-p", "--model", model, "--output-format", "json", "--tools", "",
            "--no-session-persistence", "--setting-sources", "", "--system-prompt", system]
     if schema:
         cmd += ["--json-schema", json.dumps(schema)]
@@ -61,8 +63,8 @@ def _claude(system, user, schema, model, timeout, think=True):
     res, last_err = None, None
     for _attempt in range(2):  # claude -p occasionally fails transiently; retry once
         try:
-            proc = subprocess.run(cmd, input=user, capture_output=True, text=True, timeout=timeout, cwd="/tmp",
-                                  env=env)
+            proc = subprocess.run(cmd, input=user, capture_output=True, text=True, encoding="utf-8",
+                                  timeout=timeout, cwd=tempfile.gettempdir(), env=env)
             res = json.loads(proc.stdout)
         except (subprocess.TimeoutExpired, json.JSONDecodeError) as e:
             last_err = f"claude -p failed: {e}"

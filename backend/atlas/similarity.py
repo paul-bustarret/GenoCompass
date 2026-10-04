@@ -31,7 +31,7 @@ LOOKALIKE_BIO = 0.02    # ... but (almost) no shared pathway/gene
 def hub_pathways(path: Path = HUB_PATH) -> set[str]:
     """Generic cell-biology hub pathways (config/hub_pathways.yaml) excluded from similarity features."""
     try:
-        return {p["id"] for p in yaml.safe_load(open(path)).get("hub_pathways") or []}
+        return {p["id"] for p in yaml.safe_load(open(path, encoding="utf-8")).get("hub_pathways") or []}
     except FileNotFoundError:
         return set()
 

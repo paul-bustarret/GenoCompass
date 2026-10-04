@@ -45,7 +45,7 @@ def sender_for(short: str) -> dict:
 
 def _dump(path: Path, obj) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(obj, ensure_ascii=False, indent=1) + "\n")
+    path.write_text(json.dumps(obj, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
 
 
 def _log(msg: str) -> None:
@@ -64,7 +64,7 @@ def diseases() -> list[str]:
 
 
 def _slice() -> dict:
-    return yaml.safe_load((ROOT / "config" / "slice.yaml").read_text())
+    return yaml.safe_load((ROOT / "config" / "slice.yaml").read_text(encoding="utf-8"))
 
 
 def make_journey(disease_id: str, use_llm: bool) -> tuple[dict, str | None]:
@@ -127,7 +127,7 @@ def write_examples() -> dict:
 # ---------------------------------------------------------------------------------------------
 def _clusters() -> list:
     p = OUT / "clusters.json"
-    return json.loads(p.read_text()) if p.exists() else []
+    return json.loads(p.read_text(encoding="utf-8")) if p.exists() else []
 
 
 def counts(st) -> dict:
@@ -220,7 +220,7 @@ def pg_array(items) -> str:
 def _write_csv(path: Path, header: list[str], rows) -> int:
     path.parent.mkdir(parents=True, exist_ok=True)
     n = 0
-    with open(path, "w", newline="") as f:
+    with open(path, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(header)
         for r in rows:
@@ -236,14 +236,14 @@ def _nn(v):
 
 def write_supabase(st, journeys: dict, subgraphs: dict, emails: dict) -> dict:
     SUPA_DIR.mkdir(parents=True, exist_ok=True)
-    (SUPA_DIR / "schema.sql").write_text(schema_sql())
+    (SUPA_DIR / "schema.sql").write_text(schema_sql(), encoding="utf-8")
     cols = {t: [c for c, _ in cs] for t, cs, _ in TABLES}
     g = st["g"]
     n = {}
     n["nodes"] = _write_csv(SUPA_DIR / "nodes.csv", cols["nodes"], (
         [nid, d["type"], d["name"], pg_array([s for s in (d.get("synonyms") or "").split("|") if s]),
          json.dumps(d.get("attrs") or {}, ensure_ascii=False)] for nid, d in g.nodes(data=True)))
-    with open(OUT / "edges.csv") as f:
+    with open(OUT / "edges.csv", encoding="utf-8") as f:
         raw = list(csv.DictReader(f))
     assert set(EDGE_FIELDS) <= set(raw[0]) if raw else True
     n["edges"] = _write_csv(SUPA_DIR / "edges.csv", cols["edges"], (
@@ -256,7 +256,7 @@ def write_supabase(st, journeys: dict, subgraphs: dict, emails: dict) -> dict:
          _nn(r["retrieved_at"])] for r in st["coverage"]))
     sim = []
     if (OUT / "similarity.csv").exists():
-        with open(OUT / "similarity.csv") as f:
+        with open(OUT / "similarity.csv", encoding="utf-8") as f:
             sim = list(csv.DictReader(f))
     n["similarity"] = _write_csv(SUPA_DIR / "similarity.csv", cols["similarity"], (
         [r["a"], r["b"], r["therapeutic"], r["phenotype_view"], r["gene"], r["pathway"], r["phenotype"],

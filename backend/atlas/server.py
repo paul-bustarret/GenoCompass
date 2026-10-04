@@ -160,9 +160,9 @@ def table_rows(name: str) -> list[dict]:
         rows = []
     elif name == "clusters":
         rows = [{"cluster": c["cluster"], "disease_id": d}
-                for c in json.loads(path.read_text()) for d in c["diseases"]]
+                for c in json.loads(path.read_text(encoding="utf-8")) for d in c["diseases"]]
     else:
-        with open(path, newline="") as f:
+        with open(path, newline="", encoding="utf-8") as f:
             rows = [{c: _cell(name, c, r.get(c)) for c in _COLUMNS[name]} for r in csv.DictReader(f)]
     _table_cache[name] = (mtime, rows)
     return rows

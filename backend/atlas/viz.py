@@ -32,7 +32,7 @@ def short(g, n):
 
 
 def save_computed(g, pairs, comms):
-    with open(OUT / "similarity.csv", "w", newline="") as f:
+    with open(OUT / "similarity.csv", "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["a", "b", "therapeutic", "phenotype_view", "gene", "pathway", "phenotype",
                     "lookalike", "top_witnesses"])
@@ -43,7 +43,7 @@ def save_computed(g, pairs, comms):
                         s["lookalike"], " | ".join(wit)])
     (OUT / "clusters.json").write_text(json.dumps(
         [{"cluster": i, "diseases": sorted(c), "names": sorted(short(g, d) for d in c)} for i, c in enumerate(comms)],
-        indent=2))
+        indent=2), encoding="utf-8")
 
 
 def disease_map(g, pairs, comms):
@@ -161,9 +161,9 @@ def html(g, comms):
     edges = [{"from": u, "to": v, "label": e["relation"], "source": e["source"], "url": e["source_url"],
               "evidence": e["evidence"], "confidence": e["confidence"], "quote": e["quote"], "id": k}
              for u, v, k, e in g.edges(keys=True, data=True)]
-    tpl = (Path(__file__).parent / "atlas_template.html").read_text()
+    tpl = (Path(__file__).parent / "atlas_template.html").read_text(encoding="utf-8")
     out = tpl.replace("/*NODES*/[]", json.dumps(nodes)).replace("/*EDGES*/[]", json.dumps(edges))
-    (FIG / "atlas.html").write_text(out)
+    (FIG / "atlas.html").write_text(out, encoding="utf-8")
 
 
 def main():

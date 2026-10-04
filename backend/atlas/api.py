@@ -96,7 +96,7 @@ def _state(out: Path = OUT) -> dict:
           "edges": {k: (u, v, d) for u, v, k, d in g.edges(keys=True, data=True)},
           "coverage": []}
     if (out / "coverage.csv").exists():
-        with open(out / "coverage.csv") as f:
+        with open(out / "coverage.csv", encoding="utf-8") as f:
             st["coverage"] = list(csv.DictReader(f))
     st["pairs"] = None  # computed lazily
     st["names"] = _name_index(g)
@@ -1336,7 +1336,7 @@ def stats() -> dict:
     papers_read = {e["source_url"] for e in edges if e["evidence"] == "extracted" and e["source"] == "pubmed"}
     pages_read = {e["source_url"] for e in edges if e["evidence"] == "extracted" and e["source"] == "web"}
     searched = 0
-    with open(OUT / "coverage.csv") as f:
+    with open(OUT / "coverage.csv", encoding="utf-8") as f:
         for r in csv.DictReader(f):
             try:
                 searched += max(int(r["n_results"]), 0)

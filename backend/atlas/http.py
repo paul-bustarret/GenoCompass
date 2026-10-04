@@ -21,7 +21,7 @@ def get_json(source: str, url: str, body: dict | None = None, retries: int = 3):
     key = url + (json.dumps(body, sort_keys=True) if body else "")
     path = _path(source, key)
     if path.exists():
-        return json.loads(path.read_text())["response"]
+        return json.loads(path.read_text(encoding="utf-8"))["response"]
     if "ncbi.nlm.nih.gov" in url:  # NCBI allows 3 req/s without an API key
         wait = 0.34 - (time.time() - _last_ncbi[0])
         if wait > 0:

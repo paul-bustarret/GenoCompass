@@ -2,11 +2,53 @@
 
 An evidence-led rare-disease map prototype. The current review includes the introduction, four perspectives, search, constellation map, evidence inspection, an honest-gap example, and a Type C partner and outreach page. Contact details and research programs are public-source references, not a live directory; the email draft opens in the visitor’s email app and is never sent automatically.
 
-## Run locally
+## Run locally (website + knowledge-graph backend)
 
-```sh
-bun install && bun run dev
+**Needs once per computer**
+
+| | macOS | Windows |
+|---|---|---|
+| [uv](https://docs.astral.sh/uv/) (Python) | `brew install uv` | `winget install astral-sh.uv` |
+| Node.js | `brew install node` | `winget install OpenJS.NodeJS.LTS` |
+| Claude Code, logged in (chat, email drafts, adding papers) | [install](https://docs.claude.com/en/docs/claude-code) then run `claude` once | same |
+
+Open a terminal **in the repo root** (the folder with `backend/` and `src/`). First time only:
+
 ```
+npm install
+```
+
+**Every time — two terminals, both starting in the repo root.** The commands are the same on
+macOS, Linux and Windows (PowerShell or Command Prompt); type them line by line.
+
+Terminal 1 — backend (data + AI) on http://localhost:8000:
+
+```
+cd backend
+uv run python -m atlas.server
+```
+
+Terminal 2 — website, connected to that backend:
+
+```
+npm run demo
+```
+
+Open **http://localhost:8080** (the address terminal 2 prints; if 8080 is busy it uses the next
+free port — close old servers first). Stop both with `Ctrl+C`.
+
+- Connected? The home page shows **"The atlas today"** with live numbers, and
+  http://localhost:8000/health returns `"status": "ok"`.
+- **Demo mode (default):** papers added on the "Add a paper" page are removed when the backend stops
+  with `Ctrl+C`, so each run starts from the same data. To keep them, start the backend with
+  `ATLAS_PERSIST=1 uv run python -m atlas.server` (macOS/Linux) or
+  `$env:ATLAS_PERSIST=1; uv run python -m atlas.server` (PowerShell). Reset by hand:
+  `git checkout -- backend/data/graph`.
+- `npm run demo` reads `.env.demo` (`VITE_ATLAS_API_URL=http://localhost:8000`). Plain `npm run dev`
+  runs the website without the backend (Supabase / sample data).
+
+Website only (no backend): `bun install && bun run dev`, or `npm install && npm run dev`.
+Full demo walkthrough: [DEMO.md](DEMO.md). Backend details: [backend/README.md](backend/README.md).
 
 ## Architecture
 
