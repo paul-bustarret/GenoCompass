@@ -9,7 +9,7 @@ import { clusters, diseases, allEdges, edgesFor, getGraph, getNode, clusterFor, 
 import { AtlasChatDemo } from "@/components/atlas/atlas-chat-demo";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet";
 
-export const Route = createFileRoute("/atlas/$id")({ head: () => ({ meta: [{ title: "Explore connections — Rare Disease Atlas" }, { name: "description", content: "Inspect illustrative rare-disease connections, mechanisms and their evidence." }, { property: "og:title", content: "Connections — Rare Disease Atlas" }, { property: "og:description", content: "Explore the evidence behind rare-disease connections." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }), component: Atlas });
+export const Route = createFileRoute("/atlas/$id")({ head: () => ({ meta: [{ title: "Explore connections — geno compass" }, { name: "description", content: "Inspect illustrative rare-disease connections, mechanisms and their evidence." }, { property: "og:title", content: "Connections — geno compass" }, { property: "og:description", content: "Explore the evidence behind rare-disease connections." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }), component: Atlas });
 const positions: Record<string,[number,number]> = { "mps-iiic":[46,44],"mps-iiia":[28,25],"mps-iiib":[69,28],"mps-iiid":[69,66],"mps-i":[16,69],"mps-ii":[26,83],"mps-vii":[43,76],"msd":[14,45],"rett":[85,43],"mecp2-dup":[88,76],"disease-z":[50,48] };
 const points = (id:string) => positions[id] ?? [50,50];
 const mapEdges = allEdges.filter((edge) => edge.id !== "e-rett-counter");

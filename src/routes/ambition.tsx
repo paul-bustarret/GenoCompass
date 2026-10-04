@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/ambition")({
   head: () => ({ meta: [
-    { title: "Our 10× path — Rare Disease Atlas" },
+    { title: "Our 10× path — geno compass" },
     { name: "description", content: "The wider ambition for rare-disease research: make existing knowledge, evidence and collaborators easier to find and connect." },
-    { property: "og:title", content: "Our 10× path — Rare Disease Atlas" },
+    { property: "og:title", content: "Our 10× path — geno compass" },
     { property: "og:description", content: "A vision for moving rare-disease research forward without rebuilding what already exists." },
     { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" },
   ] }),
