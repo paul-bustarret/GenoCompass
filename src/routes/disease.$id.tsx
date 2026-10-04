@@ -84,7 +84,7 @@ function DiseasePage() {
       <Link className="back-link" to="/atlas/$id" params={{ id }} search={{ as: persona } as never}><ArrowLeft size={14}/> Back to map</Link>
       <div><h1>{disease.label}</h1><p>{disease.attributes.description}</p></div>
     </header>
-    {loading ? <p className="partner-empty">Reviewing available contacts…</p> : partners.length === 0 ? <div className="partner-empty"><h3>No verified partner records in this demonstration</h3><p>We have not mapped contacts or treatment programs for this condition yet. We won’t substitute contacts from another subtype.</p></div> : <>
+    {loading ? <p className="partner-empty">Reviewing available contacts…</p> : partners.length === 0 ? <div className="partner-empty"><h3>No verified partner records yet</h3><p>We have not mapped contacts or treatment programs for this condition yet. We won’t substitute contacts from another subtype.</p></div> : <>
       <h2 className="steps-section-title">Your {plan.length} next steps</h2>
       <div className="steps-grid">{plan.map((step, i) => { const partner = partners.find((p) => p.id === step.partnerId)!; return <article key={step.partnerId} className={`step-card accent-${i + 1} ${hovered === step.partnerId ? "linked" : ""}`} onMouseEnter={() => setHovered(step.partnerId)} onMouseLeave={() => setHovered("")} onFocus={() => setHovered(step.partnerId)} onBlur={() => setHovered("")} tabIndex={0}>
         <span className="step-num">{String(i + 1).padStart(2, "0")}</span>

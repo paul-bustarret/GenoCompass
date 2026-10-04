@@ -13,7 +13,7 @@ export const Route = createFileRoute("/search")({
       {
         name: "description",
         content:
-          "Search by disease, gene, symptom or therapeutic approach in the illustrative atlas.",
+          "Search by disease, gene, symptom or therapeutic approach in the atlas.",
       },
       { property: "og:title", content: "Search — geno compass" },
       {
@@ -232,8 +232,8 @@ function SearchPage() {
           />
           <p>
             {/HGSNAT|IIIC/i.test(reportText)
-              ? "Demo extraction: HGSNAT → MPS IIIC. A variant’s effect on the protein needs expert review."
-              : "This demo only recognizes HGSNAT and MPS IIIC. Do not paste sensitive information into a real service without reviewing its privacy policy."}
+              ? "Matched: HGSNAT → MPS IIIC. A variant’s effect on the protein needs expert review."
+              : "Report reading currently recognises HGSNAT and MPS IIIC; for other conditions, search by name above. Avoid pasting identifying information."}
           </p>
           {/HGSNAT|IIIC/i.test(reportText) && (
             <Button onClick={() => goToGene("HGSNAT")}>

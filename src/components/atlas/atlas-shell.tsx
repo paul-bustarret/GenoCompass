@@ -65,7 +65,7 @@ export function AtlasShell({ children }: { children: ReactNode }) {
         <nav className="top-nav" aria-label="Main navigation"><Link to="/who" search={{ as: persona } as never}>Explore the atlas</Link><Link to="/ambition">Our 10× path</Link><Link to="/team">The team behind</Link></nav>
       </header>
       <main className={path === "/" ? "home-main" : "page-main"}>{children}</main>
-      <footer className="site-footer"><span>GENO COMPASS <span className="footer-divider">/</span> DEMONSTRATION DATA</span><span className="footer-end"><span>Research navigation tool, not medical advice. Discuss any next step with your care team.</span><span className="footer-powered">Powered by OpenAI</span></span></footer>
+      <footer className="site-footer"><span>GENO COMPASS <span className="footer-divider">/</span> RARE DISEASE ATLAS</span><span className="footer-end"><span>Research navigation tool, not medical advice. Discuss any next step with your care team.</span><span className="footer-powered">Powered by OpenAI</span></span></footer>
     </div>
   </AtlasContext.Provider>;
 }

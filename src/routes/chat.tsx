@@ -9,6 +9,6 @@ const defaultDisease = useLocalApi ? "MONDO:0010100" : "mps-iiic";
 
 export const Route = createFileRoute("/chat")({
   validateSearch: (search: Record<string, unknown>) => ({ diseaseId: typeof search['diseaseId'] === "string" ? search['diseaseId'] : defaultDisease, demo: search['demo'] === true || search['demo'] === "true" }),
-  head: () => ({ meta: [{ title: "Atlas research guide — geno compass" }, { name: "description", content: "Discuss the illustrative rare-disease connection map with the atlas research guide." }, { property: "og:title", content: "Atlas research guide — geno compass" }, { property: "og:description", content: "Explore the evidence behind the chart's illustrative relationships." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
+  head: () => ({ meta: [{ title: "Atlas research guide — geno compass" }, { name: "description", content: "Discuss the rare-disease connection map with the atlas research guide." }, { property: "og:title", content: "Atlas research guide — geno compass" }, { property: "og:description", content: "Explore the evidence behind the chart's illustrative relationships." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
   component: () => { const search = Route.useSearch(); return search.demo || useLocalApi ? <AtlasChatDemo diseaseId={search.diseaseId} /> : <AtlasChat diseaseId={search.diseaseId} />; },
 });

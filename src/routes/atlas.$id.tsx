@@ -37,7 +37,7 @@ export const Route = createFileRoute("/atlas/$id")({
       { title: "Explore connections — geno compass" },
       {
         name: "description",
-        content: "Inspect illustrative rare-disease connections, mechanisms and their evidence.",
+        content: "Inspect rare-disease connections, mechanisms and their evidence.",
       },
       { property: "og:title", content: "Connections — geno compass" },
       {
@@ -541,7 +541,7 @@ function Atlas() {
               <div className="explain-block">
                 <span className="explain-num">03</span>
                 <div>
-                  <h3>Research activity in this demo</h3>
+                  <h3>Research activity</h3>
                   <strong className="explain-value">
                     {item.research_activity >= 75
                       ? "High"
@@ -562,7 +562,7 @@ function Atlas() {
                   {persona === "devon" && (
                     <small>
                       Community:{" "}
-                      {item.attributes.patient_group || "No dedicated group in this demo"}
+                      {item.attributes.patient_group || "No dedicated group recorded yet"}
                     </small>
                   )}
                 </div>
