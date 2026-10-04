@@ -1,0 +1,15 @@
+- [x] Stage 1: White scientific design, home, roles, search, atlas, evidence and gap state.
+- [x] Fit the mechanism cluster into one viewport and add restrained motion.
+- [x] Stage 2: Show sourced Type C partners, public contacts, regions, treatment focus, and editable outreach from the disease profile.
+- [x] Bring partner actions into the graph’s selected-condition panel.
+- [x] Explain graph connections inline and open evidence by double-click.
+- [x] Improve graph line readability with larger labels, visible legend and expanded connection explanation.
+- [x] Move cluster key and line legend above the enlarged graph; shorten atlas header and keep connection explanations outside the chart.
+- [x] Remove overlapping relationship captions and stack the cluster key above the line key.
+- [x] Add account-saved, separate conversations for a chart-specific assistant (signed-in conversation flow awaits an account for live verification).
+- [x] Rework chart screen per comments; add clinician research upload; rename Priya to pharma scout.
+- [x] Apply annotated chart feedback: larger perspective selector, separate plain-language explanation, no duplicate next-steps tab, and dark-blue ordered actions.
+- [x] Apply latest chart annotation: shorter header, larger map with legend below, test assistant mock, and chart accessibility.
+- [x] Label the live chart assistant as powered by OpenAI and link to it from the test assistant; keep sample answers distinct.
+- [x] Restore full-width chart actions and add a site-wide 10× ambition and team pages to a three-link navigation, removing the condition-specific 10× shortcut from next steps.
+- [ ] Stage 3: Specialist lenses, faster route, list view and phone polish (awaiting stage 2 review).
