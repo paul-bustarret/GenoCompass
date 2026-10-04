@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { useAtlas } from "@/components/atlas/atlas-shell";
 
 export const Route = createFileRoute("/")({
- head: () => ({ meta: [{ title: "geno compass — Research connections, made visible" }, { name: "description", content: "Explore an evidence-led map of rare-disease biology, research assets and potential collaborators." }, { property: "og:title", content: "geno compass" }, { property: "og:description", content: "An evidence-led map of rare-disease connections." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
+ head: () => ({ meta: [{ title: "A Rare Disease Atlas — geno compass" }, { name: "description", content: "Explore an evidence-led map of rare-disease biology, research assets and potential collaborators." }, { property: "og:title", content: "A Rare Disease Atlas — geno compass" }, { property: "og:description", content: "An evidence-led map of rare-disease connections." }, { property: "og:type", content: "website" }, { name: "twitter:card", content: "summary" }] }),
  component: Home,
 });
 function Home() {
