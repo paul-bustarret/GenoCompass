@@ -34,6 +34,13 @@ import {
   type ApiNextStep,
   type ApiOrganization,
 } from "@/lib/atlas-api";
+import {
+  CATEGORY_INFO,
+  CATEGORY_ORDER,
+  partnersFor,
+  roleOf,
+  type PartnerCategory,
+} from "@/lib/partner-category";
 
 const countryName = (() => {
   let names: Intl.DisplayNames | null = null;
@@ -52,24 +59,11 @@ const countryName = (() => {
   };
 })();
 
-const kindLabel = (kind: string | null) =>
-  ({
-    patient_group: "Patient group",
-    sponsor: "Trial sponsor",
-    funder: "Funder",
-    nih: "Funder",
-    company: "Company",
-    industry: "Company",
-    academic: "Research centre",
-    registry_host: "Registry host",
-  })[kind ?? ""] ?? "Organisation";
-
-const roleIcon = (kind: string | null) =>
-  kind === "company" || kind === "industry" || kind === "sponsor"
-    ? FlaskConical
-    : kind === "funder" || kind === "nih"
-      ? Landmark
-      : HeartHandshake;
+const categoryIcon: Record<PartnerCategory, typeof HeartHandshake> = {
+  families: HeartHandshake,
+  therapies: FlaskConical,
+  institutions: Landmark,
+};
 
 const stepTitle: Record<ApiNextStep["kind"], string> = {
   contact: "Reach out",
@@ -99,7 +93,7 @@ function planFor(j: ApiJourney): Step[] {
   if (steps.length) return steps;
   return j.organizations.slice(0, 3).map((o) => ({
     title: stepTitle.contact,
-    text: `Contact ${o.name} (${kindLabel(o.kind).toLowerCase()}, ${countryName(o.country)}), which the atlas links to ${j.disease.short ?? j.disease.name}.`,
+    text: `Contact ${o.name} (${roleOf(o, j).toLowerCase()}, ${countryName(o.country)}), which the atlas links to ${j.disease.short ?? j.disease.name}.`,
     review: false,
     org: o,
     edges: o.edges,
@@ -166,10 +160,7 @@ export function LiveDiseasePage({ id }: { id: string }) {
   }, [id]);
 
   const plan = useMemo(() => (journey ? planFor(journey) : []), [journey]);
-  const helpers = useMemo(
-    () => (journey ? journey.organizations.filter((o) => o.for_disease === id).slice(0, 6) : []),
-    [journey, id],
-  );
+  const helpers = useMemo(() => (journey ? partnersFor(journey, id) : []), [journey, id]);
 
   async function openDraft(orgId: string | null) {
     setDraftFor(orgId);
@@ -273,47 +264,79 @@ export function LiveDiseasePage({ id }: { id: string }) {
               </article>
             ))}
           </div>
-          <div className="party-actions">
+          <div className="party-actions" style={{ marginTop: 0, justifyContent: "flex-start" }}>
             <Button onClick={() => void openDraft(null)}>
               <Mail size={15} /> Draft an outreach email
             </Button>
           </div>
           <h2 className="steps-section-title">Who can help</h2>
           <div className="steps-grid">
-            {helpers.map((org, i) => {
-              const Icon = roleIcon(org.kind);
+            {CATEGORY_ORDER.map((cat) => {
+              const info = CATEGORY_INFO[cat];
+              const CatIcon = categoryIcon[cat];
+              const items = helpers.filter((p) => p.category === cat);
               return (
-                <article
-                  key={org.id}
-                  className={`party-card accent-${(i % 3) + 1} ${hovered === org.id ? "linked" : ""}`}
+                <section
+                  key={cat}
+                  className={`accent-${info.accent}`}
+                  style={{ display: "flex", flexDirection: "column", gap: 10, minWidth: 0 }}
+                  aria-label={info.label}
                 >
                   <div className="party-top">
                     <span className="party-icon">
-                      <Icon size={18} />
+                      <CatIcon size={18} />
                     </span>
                     <div>
-                      <span className="eyebrow">{kindLabel(org.kind)}</span>
-                      <h3>{org.name}</h3>
+                      <span className="eyebrow">{info.label.toUpperCase()}</span>
+                      <p className="party-loc" style={{ margin: 0 }}>
+                        {info.blurb}
+                      </p>
                     </div>
                   </div>
-                  <p className="party-loc">
-                    <MapPin size={12} /> {countryName(org.country)}
-                  </p>
-                  <div className="party-actions">
-                    {org.contact_email ? (
-                      <a href={`mailto:${org.contact_email}`}>{org.contact_email}</a>
-                    ) : org.website ? (
-                      <a href={org.website} target="_blank" rel="noopener noreferrer">
-                        Website <ExternalLink size={12} />
-                      </a>
-                    ) : (
-                      <span className="muted">No public contact recorded</span>
-                    )}
-                    <Button size="sm" variant="outline" onClick={() => void openDraft(org.id)}>
-                      <Mail size={14} /> Draft email
-                    </Button>
-                  </div>
-                </article>
+                  {items.length === 0 && (
+                    <p className="party-loc">No {info.label.toLowerCase()} linked to this condition yet.</p>
+                  )}
+                  {items.map(({ org, role, description }) => (
+                    <article
+                      key={org.id}
+                      data-category={cat}
+                      className={`party-card accent-${info.accent} ${hovered === org.id ? "linked" : ""}`}
+                    >
+                      <div className="party-top">
+                        <span className="party-icon">
+                          <CatIcon size={18} />
+                        </span>
+                        <div style={{ minWidth: 0 }}>
+                          <span className="eyebrow">
+                            {info.label} · {role}
+                          </span>
+                          <h3>{org.name}</h3>
+                        </div>
+                      </div>
+                      <p className="party-loc">
+                        <MapPin size={12} /> {countryName(org.country)}
+                      </p>
+                      <p className="party-approach" title={description}>
+                        {description}
+                      </p>
+                      <span className="stage-badge">{info.stage}</span>
+                      <div className="party-actions">
+                        {org.contact_email ? (
+                          <a href={`mailto:${org.contact_email}`}>{org.contact_email}</a>
+                        ) : org.website ? (
+                          <a href={org.website} target="_blank" rel="noopener noreferrer">
+                            Website <ExternalLink size={12} />
+                          </a>
+                        ) : (
+                          <span className="muted">No public contact recorded</span>
+                        )}
+                        <Button size="sm" variant="outline" onClick={() => void openDraft(org.id)}>
+                          <Mail size={14} /> Draft email
+                        </Button>
+                      </div>
+                    </article>
+                  ))}
+                </section>
               );
             })}
           </div>
