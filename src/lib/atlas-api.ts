@@ -172,6 +172,82 @@ export const draftEmail = (
 export const askChat = (diseaseId: string, messages: ApiChatMessage[]) =>
   post<ApiChatResponse>("/chat", { disease_id: diseaseId, messages });
 
+// ---- §3.6 contributed papers (POST /documents, GET /contributions/{id}) ------------------------
+export type ApiAddedLink = {
+  id: string;
+  relation: string;
+  source: string;
+  source_name: string;
+  target: string;
+  target_name: string;
+  target_type: string | null;
+  polarity: "supports" | "contradicts";
+  confidence: number | null;
+  context: string | null;
+  quote: string;
+};
+export type ApiRejectedClaim = {
+  reason: "quote_check" | "relevance" | "unresolved_entity" | "invalid_type" | string;
+  relation: string | null;
+  object: string | null;
+  quote: string | null;
+};
+export type ApiDocumentResult = {
+  source_url: string | null;
+  submitted_by: string;
+  added_edges: string[];
+  new_nodes: string[];
+  contradictions: string[];
+  dropped: Record<string, number>;
+  papers_checked: number;
+  reason?: string;
+  error?: string;
+  title?: string | null;
+  matched_diseases?: { id: string; name: string; short: string }[];
+  added?: ApiAddedLink[];
+  new_node_details?: { id: string; type: string; name: string }[];
+  rejected?: ApiRejectedClaim[];
+  claims_proposed?: number;
+  already_present?: number;
+  llm_errors?: number;
+};
+export type ApiContribution = ApiEdge & { target_name: string; target_type: string };
+
+/** Reading a paper is one LLM call plus checks; allow a slow cold start. */
+const DOCUMENT_MS = 180_000;
+export const submitDocument = (body: {
+  url?: string;
+  text?: string;
+  submitted_by: string;
+  disease_ids?: string[];
+}) =>
+  request<ApiDocumentResult>(
+    "/documents",
+    { method: "POST", body: JSON.stringify(body) },
+    DOCUMENT_MS,
+  );
+
+const contributionCache = new Map<string, Promise<ApiContribution[]>>();
+export function getContributions(diseaseId: string): Promise<ApiContribution[]> {
+  let hit = contributionCache.get(diseaseId);
+  if (!hit) {
+    hit = request<{ contributions: ApiContribution[] }>(`/contributions/${enc(diseaseId)}`).then(
+      (r) => r.contributions,
+    );
+    hit.catch(() => contributionCache.delete(diseaseId));
+    contributionCache.set(diseaseId, hit);
+  }
+  return hit;
+}
+
+/** Drops the cached journey and contributions of these diseases (after new evidence was added). */
+export function invalidateDiseaseApiCache(diseaseIds: string[]): void {
+  for (const id of diseaseIds) {
+    journeys.delete(id);
+    contributionCache.delete(id);
+  }
+}
+
 /** Removes `[E1a2b3c4]` / `[E1, E2]` citation markers, keeping line breaks (markdown bullets). */
 export function stripCitations(text: string): string {
   return text

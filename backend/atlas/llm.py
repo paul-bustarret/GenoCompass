@@ -5,6 +5,8 @@ Backends (env ATLAS_LLM):
   ollama            — local model via Ollama's native /api/chat (e.g. qwen3:30b-a3b), thinking off.
 
 Tiers map to models per backend: "fast" for bulk extraction, "smart" for writing.
+The "fast" tier runs without extended thinking: extraction output is checked in code (quote, relevance),
+and thinking made one abstract take ~50 s instead of ~6 s with `claude -p`.
 Every call is cached on disk (data/llm_cache/) keyed by backend, model, prompts and schema,
 so rebuilds are free and reproducible. Set ATLAS_LLM_NOCACHE=1 to bypass.
 """
@@ -40,22 +42,27 @@ def complete(system: str, user: str, schema: dict | None = None, tier: str = "fa
     path = CACHE / f"{key}.json"
     if cache and path.exists() and not os.environ.get("ATLAS_LLM_NOCACHE"):
         return json.loads(path.read_text())["output"]
-    out = (_claude if be == "claude" else _ollama)(system, user, schema, model, timeout)
+    if be == "claude":
+        out = _claude(system, user, schema, model, timeout, think=tier != "fast")
+    else:
+        out = _ollama(system, user, schema, model, timeout)
     if cache:
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(json.dumps({"backend": be, "model": model, "output": out}))
     return out
 
 
-def _claude(system, user, schema, model, timeout):
+def _claude(system, user, schema, model, timeout, think=True):
     cmd = ["claude", "-p", "--model", model, "--output-format", "json", "--tools", "",
            "--no-session-persistence", "--setting-sources", "", "--system-prompt", system]
     if schema:
         cmd += ["--json-schema", json.dumps(schema)]
+    env = None if think else {**os.environ, "MAX_THINKING_TOKENS": "0"}
     res, last_err = None, None
     for _attempt in range(2):  # claude -p occasionally fails transiently; retry once
         try:
-            proc = subprocess.run(cmd, input=user, capture_output=True, text=True, timeout=timeout, cwd="/tmp")
+            proc = subprocess.run(cmd, input=user, capture_output=True, text=True, timeout=timeout, cwd="/tmp",
+                                  env=env)
             res = json.loads(proc.stdout)
         except (subprocess.TimeoutExpired, json.JSONDecodeError) as e:
             last_err = f"claude -p failed: {e}"

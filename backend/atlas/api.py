@@ -1289,6 +1289,22 @@ def refresh_papers(since=None, disease_ids=None, per_disease=10) -> dict:
     return ex.refresh_papers(since=since, disease_ids=disease_ids, per_disease=per_disease)
 
 
+def contributions(disease_id: str, limit: int = 50) -> dict:
+    """Findings people added through `add_document` (extracted edges with a submitter) for one disease,
+    newest first, with the other node's name so the UI can list them in plain words."""
+    st = _state()
+    _require(st, disease_id, "disease")
+    g = st["g"]
+    rows = []
+    for _, v, e in g.out_edges(disease_id, data=True):
+        by = e.get("submitted_by") or ""
+        if e.get("evidence") != "extracted" or not by or by == "refresh":
+            continue
+        rows.append({**edge_json(e), "target_name": _name(g, v), "target_type": g.nodes[v]["type"]})
+    rows.sort(key=lambda r: (r["retrieved_at"] or "", r["id"]), reverse=True)
+    return {"disease_id": disease_id, "contributions": rows[:limit]}
+
+
 def edge(edge_id: str) -> dict:
     st = _state()
     if edge_id not in st["edges"]:

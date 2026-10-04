@@ -7,6 +7,8 @@ import { lovable } from "@/integrations/lovable";
 import { diseases } from "@/lib/atlas";
 import { useAtlas } from "@/components/atlas/atlas-shell";
 import { Button } from "@/components/ui/button";
+import { PaperContribute } from "@/components/atlas/paper-contribute";
+import { useLocalApi } from "@/lib/atlas-api";
 
 export const Route = createFileRoute("/contribute")({
   validateSearch: (s: Record<string, unknown>) => ({ condition: typeof s["condition"] === "string" ? s["condition"] : "mps-iiic" }),
@@ -24,6 +26,23 @@ const schema = z.object({
 });
 
 function Contribute() {
+  return useLocalApi ? <LocalContribute /> : <SignedInContribute />;
+}
+
+/** Local demo (VITE_ATLAS_API_URL set): no sign-in; the backend reads a PubMed paper into the graph. */
+function LocalContribute() {
+  const { condition } = Route.useSearch();
+  const { persona } = useAtlas();
+  return <section className="content-width journey-page contribute-page">
+    {/^MONDO:/.test(condition) ? <Link to="/atlas/$id" params={{ id: condition }} search={{ as: persona } as never} className="back-link"><ArrowLeft size={14} /> Back to the map</Link> : <Link to="/search" className="back-link"><ArrowLeft size={14} /> Back to search</Link>}
+    <div className="section-kicker"><span className="kicker-line" /> FOR CLINICIAN RESEARCHERS / CONTRIBUTE</div>
+    <h1>Add a paper<br /><em>to the atlas.</em></h1>
+    <p className="page-intro">Share a PubMed paper about a rare condition. AI reads the abstract, and every finding it keeps is backed by an exact quote from the paper and credited to you.</p>
+    <PaperContribute />
+  </section>;
+}
+
+function SignedInContribute() {
   const { condition } = Route.useSearch();
   const { persona } = useAtlas();
   const [userId, setUserId] = useState<string | null>(null);

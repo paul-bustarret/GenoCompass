@@ -22,7 +22,7 @@ import { getSearchCoverage, getNextSteps, type Partner } from "@/lib/atlas";
 import { useAtlasGraph } from "@/lib/use-atlas-graph";
 import type { AtlasEdge } from "@/lib/atlas-db";
 import { AtlasChatDemo } from "@/components/atlas/atlas-chat-demo";
-import { getJourney, useLocalApi } from "@/lib/atlas-api";
+import { getContributions, getJourney, useLocalApi, type ApiContribution } from "@/lib/atlas-api";
 import {
   Sheet,
   SheetContent,
@@ -129,6 +129,21 @@ function Atlas() {
     getJourney(selected)
       .then((j) => {
         if (active) setSupported(j.similar.length + j.lookalikes.length);
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [selected]);
+  // Local backend: findings people added by sharing a paper (contribute page), newest first.
+  const [contributed, setContributed] = useState<ApiContribution[]>([]);
+  useEffect(() => {
+    setContributed([]);
+    if (!useLocalApi || !/^MONDO:/.test(selected)) return;
+    let active = true;
+    getContributions(selected)
+      .then((rows) => {
+        if (active) setContributed(rows);
       })
       .catch(() => {});
     return () => {
@@ -552,6 +567,47 @@ function Atlas() {
                   )}
                 </div>
               </div>
+              {contributed.length > 0 && (
+                <div className="explain-block">
+                  <span className="explain-num">04</span>
+                  <div>
+                    <h3>
+                      Added from shared papers <span>{contributed.length}</span>
+                    </h3>
+                    <div className="contributed-list">
+                      {contributed.slice(0, 6).map((c) => (
+                        <div
+                          key={c.id}
+                          className={c.polarity === "contradicts" ? "contradicts" : undefined}
+                        >
+                          <strong>
+                            {c.relation === "has_mechanism"
+                              ? "Involves "
+                              : c.relation === "caused_by"
+                                ? "Caused by changes in "
+                                : c.polarity === "contradicts"
+                                  ? "Tested without benefit: "
+                                  : "Studied with "}
+                            {c.target_name}
+                          </strong>
+                          {c.quote && <blockquote>“{c.quote}”</blockquote>}
+                          <small>
+                            AI-extracted · shared by {c.submitted_by}
+                            {c.source_url?.startsWith("http") && (
+                              <>
+                                {" · "}
+                                <a href={c.source_url} target="_blank" rel="noreferrer">
+                                  source
+                                </a>
+                              </>
+                            )}
+                          </small>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
               {view === "map" && (
                 <details className="chart-connection-list">
                   <summary>Browse chart connections ({mapEdges.length})</summary>

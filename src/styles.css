@@ -346,6 +346,41 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 .contribute-list article { position: relative; border: 1px solid var(--border); background: var(--card); padding: 14px 44px 14px 14px; display: flex; flex-direction: column; gap: 4px; }
 .contribute-list article button { position: absolute; top: 8px; right: 8px; }
 .contribute-list small, .contribute-list p { color: var(--muted-foreground); font-size: 12px; }
+.paper-contribute .contribute-form { align-self: start; }
+.paper-mode { display: flex; border: 1px solid var(--border); align-self: flex-start; }
+.paper-mode button { padding: 7px 12px; font-size: 12px; font-weight: 600; color: var(--ink-soft); background: transparent; }
+.paper-mode button[aria-selected="true"] { background: var(--primary); color: var(--primary-foreground); }
+.paper-result { border: 1px solid var(--border); background: var(--card); padding: 22px; align-self: start; scroll-margin-top: 90px; min-width: 0; }
+.paper-empty ol { margin: 12px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 13px; color: var(--ink-soft); list-style: decimal; }
+.paper-progress { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; color: var(--primary); min-height: 160px; justify-content: center; }
+.paper-progress strong { color: var(--foreground); font-size: 16px; }
+.paper-progress small { color: var(--muted-foreground); font-size: 12px; }
+.paper-result-body { display: flex; flex-direction: column; gap: 12px; }
+.paper-result-body .eyebrow { display: inline-flex; align-items: center; gap: 6px; color: var(--primary); }
+.paper-result-body h2 { font-size: 22px; line-height: 1.2; margin: 0; }
+.paper-title a { color: var(--primary); font-size: 14px; font-weight: 600; text-underline-offset: 3px; }
+.paper-title, .paper-matched, .paper-reason, .paper-note { margin: 0; font-size: 13px; color: var(--ink-soft); }
+.paper-note { display: flex; gap: 6px; align-items: flex-start; }
+.paper-note.warn { color: var(--warning); background: var(--warning-bg); padding: 8px 10px; }
+.paper-links { display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.paper-links li { border-left: 3px solid var(--primary); background: var(--surface); padding: 10px 12px; display: flex; flex-direction: column; gap: 5px; }
+.paper-links li.contradicts { border-left-color: var(--warning); }
+.paper-link-line { font-size: 14px; }
+.paper-link-line em { font-style: normal; color: var(--ink-soft); }
+.paper-links small, .paper-rejected small { font-size: 11px; color: var(--muted-foreground); display: flex; gap: 8px; align-items: center; }
+.paper-flag { display: inline-flex; gap: 4px; align-items: center; color: var(--warning); font-weight: 650; }
+.paper-links blockquote, .paper-rejected blockquote { margin: 0; font-size: 12px; font-style: italic; color: var(--ink-soft); overflow-wrap: anywhere; }
+.paper-rejected summary { cursor: pointer; font-size: 13px; font-weight: 600; color: var(--ink-soft); }
+.paper-rejected ul { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.paper-rejected li { border: 1px dashed var(--border); padding: 8px 10px; display: flex; flex-direction: column; gap: 4px; font-size: 12px; }
+.paper-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.contributed-list { display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+.contributed-list > div { border-left: 3px solid var(--primary); padding: 4px 0 4px 10px; display: flex; flex-direction: column; gap: 2px; }
+.contributed-list > div.contradicts { border-left-color: var(--warning); }
+.contributed-list strong { font-size: 13px; font-weight: 650; }
+.contributed-list small { font-size: 11px; color: var(--muted-foreground); }
+.contributed-list blockquote { margin: 0; font-size: 11px; font-style: italic; color: var(--ink-soft); }
+.contributed-list a { font-size: 11px; color: var(--primary); }
 @media (max-width: 850px) { .atlas-layout-v2 { display: flex; flex-direction: column; height: auto; overflow: visible; } .atlas-layout-v2 .network-stage { min-height: 520px; } .contribute-grid, .contribute-row { grid-template-columns: 1fr; } .atlas-layout-v2 .network-caption > span:last-child { display: none; } }
 
 /* Keep chart navigation, condition context, and actions outside the plotted area. */

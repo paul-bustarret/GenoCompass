@@ -2,7 +2,7 @@
 // `atlas.ts`, so the screens render either source without changes (see AGENTS.md).
 import type { SupabaseClient } from "@supabase/supabase-js";
 import { supabase } from "@/integrations/supabase/client";
-import { localTables, useLocalApi } from "@/lib/atlas-api";
+import { invalidateDiseaseApiCache, localTables, useLocalApi } from "@/lib/atlas-api";
 
 type GraphDatabase = {
   public: {
@@ -343,6 +343,16 @@ export function loadAtlasGraph(): Promise<AtlasGraph> {
       throw err;
     });
   return cached;
+}
+
+/**
+ * Forget cached atlas data after new evidence was added (e.g. a submitted paper), so the map,
+ * disease pages and the evidence panels re-read it: the whole-graph cache plus the per-disease
+ * journey / contributions caches of the affected diseases.
+ */
+export function invalidateAtlasCache(diseaseIds: string[] = []): void {
+  cached = null;
+  invalidateDiseaseApiCache(diseaseIds);
 }
 
 async function fetchAtlasGraph(): Promise<AtlasGraph> {

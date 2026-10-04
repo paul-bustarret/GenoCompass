@@ -208,3 +208,94 @@ def test_webmail_withheld_and_fundraising_address_avoided():
     assert X.choose_email("jane.doe@gmail.com", page) == (None, "personal address on page withheld")
     assert X.choose_email("fundraising@sanhope.org", page)[0] == "info@sanhope.org"
     assert X.choose_email("fundraising@other.org", "only fundraising@other.org here") == ("fundraising@other.org", None)
+
+
+# ---------------------------------------------------------------- contribute page (POST /documents)
+def test_parse_pmid_from_pubmed_url_or_bare_id():
+    assert X.parse_pmid("https://pubmed.ncbi.nlm.nih.gov/41819452/") == "41819452"
+    assert X.parse_pmid("pubmed.ncbi.nlm.nih.gov/41819452") == "41819452"
+    assert X.parse_pmid(" 41819452 ") == "41819452"
+    assert X.parse_pmid("PMID: 41819452") == "41819452"
+    assert X.parse_pmid(None, "41819452") == "41819452"
+    assert X.parse_pmid(None, "MPS IIIA abstract mentioning 41819452 somewhere") is None
+    assert X.parse_pmid("https://example.org/page") is None
+
+
+def test_pubmed_submission_fetches_abstract_and_makes_one_extraction_call(graph_dir, fake_llm, monkeypatch):
+    fetched = []
+    monkeypatch.setattr(X, "fetch_abstract", lambda pmid: fetched.append(pmid) or ABSTRACT)
+    monkeypatch.setattr(X, "pubmed_summaries", lambda pmids: {p: {"title": "Genistein in MPS IIIA"} for p in pmids})
+    res = X.add_document(url="https://pubmed.ncbi.nlm.nih.gov/12345678/", submitted_by="Dr Test, neurologist",
+                         out=graph_dir)
+    assert fetched == ["12345678"]
+    extraction = [u for u in fake_llm if u.startswith("Target disease:")]
+    assert len(extraction) == 1 and len(fake_llm) == 2  # one extraction + one contradiction check
+    assert res["source_url"] == "https://pubmed.ncbi.nlm.nih.gov/12345678/"
+    assert res["title"] == "Genistein in MPS IIIA"
+    assert res["matched_diseases"] == [{"id": DID, "name": "Mucopolysaccharidosis type IIIA", "short": "MPS IIIA"}]
+    by_target = {a["target"]: a for a in res["added"]}
+    assert set(by_target) == {"MECH:substrate_storage_heparan_sulfate", "INTERVENTION:genistein", "NCBIGene:6448"}
+    g = by_target["INTERVENTION:genistein"]
+    assert g["relation"] == "studied_with" and g["polarity"] == "contradicts" and g["target_name"] == "genistein"
+    assert g["source_name"] == "MPS IIIA" and g["quote"].startswith("In contrast, treatment with genistein")
+    assert by_target["NCBIGene:6448"]["target_name"] == "SGSH"
+    assert {"id": "PMID:12345678", "type": "paper", "name": "Genistein in MPS IIIA"} in res["new_node_details"]
+    assert res["claims_proposed"] == 3 and res["rejected"] == [] and "reason" not in res
+    edges = _edges(graph_dir)
+    assert all(edges[a["id"]]["submitted_by"] == "Dr Test, neurologist" for a in res["added"])
+
+
+def test_auto_detect_targets_only_the_best_matching_disease(graph_dir, fake_llm):
+    gb = GraphBuilder.from_csv(graph_dir)
+    gb.node("MONDO:0010000", "disease", "Mucopolysaccharidosis type IIIB", synonyms=["MPS IIIB"], short="MPS IIIB")
+    gb.write(graph_dir)
+    text = ABSTRACT + " MPS IIIB is mentioned once."
+    res = X.add_document(text=text, out=graph_dir)
+    assert [d["id"] for d in res["matched_diseases"]] == [DID]
+    assert len([u for u in fake_llm if u.startswith("Target disease:")]) == 1
+
+
+def test_rejected_claims_are_reported_with_reason(graph_dir, monkeypatch):
+    bad = {**CLAIMS[0], "quote": "Gene therapy cured every MPS IIIA patient in the trial."}
+    monkeypatch.setattr(atlas.llm, "complete", lambda *a, **k: {"claims": [bad, CLAIMS[2]]})
+    res = X.add_document(text=ABSTRACT, out=graph_dir)
+    assert res["dropped"]["quote_check"] == 1 and len(res["added"]) == 1
+    assert res["rejected"] == [{"reason": "quote_check", "relation": "has_mechanism",
+                                "object": "substrate_storage_heparan_sulfate",
+                                "quote": "Gene therapy cured every MPS IIIA patient in the trial."}]
+
+
+def test_unknown_pmid_is_reported_not_raised(graph_dir, fake_llm, monkeypatch):
+    monkeypatch.setattr(X, "fetch_abstract", lambda pmid: "")
+    monkeypatch.setattr(X, "pubmed_summaries", lambda pmids: {p: {"error": "cannot get document summary"} for p in pmids})
+    res = X.add_document(url="99999999", out=graph_dir)
+    assert res["added_edges"] == [] and "no abstract" in res["reason"] and not fake_llm
+
+
+def test_contributions_lists_submitted_findings_by_name(graph_dir, fake_llm, monkeypatch):
+    from atlas import api
+    X.add_document(text=ABSTRACT, submitted_by="tester", out=graph_dir)
+    api._STATE.clear()
+    monkeypatch.setattr(api, "_state", lambda out=graph_dir, _f=api._state: _f(graph_dir))
+    rows = api.contributions(DID)["contributions"]
+    assert len(rows) == 3 and {"SGSH", "genistein"} <= {r["target_name"] for r in rows}
+    assert all(r["submitted_by"] == "tester" and r["quote"] for r in rows)
+    with pytest.raises(api.NotFound):
+        api.contributions("NCBIGene:6448")
+    api._STATE.clear()
+
+
+def test_fast_tier_runs_claude_without_thinking(monkeypatch, tmp_path):
+    import json as _json
+    import subprocess
+    envs = []
+
+    def fake_run(cmd, **kw):
+        envs.append(kw.get("env"))
+        return subprocess.CompletedProcess(cmd, 0, _json.dumps({"is_error": False, "structured_output": {"a": 1}}), "")
+    monkeypatch.setattr(atlas.llm, "CACHE", tmp_path)
+    monkeypatch.setattr(atlas.llm.subprocess, "run", fake_run)
+    monkeypatch.setenv("ATLAS_LLM", "claude")
+    assert atlas.llm.complete("s", "u", schema={"type": "object"}, tier="fast", cache=False) == {"a": 1}
+    atlas.llm.complete("s", "u", schema={"type": "object"}, tier="smart", cache=False)
+    assert envs[0]["MAX_THINKING_TOKENS"] == "0" and envs[1] is None

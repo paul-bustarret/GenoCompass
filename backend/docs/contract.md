@@ -70,7 +70,7 @@ in JSON output; CSVs use empty cells).
 Local HTTP server (`python -m atlas.server`, FastAPI on `http://localhost:8000`):
 `GET /search?q=` · `GET /subgraph/{id}?focus=&k=` · `GET /journey/{id}?country=` ·
 `GET /recommend/{id}?country=` · `POST /email` · `POST /chat` · `POST /documents` · `POST /refresh` ·
-`GET /edge/{edge_id}` (one Edge, §1) · `GET /node/{node_id}` (one Node, §1) · `GET /health`
+`GET /contributions/{id}` (§3.6) · `GET /edge/{edge_id}` (one Edge, §1) · `GET /node/{node_id}` (one Node, §1) · `GET /health`
 (`{"status": "ok", "nodes": n, "edges": n}`). Request bodies mirror the function arguments.
 Unknown ids → HTTP 404 `{"error": "…"}`; invalid arguments (e.g. bad `focus`) → HTTP 400.
 `api.edge(edge_id)` and `api.node(node_id)` back the two lookup routes.
@@ -173,6 +173,17 @@ Stateless: the UI sends the full history each time. Answers only from the diseas
  "dropped": {"quote_check": 2, "relevance": 1, "unresolved_entity": 0, "invalid_type": 0},
  "papers_checked": 1}
 ```
+`add_document` also returns, for the UI's contribute page: `"title"` (paper title, or first line of
+pasted text), `"matched_diseases": [{"id", "name", "short"}]` (the target; without `disease_ids` the single
+best-matching slice disease), `"added": [{"id", "relation", "source", "source_name", "target", "target_name",
+"target_type", "polarity", "confidence", "context", "quote"}]` (extracted edges only),
+`"new_node_details": [{"id", "type", "name"}]`, `"rejected": [{"reason", "relation", "object", "quote"}]`,
+`"claims_proposed"`, `"already_present"`, `"llm_errors"`; `"reason"` when nothing could be read.
+`url` may be a PubMed URL or a bare PMID (abstract via E-utilities efetch). One extraction LLM call per
+target disease, plus one parallel round of second-pass checks for proposed contradictions.
+
+`GET /contributions/{disease_id}` → `{"disease_id", "contributions": [Edge + "target_name", "target_type"]}`:
+extracted edges from the disease that a person submitted (`submitted_by` set, not `refresh`), newest first.
 
 ## 4. Files
 

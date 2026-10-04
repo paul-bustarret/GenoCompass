@@ -457,11 +457,25 @@ def _match_gene(gb, symbol: str) -> str | None:
     return None
 
 
+def _confirm_contradictions(ctx: dict, claims: list[dict], text: str) -> dict[int, bool]:
+    """Second-pass checks for every `contradicts` claim whose quote is genuine, run in parallel
+    (index -> confirmed), so a document costs one extraction call plus one round of checks."""
+    idx = [i for i, c in enumerate(claims) if c.get("polarity") == "contradicts"
+           and (c.get("object") or "").strip() and quote_ok(c.get("quote") or "", text)]
+    if not idx:
+        return {}
+    args = [(ctx["name"], claims[i].get("relation"), (claims[i].get("object") or "").strip(),
+             (claims[i].get("quote") or "").strip()) for i in idx]
+    with ThreadPoolExecutor(max_workers=min(len(idx), WORKERS)) as ex:
+        return dict(zip(idx, ex.map(lambda a: confirm_contradiction(*a), args)))
+
+
 def apply_claims(gb, st: Stats, ctx: dict, claims: list[dict], text: str, source: str, source_url: str,
                  mechs: dict, submitted_by: str = "") -> None:
     """Run the four checks over LLM claims and append the survivors as extracted edges."""
     did = ctx["id"]
-    for c in claims:
+    confirmed = _confirm_contradictions(ctx, claims, text)
+    for i, c in enumerate(claims):
         st.c["claims_proposed"] += 1
         rel, obj, q = c.get("relation"), (c.get("object") or "").strip(), c.get("quote") or ""
         ex = {"disease": ctx["short"], "relation": rel, "object": obj, "quote": q[:160], "source_url": source_url}
@@ -482,7 +496,7 @@ def apply_claims(gb, st: Stats, ctx: dict, claims: list[dict], text: str, source
             st.drop("relevance", **ex)
             continue
         conf = min(float(c.get("confidence") or 0), MAX_CONF)
-        if pol == "contradicts" and not confirm_contradiction(ctx["name"], rel, obj, q.strip()):
+        if pol == "contradicts" and not confirmed.get(i, False):
             pol, conf = "supports", min(conf, 0.5)
             st.c["contradictions_downgraded"] += 1
         if rel == "has_mechanism":
@@ -815,19 +829,62 @@ def _report(source_url, submitted_by, st: Stats, papers_checked: int, reason: st
     return out
 
 
+def _details(gb, st: Stats, ctxs: dict, dids: list[str], title: str | None) -> dict:
+    """What a person who submitted the document needs to see: names, not ids (UI contribute page)."""
+    def name(n):
+        node = gb.nodes.get(n) or {}
+        return (node.get("attrs") or {}).get("short") or node.get("name") or n
+
+    added = []
+    for eid in st.added_edges:
+        e = gb.edges[eid]
+        if e["evidence"] != "extracted":
+            continue  # the paper -> disease 'mentions' record is bookkeeping, not a finding
+        added.append({"id": eid, "relation": e["relation"], "source": e["src"], "source_name": name(e["src"]),
+                      "target": e["dst"], "target_name": name(e["dst"]),
+                      "target_type": (gb.nodes.get(e["dst"]) or {}).get("type"),
+                      "polarity": e["polarity"] or "supports", "confidence": e["confidence"],
+                      "context": e["context"] or None, "quote": e["quote"]})
+    return {"title": title or None,
+            "matched_diseases": [{"id": d, "name": ctxs[d]["name"], "short": ctxs[d]["short"]} for d in dids],
+            "added": added,
+            "new_node_details": [{"id": n, "type": gb.nodes[n]["type"], "name": gb.nodes[n]["name"]}
+                                 for n in st.new_nodes if n in gb.nodes],
+            "rejected": [{k: d.get(k) for k in ("reason", "relation", "object", "quote")}
+                         for d in st.drop_examples],
+            "claims_proposed": st.c["claims_proposed"], "already_present": st.c["already_present"],
+            "llm_errors": st.c["llm_errors"]}
+
+
+def parse_pmid(url: str | None = None, text: str | None = None) -> str | None:
+    """PMID from a PubMed URL or a bare 'PMID 12345678' / '12345678' (in `url`, or as the whole `text`)."""
+    m = PMID_URL.search(url or "") or (PMID_URL.search(text) if text and not url else None)
+    return (m.group(1) or m.group(2)) if m else None
+
+
 def add_document(text=None, url=None, submitted_by="anonymous", disease_ids=None,
                  gb: GraphBuilder | None = None, out: Path = OUT) -> dict:
-    """One document (raw text, PubMed URL/PMID, or any URL) through the same extraction + checks."""
+    """One document (raw text, PubMed URL/PMID, or any URL) through the same extraction + checks.
+
+    One extraction LLM call per target disease (plus parallel second-pass checks of any proposed
+    contradictions). Without `disease_ids` the single best-matching slice disease is the target."""
     own = gb is None
     gb = gb or GraphBuilder.from_csv(out)
     mechs = load_mechanisms()
     st = Stats()
-    m = PMID_URL.search(url or "") or (PMID_URL.search(text) if text and not url else None)
-    pmid = (m.group(1) or m.group(2)) if m else None
+    submitted_by = (submitted_by or "").strip() or "anonymous"
+    pmid = parse_pmid(url, text)
+    title = None
     if pmid:
-        meta = pubmed_summaries([pmid]).get(pmid, {})
-        body = fetch_abstract(pmid)
         source, source_url = "pubmed", f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/"
+        try:
+            meta = pubmed_summaries([pmid]).get(pmid, {}) or {}
+            body = fetch_abstract(pmid)
+        except requests.RequestException as e:
+            return _report(source_url, submitted_by, st, 0, f"could not reach PubMed: {str(e)[:120]}")
+        if meta.get("error") or len((body or "").strip()) < 80:
+            return _report(source_url, submitted_by, st, 0, f"PubMed has no abstract for PMID {pmid}")
+        title = meta.get("title")
     elif url:
         try:
             body = page_text(url)
@@ -837,13 +894,15 @@ def add_document(text=None, url=None, submitted_by="anonymous", disease_ids=None
     elif text and text.strip():
         body = text
         source, source_url, meta = "submitted", f"submitted:sha1:{hashlib.sha1(text.encode()).hexdigest()[:12]}", None
+        title = text.strip().split("\n", 1)[0][:160]
     else:
         return _report(None, submitted_by, st, 0, "no text or url given")
     ctxs = disease_contexts(gb)
-    dids = [d for d in (disease_ids or []) if d in ctxs] if disease_ids else infer_diseases(body, ctxs)
+    dids = [d for d in (disease_ids or []) if d in ctxs] if disease_ids else infer_diseases(body, ctxs, top=1)
     if not dids:
-        return _report(source_url, submitted_by, st, 0,
-                       "no slice disease (name, synonym or gene) is mentioned in the document; nothing added")
+        res = _report(source_url, submitted_by, st, 0,
+                      "no slice disease (name, synonym or gene) is mentioned in the document; nothing added")
+        return {**res, **_details(gb, st, ctxs, [], title)}
     with ThreadPoolExecutor(max_workers=WORKERS) as ex:
         results = list(ex.map(lambda d: _llm_claims(ctxs[d], body, mechs), dids))
     for did, claims in zip(dids, results):
@@ -859,7 +918,8 @@ def add_document(text=None, url=None, submitted_by="anonymous", disease_ids=None
     if own:
         save_graph(gb, out)
         _write_report({"add_document": st.as_dict()}, out)
-    return _report(source_url, submitted_by, st, 1)
+    reason = "the AI reader could not be reached; nothing added" if st.c["llm_errors"] == len(dids) else None
+    return {**_report(source_url, submitted_by, st, 1, reason), **_details(gb, st, ctxs, dids, title)}
 
 
 def refresh_papers(since=None, disease_ids=None, per_disease: int = 10,

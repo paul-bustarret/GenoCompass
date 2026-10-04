@@ -95,6 +95,11 @@ def documents(req: DocumentRequest):
                             disease_ids=req.disease_ids)
 
 
+@app.get("/contributions/{disease_id}")
+def contributions(disease_id: str):
+    return api.contributions(disease_id)
+
+
 @app.post("/refresh")
 def refresh(req: RefreshRequest):
     return api.refresh_papers(since=req.since, disease_ids=req.disease_ids, per_disease=req.per_disease)
