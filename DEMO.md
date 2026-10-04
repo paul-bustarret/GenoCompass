@@ -4,17 +4,40 @@
 support group, and she doesn't know where to start. In about a minute the atlas shows her the
 families, researchers and a clinical trial that can help — including a trial with a site in India.
 
-## Before you start (2 min)
+## Before you start
+
+**Needs once per computer:** [uv](https://docs.astral.sh/uv/) (`brew install uv`), Node.js
+(`brew install node`), and Claude Code installed and logged in (`claude` works in a terminal —
+used for the chat and email drafts).
+
+All commands start from the **repo root** (the folder that contains `backend/` and `src/`).
+
+**First time only** — install the website's packages:
 
 ```bash
-# terminal 1 — backend
-cd rare-diseases-atlas/backend && uv run python -m atlas.server
-# terminal 2 — website
-cd rare-diseases-atlas && VITE_ATLAS_API_URL=http://localhost:8000 npx vite dev
+npm install
 ```
 
-Open **http://localhost:8080**. Chat answers are generated live every time (Claude Sonnet reads the
-disease's evidence graph, ~5–10 seconds) — say so while it thinks.
+**Every time** — two terminals, both opened in the repo root:
+
+```bash
+# terminal 1 — backend (data + AI), http://localhost:8000
+cd backend && uv run python -m atlas.server
+```
+
+```bash
+# terminal 2 — website, connected to the local backend
+VITE_ATLAS_API_URL=http://localhost:8000 npx vite dev
+```
+
+Open the address terminal 2 prints — normally **http://localhost:8080** (if 8080 is busy it picks
+the next free port; close any old atlas servers first). Stop both with `Ctrl+C`.
+
+Check it's connected: the home page shows **"The atlas today"** with live numbers, and
+http://localhost:8000/health returns `"status": "ok"`.
+
+Chat answers are generated live every time (Claude Sonnet reads the disease's evidence graph,
+~5–10 seconds) — say so while it thinks.
 
 ## The walkthrough (about 90 seconds)
 
