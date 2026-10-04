@@ -256,3 +256,26 @@ class LocalQuery implements PromiseLike<Result> {
 }
 
 export const localTables = { from: (table: string) => new LocalQuery(table) };
+
+/** Headline numbers for the home page (GET /stats). */
+export type AtlasStats = {
+  diseases: number;
+  diseases_lysosomal: number;
+  diseases_controls: number;
+  papers: number;
+  papers_read_by_ai: number;
+  pages_read_by_ai: number;
+  organizations: number;
+  countries: number;
+  trials: number;
+  grants: number;
+  researchers: number;
+  nodes: number;
+  edges: number;
+  edges_by_evidence: Record<string, number>;
+  records_searched: number;
+  sources: string[];
+};
+export function getStats(): Promise<AtlasStats> {
+  return request<AtlasStats>("/stats");
+}

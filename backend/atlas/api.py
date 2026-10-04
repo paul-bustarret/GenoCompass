@@ -5,6 +5,7 @@ so nodes/edges added by the write side (mechanisms, patient groups, assets, coun
 without code changes; every lookup tolerates their absence.
 """
 import csv
+from collections import Counter
 import difflib
 import json
 import math
@@ -1299,3 +1300,39 @@ def node(node_id: str) -> dict:
     st = _state()
     _require(st, node_id)
     return node_json(st["g"], node_id)
+
+
+# ---------------------------------------------------------------------------------------------
+# headline numbers for the home page
+# ---------------------------------------------------------------------------------------------
+STAT_SOURCES = ["PubMed", "ClinicalTrials.gov", "NIH RePORTER", "ClinVar", "HPO", "MONDO", "Reactome",
+                "Patient-group websites"]
+
+
+def stats() -> dict:
+    """Counts describing the current graph (recomputed whenever the CSVs change)."""
+    st = _state()
+    g = st["g"]
+    types = Counter(d["type"] for _, d in g.nodes(data=True))
+    edges = [e for _, _, e in g.edges(data=True)]
+    groups = [(d.get("attrs") or {}).get("group", "") for _, d in g.nodes(data=True) if d["type"] == "disease"]
+    controls = sum(1 for x in groups if x in ("Bridge", "Lookalike control"))
+    papers_read = {e["source_url"] for e in edges if e["evidence"] == "extracted" and e["source"] == "pubmed"}
+    pages_read = {e["source_url"] for e in edges if e["evidence"] == "extracted" and e["source"] == "web"}
+    searched = 0
+    with open(OUT / "coverage.csv") as f:
+        for r in csv.DictReader(f):
+            try:
+                searched += max(int(r["n_results"]), 0)
+            except (TypeError, ValueError):
+                pass
+    return {
+        "diseases": types["disease"], "diseases_lysosomal": types["disease"] - controls,
+        "diseases_controls": controls,
+        "papers": types["paper"], "papers_read_by_ai": len(papers_read), "pages_read_by_ai": len(pages_read),
+        "organizations": types["organization"], "countries": types["country"], "trials": types["trial"],
+        "grants": types["grant"], "researchers": types["person"], "mechanisms": types["mechanism"],
+        "assets": types["asset"], "nodes": g.number_of_nodes(), "edges": len(edges),
+        "edges_by_evidence": dict(Counter(e["evidence"] for e in edges)),
+        "records_searched": searched, "sources": STAT_SOURCES,
+    }

@@ -658,3 +658,15 @@ h1,h2,h3,p { margin-top: 0; } h1,h2,h3 { letter-spacing: 0; }
 .chat-grounding { color: var(--muted-foreground); font-size: 11px; margin-top: 6px; }
 .chat-out-of-scope { border-left: 2px solid var(--border); padding-left: 10px; }
 .outreach-warnings { color: var(--muted-foreground); font-size: 12px; line-height: 1.5; margin: 0; padding-left: 16px; }
+
+/* Home: "The atlas today" numbers */
+.atlas-stats-band { border-bottom: 1px solid var(--border); padding-block: 46px; }
+.atlas-stats-head p { font-size: 19px; line-height: 1.4; margin: 12px 0 26px; }
+.atlas-stats-head strong { color: var(--primary); font-weight: 650; }
+.atlas-stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); }
+.atlas-stat { padding: 22px 20px 22px 0; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 6px; }
+.atlas-stat > strong { font-size: 34px; font-weight: 650; line-height: 1; color: var(--primary); }
+.atlas-stat > span { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; }
+.atlas-stat > small { color: var(--muted-foreground); font-size: 12px; line-height: 1.4; }
+@media (max-width: 850px) { .atlas-stats-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px) { .atlas-stats-grid { grid-template-columns: 1fr; } .atlas-stat > strong { font-size: 28px; } }

@@ -275,3 +275,11 @@ def test_recommend_next_step_leads_with_own_community(monkeypatch, tay_sachs):
     assert set(own[0]["edges"][:4]) <= set(card["citations"])
     assert card["text"].index(own[0]["edges"][0]) < card["text"].index(other["edges"][0])
     assert "NEXT STEPS IN PRIORITY ORDER" in seen["user"]
+
+
+def test_stats_counts_match_graph():
+    from atlas import api
+    st = api.stats()
+    assert st["diseases"] == 25 and st["diseases_lysosomal"] + st["diseases_controls"] == 25
+    assert st["edges"] == sum(st["edges_by_evidence"].values()) and st["nodes"] > st["edges"] / 10
+    assert len(st["sources"]) == 8 and st["papers"] > 0 and st["countries"] > 0

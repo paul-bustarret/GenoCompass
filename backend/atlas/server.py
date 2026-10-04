@@ -54,6 +54,11 @@ def health():
     return {"status": "ok", "nodes": st["g"].number_of_nodes(), "edges": st["g"].number_of_edges()}
 
 
+@app.get("/stats")
+def stats():
+    return api.stats()
+
+
 @app.get("/search")
 def search(q: str = ""):
     return api.search(q)
