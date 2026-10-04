@@ -283,3 +283,20 @@ def test_stats_counts_match_graph():
     assert st["diseases"] == 25 and st["diseases_lysosomal"] + st["diseases_controls"] == 25
     assert st["edges"] == sum(st["edges_by_evidence"].values()) and st["nodes"] > st["edges"] / 10
     assert len(st["sources"]) == 8 and st["papers"] > 0 and st["countries"] > 0
+
+
+def test_demo_reset_restores_graph(tmp_path):
+    from atlas import demo_reset
+    out, snap = tmp_path / "graph", tmp_path / "graph_snapshot"
+    out.mkdir()
+    (out / "edges.csv").write_text("original")
+    demo_reset.snapshot(out, snap)
+    (out / "edges.csv").write_text("original + new paper")
+    (out / "new.json").write_text("added")
+    demo_reset.restore(out, snap)
+    assert (out / "edges.csv").read_text() == "original"
+    assert not (out / "new.json").exists() and not snap.exists()
+    demo_reset.snapshot(out, snap)          # a leftover snapshot from a crashed session...
+    (out / "edges.csv").write_text("crashed session edit")
+    demo_reset.snapshot(out, snap)          # ...is restored at the next start-up
+    assert (out / "edges.csv").read_text() == "original"

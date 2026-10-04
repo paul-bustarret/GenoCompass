@@ -33,6 +33,11 @@ VITE_ATLAS_API_URL=http://localhost:8000 npx vite dev
 Open the address terminal 2 prints — normally **http://localhost:8080** (if 8080 is busy it picks
 the next free port; close any old atlas servers first). Stop both with `Ctrl+C`.
 
+**Demo mode (default):** papers you add on the "Add a paper" page are removed when you stop the
+backend with `Ctrl+C`, so every run starts from the same data. To keep them, start the backend with
+`ATLAS_PERSIST=1 uv run python -m atlas.server`. If a terminal was closed without `Ctrl+C`, the next
+start-up cleans up automatically; to reset by hand: `git checkout -- backend/data/graph`.
+
 Check it's connected: the home page shows **"The atlas today"** with live numbers, and
 http://localhost:8000/health returns `"status": "ok"`.
 

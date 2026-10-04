@@ -1,6 +1,7 @@
 """Local HTTP server for the UI (docs/contract.md §2). Run: `uv run python -m atlas.server`."""
 import csv
 import json
+import os
 
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -182,4 +183,15 @@ def tables(name: str, request: Request):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    from . import demo_reset
+
+    if demo_reset.enabled():
+        demo_reset.snapshot()
+        print("Demo mode: papers added in this session are removed when the server stops "
+              "(set ATLAS_PERSIST=1 to keep them).")
+    try:
+        uvicorn.run(app, host="127.0.0.1", port=int(os.environ.get("ATLAS_PORT", "8000")))
+    finally:
+        if demo_reset.enabled():
+            demo_reset.restore()
+            print("Demo mode: graph restored to its state at start-up.")
